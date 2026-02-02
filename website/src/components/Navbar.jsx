@@ -87,7 +87,7 @@ export default function Navbar() {
               const r = e.currentTarget.getBoundingClientRect()
               const px = (e.clientX - r.left) / r.width
               const py = (e.clientY - r.top) / r.height
-              const max = 10
+              const max = 6
               rx.set((0.5 - py) * max)
               ry.set((px - 0.5) * max)
               lift.set(-2)
