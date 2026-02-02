@@ -187,15 +187,66 @@ export const contentEN = {
   },
   support: {
     title: 'IT Support Services',
-    lead: 'Selection of SLAs that fit your requirements. Remote and On-site support.',
-    tiers: ['Joint IT Support', 'Specialized IT Support', 'Project IT Support', 'Complete IT Support'],
-    process: [
-      'When there is a problem report or a request from a client, the IT specialist of IT Outsource Ltd. connects to the network of the client via encrypted communication (VPN) and resolve the problem as soon as possible. When a specific problem occurs, that can not be resolved remotely, our IT specialist visit the customer on site.',
-      'Phone.',
-      'On-line trouble ticket system.',
-      'E-mail.',
-      'For remote Access: IT specialists are going to resolve the problem immediately or no later than an hour.',
-      'On-site : If the problem requires a site visit, it is going to take from one to three hours, depending on the location and the traffic.'
+    lead:
+      'Predictable service, measurable performance, and rapid resolution — built around your SLAs, not ours.',
+    subline:
+      'Remote-first support with structured on-site escalation when it actually matters.',
+    credibility:
+      'Built for regulated and complex environments — retail, healthcare, and research organizations that cannot afford downtime.',
+
+    serviceModelsTitle: 'Service Models',
+    serviceModels: [
+      {
+        title: 'Complete Managed IT',
+        description: 'We run your IT end-to-end. You focus on your business.'
+      },
+      {
+        title: 'Joint IT Support',
+        description: 'We partner with your internal team and cover gaps 24/7.'
+      },
+      {
+        title: 'Specialized IT Support',
+        description: 'Deep expertise for complex environments (M365, Mac, Security, Networks).'
+      },
+      {
+        title: 'Project IT Support',
+        description: 'Dedicated delivery for migrations, rollouts, and critical initiatives.'
+      }
+    ],
+
+    deliveryModelTitle: 'Service Delivery Model',
+    deliveryModel: [
+      {
+        title: 'Single Point of Contact (SPOC)',
+        description: 'One intake channel, no chaos, full traceability.'
+      },
+      {
+        title: 'Secure Remote Access',
+        description: 'Encrypted connectivity, compliant logging, zero shortcuts.'
+      },
+      {
+        title: 'Tiered Response Framework',
+        description:
+          'P1 (Business Critical): immediate response, continuous handling. P2 (High): response within SLA, structured remediation. P3/P4: scheduled resolution, documented root cause.'
+      },
+      {
+        title: 'On-site Support (when remote is insufficient)',
+        description:
+          'Typical arrival window: 1–3 hours depending on location and traffic. Field engineer arrives with predefined runbooks and escalation path.'
+      },
+      {
+        title: 'Tools & Channels',
+        description: 'Phone • Ticketing portal • E-mail • Remote session with audit trail'
+      }
+    ],
+
+    governanceTitle: 'Performance & Governance',
+    governance: [
+      'SLA-backed response and resolution times',
+      'Monthly service reporting and trend analysis',
+      'Root Cause Analysis for major incidents',
+      'Change management and controlled deployments',
+      'Vendor coordination and escalation ownership'
     ]
   },
   solutions: {

@@ -69,6 +69,7 @@ export const icons = {
 
   // support page
   sla: LifeBuoy,
+  governance: Shield,
 
   // solutions
   platform: Boxes
