@@ -55,6 +55,10 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img src={logo} alt="IT Outsource Ltd." className="h-10 w-auto" loading="eager" />
+          <div className="hidden leading-tight md:block">
+            <div className="text-sm font-semibold tracking-wide text-white">IT Outsource LTD</div>
+            <div className="text-xs text-white/55">Delivery-first IT services</div>
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
