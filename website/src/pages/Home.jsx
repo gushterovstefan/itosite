@@ -93,9 +93,17 @@ export default function Home() {
           <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-3">
             {c.highlights.map((x, i) => (
               <Card key={x.title} className="p-5" revealDelay={0.06 + i * 0.06}>
-                {/* brand reveal on hover */}
-                <div className="pointer-events-none absolute left-5 top-5 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                  <div className="text-sm font-semibold tracking-wide text-white">IT Outsource LTD</div>
+                {/* brand reveal on hover (logo style) */}
+                <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 -translate-y-3 opacity-0 transition-all duration-200 group-hover:-translate-y-5 group-hover:opacity-100">
+                  <div className="inline-flex items-baseline gap-2 rounded-full border border-white/10 bg-ink-950/70 px-4 py-2 backdrop-blur">
+                    <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-xs font-extrabold tracking-[0.28em] text-transparent">
+                      IT
+                    </span>
+                    <span className="text-xs font-extrabold tracking-[0.28em] text-white">OUTSOURCE</span>
+                    <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-[10px] font-extrabold tracking-[0.32em] text-transparent">
+                      LTD
+                    </span>
+                  </div>
                 </div>
 
                 <div className="flex items-start justify-between gap-4">
