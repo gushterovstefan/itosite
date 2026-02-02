@@ -102,3 +102,16 @@ body {
 .hero-float {
   animation: floatGradient 9s ease-in-out infinite;
 }
+
+@keyframes lineFlow {
+  0% { background-position: 0% 50%; opacity: 0.55; }
+  50% { opacity: 0.9; }
+  100% { background-position: 100% 50%; opacity: 0.55; }
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(116,173,60,0.45), rgba(217,70,239,0.35), transparent);
+  background-size: 200% 100%;
+  animation: lineFlow 6s ease-in-out infinite;
+}

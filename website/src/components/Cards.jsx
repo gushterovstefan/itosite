@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import Reveal from './Reveal.jsx'
+import CardSpotlight from './CardSpotlight.jsx'
 
 export function Card({ children, className = '', revealDelay = 0 }) {
   return (
@@ -8,11 +9,12 @@ export function Card({ children, className = '', revealDelay = 0 }) {
         whileHover={{ y: -6, scale: 1.01 }}
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
         className={
-          'group rounded-2xl border border-white/10 bg-white/5 p-5 md:p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(116,173,60,0.18),0_18px_60px_-28px_rgba(0,0,0,0.8)] ' +
+          'group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 md:p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(116,173,60,0.18),0_18px_60px_-28px_rgba(0,0,0,0.8)] ' +
           className
         }
       >
-        {children}
+        <CardSpotlight />
+        <div className="relative z-10">{children}</div>
       </motion.div>
     </Reveal>
   )
