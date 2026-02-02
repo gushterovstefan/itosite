@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useMotionValue, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Section from '../components/Section.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
@@ -19,6 +19,10 @@ export default function Home() {
   const c = content.home
   const ui = content.shared.ui
 
+  const reduce = useReducedMotion()
+  const heroX = useMotionValue(0)
+  const heroY = useMotionValue(0)
+
   const { scrollY } = useScroll()
   const watermarkY = useTransform(scrollY, [0, 600], [0, 40])
   const watermarkRotate = useTransform(scrollY, [0, 600], [0, -6])
@@ -26,7 +30,15 @@ export default function Home() {
   return (
     <div id="top">
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section
+        className="group/hero relative overflow-hidden"
+        onPointerMove={(e) => {
+          if (reduce) return
+          const r = e.currentTarget.getBoundingClientRect()
+          heroX.set(e.clientX - r.left)
+          heroY.set(e.clientY - r.top)
+        }}
+      >
         <div className="pointer-events-none absolute inset-0">
           {/* animated gradient glow */}
           <div className="hero-float absolute -left-40 -top-40 h-96 w-96 rounded-full bg-brand-500/22 blur-3xl" />
@@ -51,6 +63,30 @@ export default function Home() {
             style={{ y: watermarkY, rotate: watermarkRotate }}
             className="absolute right-[-6rem] top-1/2 h-[28rem] w-[28rem] -translate-y-1/2 opacity-[0.10] blur-[0.2px] md:right-[-4rem] md:h-[40rem] md:w-[40rem]"
           />
+
+          {/* hover brand mark in empty hero area */}
+          {!reduce ? (
+            <motion.div
+              aria-hidden="true"
+              className="absolute left-0 top-0 pointer-events-none"
+              style={{ x: heroX, y: heroY }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="-translate-x-1/2 -translate-y-10 whitespace-nowrap opacity-0 transition-opacity duration-200 group-hover/hero:opacity-100">
+                <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-[11px] font-extrabold tracking-[0.34em] text-transparent opacity-[0.22]">
+                  IT
+                </span>
+                <span className="mx-3 text-[11px] font-extrabold tracking-[0.34em] text-white/20">
+                  OUTSOURCE
+                </span>
+                <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-[11px] font-extrabold tracking-[0.34em] text-transparent opacity-[0.18]">
+                  LTD
+                </span>
+              </div>
+            </motion.div>
+          ) : null}
         </div>
 
         <div className="mx-auto max-w-6xl px-4 pt-20 pb-6 md:pt-28 md:pb-8">
