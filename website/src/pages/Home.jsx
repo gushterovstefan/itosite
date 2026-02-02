@@ -159,9 +159,12 @@ export default function Home() {
       {/* Why */}
       <Section eyebrow="Why" title={c.why.title} lead="" tight>
         <div className="grid gap-4 md:grid-cols-2">
-          {c.why.blocks.map((b) => (
-            <Card key={b.h}>
-              <div className="text-sm font-semibold">{b.h}</div>
+          {c.why.blocks.map((b, i) => (
+            <Card key={b.h} revealDelay={0.04 + i * 0.04}>
+              <div className="flex items-start justify-between gap-4">
+                <div className="text-sm font-semibold">{b.h}</div>
+                <Icon as={icons[b.icon] ?? icons.tools} />
+              </div>
               <div className="mt-2 text-sm text-white/70">{b.p}</div>
             </Card>
           ))}
@@ -171,11 +174,20 @@ export default function Home() {
       {/* Benefits */}
       <Section eyebrow="Benefits" title={c.benefits.title} lead={null} tight>
         <div className="grid gap-4 md:grid-cols-2">
-          <Card>
-            <BulletList items={c.benefits.items} />
+          <Card revealDelay={0.04}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">{c.benefits.title}</div>
+              <Icon as={icons[c.benefits.icon] ?? icons.target} />
+            </div>
+            <div className="mt-4">
+              <BulletList items={c.benefits.items} />
+            </div>
           </Card>
-          <Card>
-            <div className="text-sm font-semibold">{c.clientBenefits.title}</div>
+          <Card revealDelay={0.10}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">{c.clientBenefits.title}</div>
+              <Icon as={icons[c.clientBenefits.icon] ?? icons.security} />
+            </div>
             <div className="mt-4">
               <BulletList items={c.clientBenefits.items} />
             </div>

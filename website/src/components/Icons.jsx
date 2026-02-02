@@ -59,6 +59,9 @@ export const icons = {
   vision: Eye,
   testimonial: Quote,
 
+  // misc
+  target: Target,
+
   // infra sections
   assessment: Database,
   virtualization: Layers,

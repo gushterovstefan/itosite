@@ -70,24 +70,29 @@ export const contentEN = {
       blocks: [
         {
           h: 'Operational excellence',
-          p: 'Delivery-led IT operations with clear ownership, measurable SLAs, and predictable outcomes.'
+          p: 'Delivery-led IT operations with clear ownership, measurable SLAs, and predictable outcomes.',
+          icon: 'tools'
         },
         {
           h: 'Security by design',
-          p: 'Identity-first security and resilient architectures built for real-world threat models and audits.'
+          p: 'Identity-first security and resilient architectures built for real-world threat models and audits.',
+          icon: 'security'
         },
         {
           h: 'Senior expertise',
-          p: 'Multidisciplinary engineers who can design, implement, and support the full lifecycle — not just tickets.'
+          p: 'Multidisciplinary engineers who can design, implement, and support the full lifecycle — not just tickets.',
+          icon: 'consulting'
         },
         {
           h: 'Pragmatic modernization',
-          p: 'We modernize what matters (cloud, workplace, infrastructure) without breaking production.'
+          p: 'We modernize what matters (cloud, workplace, infrastructure) without breaking production.',
+          icon: 'cloud'
         }
       ]
     },
     benefits: {
       title: 'What you get',
+      icon: 'target',
       items: [
         'A delivery partner that owns outcomes end-to-end',
         'Proactive monitoring and rapid incident response',
@@ -96,6 +101,7 @@ export const contentEN = {
     },
     clientBenefits: {
       title: 'Designed for regulated environments',
+      icon: 'security',
       items: [
         'Audit-ready operations and change control',
         'Security and continuity built into day-to-day delivery',
