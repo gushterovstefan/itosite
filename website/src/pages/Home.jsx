@@ -60,13 +60,13 @@ export default function Home() {
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/contacts"
-                className="rounded-full bg-brand-500 px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-brand-500/20 hover:bg-brand-400"
+                className="rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/20 hover:bg-brand-400"
               >
                 Contact us
               </Link>
               <Link
                 to="/solutions"
-                className="rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10"
+                className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/10"
               >
                 Explore solutions
               </Link>

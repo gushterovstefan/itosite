@@ -74,12 +74,12 @@ export default function Navbar() {
           {/* mobile menu button */}
           <button
             type="button"
-            className="ml-1 inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/80 hover:text-white md:hidden"
+            className="ml-1 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/80 hover:text-white md:hidden"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
-            <span className="text-lg leading-none">{open ? '×' : '☰'}</span>
+            <span className="text-xl leading-none">{open ? '×' : '☰'}</span>
           </button>
         </div>
       </div>

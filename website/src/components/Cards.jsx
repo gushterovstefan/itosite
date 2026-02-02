@@ -8,7 +8,7 @@ export function Card({ children, className = '', revealDelay = 0 }) {
         whileHover={{ y: -4 }}
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
         className={
-          'rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] ' +
+          'rounded-2xl border border-white/10 bg-white/5 p-5 md:p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] ' +
           className
         }
       >
