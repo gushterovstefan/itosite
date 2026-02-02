@@ -347,48 +347,58 @@ export const contentEN = {
   },
   solutions: {
     title: 'Solutions',
-    intro: 'Make technology an ASSET for your business NOT a PROBLEM',
-    items: [
+    lead:
+      'Enterprise platforms and solutions delivered with security, governance, and operational ownership.',
+    subline:
+      'A modern stack spanning cloud, workplace, virtualization, and custom web platforms — built to run in production.',
+
+    cards: [
       {
-        h: 'Microsoft Azure',
+        title: 'Microsoft Azure',
+        icon: 'cloud',
         bullets: [
-          'Build, deploy and manage virtual Windows and Linux servers using the cloud computing platform Microsoft Azure',
-          'Move faster, do more and safe money, because you do not need to invest resources to build and maintain your own data center. Protect your business with the most trusted cloud'
+          'Build, scale, and run your infrastructure on Azure with secure cloud resources, global reach, and cost control',
+          'Design for resilience with proper networking, monitoring, and governance'
         ]
       },
       {
-        h: 'Microsoft Office 365',
+        title: 'Microsoft 365',
+        icon: 'platform',
         bullets: [
-          'The most secure office for your business',
-          'Receive all office applications fully installed',
-          'Access your documents from multiple devices',
-          'Access files and use your email anywhere – online and offline',
-          'Perform your tasks from any point of the world',
-          'Monthly secure updates and feature releases'
+          'Deliver productivity and collaboration (Teams, SharePoint, Exchange) with enterprise-grade security',
+          'Device and identity alignment across Entra ID, Intune, and Defender'
         ]
       },
       {
-        h: 'KVM Virtualization',
+        title: 'VMware & Proxmox Virtualization',
+        icon: 'virtualization',
         bullets: [
-          'Optimize your expenses for hardware and build reliable on premises data center that requires zero cost of ownership and no vendor lock-in effect as well as reduced cost of deployment and maintenance',
-          'The most appropriate open source alternative to fully virtualize your IT resource'
+          'Consolidate and optimize on-prem resources using VMware’s enterprise ecosystem or Proxmox’s open-source flexibility',
+          'Right-size workloads, improve availability, and reduce operating cost'
         ]
       },
       {
-        h: 'Easy Order Web Platform',
+        title: 'Azure Hybrid Cloud Integration',
+        icon: 'infrastructure',
         bullets: [
-          'Web based platform that manages all activities related to Order Process',
-          'The solution offers a fully integrated and automated process of data transfer to all related parties (end customer, manufacturer, warehouse, distributor)',
-          'Promotion campaigns',
-          'Reports',
-          'Customers’ notification via e-mail'
+          'Seamlessly extend on-prem VMware or Proxmox environments into Azure for hybrid scalability and DR',
+          'Secure connectivity, identity integration, and consistent monitoring across platforms'
         ]
       },
       {
-        h: 'Web based B2B & B2C solutions',
+        title: 'Web-Based B2B & B2C Solutions',
+        icon: 'web',
         bullets: [
-          'We offer different web based B2B and B2C solutions as well as separate modules that could be fully integrated with your operating ERP system in order to optimize different business processes',
-          'We develop specific solutions that correspond to your exact business needs'
+          'Custom-built web applications integrated with your ERP, tailored to your exact business processes',
+          'Modular architecture with clear ownership, security boundaries, and operational handover'
+        ]
+      },
+      {
+        title: 'Easy Order Web Platform',
+        icon: 'tools',
+        bullets: [
+          'A fully integrated platform for order management',
+          'Automated data flow between customers, manufacturers, and distributors'
         ]
       }
     ]
