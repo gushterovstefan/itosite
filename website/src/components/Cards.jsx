@@ -1,17 +1,20 @@
 import { motion } from 'framer-motion'
+import Reveal from './Reveal.jsx'
 
-export function Card({ children, className = '' }) {
+export function Card({ children, className = '', revealDelay = 0 }) {
   return (
-    <motion.div
-      whileHover={{ y: -4 }}
-      transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-      className={
-        'rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] ' +
-        className
-      }
-    >
-      {children}
-    </motion.div>
+    <Reveal delay={revealDelay}>
+      <motion.div
+        whileHover={{ y: -4 }}
+        transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+        className={
+          'rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] ' +
+          className
+        }
+      >
+        {children}
+      </motion.div>
+    </Reveal>
   )
 }
 

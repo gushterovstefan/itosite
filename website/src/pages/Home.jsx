@@ -78,8 +78,8 @@ export default function Home() {
               { t: 'IT Professional support', d: 'Timely response to any issue.' },
               { t: 'Web development', d: 'Web based B2B & B2C solutions and custom modules.' },
               { t: 'Server platforms', d: 'Design, deployment, and support for reliable infrastructure.' }
-            ].map((x) => (
-              <Card key={x.t} className="p-5">
+            ].map((x, i) => (
+              <Card key={x.t} className="p-5" revealDelay={0.06 + i * 0.06}>
                 <div className="text-sm font-semibold">{x.t}</div>
                 <div className="mt-2 text-sm text-white/65">{x.d}</div>
               </Card>
