@@ -2,7 +2,34 @@ export const contentEN = {
   shared: {
     email: 'info@itoutsource.bg',
     phone: '+359 887 940248',
-    tagline: 'Make technology an ASSET for your business NOT a PROBLEM'
+    tagline: 'Make technology an ASSET for your business NOT a PROBLEM',
+    ui: {
+      home: 'Home',
+      support: 'Support',
+      infrastructure: 'Infrastructure',
+      consulting: 'Consulting',
+      solutions: 'Solutions',
+      about: 'About',
+      contact: 'Contact',
+      getQuote: 'Get a quote',
+      modernUi: 'Modern UI (v1)',
+      contactUs: 'Contact us',
+      exploreSolutions: 'Explore solutions',
+      talkToUs: 'Talk to us',
+      itServicesBadge: 'IT services & solutions',
+      servicesEyebrow: 'WHAT WE DO',
+      servicesTitle: 'Services',
+      servicesLead: 'Delivery-first services built for uptime, security, and scale.',
+      whyEyebrow: 'Why',
+      benefitsEyebrow: 'Benefits',
+      writeUs: 'Write us',
+      phoneLabel: 'Phone',
+      emailLabel: 'Email',
+      sendDemo: 'Send (demo)',
+      yourName: 'Your name',
+      yourEmail: 'Email',
+      message: 'Message'
+    }
   },
   home: {
     heroTitle: 'Make technology an ASSET for your business NOT a PROBLEM',
