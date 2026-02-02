@@ -2,10 +2,11 @@ import Section from '../components/Section.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import InfoList from '../components/InfoList.jsx'
-import { contentEN } from '../content/en.js'
+import { useContent } from '../content/index.jsx'
 
 export default function Support() {
-  const c = contentEN.support
+  const { content } = useContent()
+  const c = content.support
 
   return (
     <div>

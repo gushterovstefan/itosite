@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Section from '../components/Section.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
-import { contentEN } from '../content/en.js'
+import { useContent } from '../content/index.jsx'
 import logo from '../assets/logo.png'
 
 const fadeUp = {
@@ -12,7 +12,9 @@ const fadeUp = {
 }
 
 export default function Home() {
-  const c = contentEN.home
+  const { content } = useContent()
+  const c = content.home
+  const ui = content.shared.ui
 
   return (
     <div id="top">
@@ -42,7 +44,7 @@ export default function Home() {
             <motion.div variants={fadeUp} className="inline-flex">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-brand-200/90">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-400" aria-hidden="true" />
-                IT services & solutions
+                {ui.itServicesBadge}
               </span>
             </motion.div>
 
@@ -62,13 +64,13 @@ export default function Home() {
                 to="/contacts"
                 className="rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/20 hover:bg-brand-400"
               >
-                Contact us
+                {ui.contactUs}
               </Link>
               <Link
                 to="/solutions"
                 className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/10"
               >
-                Explore solutions
+                {ui.exploreSolutions}
               </Link>
             </motion.div>
           </motion.div>
@@ -89,12 +91,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <Section
-        eyebrow={c.services.title}
-        title="Services"
-        lead="Delivery-first services built for uptime, security, and scale."
-        tight
-      >
+      <Section eyebrow={ui.servicesEyebrow} title={ui.servicesTitle} lead={ui.servicesLead} tight>
         <div className="grid gap-4 md:grid-cols-3">
           <Card revealDelay={0.04}>
             <div className="flex items-start justify-between gap-4">
@@ -106,7 +103,7 @@ export default function Home() {
             </div>
             <div className="mt-5">
               <Link className="text-sm text-brand-200 hover:text-brand-100" to="/it-support-services">
-                View support services →
+                {ui.support} →
               </Link>
             </div>
           </Card>
@@ -120,11 +117,8 @@ export default function Home() {
               <BulletList items={c.services.infrastructure.items} />
             </div>
             <div className="mt-5">
-              <Link
-                className="text-sm text-brand-200 hover:text-brand-100"
-                to="/it-infrastructure-services"
-              >
-                View infrastructure →
+              <Link className="text-sm text-brand-200 hover:text-brand-100" to="/it-infrastructure-services">
+                {ui.infrastructure} →
               </Link>
             </div>
           </Card>
@@ -139,7 +133,7 @@ export default function Home() {
             </div>
             <div className="mt-5">
               <Link className="text-sm text-brand-200 hover:text-brand-100" to="/it-consulting-services">
-                View consulting →
+                {ui.consulting} →
               </Link>
             </div>
           </Card>
@@ -159,7 +153,7 @@ export default function Home() {
       </Section>
 
       {/* Why */}
-      <Section eyebrow="Why" title={c.why.title} lead="" tight>
+      <Section eyebrow={ui.whyEyebrow} title={c.why.title} lead="" tight>
         <div className="grid gap-4 md:grid-cols-2">
           {c.why.blocks.map((b, i) => (
             <Card key={b.h} revealDelay={0.04 + i * 0.04}>
@@ -174,7 +168,7 @@ export default function Home() {
       </Section>
 
       {/* Benefits */}
-      <Section eyebrow="Benefits" title={c.benefits.title} lead={null} tight>
+      <Section eyebrow={ui.benefitsEyebrow} title={c.benefits.title} lead={null} tight>
         <div className="grid gap-4 md:grid-cols-2">
           <Card revealDelay={0.04}>
             <div className="flex items-start justify-between gap-4">
@@ -211,7 +205,7 @@ export default function Home() {
                 to="/contacts"
                 className="inline-flex rounded-full bg-brand-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-brand-400"
               >
-                Talk to us
+                {ui.talkToUs}
               </Link>
             </div>
           </div>

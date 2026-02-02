@@ -1,10 +1,11 @@
 import Section from '../components/Section.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
-import { contentEN } from '../content/en.js'
+import { useContent } from '../content/index.jsx'
 
 export default function Consulting() {
-  const c = contentEN.consulting
+  const { content } = useContent()
+  const c = content.consulting
 
   return (
     <div>

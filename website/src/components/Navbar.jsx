@@ -1,6 +1,7 @@
 import { NavLink, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { useContent } from '../content/index.jsx'
 import logo from '../assets/logo.png'
 
 const navLinkClass = ({ isActive }) =>
@@ -10,6 +11,8 @@ const navLinkClass = ({ isActive }) =>
   ].join(' ')
 
 export default function Navbar() {
+  const { lang, setLang, content } = useContent()
+  const ui = content.shared.ui
   const [open, setOpen] = useState(false)
 
   // Close on ESC
@@ -30,13 +33,13 @@ export default function Navbar() {
   }, [open])
 
   const links = [
-    { to: '/', label: 'Home', end: true },
-    { to: '/it-support-services', label: 'Support' },
-    { to: '/it-infrastructure-services', label: 'Infrastructure' },
-    { to: '/it-consulting-services', label: 'Consulting' },
-    { to: '/solutions', label: 'Solutions' },
-    { to: '/about', label: 'About' },
-    { to: '/contacts', label: 'Contact' }
+    { to: '/', label: ui.home, end: true },
+    { to: '/it-support-services', label: ui.support },
+    { to: '/it-infrastructure-services', label: ui.infrastructure },
+    { to: '/it-consulting-services', label: ui.consulting },
+    { to: '/solutions', label: ui.solutions },
+    { to: '/about', label: ui.about },
+    { to: '/contacts', label: ui.contact }
   ]
 
   return (
@@ -52,6 +55,17 @@ export default function Navbar() {
               {l.label}
             </NavLink>
           ))}
+          {/* language toggle */}
+          <button
+            type="button"
+            onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
+            className="ml-1 inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs font-semibold text-white/80 hover:text-white"
+            aria-label="Toggle language"
+          >
+            <span className={lang === 'bg' ? 'text-white' : 'text-white/60'}>BG</span>
+            <span className="text-white/30">/</span>
+            <span className={lang === 'en' ? 'text-white' : 'text-white/60'}>EN</span>
+          </button>
         </nav>
 
         <div className="flex items-center gap-3">
@@ -59,7 +73,7 @@ export default function Navbar() {
             to="/contacts"
             className="hidden rounded-full bg-brand-500 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-brand-500/20 transition hover:bg-brand-400 md:inline-flex"
           >
-            Get a quote
+            {ui.getQuote}
           </Link>
 
           <motion.a
@@ -135,8 +149,16 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className="inline-flex items-center justify-center rounded-xl bg-brand-500 px-4 py-3 text-sm font-semibold text-white hover:bg-brand-400"
                   >
-                    Get a quote
+                    {ui.getQuote}
                   </Link>
+
+                  <button
+                    type="button"
+                    onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
+                    className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white/80 hover:text-white"
+                  >
+                    {lang === 'bg' ? 'EN' : 'BG'}
+                  </button>
                 </div>
               </div>
             </motion.div>

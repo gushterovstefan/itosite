@@ -1,14 +1,15 @@
 import Section from '../components/Section.jsx'
 import { Card } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
-import { contentEN } from '../content/en.js'
+import { useContent } from '../content/index.jsx'
 
 export default function About() {
-  const c = contentEN.about
+  const { content } = useContent()
+  const c = content.about
 
   return (
     <div>
-      <Section eyebrow="About" title="About" lead={contentEN.shared.tagline}>
+      <Section eyebrow={content.shared.ui.about} title={content.shared.ui.about} lead={content.shared.tagline}>
         <div className="grid gap-4 md:grid-cols-2">
           <Card revealDelay={0.04}>
             <div className="flex items-start justify-between gap-4">
