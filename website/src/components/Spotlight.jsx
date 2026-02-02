@@ -42,7 +42,7 @@ export default function Spotlight({ className = '' }) {
     }
   }, [reduce, x, y])
 
-  const background = useMotionTemplate`radial-gradient(520px circle at ${x}px ${y}px, rgba(116,173,60,0.18), rgba(217,70,239,0.10), transparent 60%)`
+  const background = useMotionTemplate`radial-gradient(360px circle at ${x}px ${y}px, rgba(116,173,60,0.12), rgba(217,70,239,0.07), transparent 62%)`
 
   if (reduce) return null
 
@@ -51,7 +51,7 @@ export default function Spotlight({ className = '' }) {
       ref={ref}
       aria-hidden="true"
       className={
-        'pointer-events-none absolute inset-0 opacity-80 mix-blend-screen ' +
+        'pointer-events-none absolute inset-0 opacity-55 mix-blend-screen ' +
         className
       }
       style={{ background }}

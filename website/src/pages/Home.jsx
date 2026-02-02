@@ -105,8 +105,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <div className="section-bg">
-        <Section eyebrow={ui.servicesEyebrow} title={ui.servicesTitle} lead={ui.servicesLead} tight>
+      <Section eyebrow={ui.servicesEyebrow} title={ui.servicesTitle} lead={ui.servicesLead} tight>
         <div className="grid gap-4 md:grid-cols-3">
           <Card revealDelay={0.04}>
             <div className="flex items-start justify-between gap-4">
@@ -166,7 +165,6 @@ export default function Home() {
           </Card>
         </div>
       </Section>
-      </div>
 
       {/* Why */}
       <Section eyebrow={ui.whyEyebrow} title={c.why.title} lead="" tight>

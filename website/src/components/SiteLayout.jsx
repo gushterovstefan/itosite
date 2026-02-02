@@ -7,7 +7,7 @@ export default function SiteLayout() {
   return (
     <div className="relative min-h-dvh overflow-hidden">
       {/* global subtle spotlight */}
-      <Spotlight className="opacity-60" />
+      <Spotlight className="opacity-40" />
 
       <Navbar />
       <main className="relative pt-16">

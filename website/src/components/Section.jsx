@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion'
 import Reveal from './Reveal.jsx'
 
-export default function Section({ eyebrow, title, lead, children, tight = false }) {
+export default function Section({ eyebrow, title, lead, children, tight = false, bg = true, className = '' }) {
   return (
-    <section className={tight ? 'py-8 md:py-10' : 'py-16 md:py-24'}>
+    <section
+      className={
+        (tight ? 'py-8 md:py-10' : 'py-16 md:py-24') +
+        (bg ? ' section-bg' : '') +
+        (className ? ` ${className}` : '')
+      }
+    >
       <div className="mx-auto max-w-6xl px-4">
         {eyebrow ? (
           <Reveal>
