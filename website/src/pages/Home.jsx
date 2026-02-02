@@ -4,6 +4,7 @@ import Section from '../components/Section.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import Particles from '../components/Particles.jsx'
+import Spotlight from '../components/Spotlight.jsx'
 import { useContent } from '../content/index.jsx'
 import logo from '../assets/logo.png'
 
@@ -34,6 +35,9 @@ export default function Home() {
           {/* subtle grid + noise */}
           <div className="absolute inset-0 hero-grid" />
           <div className="absolute inset-0 hero-noise" />
+
+          {/* cursor spotlight */}
+          <Spotlight />
 
           {/* floating particles */}
           <Particles />
@@ -76,15 +80,15 @@ export default function Home() {
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/contacts"
-                className="rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/20 hover:bg-brand-400"
+                className="btn-primary rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/20 hover:bg-brand-400"
               >
-                {ui.contactUs}
+                <span>{ui.contactUs}</span>
               </Link>
               <Link
                 to="/solutions"
                 className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/10"
               >
-                {ui.exploreSolutions}
+                <span>{ui.exploreSolutions}</span>
               </Link>
             </motion.div>
           </motion.div>
