@@ -150,7 +150,9 @@ export default function Home() {
                 <div className="text-sm font-semibold">{c.services.trust.title}</div>
                 <div className="mt-2 text-sm text-white/70">{c.services.trust.description}</div>
               </div>
-              <Icon as={icons.security} />
+              <span className="grid h-10 w-10 place-items-center rounded-2xl border border-white/10 bg-white/5">
+                <Icon as={icons.security} className="h-6 w-6 text-brand-100" />
+              </span>
             </div>
           </Card>
         </div>
