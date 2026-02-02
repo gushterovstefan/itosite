@@ -34,5 +34,6 @@ export function ContentProvider({ children }) {
 export function useContent() {
   const ctx = useContext(ContentCtx)
   if (!ctx) throw new Error('useContent must be used within ContentProvider')
-  return ctx
+  // Extra safety: never allow undefined content to reach pages.
+  return { ...ctx, content: ctx.content || contentEN }
 }
