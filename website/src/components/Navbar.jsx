@@ -1,5 +1,5 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion, useScroll } from 'framer-motion'
+import { AnimatePresence, motion, useMotionValue, useScroll, useSpring } from 'framer-motion'
 import { useEffect, useMemo, useState } from 'react'
 import { useContent } from '../content/index.jsx'
 import SheenButton from './SheenButton.jsx'
@@ -37,6 +37,14 @@ export default function Navbar() {
 
   const activePath = useMemo(() => location.pathname, [location.pathname])
 
+  // dynamic 3D tilt for the bar
+  const rx = useMotionValue(0)
+  const ry = useMotionValue(0)
+  const lift = useMotionValue(0)
+  const srx = useSpring(rx, { stiffness: 220, damping: 24 })
+  const sry = useSpring(ry, { stiffness: 220, damping: 24 })
+  const slift = useSpring(lift, { stiffness: 240, damping: 26 })
+
   // Close on ESC
   useEffect(() => {
     const onKeyDown = (e) => {
@@ -73,14 +81,23 @@ export default function Navbar() {
       />
 
       <div className="mx-auto max-w-6xl px-4 pt-3">
-        <motion.div
-          style={{ perspective: 900 }}
-          className="relative"
-        >
+        <motion.div style={{ perspective: 900 }} className="relative">
           <motion.div
-            whileHover={{ rotateX: 9, rotateY: -10, y: -2 }}
-            transition={{ type: 'spring', stiffness: 220, damping: 22 }}
-            style={{ transformStyle: 'preserve-3d' }}
+            onMouseMove={(e) => {
+              const r = e.currentTarget.getBoundingClientRect()
+              const px = (e.clientX - r.left) / r.width
+              const py = (e.clientY - r.top) / r.height
+              const max = 10
+              rx.set((0.5 - py) * max)
+              ry.set((px - 0.5) * max)
+              lift.set(-2)
+            }}
+            onMouseLeave={() => {
+              rx.set(0)
+              ry.set(0)
+              lift.set(0)
+            }}
+            style={{ transformStyle: 'preserve-3d', rotateX: srx, rotateY: sry, y: slift }}
             className="relative rounded-2xl border border-white/10 bg-ink-950/55 px-4 shadow-[0_12px_40px_-24px_rgba(0,0,0,0.85)] backdrop-blur"
           >
             {/* glass edge + sheen */}
