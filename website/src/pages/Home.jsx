@@ -49,7 +49,10 @@ export default function Home() {
             <motion.h1 variants={fadeUp} className="mt-4 h1">
               {c.heroTitle}
             </motion.h1>
-            <motion.p variants={fadeUp} className="mt-6 prose-lead">
+            <motion.p variants={fadeUp} className="mt-5 text-base font-medium text-white/85 md:text-lg">
+              {c.heroSubline}
+            </motion.p>
+            <motion.p variants={fadeUp} className="mt-3 prose-lead">
               IT Outsource is a fast growing IT company with more than 10 years of experience designing,
               implementing, integrating and supporting different IT solutions.
             </motion.p>
@@ -72,17 +75,13 @@ export default function Home() {
 
           {/* top highlights */}
           <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-3">
-            {[
-              { t: 'IT Professional support', d: 'Timely response to any issue.', icon: icons.support },
-              { t: 'Web development', d: 'Web based B2B & B2C solutions and custom modules.', icon: icons.web },
-              { t: 'Server platforms', d: 'Design, deployment, and support for reliable infrastructure.', icon: icons.server }
-            ].map((x, i) => (
-              <Card key={x.t} className="p-5" revealDelay={0.06 + i * 0.06}>
+            {c.highlights.map((x, i) => (
+              <Card key={x.title} className="p-5" revealDelay={0.06 + i * 0.06}>
                 <div className="flex items-start justify-between gap-4">
-                  <div className="text-sm font-semibold">{x.t}</div>
-                  <Icon as={x.icon} />
+                  <div className="text-sm font-semibold">{x.title}</div>
+                  <Icon as={icons[x.icon] ?? icons.tools} />
                 </div>
-                <div className="mt-2 text-sm text-white/65">{x.d}</div>
+                <div className="mt-2 text-sm text-white/65">{x.description}</div>
               </Card>
             ))}
           </div>
@@ -92,8 +91,8 @@ export default function Home() {
       {/* Services */}
       <Section
         eyebrow={c.services.title}
-        title="What we do"
-        lead="Support, infrastructure and consulting tailored to your needs."
+        title="Services"
+        lead="Delivery-first services built for uptime, security, and scale."
         tight
       >
         <div className="grid gap-4 md:grid-cols-3">
@@ -142,6 +141,16 @@ export default function Home() {
               <Link className="text-sm text-brand-200 hover:text-brand-100" to="/it-consulting-services">
                 View consulting →
               </Link>
+            </div>
+          </Card>
+
+          <Card revealDelay={0.22} className="md:col-span-3">
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <div className="text-sm font-semibold">{c.services.trust.title}</div>
+                <div className="mt-2 text-sm text-white/70">{c.services.trust.description}</div>
+              </div>
+              <Icon as={icons.shield} />
             </div>
           </Card>
         </div>

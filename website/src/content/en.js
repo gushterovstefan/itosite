@@ -6,39 +6,63 @@ export const contentEN = {
   },
   home: {
     heroTitle: 'Make technology an ASSET for your business NOT a PROBLEM',
+    heroSubline: 'From strategy to operations — we design it, build it, secure it, and run it.',
+    highlights: [
+      {
+        title: 'Managed IT Operations',
+        description:
+          'Proactive monitoring, rapid incident resolution, and service continuity you can rely on.',
+        icon: 'support'
+      },
+      {
+        title: 'Cloud & Digital Workplace',
+        description:
+          'Secure Microsoft 365, Entra/Intune, and modern workplace transformations that actually work in production.',
+        icon: 'cloud'
+      },
+      {
+        title: 'Infrastructure & Platforms',
+        description:
+          'Design, deployment, and lifecycle management of hybrid and cloud infrastructure built for resilience.',
+        icon: 'infrastructure'
+      }
+    ],
     services: {
-      title: 'SERVICES',
+      title: 'WHAT WE DO',
       support: {
         title: 'IT SUPPORT SERVICES',
         items: [
-          'Complete IT Support',
-          'Joint IT Support',
-          'Specialized IT Support',
-          'Project IT Support'
+          '24/7 Managed Service Desk',
+          'Endpoint Management (Mac & Windows, Intune, Defender)',
+          'SLA-based Incident & Problem Management',
+          'On-site and Remote Field Support',
+          'Vendor & Escalation Management'
         ]
       },
       infrastructure: {
         title: 'IT INFRASTRUCTURE',
         items: [
-          'Servers and database infrastructure assessment',
-          'Security',
-          'Communication',
-          'Virtualization',
-          'Back up strategy'
+          'Hybrid Cloud Architecture (Azure, VMware, Backup)',
+          'Zero Trust Security & Identity (Entra, MFA, PIM)',
+          'Network Design & Optimization',
+          'Backup, DR, and Business Continuity',
+          'Server & Database Platform Management'
         ]
       },
       consulting: {
         title: 'IT CONSULTING SERVICES',
         items: [
-          'Architecture review and Audit',
-          'Infrastructure consolidation and virtualization',
-          'Architecture design',
-          'Selection and implementation',
-          'IT Security',
-          'Data backup and Disaster Recovery planning',
-          'Networking',
-          'Licenses'
+          'Enterprise Architecture & Technical Due Diligence',
+          'Cloud Migration & Modernization',
+          'Security & Compliance (ISO/GDPR aligned)',
+          'ERP & Business Systems Integration',
+          'Vendor Selection & Technical RFP Support'
         ]
+      },
+      trust: {
+        title: 'Trusted by regulated businesses',
+        description:
+          'We operate in compliant, audit-ready environments (CRO, healthcare, finance, retail) with documented processes and governance.'
       }
     },
     why: {
