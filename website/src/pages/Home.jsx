@@ -71,7 +71,7 @@ export default function Home() {
           </motion.div>
 
           {/* top highlights */}
-          <div className="mt-12 grid gap-4 md:mt-16 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 md:mt-12 md:grid-cols-3">
             {[
               { t: 'IT Professional support', d: 'Timely response to any issue.', icon: icons.support },
               { t: 'Web development', d: 'Web based B2B & B2C solutions and custom modules.', icon: icons.web },
@@ -94,6 +94,7 @@ export default function Home() {
         eyebrow={c.services.title}
         title="What we do"
         lead="Support, infrastructure and consulting tailored to your needs."
+        tight
       >
         <div className="grid gap-4 md:grid-cols-3">
           <Card revealDelay={0.04}>
@@ -147,7 +148,7 @@ export default function Home() {
       </Section>
 
       {/* Why */}
-      <Section eyebrow="Why" title={c.why.title} lead="">
+      <Section eyebrow="Why" title={c.why.title} lead="" tight>
         <div className="grid gap-4 md:grid-cols-2">
           {c.why.blocks.map((b) => (
             <Card key={b.h}>
@@ -159,7 +160,7 @@ export default function Home() {
       </Section>
 
       {/* Benefits */}
-      <Section eyebrow="Benefits" title={c.benefits.title} lead={null}>
+      <Section eyebrow="Benefits" title={c.benefits.title} lead={null} tight>
         <div className="grid gap-4 md:grid-cols-2">
           <Card>
             <BulletList items={c.benefits.items} />

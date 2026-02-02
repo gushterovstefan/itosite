@@ -1,8 +1,8 @@
 import Reveal from './Reveal.jsx'
 
-export default function Section({ eyebrow, title, lead, children }) {
+export default function Section({ eyebrow, title, lead, children, tight = false }) {
   return (
-    <section className="py-16 md:py-24">
+    <section className={tight ? 'py-10 md:py-14' : 'py-16 md:py-24'}>
       <div className="mx-auto max-w-6xl px-4">
         {eyebrow ? (
           <Reveal>
