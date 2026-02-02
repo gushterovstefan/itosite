@@ -69,37 +69,37 @@ export const contentEN = {
       title: 'Why IT Outsource?',
       blocks: [
         {
-          h: 'IT Outsource offers',
-          p: 'a portfolio of IT Services & Solutions design to correspond to your business needs, budget, time and IT requirements'
+          h: 'Operational excellence',
+          p: 'Delivery-led IT operations with clear ownership, measurable SLAs, and predictable outcomes.'
         },
         {
-          h: 'IT Outsource solutions',
-          p: 'are reliable and designed for long term performance'
+          h: 'Security by design',
+          p: 'Identity-first security and resilient architectures built for real-world threat models and audits.'
         },
         {
-          h: 'Your IT needs',
-          p: 'are places in the hands of our multifunctional and certified experts that use their skills and experience to develop specific solutions that match your requirements'
+          h: 'Senior expertise',
+          p: 'Multidisciplinary engineers who can design, implement, and support the full lifecycle — not just tickets.'
         },
         {
-          h: 'Your Partner',
-          p: 'WE are the RIGHT PARTNER for you, because the CLIENT is the most important and valued element of our business'
+          h: 'Pragmatic modernization',
+          p: 'We modernize what matters (cloud, workplace, infrastructure) without breaking production.'
         }
       ]
     },
     benefits: {
-      title: 'Our Benefits',
+      title: 'What you get',
       items: [
-        'Wide range of IT Solutions & Services',
-        'Our main focus is your IT needs',
-        'Team of multifunctional and certified professionals'
+        'A delivery partner that owns outcomes end-to-end',
+        'Proactive monitoring and rapid incident response',
+        'Documented processes, governance, and clear communication'
       ]
     },
     clientBenefits: {
-      title: 'Our Clients BENEFIT from',
+      title: 'Designed for regulated environments',
       items: [
-        'Established team with more than 10 years of experience',
-        'Timely response to any issue',
-        'Cost efficient services'
+        'Audit-ready operations and change control',
+        'Security and continuity built into day-to-day delivery',
+        'Predictable costs with scalable service models'
       ]
     }
   },
