@@ -28,7 +28,7 @@ export function Icon({ as: As, className = '' }) {
     <As
       aria-hidden="true"
       className={
-        'h-5 w-5 text-brand-200/90 drop-shadow-[0_0_18px_rgba(116,173,60,0.10)] ' +
+        'h-5 w-5 text-brand-200/90 drop-shadow-[0_0_18px_rgba(116,173,60,0.10)] transition-transform duration-300 ease-out group-hover:rotate-[-6deg] group-hover:scale-[1.06] ' +
         className
       }
       strokeWidth={1.8}

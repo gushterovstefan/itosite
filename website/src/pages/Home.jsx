@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Section from '../components/Section.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
+import Particles from '../components/Particles.jsx'
 import { useContent } from '../content/index.jsx'
 import logo from '../assets/logo.png'
 
@@ -25,9 +26,17 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -left-40 -top-40 h-96 w-96 rounded-full bg-brand-500/18 blur-3xl" />
-          <div className="absolute -bottom-56 right-0 h-[32rem] w-[32rem] rounded-full bg-fuchsia-500/15 blur-3xl" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(116,173,60,0.14),transparent_45%),radial-gradient(circle_at_80%_60%,rgba(217,70,239,0.08),transparent_50%)]" />
+          {/* animated gradient glow */}
+          <div className="hero-float absolute -left-40 -top-40 h-96 w-96 rounded-full bg-brand-500/22 blur-3xl" />
+          <div className="hero-float absolute -bottom-56 right-0 h-[32rem] w-[32rem] rounded-full bg-fuchsia-500/18 blur-3xl" />
+          <div className="hero-float absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(116,173,60,0.16),transparent_45%),radial-gradient(circle_at_80%_60%,rgba(217,70,239,0.10),transparent_52%)]" />
+
+          {/* subtle grid + noise */}
+          <div className="absolute inset-0 hero-grid" />
+          <div className="absolute inset-0 hero-noise" />
+
+          {/* floating particles */}
+          <Particles />
 
           {/* big logo watermark */}
           <motion.img

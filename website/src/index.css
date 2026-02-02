@@ -32,3 +32,29 @@ body {
 .h2 {
   @apply text-2xl font-semibold tracking-tight md:text-4xl;
 }
+
+/* Elementra-ish motion background */
+@keyframes floatGradient {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-2%, 1.5%, 0) scale(1.02); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at 35% 25%, rgba(0,0,0,1), rgba(0,0,0,0) 65%);
+}
+
+.hero-noise {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.12) 1px, transparent 0);
+  background-size: 3px 3px;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+}
+
+.hero-float {
+  animation: floatGradient 9s ease-in-out infinite;
+}
