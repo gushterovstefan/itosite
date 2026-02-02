@@ -23,7 +23,8 @@ export function ContentProvider({ children }) {
   }
 
   const value = useMemo(() => {
-    const content = lang === 'bg' ? contentBG : contentEN
+    const picked = lang === 'bg' ? contentBG : contentEN
+    const content = picked || contentEN
     return { lang, setLang, content }
   }, [lang])
 
