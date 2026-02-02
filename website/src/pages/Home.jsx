@@ -39,8 +39,11 @@ export default function Home() {
             transition={{ staggerChildren: 0.06 }}
             className="max-w-3xl"
           >
-            <motion.div variants={fadeUp} className="text-sm text-brand-200/80">
-              IT services & solutions
+            <motion.div variants={fadeUp} className="inline-flex">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-brand-200/90">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-400" aria-hidden="true" />
+                IT services & solutions
+              </span>
             </motion.div>
 
             <motion.h1 variants={fadeUp} className="mt-4 h1">
