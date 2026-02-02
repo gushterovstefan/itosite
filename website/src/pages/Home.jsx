@@ -32,7 +32,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="mx-auto max-w-6xl px-4 pt-20 pb-10 md:pt-28 md:pb-12">
+        <div className="mx-auto max-w-6xl px-4 pt-20 pb-6 md:pt-28 md:pb-8">
           <motion.div
             initial="hidden"
             animate="show"
@@ -71,7 +71,7 @@ export default function Home() {
           </motion.div>
 
           {/* top highlights */}
-          <div className="mt-8 grid gap-4 md:mt-12 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-3">
             {[
               { t: 'IT Professional support', d: 'Timely response to any issue.', icon: icons.support },
               { t: 'Web development', d: 'Web based B2B & B2C solutions and custom modules.', icon: icons.web },
