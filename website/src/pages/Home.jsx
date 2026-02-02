@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Section from '../components/Section.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
+import { Icon, icons } from '../components/Icons.jsx'
 import { contentEN } from '../content/en.js'
 import logo from '../assets/logo.png'
 
@@ -42,16 +43,10 @@ export default function Home() {
               IT services & solutions
             </motion.div>
 
-            <motion.h1
-              variants={fadeUp}
-              className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl"
-            >
+            <motion.h1 variants={fadeUp} className="mt-4 h1">
               {c.heroTitle}
             </motion.h1>
-            <motion.p
-              variants={fadeUp}
-              className="mt-6 text-base leading-relaxed text-white/70 md:text-lg"
-            >
+            <motion.p variants={fadeUp} className="mt-6 prose-lead">
               IT Outsource is a fast growing IT company with more than 10 years of experience designing,
               implementing, integrating and supporting different IT solutions.
             </motion.p>
@@ -75,12 +70,15 @@ export default function Home() {
           {/* top highlights */}
           <div className="mt-12 grid gap-4 md:mt-16 md:grid-cols-3">
             {[
-              { t: 'IT Professional support', d: 'Timely response to any issue.' },
-              { t: 'Web development', d: 'Web based B2B & B2C solutions and custom modules.' },
-              { t: 'Server platforms', d: 'Design, deployment, and support for reliable infrastructure.' }
+              { t: 'IT Professional support', d: 'Timely response to any issue.', icon: icons.support },
+              { t: 'Web development', d: 'Web based B2B & B2C solutions and custom modules.', icon: icons.web },
+              { t: 'Server platforms', d: 'Design, deployment, and support for reliable infrastructure.', icon: icons.server }
             ].map((x, i) => (
               <Card key={x.t} className="p-5" revealDelay={0.06 + i * 0.06}>
-                <div className="text-sm font-semibold">{x.t}</div>
+                <div className="flex items-start justify-between gap-4">
+                  <div className="text-sm font-semibold">{x.t}</div>
+                  <Icon as={x.icon} />
+                </div>
                 <div className="mt-2 text-sm text-white/65">{x.d}</div>
               </Card>
             ))}
@@ -89,10 +87,17 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <Section eyebrow={c.services.title} title="What we do" lead="Support, infrastructure and consulting tailored to your needs.">
+      <Section
+        eyebrow={c.services.title}
+        title="What we do"
+        lead="Support, infrastructure and consulting tailored to your needs."
+      >
         <div className="grid gap-4 md:grid-cols-3">
-          <Card>
-            <div className="text-sm font-semibold">{c.services.support.title}</div>
+          <Card revealDelay={0.04}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">{c.services.support.title}</div>
+              <Icon as={icons.support} />
+            </div>
             <div className="mt-4">
               <BulletList items={c.services.support.items} />
             </div>
@@ -102,19 +107,30 @@ export default function Home() {
               </Link>
             </div>
           </Card>
-          <Card>
-            <div className="text-sm font-semibold">{c.services.infrastructure.title}</div>
+
+          <Card revealDelay={0.10}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">{c.services.infrastructure.title}</div>
+              <Icon as={icons.infrastructure} />
+            </div>
             <div className="mt-4">
               <BulletList items={c.services.infrastructure.items} />
             </div>
             <div className="mt-5">
-              <Link className="text-sm text-brand-200 hover:text-brand-100" to="/it-infrastructure-services">
+              <Link
+                className="text-sm text-brand-200 hover:text-brand-100"
+                to="/it-infrastructure-services"
+              >
                 View infrastructure →
               </Link>
             </div>
           </Card>
-          <Card>
-            <div className="text-sm font-semibold">{c.services.consulting.title}</div>
+
+          <Card revealDelay={0.16}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">{c.services.consulting.title}</div>
+              <Icon as={icons.consulting} />
+            </div>
             <div className="mt-4">
               <BulletList items={c.services.consulting.items} />
             </div>
@@ -157,7 +173,7 @@ export default function Home() {
       {/* CTA */}
       <section className="border-t border-white/10 py-14">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-indigo-500/15 via-white/5 to-fuchsia-500/10 p-8 md:p-12">
+          <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-brand-500/14 via-white/5 to-fuchsia-500/10 p-8 md:p-12">
             <div className="text-xl font-semibold md:text-2xl">Ready to modernize your IT?</div>
             <div className="mt-2 max-w-2xl text-sm text-white/70 md:text-base">
               Your IT needs are placed in the hands of multifunctional and certified experts that use

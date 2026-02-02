@@ -12,9 +12,23 @@ html, body {
 
 body {
   @apply bg-ink-950 text-white antialiased;
+  font-feature-settings: 'ss01' on, 'cv02' on;
 }
 
 /* nicer selection */
 ::selection {
-  background: rgba(99, 102, 241, 0.35);
+  background: rgba(116, 173, 60, 0.30);
+}
+
+/* premium readability helpers */
+.prose-lead {
+  @apply text-base leading-relaxed text-white/70 md:text-lg;
+}
+
+.h1 {
+  @apply text-4xl font-semibold tracking-tight md:text-6xl;
+}
+
+.h2 {
+  @apply text-2xl font-semibold tracking-tight md:text-4xl;
 }

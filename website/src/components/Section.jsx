@@ -13,14 +13,14 @@ export default function Section({ eyebrow, title, lead, children }) {
         ) : null}
         {title ? (
           <Reveal delay={0.04}>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-4xl">
+            <h2 className="mt-3 h2">
               {title}
             </h2>
           </Reveal>
         ) : null}
         {lead ? (
           <Reveal delay={0.08}>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/70 md:text-lg">
+            <p className="mt-4 max-w-3xl prose-lead">
               {lead}
             </p>
           </Reveal>
