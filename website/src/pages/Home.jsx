@@ -32,7 +32,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="mx-auto max-w-6xl px-4 py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-4 pt-20 pb-10 md:pt-28 md:pb-12">
           <motion.div
             initial="hidden"
             animate="show"
