@@ -1,13 +1,23 @@
 import {
   Headset,
-  Globe,
+  LayoutGrid,
   Server,
   Shield,
   Cloud,
-  LayoutGrid,
   Network,
   Search,
-  Wrench
+  Wrench,
+  Phone,
+  Mail,
+  MessageSquare,
+  Target,
+  Eye,
+  Quote,
+  Database,
+  Layers,
+  HardDriveDownload,
+  LifeBuoy,
+  Boxes
 } from 'lucide-react'
 
 /**
@@ -27,13 +37,36 @@ export function Icon({ as: As, className = '' }) {
 }
 
 export const icons = {
+  // homepage highlights
   support: Headset,
   web: LayoutGrid,
   server: Server,
+
+  // service areas
   infrastructure: Network,
   security: Shield,
   cloud: Cloud,
   consulting: Search,
   tools: Wrench,
-  globe: Globe
+
+  // contact
+  phone: Phone,
+  mail: Mail,
+  message: MessageSquare,
+
+  // about
+  mission: Target,
+  vision: Eye,
+  testimonial: Quote,
+
+  // infra sections
+  assessment: Database,
+  virtualization: Layers,
+  backup: HardDriveDownload,
+
+  // support page
+  sla: LifeBuoy,
+
+  // solutions
+  platform: Boxes
 }

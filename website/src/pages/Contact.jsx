@@ -1,5 +1,6 @@
 import Section from '../components/Section.jsx'
 import { Card } from '../components/Cards.jsx'
+import { Icon, icons } from '../components/Icons.jsx'
 import { contentEN } from '../content/en.js'
 
 export default function Contact() {
@@ -9,16 +10,25 @@ export default function Contact() {
     <div>
       <Section eyebrow="Contact" title={c.title} lead={c.lead}>
         <div className="grid gap-4 md:grid-cols-3">
-          <Card className="md:col-span-1">
-            <div className="text-sm font-semibold">Phone</div>
+          <Card className="md:col-span-1" revealDelay={0.04}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">Phone</div>
+              <Icon as={icons.phone} />
+            </div>
             <div className="mt-2 text-sm text-white/70">{c.phone}</div>
           </Card>
-          <Card className="md:col-span-1">
-            <div className="text-sm font-semibold">Email</div>
+          <Card className="md:col-span-1" revealDelay={0.10}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">Email</div>
+              <Icon as={icons.mail} />
+            </div>
             <div className="mt-2 text-sm text-white/70">{c.email}</div>
           </Card>
-          <Card className="md:col-span-1">
-            <div className="text-sm font-semibold">Write us</div>
+          <Card className="md:col-span-1" revealDelay={0.16}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">Write us</div>
+              <Icon as={icons.message} />
+            </div>
             <p className="mt-2 text-sm text-white/70">
               For the development phase we can keep this as a simple form (no database) and later wire it to email/CRM.
             </p>

@@ -1,5 +1,6 @@
 import Section from '../components/Section.jsx'
 import { Card } from '../components/Cards.jsx'
+import { Icon, icons } from '../components/Icons.jsx'
 import { contentEN } from '../content/en.js'
 
 export default function About() {
@@ -9,9 +10,12 @@ export default function About() {
     <div>
       <Section eyebrow="About" title="About" lead={contentEN.shared.tagline}>
         <div className="grid gap-4 md:grid-cols-2">
-          <Card>
-            <div className="text-sm font-semibold">{c.missionTitle}</div>
-            <div className="mt-2 text-sm text-white/70">{c.missionLead}</div>
+          <Card revealDelay={0.04}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">{c.missionTitle}</div>
+              <Icon as={icons.mission} />
+            </div>
+            <div className="mt-3 text-sm text-white/70">{c.missionLead}</div>
             <div className="mt-4 space-y-2 text-sm text-white/70">
               {c.missionBody.map((p) => (
                 <p key={p}>{p}</p>
@@ -19,14 +23,20 @@ export default function About() {
             </div>
           </Card>
 
-          <Card>
-            <div className="text-sm font-semibold">{c.visionTitle}</div>
+          <Card revealDelay={0.10}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">{c.visionTitle}</div>
+              <Icon as={icons.vision} />
+            </div>
             <div className="mt-4 space-y-2 text-sm text-white/70">
               {c.visionBody.map((p) => (
                 <p key={p}>{p}</p>
               ))}
             </div>
-            <div className="mt-6 text-sm font-semibold">{c.purposeTitle}</div>
+            <div className="mt-6 flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">{c.purposeTitle}</div>
+              <Icon as={icons.mission} className="opacity-60" />
+            </div>
             <div className="mt-2 space-y-2 text-sm text-white/70">
               {c.purposeBody.map((p) => (
                 <p key={p}>{p}</p>
@@ -36,8 +46,11 @@ export default function About() {
         </div>
 
         <div className="mt-4">
-          <Card>
-            <div className="text-sm font-semibold">{c.testimonialsTitle}</div>
+          <Card revealDelay={0.16}>
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">{c.testimonialsTitle}</div>
+              <Icon as={icons.testimonial} />
+            </div>
             <div className="mt-4 space-y-4 text-sm text-white/70">
               {c.testimonials.map((t) => (
                 <p key={t}>{t}</p>
