@@ -130,15 +130,65 @@ export const contentEN = {
   },
   consulting: {
     title: 'IT Consulting Services',
-    bullets: [
-      'Architecture review and Audit',
-      'Infrastructure consolidation and virtualization',
-      'Architecture design that corresponds to budget and performance requirements',
-      'Selection and implementation of on premises or cloud based IT infrastructure',
-      'IT Security',
-      'Data backup and Disaster Recovery planning, testing and implementation routines',
-      'Networking',
-      'Licenses'
+    lead:
+      'Executive-level technical clarity — architecture, security, and modernization decisions backed by evidence, not opinion.',
+    subline:
+      'We help you de-risk change, align stakeholders, and execute with measurable outcomes.',
+
+    cards: [
+      {
+        title: 'Enterprise Architecture & Technical Due Diligence',
+        icon: 'consulting',
+        bullets: [
+          'Architecture review and audit across systems, integrations, and dependencies',
+          'Risk identification: security, continuity, vendor lock-in, and scalability',
+          'Decision-ready recommendations with options and trade-offs'
+        ]
+      },
+      {
+        title: 'Cloud Migration & Modernization',
+        icon: 'cloud',
+        bullets: [
+          'Migration strategy: lift-and-shift vs refactor vs platform adoption (PaaS)',
+          'Landing zone and governance: identity, networking, policies, cost controls',
+          'Execution planning with phased cutovers and rollback paths'
+        ]
+      },
+      {
+        title: 'Security & Compliance (ISO/GDPR aligned)',
+        icon: 'security',
+        bullets: [
+          'Security posture assessment and remediation roadmap',
+          'Identity and access governance (MFA, Conditional Access, PIM)',
+          'Controls, evidence, and documentation for audit readiness'
+        ]
+      },
+      {
+        title: 'ERP & Business Systems Integration',
+        icon: 'platform',
+        bullets: [
+          'Integration architecture for ERP, B2B/B2C, and line-of-business systems',
+          'Data flows, identity, and access boundaries defined upfront',
+          'Operational handover: monitoring, incident response, and runbooks'
+        ]
+      },
+      {
+        title: 'Vendor Selection & Technical RFP Support',
+        icon: 'tools',
+        bullets: [
+          'Requirements definition and evaluation criteria',
+          'RFP technical scoring and proof-of-concept guidance',
+          'Contract risk review: SLAs, support, security, and exit strategy'
+        ]
+      }
+    ],
+
+    governanceTitle: 'Governance & Delivery',
+    governance: [
+      'Clear scope and deliverables with acceptance criteria',
+      'Change management to keep stakeholders aligned',
+      'Documentation: architecture diagrams, runbooks, and operational handover',
+      'Post-project review: outcomes, risks, and next-step roadmap'
     ]
   },
   infrastructure: {
