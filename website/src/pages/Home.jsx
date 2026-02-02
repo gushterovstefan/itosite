@@ -93,6 +93,11 @@ export default function Home() {
           <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-3">
             {c.highlights.map((x, i) => (
               <Card key={x.title} className="p-5" revealDelay={0.06 + i * 0.06}>
+                {/* brand reveal on hover */}
+                <div className="pointer-events-none absolute left-5 top-5 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                  <div className="text-sm font-semibold tracking-wide text-white">IT Outsource LTD</div>
+                </div>
+
                 <div className="flex items-start justify-between gap-4">
                   <div className="text-sm font-semibold">{x.title}</div>
                   <Icon as={icons[x.icon] ?? icons.tools} />
