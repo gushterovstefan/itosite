@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Reveal from './Reveal.jsx'
 import CardSpotlight from './CardSpotlight.jsx'
 
-export function Card({ children, className = '', revealDelay = 0 }) {
+export function Card({ children, className = '', revealDelay = 0, underlay = null }) {
   return (
     <Reveal delay={revealDelay}>
       <motion.div
@@ -13,7 +13,8 @@ export function Card({ children, className = '', revealDelay = 0 }) {
           className
         }
       >
-        <CardSpotlight />
+        <CardSpotlight className="z-0" />
+        {underlay ? <div className="absolute inset-0 z-[1]">{underlay}</div> : null}
         <div className="relative z-10">{children}</div>
       </motion.div>
     </Reveal>
