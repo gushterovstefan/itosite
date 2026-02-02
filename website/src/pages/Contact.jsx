@@ -50,9 +50,10 @@ export default function Contact() {
               />
               <button
                 type="button"
-                className="rounded-full bg-brand-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-brand-400"
+                className="btn-sheen btn-primary rounded-full bg-brand-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-brand-400"
               >
-                {ui.sendDemo}
+                <span className="sheen" aria-hidden="true" />
+                <span>{ui.sendDemo}</span>
               </button>
             </form>
           </Card>

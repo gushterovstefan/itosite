@@ -2,6 +2,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { motion, AnimatePresence, useScroll } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { useContent } from '../content/index.jsx'
+import SheenButton from './SheenButton.jsx'
 import logo from '../assets/logo.png'
 
 const navLinkClass = ({ isActive }) =>
@@ -76,12 +77,9 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link
-            to="/contacts"
-            className="hidden rounded-full bg-brand-500 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-brand-500/20 transition hover:bg-brand-400 md:inline-flex"
-          >
+          <SheenButton to="/contacts" className="hidden px-4 py-2 md:inline-flex">
             {ui.getQuote}
-          </Link>
+          </SheenButton>
 
           <motion.a
             whileHover={{ y: -1 }}
@@ -151,13 +149,13 @@ export default function Navbar() {
                 </div>
 
                 <div className="mt-3 grid gap-2">
-                  <Link
+                  <SheenButton
                     to="/contacts"
                     onClick={() => setOpen(false)}
-                    className="inline-flex items-center justify-center rounded-xl bg-brand-500 px-4 py-3 text-sm font-semibold text-white hover:bg-brand-400"
+                    className="w-full rounded-xl px-4 py-3 text-sm font-semibold"
                   >
                     {ui.getQuote}
-                  </Link>
+                  </SheenButton>
 
                   <button
                     type="button"

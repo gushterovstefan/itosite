@@ -79,6 +79,64 @@ body {
   pointer-events: none;
 }
 
+/* cursor-follow sheen */
+.btn-sheen {
+  --mx: 40px;
+  --my: 20px;
+}
+
+.btn-sheen::marker { content: none; }
+
+.btn-sheen::before {
+  /* keep existing glow but slightly stronger */
+  opacity: 0.85;
+}
+
+.btn-sheen .sheen {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(240px circle at var(--mx) var(--my), rgba(255,255,255,0.22), transparent 60%);
+  opacity: 0;
+  transition: opacity 240ms ease;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+.btn-sheen:hover .sheen {
+  opacity: 1;
+}
+
+/* section background drift */
+@keyframes sectionDrift {
+  0% { background-position: 20% 20%, 80% 60%; }
+  50% { background-position: 30% 10%, 70% 70%; }
+  100% { background-position: 20% 20%, 80% 60%; }
+}
+
+.section-bg {
+  position: relative;
+}
+
+.section-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(116,173,60,0.10), transparent 45%),
+    radial-gradient(circle at 80% 60%, rgba(217,70,239,0.08), transparent 50%);
+  animation: sectionDrift 10s ease-in-out infinite;
+}
+
+.section-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
 .btn-primary > span {
   position: relative;
   z-index: 1;

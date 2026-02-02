@@ -5,6 +5,7 @@ import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import Particles from '../components/Particles.jsx'
 import Spotlight from '../components/Spotlight.jsx'
+import SheenButton from '../components/SheenButton.jsx'
 import { useContent } from '../content/index.jsx'
 import logo from '../assets/logo.png'
 
@@ -78,12 +79,7 @@ export default function Home() {
             </motion.p>
 
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/contacts"
-                className="btn-primary rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/20 hover:bg-brand-400"
-              >
-                <span>{ui.contactUs}</span>
-              </Link>
+              <SheenButton to="/contacts">{ui.contactUs}</SheenButton>
               <Link
                 to="/solutions"
                 className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/10"
@@ -109,7 +105,8 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <Section eyebrow={ui.servicesEyebrow} title={ui.servicesTitle} lead={ui.servicesLead} tight>
+      <div className="section-bg">
+        <Section eyebrow={ui.servicesEyebrow} title={ui.servicesTitle} lead={ui.servicesLead} tight>
         <div className="grid gap-4 md:grid-cols-3">
           <Card revealDelay={0.04}>
             <div className="flex items-start justify-between gap-4">
@@ -169,6 +166,7 @@ export default function Home() {
           </Card>
         </div>
       </Section>
+      </div>
 
       {/* Why */}
       <Section eyebrow={ui.whyEyebrow} title={c.why.title} lead="" tight>
@@ -219,12 +217,9 @@ export default function Home() {
               their skills and experience to develop specific solutions that match your requirements.
             </div>
             <div className="mt-6">
-              <Link
-                to="/contacts"
-                className="inline-flex rounded-full bg-brand-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-brand-400"
-              >
+              <SheenButton to="/contacts" className="px-5 py-2.5 text-sm font-medium">
                 {ui.talkToUs}
-              </Link>
+              </SheenButton>
             </div>
           </div>
         </div>
