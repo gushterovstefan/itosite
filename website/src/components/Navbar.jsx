@@ -1,5 +1,5 @@
 import { NavLink, Link } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useScroll } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { useContent } from '../content/index.jsx'
 import logo from '../assets/logo.png'
@@ -14,6 +14,7 @@ export default function Navbar() {
   const { lang, setLang, content } = useContent()
   const ui = content.shared.ui
   const [open, setOpen] = useState(false)
+  const { scrollYProgress } = useScroll()
 
   // Close on ESC
   useEffect(() => {
@@ -44,6 +45,12 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink-950/70 backdrop-blur">
+      {/* scroll progress */}
+      <motion.div
+        className="absolute left-0 top-0 h-[2px] w-full origin-left bg-gradient-to-r from-brand-400 via-brand-300 to-fuchsia-400"
+        style={{ scaleX: scrollYProgress }}
+      />
+
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img src={logo} alt="IT Outsource Ltd." className="h-10 w-auto" loading="eager" />

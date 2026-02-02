@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Section from '../components/Section.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
@@ -16,6 +16,10 @@ export default function Home() {
   const c = content.home
   const ui = content.shared.ui
 
+  const { scrollY } = useScroll()
+  const watermarkY = useTransform(scrollY, [0, 600], [0, 40])
+  const watermarkRotate = useTransform(scrollY, [0, 600], [0, -6])
+
   return (
     <div id="top">
       {/* Hero */}
@@ -26,11 +30,12 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(116,173,60,0.14),transparent_45%),radial-gradient(circle_at_80%_60%,rgba(217,70,239,0.08),transparent_50%)]" />
 
           {/* big logo watermark */}
-          <img
+          <motion.img
             src={logo}
             alt=""
             aria-hidden="true"
-            className="absolute right-[-6rem] top-1/2 h-[28rem] w-[28rem] -translate-y-1/2 opacity-[0.09] blur-[0.2px] md:right-[-4rem] md:h-[40rem] md:w-[40rem]"
+            style={{ y: watermarkY, rotate: watermarkRotate }}
+            className="absolute right-[-6rem] top-1/2 h-[28rem] w-[28rem] -translate-y-1/2 opacity-[0.10] blur-[0.2px] md:right-[-4rem] md:h-[40rem] md:w-[40rem]"
           />
         </div>
 

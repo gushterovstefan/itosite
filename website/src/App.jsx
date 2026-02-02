@@ -1,6 +1,8 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 import ErrorBoundary from './components/ErrorBoundary.jsx'
 import SiteLayout from './components/SiteLayout.jsx'
+import PageTransition from './components/PageTransition.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Consulting from './pages/Consulting.jsx'
@@ -10,19 +12,23 @@ import Solutions from './pages/Solutions.jsx'
 import Contact from './pages/Contact.jsx'
 
 export default function App() {
+  const location = useLocation()
+
   return (
     <ErrorBoundary>
-      <Routes>
-        <Route element={<SiteLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/it-consulting-services" element={<Consulting />} />
-          <Route path="/it-support-services" element={<Support />} />
-          <Route path="/it-infrastructure-services" element={<Infrastructure />} />
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/contacts" element={<Contact />} />
-        </Route>
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route element={<SiteLayout />}>
+            <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+            <Route path="/about" element={<PageTransition><About /></PageTransition>} />
+            <Route path="/it-consulting-services" element={<PageTransition><Consulting /></PageTransition>} />
+            <Route path="/it-support-services" element={<PageTransition><Support /></PageTransition>} />
+            <Route path="/it-infrastructure-services" element={<PageTransition><Infrastructure /></PageTransition>} />
+            <Route path="/solutions" element={<PageTransition><Solutions /></PageTransition>} />
+            <Route path="/contacts" element={<PageTransition><Contact /></PageTransition>} />
+          </Route>
+        </Routes>
+      </AnimatePresence>
     </ErrorBoundary>
   )
 }
