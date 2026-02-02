@@ -143,45 +143,91 @@ export const contentEN = {
   },
   infrastructure: {
     title: 'IT Infrastructure Services',
-    sections: [
+    lead:
+      'Enterprise-grade hybrid infrastructure on Azure, Microsoft 365, VMware and Proxmox — designed, secured, and operated as one controlled system.',
+    subline:
+      'From datacenter to cloud to endpoint — one coherent architecture, one accountability line.',
+    punchline:
+      'Modern infrastructure is hybrid by default — if your provider can’t run Azure, Microsoft 365, VMware and Proxmox together, they are not your provider.',
+    cards: [
       {
-        h: 'Servers and database infrastructure assessment',
+        title: 'Infrastructure Assessment & Roadmap',
+        icon: 'assessment',
         bullets: [
-          'Risk assessment (discovering and preventing loss of services and data)',
-          'Review of your current infrastructure',
-          'Cost effective choice between on premise server, rent data center or cloud IT infrastructure',
-          'Identify gaps in performance and inefficiencies',
-          'Establish plan to handle issues that need immediate resolution',
-          'Build a long – term plan of where we want to be and how we get there'
-        ]
+          'We assess and plan across: On-prem: VMware vSphere, Proxmox VE, SAN/NAS storage, Windows Server, SQL Server, Linux',
+          'Hybrid/Cloud: Microsoft Azure (IaaS/PaaS), Azure Backup, Azure Site Recovery, Azure Networking',
+          'Risk mapping of servers, databases, network, identity, and backup',
+          'Performance and capacity analysis (CPU, RAM, Storage, IOPS)',
+          'TCO comparison: VMware/Proxmox on-prem vs Azure IaaS vs Azure PaaS',
+          'Identification of single points of failure and technical debt',
+          '12–24 month modernization roadmap with clear migration steps'
+        ],
+        definition:
+          'We tell you exactly where your infrastructure is weak, expensive, or risky — and how to fix it.'
       },
       {
-        h: 'Security',
+        title: 'Infrastructure Security & Zero Trust',
+        icon: 'security',
         bullets: [
-          'Analyze your current security and identify vulnerabilities',
-          'Enhance network security with Prevention and Detection Systems and Firewall',
-          'Enhance data protection by implementing clear and centralized policy concerning the access and data sharing in order to prevent your company from spreading confidential information',
-          'Monitoring strategy for network, databases and servers against unauthorized access'
-        ]
+          'Identity: Microsoft Entra ID, MFA, Conditional Access, PIM',
+          'Endpoints: Microsoft Defender, Intune device compliance',
+          'Network: Next-Gen Firewall, IDS/IPS, VLAN segmentation, secure VPN',
+          'Servers: Hardening baselines, patching, configuration control',
+          'Cloud: Microsoft Defender for Cloud, workload protection'
+        ],
+        definition:
+          'We reduce your attack surface, continuously monitor it, and enforce least privilege everywhere.'
       },
       {
-        h: 'Communication',
+        title: 'Secure Connectivity',
+        icon: 'infrastructure',
         bullets: [
-          'Protect your company data connecting all offices in one secure Virtual private network (VPN)',
-          'Let your employees access files, applications and other resources from any point of the word using secure and crypt communication'
-        ]
+          'Site-to-site IPsec VPN between branches, datacenters, and Azure',
+          'Secure remote access (SSL/Zero Trust access)',
+          'Redundant links where business criticality requires it',
+          'Secure access to: On-prem apps on VMware/Proxmox',
+          'Secure access to: Workloads in Microsoft Azure',
+          'Secure access to: Microsoft 365 (O365) services'
+        ],
+        definition: 'Encrypted, resilient connectivity that keeps working when things fail.'
       },
       {
-        h: 'Virtualization',
+        title: 'Virtualization & Platform Optimization',
+        icon: 'virtualization',
         bullets: [
-          'Virtualize your servers to cut expenses of buying and replacing servers',
-          'Optimize and allocate your server resources in a cost effective way that will lead to reliable and sustainable IT services',
-          'We could build virtual environment using the well-known VM Ware and Microsoft Hyper-V as well as using free Linux based solution'
-        ]
+          'VMware vSphere — enterprise virtualization, HA, vMotion, clustering',
+          'Proxmox VE — cost-efficient open-source virtualization with ZFS',
+          'Workload right-sizing and performance tuning',
+          'Server consolidation to cut hardware and power costs',
+          'Hybrid readiness to extend workloads to Azure'
+        ],
+        definition: 'Fewer physical servers, better performance, lower operating cost.'
       },
       {
-        h: 'Back up strategy and Disaster Recovery Planning',
-        bullets: ['Monitor Data Backup Services', 'Disaster Recovery Solutions', 'Prevention']
+        title: 'Backup & Disaster Recovery (BCDR)',
+        icon: 'backup',
+        bullets: [
+          'Veeam for VMware, Proxmox, and Microsoft 365 backups',
+          'Azure Backup and Azure Site Recovery for hybrid DR',
+          'Defined RPO/RTO per system',
+          'Regular recovery testing (not just backup creation)',
+          'Documented failover and recovery runbooks'
+        ],
+        definition: 'Backups that are monitored, tested, and actually restorable.'
+      },
+      {
+        title: 'Hybrid Cloud & Platform Operations',
+        icon: 'cloud',
+        bullets: [
+          'Microsoft Azure Virtual Machines, Azure Networking, Azure Backup, Azure Monitor',
+          'Cloud cost governance and FinOps controls',
+          'Microsoft 365 (O365) governance: Entra ID, Intune, Defender, SharePoint, Exchange, Teams',
+          'Tenant security, data protection, and lifecycle management',
+          'On-prem (VMware/Proxmox) platform lifecycle management (patching, updates, monitoring)',
+          'Storage, backup, and performance optimization'
+        ],
+        definition:
+          'We don’t just build infrastructure — we run it, measure it, and keep it compliant.'
       }
     ]
   },
