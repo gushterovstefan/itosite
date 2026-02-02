@@ -22,9 +22,6 @@ export default function Infrastructure() {
               <div className="mt-4">
                 <BulletList items={card.bullets} />
               </div>
-              <div className="mt-4 text-sm text-white/70">
-                <span className="font-semibold text-white/85">Definition:</span> {card.definition}
-              </div>
             </Card>
           ))}
         </div>
