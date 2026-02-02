@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Section from '../components/Section.jsx'
-import { Card, BulletList } from '../components/Cards.jsx'
+import { Card, ClickCard, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import Particles from '../components/Particles.jsx'
 import Spotlight from '../components/Spotlight.jsx'
@@ -128,20 +128,21 @@ export default function Home() {
           {/* top highlights */}
           <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-3">
             {c.highlights.map((x, i) => (
-              <Card
+              <ClickCard
                 key={x.title}
+                to={i === 0 ? '/it-support-services' : i === 1 ? '/solutions' : '/it-infrastructure-services'}
                 className="p-5 overflow-visible"
                 revealDelay={0.06 + i * 0.06}
                 underlay={
                   <div className="pointer-events-none absolute -inset-8 -z-10 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
-                      <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-[11px] font-extrabold tracking-[0.34em] text-transparent opacity-[0.22]">
+                      <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-[15px] font-extrabold tracking-[0.28em] text-transparent opacity-[0.22]">
                         IT
                       </span>
-                      <span className="mx-3 text-[11px] font-extrabold tracking-[0.34em] text-white/20">
+                      <span className="mx-3 text-[15px] font-extrabold tracking-[0.28em] text-white/20">
                         OUTSOURCE
                       </span>
-                      <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-[11px] font-extrabold tracking-[0.34em] text-transparent opacity-[0.18]">
+                      <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-[15px] font-extrabold tracking-[0.28em] text-transparent opacity-[0.18]">
                         LTD
                       </span>
                     </div>
@@ -153,7 +154,7 @@ export default function Home() {
                   <Icon as={icons[x.icon] ?? icons.tools} />
                 </div>
                 <div className="mt-2 text-sm text-white/65">{x.description}</div>
-              </Card>
+              </ClickCard>
             ))}
           </div>
         </div>
@@ -162,7 +163,7 @@ export default function Home() {
       {/* Services */}
       <Section eyebrow={ui.servicesEyebrow} title={ui.servicesTitle} lead={ui.servicesLead} tight>
         <div className="grid gap-4 md:grid-cols-3">
-          <Card revealDelay={0.04}>
+          <ClickCard to="/it-support-services" revealDelay={0.04}>
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.services.support.title}</div>
               <Icon as={icons.support} />
@@ -171,13 +172,13 @@ export default function Home() {
               <BulletList items={c.services.support.items} />
             </div>
             <div className="mt-5">
-              <Link className="text-sm text-brand-200 hover:text-brand-100" to="/it-support-services">
+              <span className="text-sm text-brand-200 group-hover:text-brand-100">
                 {ui.support} →
-              </Link>
+              </span>
             </div>
-          </Card>
+          </ClickCard>
 
-          <Card revealDelay={0.10}>
+          <ClickCard to="/it-infrastructure-services" revealDelay={0.10}>
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.services.infrastructure.title}</div>
               <Icon as={icons.infrastructure} />
@@ -186,13 +187,13 @@ export default function Home() {
               <BulletList items={c.services.infrastructure.items} />
             </div>
             <div className="mt-5">
-              <Link className="text-sm text-brand-200 hover:text-brand-100" to="/it-infrastructure-services">
+              <span className="text-sm text-brand-200 group-hover:text-brand-100">
                 {ui.infrastructure} →
-              </Link>
+              </span>
             </div>
-          </Card>
+          </ClickCard>
 
-          <Card revealDelay={0.16}>
+          <ClickCard to="/it-consulting-services" revealDelay={0.16}>
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.services.consulting.title}</div>
               <Icon as={icons.consulting} />
@@ -201,11 +202,11 @@ export default function Home() {
               <BulletList items={c.services.consulting.items} />
             </div>
             <div className="mt-5">
-              <Link className="text-sm text-brand-200 hover:text-brand-100" to="/it-consulting-services">
+              <span className="text-sm text-brand-200 group-hover:text-brand-100">
                 {ui.consulting} →
-              </Link>
+              </span>
             </div>
-          </Card>
+          </ClickCard>
 
           <Card revealDelay={0.22} className="md:col-span-3">
             <div className="flex items-start justify-between gap-4">
