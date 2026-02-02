@@ -75,13 +75,13 @@ export default function Home() {
               transition={{ duration: 0.2 }}
             >
               <div className="-translate-x-1/2 -translate-y-10 whitespace-nowrap opacity-0 transition-opacity duration-200 group-hover/hero:opacity-100">
-                <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-[11px] font-extrabold tracking-[0.34em] text-transparent opacity-[0.22]">
+                <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-[15px] font-extrabold tracking-[0.28em] text-transparent opacity-[0.22]">
                   IT
                 </span>
-                <span className="mx-3 text-[11px] font-extrabold tracking-[0.34em] text-white/20">
+                <span className="mx-3 text-[15px] font-extrabold tracking-[0.28em] text-white/20">
                   OUTSOURCE
                 </span>
-                <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-[11px] font-extrabold tracking-[0.34em] text-transparent opacity-[0.18]">
+                <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-fuchsia-300 bg-clip-text text-[15px] font-extrabold tracking-[0.28em] text-transparent opacity-[0.18]">
                   LTD
                 </span>
               </div>
