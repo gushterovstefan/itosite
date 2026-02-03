@@ -9,7 +9,7 @@ export default function Solutions() {
 
   return (
     <div>
-      <Section eyebrow="Solutions" title={c.title} lead={c.lead}>
+      <Section eyebrow={content.shared.ui.solutions} title={c.title} lead={c.lead}>
         <p className="-mt-2 max-w-3xl text-sm text-white/70 md:text-base">{c.subline}</p>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-2">

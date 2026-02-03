@@ -7,10 +7,11 @@ import { useContent } from '../content/index.jsx'
 export default function Support() {
   const { content } = useContent()
   const c = content.support
+  const ui = content.shared.ui
 
   return (
     <div>
-      <Section eyebrow="Services" title={c.title} lead={c.lead}>
+      <Section eyebrow={ui.support} title={c.title} lead={c.lead}>
         <p className="-mt-2 max-w-3xl text-sm text-white/70 md:text-base">{c.subline}</p>
         <p className="mt-4 max-w-3xl text-sm text-white/60">{c.credibility}</p>
 

@@ -6,10 +6,11 @@ import { useContent } from '../content/index.jsx'
 export default function Consulting() {
   const { content } = useContent()
   const c = content.consulting
+  const ui = content.shared.ui
 
   return (
     <div>
-      <Section eyebrow="Services" title={c.title} lead={c.lead}>
+      <Section eyebrow={ui.consulting} title={c.title} lead={c.lead}>
         <p className="-mt-2 max-w-3xl text-sm text-white/70 md:text-base">{c.subline}</p>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
