@@ -142,14 +142,6 @@ export default function Navbar() {
                   {ui.getQuote}
                 </SheenButton>
 
-                <motion.a
-                  whileHover={{ y: -1 }}
-                  whileTap={{ scale: 0.98 }}
-                  href="#top"
-                  className="inline-flex rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs text-white/80 hover:text-white"
-                >
-                  Modern UI (v1)
-                </motion.a>
 
                 <button
                   type="button"
