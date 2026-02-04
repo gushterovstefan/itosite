@@ -44,14 +44,14 @@ function CardShell({ children, className = '', underlay = null, variant = 'defau
       {underlay ? <div className="absolute inset-0 z-[1]">{underlay}</div> : null}
 
       {badge ? (
-        <div className="absolute left-5 top-5 z-20">
-          <span className="inline-flex items-center rounded-full border border-white/10 bg-ink-950/60 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 backdrop-blur">
+        <div className="absolute left-4 top-4 z-20">
+          <span className="inline-flex max-w-[15rem] items-center truncate rounded-full border border-white/10 bg-ink-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 backdrop-blur">
             {badge}
           </span>
         </div>
       ) : null}
 
-      <div className={'relative z-10 ' + className}>{children}</div>
+      <div className={'relative z-10 ' + (badge ? 'pt-8 ' : '') + className}>{children}</div>
     </>
   )
 }
