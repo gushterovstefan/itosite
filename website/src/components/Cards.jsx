@@ -3,20 +3,84 @@ import { useNavigate } from 'react-router-dom'
 import Reveal from './Reveal.jsx'
 import CardSpotlight from './CardSpotlight.jsx'
 
-export function Card({ children, className = '', revealDelay = 0, underlay = null }) {
+const variants = {
+  default: {
+    card: 'border-white/10 bg-white/5',
+    top: 'from-white/10 via-white/5 to-transparent'
+  },
+  brand: {
+    card: 'border-brand-300/15 bg-brand-500/10',
+    top: 'from-brand-400/25 via-white/5 to-transparent'
+  },
+  violet: {
+    card: 'border-fuchsia-300/15 bg-fuchsia-500/10',
+    top: 'from-fuchsia-400/20 via-white/5 to-transparent'
+  },
+  steel: {
+    card: 'border-sky-200/12 bg-sky-500/7',
+    top: 'from-sky-300/18 via-white/5 to-transparent'
+  },
+  amber: {
+    card: 'border-amber-200/12 bg-amber-500/8',
+    top: 'from-amber-300/18 via-white/5 to-transparent'
+  }
+}
+
+function CardShell({ children, className = '', underlay = null, variant = 'default', badge = null }) {
+  const v = variants[variant] ?? variants.default
+
+  return (
+    <>
+      {/* top tint */}
+      <div
+        aria-hidden="true"
+        className={
+          'pointer-events-none absolute inset-0 bg-gradient-to-b opacity-70 ' +
+          v.top
+        }
+      />
+
+      <CardSpotlight className="z-0" />
+      {underlay ? <div className="absolute inset-0 z-[1]">{underlay}</div> : null}
+
+      {badge ? (
+        <div className="absolute left-5 top-5 z-20">
+          <span className="inline-flex items-center rounded-full border border-white/10 bg-ink-950/60 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 backdrop-blur">
+            {badge}
+          </span>
+        </div>
+      ) : null}
+
+      <div className={'relative z-10 ' + className}>{children}</div>
+    </>
+  )
+}
+
+export function Card({
+  children,
+  className = '',
+  revealDelay = 0,
+  underlay = null,
+  variant = 'default',
+  badge = null
+}) {
+  const v = variants[variant] ?? variants.default
+
   return (
     <Reveal delay={revealDelay}>
       <motion.div
         whileHover={{ y: -6, scale: 1.01 }}
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
         className={
-          'group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 md:p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(116,173,60,0.18),0_18px_60px_-28px_rgba(0,0,0,0.8)] ' +
+          'group relative overflow-hidden rounded-2xl border p-5 md:p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(116,173,60,0.18),0_18px_60px_-28px_rgba(0,0,0,0.8)] ' +
+          v.card +
+          ' ' +
           className
         }
       >
-        <CardSpotlight className="z-0" />
-        {underlay ? <div className="absolute inset-0 z-[1]">{underlay}</div> : null}
-        <div className="relative z-10">{children}</div>
+        <CardShell underlay={underlay} variant={variant} badge={badge}>
+          {children}
+        </CardShell>
       </motion.div>
     </Reveal>
   )
@@ -27,7 +91,9 @@ export function ClickCard({
   children,
   className = '',
   revealDelay = 0,
-  underlay = null
+  underlay = null,
+  variant = 'default',
+  badge = null
 }) {
   const nav = useNavigate()
   const reduce = useReducedMotion()
@@ -55,6 +121,8 @@ export function ClickCard({
     nav(to)
   }
 
+  const v = variants[variant] ?? variants.default
+
   return (
     <Reveal delay={revealDelay}>
       <motion.button
@@ -65,13 +133,15 @@ export function ClickCard({
         whileTap={reduce ? undefined : { scale: 0.985 }}
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
         className={
-          'group relative w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 text-left md:p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(116,173,60,0.18),0_18px_60px_-28px_rgba(0,0,0,0.8)] focus:outline-none focus:ring-2 focus:ring-brand-400/50 ' +
+          'group relative w-full overflow-hidden rounded-2xl border p-5 text-left md:p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(116,173,60,0.18),0_18px_60px_-28px_rgba(0,0,0,0.8)] focus:outline-none focus:ring-2 focus:ring-brand-400/50 ' +
+          v.card +
+          ' ' +
           className
         }
       >
-        <CardSpotlight className="z-0" />
-        {underlay ? <div className="absolute inset-0 z-[1]">{underlay}</div> : null}
-        <div className="relative z-10">{children}</div>
+        <CardShell underlay={underlay} variant={variant} badge={badge}>
+          {children}
+        </CardShell>
       </motion.button>
     </Reveal>
   )

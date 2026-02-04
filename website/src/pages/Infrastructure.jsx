@@ -16,7 +16,7 @@ export default function Infrastructure() {
 
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           {c.cards.map((card, i) => (
-            <Card key={card.title} revealDelay={0.04 + i * 0.04}>
+            <Card key={card.title} revealDelay={0.04 + i * 0.04} variant="steel">
               <div className="flex items-start justify-between gap-4">
                 <div className="text-sm font-semibold">{card.title}</div>
                 <Icon as={icons[card.icon] ?? icons.infrastructure} />

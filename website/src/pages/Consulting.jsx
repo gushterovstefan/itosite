@@ -26,7 +26,7 @@ export default function Consulting() {
             </Card>
           ))}
 
-          <Card revealDelay={0.26} className="lg:col-span-2">
+          <Card revealDelay={0.26} className="lg:col-span-2" variant="amber" badge="Governance">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.governanceTitle}</div>
               <Icon as={icons.governance} />

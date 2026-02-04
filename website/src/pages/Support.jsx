@@ -17,7 +17,7 @@ export default function Support() {
 
         <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {/* Card 1 */}
-          <Card revealDelay={0.04} className="lg:col-span-1">
+          <Card revealDelay={0.04} className="lg:col-span-1" variant="brand" badge="SLA">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <div className="text-sm font-semibold">{c.serviceModelsTitle}</div>
@@ -31,7 +31,7 @@ export default function Support() {
           </Card>
 
           {/* Card 2 */}
-          <Card revealDelay={0.10} className="lg:col-span-1">
+          <Card revealDelay={0.10} className="lg:col-span-1" variant="steel" badge="Operations">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.deliveryModelTitle}</div>
               <Icon as={icons.support} />
@@ -40,7 +40,7 @@ export default function Support() {
           </Card>
 
           {/* Card 3 */}
-          <Card revealDelay={0.16} className="lg:col-span-1">
+          <Card revealDelay={0.16} className="lg:col-span-1" variant="amber" badge="Governance">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.governanceTitle}</div>
               <Icon as={icons.governance} />

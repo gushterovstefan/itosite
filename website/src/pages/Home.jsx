@@ -176,6 +176,8 @@ export default function Home() {
               <ClickCard
                 key={x.title}
                 to={i === 0 ? '/it-support-services' : i === 1 ? '/solutions' : '/it-infrastructure-services'}
+                variant={i === 0 ? 'brand' : i === 1 ? 'violet' : 'steel'}
+                badge={i === 0 ? 'Managed support' : i === 1 ? 'Solutions' : 'Infrastructure'}
                 className="p-5 overflow-visible"
                 revealDelay={0.06 + i * 0.06}
                 underlay={
@@ -208,7 +210,7 @@ export default function Home() {
       {/* Services */}
       <Section eyebrow={ui.servicesEyebrow} title={ui.servicesTitle} lead={ui.servicesLead} tight>
         <div className="grid gap-4 md:grid-cols-3">
-          <ClickCard to="/it-support-services" revealDelay={0.04}>
+          <ClickCard to="/it-support-services" revealDelay={0.04} variant="brand" badge="24/7">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.services.support.title}</div>
               <Icon as={icons.support} />
@@ -223,7 +225,7 @@ export default function Home() {
             </div>
           </ClickCard>
 
-          <ClickCard to="/it-infrastructure-services" revealDelay={0.10}>
+          <ClickCard to="/it-infrastructure-services" revealDelay={0.10} variant="steel" badge="Platforms">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.services.infrastructure.title}</div>
               <Icon as={icons.infrastructure} />
@@ -238,7 +240,7 @@ export default function Home() {
             </div>
           </ClickCard>
 
-          <ClickCard to="/it-consulting-services" revealDelay={0.16}>
+          <ClickCard to="/it-consulting-services" revealDelay={0.16} variant="violet" badge="Strategy">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.services.consulting.title}</div>
               <Icon as={icons.consulting} />
@@ -253,7 +255,7 @@ export default function Home() {
             </div>
           </ClickCard>
 
-          <Card revealDelay={0.22} className="md:col-span-3">
+          <Card revealDelay={0.22} className="md:col-span-3" variant="amber" badge="Trust & compliance">
             <div className="flex items-start justify-between gap-4">
               <div>
                 <div className="text-sm font-semibold">{c.services.trust.title}</div>

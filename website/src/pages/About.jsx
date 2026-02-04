@@ -11,7 +11,7 @@ export default function About() {
     <div>
       <Section eyebrow={content.shared.ui.about} title={content.shared.ui.about} lead={content.shared.tagline}>
         <div className="grid gap-4 md:grid-cols-2">
-          <Card revealDelay={0.04}>
+          <Card revealDelay={0.04} variant="steel" badge="Mission">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.missionTitle}</div>
               <Icon as={icons.mission} />
@@ -24,7 +24,7 @@ export default function About() {
             </div>
           </Card>
 
-          <Card revealDelay={0.10}>
+          <Card revealDelay={0.10} variant="violet" badge="Vision">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.visionTitle}</div>
               <Icon as={icons.vision} />
@@ -47,7 +47,7 @@ export default function About() {
         </div>
 
         <div className="mt-4">
-          <Card revealDelay={0.16}>
+          <Card revealDelay={0.16} variant="brand" badge="Values">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.testimonialsTitle}</div>
               <Icon as={icons.testimonial} />
