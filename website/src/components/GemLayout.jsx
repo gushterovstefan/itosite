@@ -6,7 +6,7 @@ export default function GemLayout() {
   return (
     <div className="min-h-dvh bg-ink-950 text-white">
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-14 md:pt-16">
         <Outlet />
       </main>
       <Footer />
