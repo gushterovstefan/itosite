@@ -2,7 +2,7 @@ import Reveal from './Reveal.jsx'
 
 export default function GemSection({ eyebrow, title, lead, children }) {
   return (
-    <section className="py-10 md:py-12">
+    <section className="py-8 md:py-10">
       <div className="mx-auto max-w-6xl px-4">
         {eyebrow ? (
           <Reveal>
@@ -21,7 +21,7 @@ export default function GemSection({ eyebrow, title, lead, children }) {
             <p className="mt-2 max-w-3xl text-base text-white/70 md:text-lg">{lead}</p>
           </Reveal>
         ) : null}
-        {children ? <div className="mt-6">{children}</div> : null}
+        {children ? <div className="mt-5">{children}</div> : null}
       </div>
     </section>
   )
