@@ -1,4 +1,5 @@
-import Section from '../components/Section.jsx'
+import PageHero from '../components/PageHero.jsx'
+import GemSection from '../components/GemSection.jsx'
 import { Card } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import { useContent } from '../content/index.jsx'
@@ -9,7 +10,27 @@ export default function About() {
 
   return (
     <div>
-      <Section eyebrow={content.shared.ui.about} title={content.shared.ui.about} lead={content.shared.tagline}>
+      <PageHero
+        eyebrow={content.shared.ui.about}
+        title={content.shared.ui.about}
+        lead={content.shared.tagline}
+        subline={null}
+        primaryCta={{ to: '/contacts', label: content.shared.ui.contactUs ?? content.shared.ui.contact }}
+        secondaryCta={{ to: '/', label: content.shared.ui.home }}
+        aside={{
+          eyebrow: 'Company',
+          title: 'IT Outsource Ltd.',
+          lead: 'Designing, implementing, integrating and supporting IT solutions.',
+          icon: 'mission',
+          items: [
+            { k: 'Focus', v: 'Quality' },
+            { k: 'Approach', v: 'Pragmatic' },
+            { k: 'Delivery', v: 'Reliable' }
+          ]
+        }}
+      />
+
+      <GemSection eyebrow={content.shared.ui.about} title={content.shared.ui.about} lead={content.shared.tagline}>
         <div className="grid gap-4 md:grid-cols-2">
           <Card revealDelay={0.04} variant="steel" badge="Mission">
             <div className="flex items-start justify-between gap-4">
@@ -59,7 +80,7 @@ export default function About() {
             </div>
           </Card>
         </div>
-      </Section>
+      </GemSection>
     </div>
   )
 }

@@ -1,4 +1,5 @@
-import Section from '../components/Section.jsx'
+import PageHero from '../components/PageHero.jsx'
+import GemSection from '../components/GemSection.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import InfoList from '../components/InfoList.jsx'
@@ -11,11 +12,28 @@ export default function Support() {
 
   return (
     <div>
-      <Section eyebrow={ui.support} title={c.title} lead={c.lead}>
-        <p className="-mt-2 max-w-3xl text-sm text-white/70 md:text-base">{c.subline}</p>
-        <p className="mt-4 max-w-3xl text-sm text-white/60">{c.credibility}</p>
+      <PageHero
+        eyebrow={ui.support}
+        title={c.title}
+        lead={c.lead}
+        subline={c.subline}
+        primaryCta={{ to: '/contacts', label: ui.contactUs ?? ui.contact }}
+        secondaryCta={{ to: '/solutions', label: ui.exploreSolutions ?? ui.solutions }}
+        aside={{
+          eyebrow: 'Managed support',
+          title: 'SLA-driven operations',
+          lead: c.credibility,
+          icon: 'sla',
+          items: [
+            { k: 'Coverage', v: '24/7' },
+            { k: 'Escalation', v: 'Clear tiers' },
+            { k: 'Reporting', v: 'Monthly' }
+          ]
+        }}
+      />
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-3">
+      <GemSection eyebrow="Support" title={c.serviceModelsTitle} lead={c.credibility}>
+        <div className="grid gap-4 lg:grid-cols-3">
           {/* Card 1 */}
           <Card revealDelay={0.04} className="lg:col-span-1" variant="brand" badge="SLA">
             <div className="flex items-start justify-between gap-4">
@@ -50,7 +68,7 @@ export default function Support() {
             </div>
           </Card>
         </div>
-      </Section>
+      </GemSection>
     </div>
   )
 }

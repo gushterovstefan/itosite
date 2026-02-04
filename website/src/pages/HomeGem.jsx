@@ -2,6 +2,8 @@ import { lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import GemSection from '../components/GemSection.jsx'
+import KpiStrip from '../components/KpiStrip.jsx'
+import Stepper from '../components/Stepper.jsx'
 import { ClickCard } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import SheenButton from '../components/SheenButton.jsx'
@@ -107,6 +109,18 @@ export default function HomeGem() {
         </div>
       </section>
 
+      {/* KPI strip */}
+      <GemSection eyebrow="At a glance" title="Delivery KPIs" lead="Operational discipline with enterprise-ready controls.">
+        <KpiStrip
+          items={[
+            { value: '10+ yrs', label: 'Experience', note: 'Design · Integrate · Support' },
+            { value: '24/7', label: 'Operations', note: 'SLA-driven support' },
+            { value: 'MFA', label: 'Security baseline', note: 'Hardening + policies' },
+            { value: 'Fast', label: 'Response times', note: 'Clear escalation paths' }
+          ]}
+        />
+      </GemSection>
+
       {/* Sections reusing only our text */}
       <GemSection eyebrow={ui.servicesEyebrow} title={ui.servicesTitle} lead={ui.servicesLead}>
         <div className="grid gap-4 md:grid-cols-3">
@@ -134,6 +148,18 @@ export default function HomeGem() {
             <div className="mt-3 text-sm text-white/70">{c.services.consulting.items[0]}</div>
           </ClickCard>
         </div>
+      </GemSection>
+
+      {/* Stepper */}
+      <GemSection eyebrow="Process" title="How we deliver" lead="A clear, repeatable engagement model — from assessment to ongoing support.">
+        <Stepper
+          steps={[
+            { title: 'Assess', icon: 'consulting', body: 'Understand requirements, risks, and current state.' },
+            { title: 'Design', icon: 'platform', body: 'Define architecture, security, and a delivery plan.' },
+            { title: 'Implement', icon: 'tools', body: 'Build, integrate, automate, and document.' },
+            { title: 'Run', icon: 'support', body: 'Operate with monitoring, SLAs, and continuous improvement.' }
+          ]}
+        />
       </GemSection>
     </div>
   )

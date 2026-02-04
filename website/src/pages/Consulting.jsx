@@ -1,4 +1,5 @@
-import Section from '../components/Section.jsx'
+import PageHero from '../components/PageHero.jsx'
+import GemSection from '../components/GemSection.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import { useContent } from '../content/index.jsx'
@@ -10,10 +11,28 @@ export default function Consulting() {
 
   return (
     <div>
-      <Section eyebrow={ui.consulting} title={c.title} lead={c.lead}>
-        <p className="-mt-2 max-w-3xl text-sm text-white/70 md:text-base">{c.subline}</p>
+      <PageHero
+        eyebrow={ui.consulting}
+        title={c.title}
+        lead={c.lead}
+        subline={c.subline}
+        primaryCta={{ to: '/contacts', label: ui.contactUs ?? ui.contact }}
+        secondaryCta={{ to: '/solutions', label: ui.exploreSolutions ?? ui.solutions }}
+        aside={{
+          eyebrow: 'Consulting',
+          title: 'Plan with confidence',
+          lead: 'Architecture, security and governance — aligned to business needs.',
+          icon: 'consulting',
+          items: [
+            { k: 'Roadmaps', v: 'Practical' },
+            { k: 'Security', v: 'Built-in' },
+            { k: 'Docs', v: 'Included' }
+          ]
+        }}
+      />
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-2">
+      <GemSection eyebrow={ui.consulting} title={c.title} lead={c.subline}>
+        <div className="grid gap-4 lg:grid-cols-2">
           {c.cards.map((card, i) => (
             <Card key={card.title} revealDelay={0.04 + i * 0.04}>
               <div className="flex items-start justify-between gap-4">
@@ -36,7 +55,7 @@ export default function Consulting() {
             </div>
           </Card>
         </div>
-      </Section>
+      </GemSection>
     </div>
   )
 }

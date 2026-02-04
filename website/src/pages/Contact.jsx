@@ -1,4 +1,5 @@
-import Section from '../components/Section.jsx'
+import PageHero from '../components/PageHero.jsx'
+import GemSection from '../components/GemSection.jsx'
 import { Card } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import { useContent } from '../content/index.jsx'
@@ -10,7 +11,27 @@ export default function Contact() {
 
   return (
     <div>
-      <Section eyebrow={ui.contact} title={c.title} lead={c.lead}>
+      <PageHero
+        eyebrow={ui.contact}
+        title={c.title}
+        lead={c.lead}
+        subline={null}
+        primaryCta={{ to: '/it-support-services', label: ui.support }}
+        secondaryCta={{ to: '/solutions', label: ui.solutions }}
+        aside={{
+          eyebrow: 'Contact',
+          title: 'Let’s talk',
+          lead: 'Reach us by phone, email, or leave a message (demo form).',
+          icon: 'message',
+          items: [
+            { k: 'Response', v: 'Fast' },
+            { k: 'Support', v: '24/7' },
+            { k: 'Time zone', v: 'EET' }
+          ]
+        }}
+      />
+
+      <GemSection eyebrow={ui.contact} title={c.title} lead={c.lead}>
         <div className="grid gap-4 md:grid-cols-3">
           <Card className="md:col-span-1" revealDelay={0.04}>
             <div className="flex items-start justify-between gap-4">
@@ -58,7 +79,7 @@ export default function Contact() {
             </form>
           </Card>
         </div>
-      </Section>
+      </GemSection>
     </div>
   )
 }
