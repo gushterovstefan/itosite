@@ -62,22 +62,10 @@ export default function HomeGem() {
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                 className="rounded-3xl border border-black/10 bg-white/70 p-8"
               >
-                <div className="relative">
-                  {/* subtle brand mark (blended, not a stuck box) */}
-                  <div className="pointer-events-none absolute right-2 top-2 opacity-70 md:right-4 md:top-4">
-                    <img
-                      src={logo}
-                      alt=""
-                      aria-hidden="true"
-                      className="h-10 w-auto mix-blend-multiply md:h-12"
-                    />
-                  </div>
-
-                  <div>
-                    <div className="text-xs font-semibold uppercase tracking-[0.28em] text-ink-900/55">Enterprise delivery</div>
-                    <div className="mt-3 text-4xl font-semibold tracking-tight text-ink-950">10+ years</div>
-                    <div className="mt-2 text-sm text-ink-900/65">Design · Build · Secure · Run</div>
-                  </div>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-ink-900/55">Enterprise delivery</div>
+                  <div className="mt-3 text-4xl font-semibold tracking-tight text-ink-950">10+ years</div>
+                  <div className="mt-2 text-sm text-ink-900/65">Design · Build · Secure · Run</div>
                 </div>
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
