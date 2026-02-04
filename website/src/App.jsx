@@ -1,9 +1,9 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import ErrorBoundary from './components/ErrorBoundary.jsx'
-import SiteLayout from './components/SiteLayout.jsx'
+import GemLayout from './components/GemLayout.jsx'
 import PageTransition from './components/PageTransition.jsx'
-import Home from './pages/Home.jsx'
+import HomeGem from './pages/HomeGem.jsx'
 import About from './pages/About.jsx'
 import Consulting from './pages/Consulting.jsx'
 import Support from './pages/Support.jsx'
@@ -18,8 +18,8 @@ export default function App() {
     <ErrorBoundary>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route element={<SiteLayout />}>
-            <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+          <Route element={<GemLayout />}>
+            <Route path="/" element={<PageTransition><HomeGem /></PageTransition>} />
             <Route path="/about" element={<PageTransition><About /></PageTransition>} />
             <Route path="/it-consulting-services" element={<PageTransition><Consulting /></PageTransition>} />
             <Route path="/it-support-services" element={<PageTransition><Support /></PageTransition>} />
