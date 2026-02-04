@@ -48,7 +48,7 @@ export default function Home() {
       {/* Home background WebGL (desktop only) */}
       <div className="pointer-events-none absolute inset-0 -z-10 hidden md:block">
         <Suspense fallback={null}>
-          <HeroWebGL logoSrc={logo} />
+          <HeroWebGL logoSrc={logo} showCoin={false} />
         </Suspense>
       </div>
 

@@ -6,7 +6,7 @@ function isDesktop() {
   return window.matchMedia('(min-width: 768px)').matches
 }
 
-export default function HeroWebGL({ logoSrc }) {
+export default function HeroWebGL({ logoSrc, showCoin = true }) {
   const hostRef = useRef(null)
 
   useEffect(() => {
@@ -85,8 +85,11 @@ export default function HeroWebGL({ logoSrc }) {
     const line = new THREE.LineSegments(lineGeom, lineMat)
     field.add(line)
 
+    if (showCoin) {
+    let coinGroup = null
+
     // --- 3D logo coin (cylinder + texture on both faces) ---
-    const coinGroup = new THREE.Group()
+    coinGroup = new THREE.Group()
     scene.add(coinGroup)
 
     const texLoader = new THREE.TextureLoader()
@@ -135,6 +138,8 @@ export default function HeroWebGL({ logoSrc }) {
     glow.scale.set(6, 6, 1)
     glow.position.set(0, 0, -1.2)
     coinGroup.add(glow)
+
+    }
 
     // Layout / resize
     const resize = () => {
@@ -205,11 +210,13 @@ export default function HeroWebGL({ logoSrc }) {
       lineGeom.computeBoundingSphere()
 
       // coin motion
-      coinGroup.rotation.y += 0.004
-      coinGroup.rotation.x += 0.0012
-      coinGroup.rotation.x += (targetRx - coinGroup.rotation.x) * 0.05
-      coinGroup.rotation.y += (targetRy - coinGroup.rotation.y) * 0.05
-      coinGroup.position.y = Math.sin(t * 0.0012) * 0.12
+      if (showCoin && coinGroup) {
+        coinGroup.rotation.y += 0.004
+        coinGroup.rotation.x += 0.0012
+        coinGroup.rotation.x += (targetRx - coinGroup.rotation.x) * 0.05
+        coinGroup.rotation.y += (targetRy - coinGroup.rotation.y) * 0.05
+        coinGroup.position.y = Math.sin(t * 0.0012) * 0.12
+      }
 
       // subtle camera drift
       camera.position.x = Math.sin(t * 0.0004) * 0.25
@@ -232,11 +239,11 @@ export default function HeroWebGL({ logoSrc }) {
       pointsMat.dispose()
       lineGeom.dispose()
       lineMat.dispose()
-      coinGeo.dispose()
-      edgeMat.dispose()
-      faceMat.dispose()
-      glowTex.dispose()
-      glowMat.dispose()
+      if (coinGeo) coinGeo.dispose()
+      if (edgeMat) edgeMat.dispose()
+      if (faceMat) faceMat.dispose()
+      if (glowTex) glowTex.dispose()
+      if (glowMat) glowMat.dispose()
 
       if (renderer.domElement && renderer.domElement.parentNode) {
         renderer.domElement.parentNode.removeChild(renderer.domElement)
