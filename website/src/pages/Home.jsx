@@ -92,8 +92,8 @@ export default function Home() {
 
         <div className="mx-auto max-w-6xl px-4 pt-20 pb-6 md:pt-28 md:pb-8">
           {/* animated logo coin (Elementra-style) */}
-          <div className="relative mb-6 mt-2 hidden justify-end md:flex">
-            <LogoCoin src={logo} className="-mr-6" />
+          <div className="relative mb-6 mt-2 hidden justify-center md:flex">
+            <LogoCoin src={logo} />
           </div>
           <motion.div
             initial="hidden"
