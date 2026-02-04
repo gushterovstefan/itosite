@@ -5,24 +5,24 @@ import CardSpotlight from './CardSpotlight.jsx'
 
 const variants = {
   default: {
-    card: 'border-white/10 bg-white/5',
-    top: 'from-white/10 via-white/5 to-transparent'
+    card: 'border-white/12 bg-white/6',
+    top: 'from-white/14 via-white/6 to-transparent'
   },
   brand: {
-    card: 'border-brand-300/15 bg-brand-500/10',
-    top: 'from-brand-400/25 via-white/5 to-transparent'
+    card: 'border-brand-300/22 bg-brand-500/14',
+    top: 'from-brand-400/35 via-white/6 to-transparent'
   },
   violet: {
-    card: 'border-fuchsia-300/15 bg-fuchsia-500/10',
-    top: 'from-fuchsia-400/20 via-white/5 to-transparent'
+    card: 'border-fuchsia-300/22 bg-fuchsia-500/14',
+    top: 'from-fuchsia-400/30 via-white/6 to-transparent'
   },
   steel: {
-    card: 'border-sky-200/12 bg-sky-500/7',
-    top: 'from-sky-300/18 via-white/5 to-transparent'
+    card: 'border-sky-200/18 bg-sky-500/10',
+    top: 'from-sky-300/26 via-white/6 to-transparent'
   },
   amber: {
-    card: 'border-amber-200/12 bg-amber-500/8',
-    top: 'from-amber-300/18 via-white/5 to-transparent'
+    card: 'border-amber-200/18 bg-amber-500/10',
+    top: 'from-amber-300/26 via-white/6 to-transparent'
   }
 }
 
@@ -35,7 +35,7 @@ function CardShell({ children, className = '', underlay = null, variant = 'defau
       <div
         aria-hidden="true"
         className={
-          'pointer-events-none absolute inset-0 bg-gradient-to-b opacity-70 ' +
+          'pointer-events-none absolute inset-0 bg-gradient-to-b opacity-85 ' +
           v.top
         }
       />
@@ -45,7 +45,7 @@ function CardShell({ children, className = '', underlay = null, variant = 'defau
 
       {badge ? (
         <div className="absolute left-4 top-4 z-20">
-          <span className="inline-flex max-w-[15rem] items-center truncate rounded-full border border-white/10 bg-ink-950/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70 backdrop-blur">
+          <span className="inline-flex max-w-[15rem] items-center truncate rounded-full border border-white/12 bg-ink-950/92 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur">
             {badge}
           </span>
         </div>
@@ -72,7 +72,7 @@ export function Card({
         whileHover={{ y: -6, scale: 1.01 }}
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
         className={
-          'group relative overflow-hidden rounded-2xl border p-5 md:p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(116,173,60,0.18),0_18px_60px_-28px_rgba(0,0,0,0.8)] ' +
+          'group relative overflow-hidden rounded-2xl border p-5 md:p-6 backdrop-blur shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_0_0_1px_rgba(116,173,60,0.22),0_22px_70px_-34px_rgba(0,0,0,0.85)] ' +
           v.card +
           ' ' +
           className
@@ -133,7 +133,7 @@ export function ClickCard({
         whileTap={reduce ? undefined : { scale: 0.985 }}
         transition={{ type: 'spring', stiffness: 260, damping: 22 }}
         className={
-          'group relative w-full overflow-hidden rounded-2xl border p-5 text-left md:p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(116,173,60,0.18),0_18px_60px_-28px_rgba(0,0,0,0.8)] focus:outline-none focus:ring-2 focus:ring-brand-400/50 ' +
+          'group relative w-full overflow-hidden rounded-2xl border p-5 text-left md:p-6 backdrop-blur shadow-[0_0_0_1px_rgba(255,255,255,0.03)] hover:shadow-[0_0_0_1px_rgba(116,173,60,0.22),0_22px_70px_-34px_rgba(0,0,0,0.85)] focus:outline-none focus:ring-2 focus:ring-brand-400/55 ' +
           v.card +
           ' ' +
           className
