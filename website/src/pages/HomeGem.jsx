@@ -8,7 +8,7 @@ import { ClickCard } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import SheenButton from '../components/SheenButton.jsx'
 import { useContent } from '../content/index.jsx'
-import logo from '../assets/logo-green.jpg'
+import logo from '../assets/logo-globe.jpg'
 
 const HeroWebGL = lazy(() => import('../components/HeroWebGL.jsx'))
 
@@ -68,7 +68,12 @@ export default function HomeGem() {
                     <div className="mt-3 text-4xl font-semibold tracking-tight text-ink-950">10+ years</div>
                     <div className="mt-2 text-sm text-ink-900/65">Design · Build · Secure · Run</div>
                   </div>
-                  <img src={logo} alt="" aria-hidden="true" className="h-20 w-20 opacity-80" />
+                  <img
+                    src={logo}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-16 w-16 drop-shadow-[0_8px_18px_rgba(0,0,0,0.18)] md:h-20 md:w-20"
+                  />
                 </div>
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
