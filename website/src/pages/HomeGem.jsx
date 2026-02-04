@@ -8,7 +8,7 @@ import { ClickCard } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import SheenButton from '../components/SheenButton.jsx'
 import { useContent } from '../content/index.jsx'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo-green.jpg'
 
 const HeroWebGL = lazy(() => import('../components/HeroWebGL.jsx'))
 
