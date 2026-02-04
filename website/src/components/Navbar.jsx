@@ -3,7 +3,7 @@ import { AnimatePresence, motion, useMotionValue, useScroll, useSpring } from 'f
 import { useEffect, useMemo, useState } from 'react'
 import { useContent } from '../content/index.jsx'
 import SheenButton from './SheenButton.jsx'
-import logo from '../assets/logo-green.jpg'
+import logo from '../assets/logo-globe.jpg'
 
 function NavItem({ to, label, end, activePath }) {
   const isActive = end ? activePath === to : activePath.startsWith(to)
