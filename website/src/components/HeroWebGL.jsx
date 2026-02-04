@@ -24,9 +24,10 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
     camera.position.set(0, 0, 9)
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+    // Light theme background (so the hero doesn't look like a different site section)
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false })
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
-    renderer.setClearColor(0x000000, 0)
+    renderer.setClearColor(0xffffff, 1)
 
     host.appendChild(renderer.domElement)
 
@@ -36,7 +37,7 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     const key = new THREE.DirectionalLight(0xffffff, 1.1)
     key.position.set(2.5, 2.2, 4)
     scene.add(key)
-    const rim = new THREE.PointLight(0xd946ef, 1.1, 30)
+    const rim = new THREE.PointLight(0x63c61f, 0.9, 30)
     rim.position.set(-3, -2, 5)
     scene.add(rim)
 
@@ -64,7 +65,7 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     pointsGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3))
 
     const pointsMat = new THREE.PointsMaterial({
-      color: 0xffffff,
+      color: 0x1f2937, // slate-800
       size: 0.045,
       sizeAttenuation: true,
       transparent: true,
@@ -76,9 +77,9 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     field.add(points)
 
     const lineMat = new THREE.LineBasicMaterial({
-      color: 0xd946ef,
+      color: 0x4ea314,
       transparent: true,
-      opacity: 0.12,
+      opacity: 0.14,
       depthWrite: false
     })
     const lineGeom = new THREE.BufferGeometry()
@@ -131,8 +132,8 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
       glowCanvas.height = 128
       const gctx = glowCanvas.getContext('2d')
       const grd = gctx.createRadialGradient(64, 64, 8, 64, 64, 64)
-      grd.addColorStop(0, 'rgba(217,70,239,0.55)')
-      grd.addColorStop(0.45, 'rgba(116,173,60,0.10)')
+      grd.addColorStop(0, 'rgba(99,198,31,0.38)')
+      grd.addColorStop(0.55, 'rgba(99,198,31,0.10)')
       grd.addColorStop(1, 'rgba(0,0,0,0)')
       gctx.fillStyle = grd
       gctx.fillRect(0, 0, 128, 128)
