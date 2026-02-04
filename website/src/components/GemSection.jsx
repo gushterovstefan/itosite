@@ -2,7 +2,7 @@ import Reveal from './Reveal.jsx'
 
 export default function GemSection({ eyebrow, title, lead, children }) {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-12 md:py-16">
       <div className="mx-auto max-w-6xl px-4">
         {eyebrow ? (
           <Reveal>
@@ -13,15 +13,15 @@ export default function GemSection({ eyebrow, title, lead, children }) {
         ) : null}
         {title ? (
           <Reveal delay={0.05}>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">{title}</h2>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">{title}</h2>
           </Reveal>
         ) : null}
         {lead ? (
           <Reveal delay={0.1}>
-            <p className="mt-4 max-w-3xl text-base text-white/70 md:text-lg">{lead}</p>
+            <p className="mt-3 max-w-3xl text-base text-white/70 md:text-lg">{lead}</p>
           </Reveal>
         ) : null}
-        {children ? <div className="mt-12">{children}</div> : null}
+        {children ? <div className="mt-8">{children}</div> : null}
       </div>
     </section>
   )
