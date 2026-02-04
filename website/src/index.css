@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-  @apply bg-ink-950 text-white antialiased;
+  @apply bg-white text-ink-900 antialiased;
   font-feature-settings: 'ss01' on, 'cv02' on;
 }
 
@@ -22,7 +22,7 @@ body {
 
 /* premium readability helpers */
 .prose-lead {
-  @apply text-base leading-relaxed text-white/70 md:text-lg;
+  @apply text-base leading-relaxed text-ink-900/70 md:text-lg;
 }
 
 .h1 {

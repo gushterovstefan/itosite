@@ -31,14 +31,14 @@ export default function HomeGem() {
         <div className="mx-auto max-w-6xl px-4 pt-10 md:pt-12">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
-              <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/75">
+              <div className="inline-flex items-center gap-3 rounded-full border border-black/10 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-ink-950/75">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-400" aria-hidden="true" />
                 {ui.itServicesBadge}
               </div>
 
               <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-6xl">{c.heroTitle}</h1>
-              <p className="mt-5 text-base font-medium text-white/85 md:text-lg">{c.heroSubline}</p>
-              <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/65 md:text-base">
+              <p className="mt-5 text-base font-medium text-ink-950/85 md:text-lg">{c.heroSubline}</p>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-900/65 md:text-base">
                 IT Outsource is a fast growing IT company with more than 10 years of experience designing,
                 implementing, integrating and supporting different IT solutions.
               </p>
@@ -47,7 +47,7 @@ export default function HomeGem() {
                 <SheenButton to="/contacts">{ui.contactUs}</SheenButton>
                 <Link
                   to="/solutions"
-                  className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/10"
+                  className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
                 >
                   <span>{ui.exploreSolutions}</span>
                 </Link>
@@ -60,28 +60,28 @@ export default function HomeGem() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="rounded-3xl border border-white/10 bg-white/5 p-8"
+                className="rounded-3xl border border-black/10 bg-white/70 p-8"
               >
                 <div className="flex items-center justify-between gap-6">
                   <div>
-                    <div className="text-xs font-semibold uppercase tracking-[0.28em] text-white/55">Enterprise delivery</div>
-                    <div className="mt-3 text-4xl font-semibold tracking-tight text-white">10+ years</div>
-                    <div className="mt-2 text-sm text-white/65">Design · Build · Secure · Run</div>
+                    <div className="text-xs font-semibold uppercase tracking-[0.28em] text-ink-900/55">Enterprise delivery</div>
+                    <div className="mt-3 text-4xl font-semibold tracking-tight text-ink-950">10+ years</div>
+                    <div className="mt-2 text-sm text-ink-900/65">Design · Build · Secure · Run</div>
                   </div>
                   <img src={logo} alt="" aria-hidden="true" className="h-20 w-20 opacity-80" />
                 </div>
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-2xl border border-white/10 bg-ink-950/50 px-4 py-3">
-                    <div className="text-xs text-white/55">Availability</div>
+                  <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
+                    <div className="text-xs text-ink-900/55">Availability</div>
                     <div className="mt-1 text-sm font-semibold">24/7 Ops</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-ink-950/50 px-4 py-3">
-                    <div className="text-xs text-white/55">Security</div>
+                  <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
+                    <div className="text-xs text-ink-900/55">Security</div>
                     <div className="mt-1 text-sm font-semibold">MFA + Hardening</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-ink-950/50 px-4 py-3">
-                    <div className="text-xs text-white/55">Delivery</div>
+                  <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
+                    <div className="text-xs text-ink-900/55">Delivery</div>
                     <div className="mt-1 text-sm font-semibold">SLA-driven</div>
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export default function HomeGem() {
                   <div className="text-sm font-semibold">{x.title}</div>
                   <Icon as={icons[x.icon] ?? icons.tools} />
                 </div>
-                <div className="mt-3 text-sm text-white/70">{x.description}</div>
+                <div className="mt-3 text-sm text-ink-900/70">{x.description}</div>
               </ClickCard>
             ))}
           </div>
@@ -129,7 +129,7 @@ export default function HomeGem() {
               <div className="text-sm font-semibold">{c.services.support.title}</div>
               <Icon as={icons.support} />
             </div>
-            <div className="mt-3 text-sm text-white/70">{c.services.support.items[0]}</div>
+            <div className="mt-3 text-sm text-ink-900/70">{c.services.support.items[0]}</div>
           </ClickCard>
 
           <ClickCard to="/it-infrastructure-services" variant="steel" badge="Platforms">
@@ -137,7 +137,7 @@ export default function HomeGem() {
               <div className="text-sm font-semibold">{c.services.infrastructure.title}</div>
               <Icon as={icons.infrastructure} />
             </div>
-            <div className="mt-3 text-sm text-white/70">{c.services.infrastructure.items[0]}</div>
+            <div className="mt-3 text-sm text-ink-900/70">{c.services.infrastructure.items[0]}</div>
           </ClickCard>
 
           <ClickCard to="/it-consulting-services" variant="violet" badge="Strategy">
@@ -145,7 +145,7 @@ export default function HomeGem() {
               <div className="text-sm font-semibold">{c.services.consulting.title}</div>
               <Icon as={icons.consulting} />
             </div>
-            <div className="mt-3 text-sm text-white/70">{c.services.consulting.items[0]}</div>
+            <div className="mt-3 text-sm text-ink-900/70">{c.services.consulting.items[0]}</div>
           </ClickCard>
         </div>
       </GemSection>

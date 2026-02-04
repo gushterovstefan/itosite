@@ -45,7 +45,7 @@ function CardShell({ children, className = '', underlay = null, variant = 'defau
 
       {badge ? (
         <div className="absolute left-4 top-4 z-20">
-          <span className="inline-flex max-w-[15rem] items-center truncate rounded-full border border-white/12 bg-ink-950/92 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur">
+          <span className="inline-flex max-w-[15rem] items-center truncate rounded-full border border-white/12 bg-white/92 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-ink-950/80 backdrop-blur">
             {badge}
           </span>
         </div>
@@ -149,7 +149,7 @@ export function ClickCard({
 
 export function BulletList({ items }) {
   return (
-    <ul className="space-y-2 text-sm text-white/70">
+    <ul className="space-y-2 text-sm text-ink-900/70">
       {items.map((b, i) => (
         <motion.li
           key={b}

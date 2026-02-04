@@ -18,7 +18,7 @@ export default function GemSection({ eyebrow, title, lead, children }) {
         ) : null}
         {lead ? (
           <Reveal delay={0.1}>
-            <p className="mt-2 max-w-3xl text-base text-white/70 md:text-lg">{lead}</p>
+            <p className="mt-2 max-w-3xl text-base text-ink-900/70 md:text-lg">{lead}</p>
           </Reveal>
         ) : null}
         {children ? <div className="mt-5">{children}</div> : null}

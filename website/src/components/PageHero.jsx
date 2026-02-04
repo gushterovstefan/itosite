@@ -24,7 +24,7 @@ export default function PageHero({
         <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div>
             {eyebrow ? (
-              <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/75">
+              <div className="inline-flex items-center gap-3 rounded-full border border-black/10 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-ink-950/75">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-400" aria-hidden="true" />
                 {eyebrow}
               </div>
@@ -35,11 +35,11 @@ export default function PageHero({
             ) : null}
 
             {lead ? (
-              <p className="mt-5 text-base font-medium text-white/85 md:text-lg">{lead}</p>
+              <p className="mt-5 text-base font-medium text-ink-950/85 md:text-lg">{lead}</p>
             ) : null}
 
             {subline ? (
-              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/65 md:text-base">
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-900/65 md:text-base">
                 {subline}
               </p>
             ) : null}
@@ -48,7 +48,7 @@ export default function PageHero({
               <SheenButton to={primaryCta.to}>{primaryCta.label}</SheenButton>
               <Link
                 to={secondaryCta.to}
-                className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-white/10"
+                className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
               >
                 <span>{secondaryCta.label}</span>
               </Link>
@@ -56,20 +56,20 @@ export default function PageHero({
           </div>
 
           {aside ? (
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-7 md:p-8">
+            <div className="rounded-3xl border border-black/10 bg-white/70 p-7 md:p-8">
               <div className="flex items-start justify-between gap-6">
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-white/55">
+                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-ink-900/55">
                     {aside.eyebrow}
                   </div>
-                  <div className="mt-3 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                  <div className="mt-3 text-2xl font-semibold tracking-tight text-ink-950 md:text-3xl">
                     {aside.title}
                   </div>
                   {aside.lead ? (
-                    <div className="mt-2 text-sm text-white/65">{aside.lead}</div>
+                    <div className="mt-2 text-sm text-ink-900/65">{aside.lead}</div>
                   ) : null}
                 </div>
-                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-ink-950/40">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-black/10 bg-white/40">
                   <Icon as={icons[aside.icon] ?? icons.tools} className="h-6 w-6 text-brand-200" />
                 </span>
               </div>
@@ -77,8 +77,8 @@ export default function PageHero({
               {aside.items?.length ? (
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
                   {aside.items.map((it) => (
-                    <div key={it.k} className="rounded-2xl border border-white/10 bg-ink-950/50 px-4 py-3">
-                      <div className="text-xs text-white/55">{it.k}</div>
+                    <div key={it.k} className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
+                      <div className="text-xs text-ink-900/55">{it.k}</div>
                       <div className="mt-1 text-sm font-semibold">{it.v}</div>
                     </div>
                   ))}
