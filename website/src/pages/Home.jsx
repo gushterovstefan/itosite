@@ -6,6 +6,7 @@ import { Icon, icons } from '../components/Icons.jsx'
 import Particles from '../components/Particles.jsx'
 import Spotlight from '../components/Spotlight.jsx'
 import SheenButton from '../components/SheenButton.jsx'
+import LogoCoin from '../components/LogoCoin.jsx'
 import { useContent } from '../content/index.jsx'
 import logo from '../assets/logo.png'
 
@@ -90,6 +91,10 @@ export default function Home() {
         </div>
 
         <div className="mx-auto max-w-6xl px-4 pt-20 pb-6 md:pt-28 md:pb-8">
+          {/* animated logo coin (Elementra-style) */}
+          <div className="relative mb-6 mt-2 hidden justify-end md:flex">
+            <LogoCoin src={logo} className="-mr-6" />
+          </div>
           <motion.div
             initial="hidden"
             animate="show"
