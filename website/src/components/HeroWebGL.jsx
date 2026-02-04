@@ -11,6 +11,7 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
 
   useEffect(() => {
     if (!isDesktop()) return
+
     const host = hostRef.current
     if (!host) return
 
@@ -29,7 +30,7 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
 
     host.appendChild(renderer.domElement)
 
-    // Lights for the coin
+    // Lights
     const ambient = new THREE.AmbientLight(0xffffff, 0.8)
     scene.add(ambient)
     const key = new THREE.DirectionalLight(0xffffff, 1.1)
@@ -74,7 +75,6 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     const points = new THREE.Points(pointsGeo, pointsMat)
     field.add(points)
 
-    // line segments geometry (recreated each frame; cheap at this size)
     const lineMat = new THREE.LineBasicMaterial({
       color: 0xd946ef,
       transparent: true,
@@ -85,60 +85,64 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     const line = new THREE.LineSegments(lineGeom, lineMat)
     field.add(line)
 
-    if (showCoin) {
+    // --- Optional 3D logo coin ---
     let coinGroup = null
+    let coinGeo = null
+    let edgeMat = null
+    let faceMat = null
+    let glowTex = null
+    let glowMat = null
 
-    // --- 3D logo coin (cylinder + texture on both faces) ---
-    coinGroup = new THREE.Group()
-    scene.add(coinGroup)
+    if (showCoin) {
+      coinGroup = new THREE.Group()
+      scene.add(coinGroup)
 
-    const texLoader = new THREE.TextureLoader()
-    const logoTex = texLoader.load(logoSrc)
-    logoTex.colorSpace = THREE.SRGBColorSpace
-    logoTex.anisotropy = 8
+      const texLoader = new THREE.TextureLoader()
+      const logoTex = texLoader.load(logoSrc)
+      logoTex.colorSpace = THREE.SRGBColorSpace
+      logoTex.anisotropy = 8
 
-    const radius = 1.55
-    const thickness = 0.22
-    const coinGeo = new THREE.CylinderGeometry(radius, radius, thickness, 84, 1, false)
+      const radius = 1.55
+      const thickness = 0.22
+      coinGeo = new THREE.CylinderGeometry(radius, radius, thickness, 84, 1, false)
 
-    const edgeMat = new THREE.MeshStandardMaterial({
-      color: 0x2a2238,
-      metalness: 0.75,
-      roughness: 0.35,
-      emissive: new THREE.Color(0x120818),
-      emissiveIntensity: 0.35
-    })
+      edgeMat = new THREE.MeshStandardMaterial({
+        color: 0x2a2238,
+        metalness: 0.75,
+        roughness: 0.35,
+        emissive: new THREE.Color(0x120818),
+        emissiveIntensity: 0.35
+      })
 
-    const faceMat = new THREE.MeshStandardMaterial({
-      map: logoTex,
-      metalness: 0.15,
-      roughness: 0.6,
-      transparent: true
-    })
+      faceMat = new THREE.MeshStandardMaterial({
+        map: logoTex,
+        metalness: 0.15,
+        roughness: 0.6,
+        transparent: true
+      })
 
-    // CylinderGeometry groups: 0=side, 1=top, 2=bottom
-    const coin = new THREE.Mesh(coinGeo, [edgeMat, faceMat, faceMat])
-    coin.rotation.x = Math.PI / 2
-    coinGroup.add(coin)
+      const coin = new THREE.Mesh(coinGeo, [edgeMat, faceMat, faceMat])
+      coin.rotation.x = Math.PI / 2
+      coinGroup.add(coin)
 
-    // glow sprite behind coin
-    const glowCanvas = document.createElement('canvas')
-    glowCanvas.width = 128
-    glowCanvas.height = 128
-    const gctx = glowCanvas.getContext('2d')
-    const grd = gctx.createRadialGradient(64, 64, 8, 64, 64, 64)
-    grd.addColorStop(0, 'rgba(217,70,239,0.55)')
-    grd.addColorStop(0.45, 'rgba(116,173,60,0.10)')
-    grd.addColorStop(1, 'rgba(0,0,0,0)')
-    gctx.fillStyle = grd
-    gctx.fillRect(0, 0, 128, 128)
-    const glowTex = new THREE.CanvasTexture(glowCanvas)
-    const glowMat = new THREE.SpriteMaterial({ map: glowTex, transparent: true, opacity: 0.55, depthWrite: false })
-    const glow = new THREE.Sprite(glowMat)
-    glow.scale.set(6, 6, 1)
-    glow.position.set(0, 0, -1.2)
-    coinGroup.add(glow)
+      // glow sprite behind coin
+      const glowCanvas = document.createElement('canvas')
+      glowCanvas.width = 128
+      glowCanvas.height = 128
+      const gctx = glowCanvas.getContext('2d')
+      const grd = gctx.createRadialGradient(64, 64, 8, 64, 64, 64)
+      grd.addColorStop(0, 'rgba(217,70,239,0.55)')
+      grd.addColorStop(0.45, 'rgba(116,173,60,0.10)')
+      grd.addColorStop(1, 'rgba(0,0,0,0)')
+      gctx.fillStyle = grd
+      gctx.fillRect(0, 0, 128, 128)
 
+      glowTex = new THREE.CanvasTexture(glowCanvas)
+      glowMat = new THREE.SpriteMaterial({ map: glowTex, transparent: true, opacity: 0.55, depthWrite: false })
+      const glow = new THREE.Sprite(glowMat)
+      glow.scale.set(6, 6, 1)
+      glow.position.set(0, 0, -1.2)
+      coinGroup.add(glow)
     }
 
     // Layout / resize
@@ -179,7 +183,6 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
         positions[i3 + 1] += velocities[i3 + 1] * dt
         positions[i3 + 2] += velocities[i3 + 2] * dt
 
-        // bounce
         if (positions[i3 + 0] > bounds.x / 2 || positions[i3 + 0] < -bounds.x / 2) velocities[i3 + 0] *= -1
         if (positions[i3 + 1] > bounds.y / 2 || positions[i3 + 1] < -bounds.y / 2) velocities[i3 + 1] *= -1
         if (positions[i3 + 2] > -0.5 || positions[i3 + 2] < -4.0) velocities[i3 + 2] *= -1
@@ -201,16 +204,14 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
           const dy = ay - by
           const dz = az - bz
           const d = Math.sqrt(dx * dx + dy * dy + dz * dz)
-          if (d < maxDist) {
-            verts.push(ax, ay, az, bx, by, bz)
-          }
+          if (d < maxDist) verts.push(ax, ay, az, bx, by, bz)
         }
       }
       lineGeom.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3))
       lineGeom.computeBoundingSphere()
 
-      // coin motion
-      if (showCoin && coinGroup) {
+      // optional coin motion
+      if (coinGroup) {
         coinGroup.rotation.y += 0.004
         coinGroup.rotation.x += 0.0012
         coinGroup.rotation.x += (targetRx - coinGroup.rotation.x) * 0.05
@@ -218,7 +219,6 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
         coinGroup.position.y = Math.sin(t * 0.0012) * 0.12
       }
 
-      // subtle camera drift
       camera.position.x = Math.sin(t * 0.0004) * 0.25
       camera.position.y = Math.cos(t * 0.00035) * 0.18
       camera.lookAt(0, 0, 0)
@@ -235,10 +235,12 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
       ro.disconnect()
 
       renderer.dispose()
+
       pointsGeo.dispose()
       pointsMat.dispose()
       lineGeom.dispose()
       lineMat.dispose()
+
       if (coinGeo) coinGeo.dispose()
       if (edgeMat) edgeMat.dispose()
       if (faceMat) faceMat.dispose()
@@ -249,13 +251,7 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
         renderer.domElement.parentNode.removeChild(renderer.domElement)
       }
     }
-  }, [logoSrc])
+  }, [logoSrc, showCoin])
 
-  return (
-    <div
-      ref={hostRef}
-      aria-hidden="true"
-      className="pointer-events-none absolute inset-0"
-    />
-  )
+  return <div ref={hostRef} aria-hidden="true" className="pointer-events-none absolute inset-0" />
 }
