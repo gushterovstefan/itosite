@@ -7,7 +7,7 @@ import Particles from '../components/Particles.jsx'
 import Spotlight from '../components/Spotlight.jsx'
 import SheenButton from '../components/SheenButton.jsx'
 import LogoCoin from '../components/LogoCoin.jsx'
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 
 const HeroWebGL = lazy(() => import('../components/HeroWebGL.jsx'))
 import { useContent } from '../content/index.jsx'
@@ -27,12 +27,52 @@ export default function Home() {
   const heroX = useMotionValue(0)
   const heroY = useMotionValue(0)
 
+  const [showIntro, setShowIntro] = useState(false)
+
+  useEffect(() => {
+    if (reduce) return
+    const t1 = setTimeout(() => setShowIntro(true), 900)
+    const t2 = setTimeout(() => setShowIntro(false), 2600)
+    return () => {
+      clearTimeout(t1)
+      clearTimeout(t2)
+    }
+  }, [reduce])
+
   const { scrollY } = useScroll()
   const watermarkY = useTransform(scrollY, [0, 600], [0, 40])
   const watermarkRotate = useTransform(scrollY, [0, 600], [0, -6])
 
   return (
-    <div id="top">
+    <div id="top" className="relative">
+      {/* Home background WebGL (desktop only) */}
+      <div className="pointer-events-none absolute inset-0 -z-10 hidden md:block">
+        <Suspense fallback={null}>
+          <HeroWebGL logoSrc={logo} />
+        </Suspense>
+      </div>
+
+      {/* Intro logo pop (desktop only) */}
+      {showIntro ? (
+        <motion.div
+          className="pointer-events-none fixed inset-0 z-[80] hidden place-items-center md:grid"
+          initial={{ opacity: 0, scale: 0.9, filter: 'blur(6px)' }}
+          animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <motion.img
+            src={logo}
+            alt=""
+            aria-hidden="true"
+            className="h-[16rem] w-[16rem] opacity-80"
+            initial={{ y: 10 }}
+            animate={{ y: 0 }}
+            transition={{ type: 'spring', stiffness: 220, damping: 16 }}
+          />
+        </motion.div>
+      ) : null}
+
       {/* Hero */}
       <section
         className="group/hero relative overflow-hidden"
@@ -94,17 +134,7 @@ export default function Home() {
         </div>
 
         <div className="mx-auto max-w-6xl px-4 pt-20 pb-6 md:pt-28 md:pb-8">
-          {/* WebGL hero scene (desktop only): abstract network field + 3D coin */}
-          <div className="relative mb-6 mt-2 hidden h-[22rem] items-center justify-center md:flex">
-            <Suspense fallback={null}>
-              <HeroWebGL logoSrc={logo} />
-            </Suspense>
-          </div>
-
-          {/* fallback CSS coin (kept for non-WebGL environments if needed) */}
-          <div className="relative mb-6 mt-2 hidden justify-center md:hidden">
-            <LogoCoin src={logo} />
-          </div>
+          {/* (moved) WebGL now runs as full-page background */}
           <motion.div
             initial="hidden"
             animate="show"
