@@ -12,8 +12,8 @@ export default function Support() {
   return (
     <div>
       <Section eyebrow={ui.support} title={c.title} lead={c.lead}>
-        <p className="-mt-2 max-w-3xl text-sm text-white/70 md:text-base">{c.subline}</p>
-        <p className="mt-4 max-w-3xl text-sm text-white/60">{c.credibility}</p>
+        <p className="-mt-2 max-w-3xl text-sm text-white/78 md:text-base">{c.subline}</p>
+        <p className="mt-4 max-w-3xl text-sm text-white/70">{c.credibility}</p>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {/* Card 1 */}

@@ -11,8 +11,8 @@ export default function Infrastructure() {
   return (
     <div>
       <Section eyebrow={ui.infrastructure} title={c.title} lead={c.lead}>
-        <p className="-mt-2 max-w-3xl text-sm text-white/70 md:text-base">{c.subline}</p>
-        <p className="mt-4 max-w-3xl text-sm text-white/60">{c.punchline}</p>
+        <p className="-mt-2 max-w-3xl text-sm text-white/78 md:text-base">{c.subline}</p>
+        <p className="mt-4 max-w-3xl text-sm text-white/70">{c.punchline}</p>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           {c.cards.map((card, i) => (

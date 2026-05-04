@@ -11,7 +11,7 @@ export default function Consulting() {
   return (
     <div>
       <Section eyebrow={ui.consulting} title={c.title} lead={c.lead}>
-        <p className="-mt-2 max-w-3xl text-sm text-white/70 md:text-base">{c.subline}</p>
+        <p className="-mt-2 max-w-3xl text-sm text-white/78 md:text-base">{c.subline}</p>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           {c.cards.map((card, i) => (
