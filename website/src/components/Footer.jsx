@@ -85,8 +85,8 @@ export default function Footer() {
               <FooterLink to="/about">{ui.about}</FooterLink>
               <FooterLink to="/how-we-deliver">{l.howWeDeliver}</FooterLink>
               <FooterLink to="/industries">{l.industries}</FooterLink>
+              <FooterLink to="/insights">{l.insights}</FooterLink>
               <FooterLink to="/contacts">{ui.contact}</FooterLink>
-              <span className="text-ink-900/35">{l.insights}</span>
             </div>
           </div>
 

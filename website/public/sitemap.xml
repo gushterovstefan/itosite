@@ -15,6 +15,10 @@
   <url><loc>https://itosite.pages.dev/industries/life-sciences</loc><priority>0.7</priority></url>
   <url><loc>https://itosite.pages.dev/industries/energy</loc><priority>0.7</priority></url>
   <url><loc>https://itosite.pages.dev/industries/professional-services</loc><priority>0.7</priority></url>
+  <url><loc>https://itosite.pages.dev/insights</loc><priority>0.8</priority></url>
+  <url><loc>https://itosite.pages.dev/insights/google-workspace-to-microsoft-365-migration</loc><priority>0.7</priority></url>
+  <url><loc>https://itosite.pages.dev/insights/zero-trust-regulated-mid-market</loc><priority>0.7</priority></url>
+  <url><loc>https://itosite.pages.dev/insights/backup-immutability-tested-dr</loc><priority>0.7</priority></url>
   <url><loc>https://itosite.pages.dev/about</loc><priority>0.6</priority></url>
   <url><loc>https://itosite.pages.dev/contacts</loc><priority>0.8</priority></url>
   <url><loc>https://itosite.pages.dev/legal/privacy</loc><priority>0.3</priority></url>

@@ -13,6 +13,7 @@ import SolutionDetail from './pages/SolutionDetail.jsx'
 import HowWeDeliver from './pages/HowWeDeliver.jsx'
 import { IndustriesHub } from './pages/Industries.jsx'
 import IndustryRoute from './pages/IndustryRoute.jsx'
+import { InsightsHub, InsightDetail } from './pages/Insights.jsx'
 import Contact from './pages/Contact.jsx'
 import Legal from './pages/Legal.jsx'
 import Seo from './components/Seo.jsx'
@@ -36,6 +37,8 @@ export default function App() {
             <Route path="/how-we-deliver" element={<PageTransition><HowWeDeliver /></PageTransition>} />
             <Route path="/industries" element={<PageTransition><IndustriesHub /></PageTransition>} />
             <Route path="/industries/:slug" element={<PageTransition><IndustryRoute /></PageTransition>} />
+            <Route path="/insights" element={<PageTransition><InsightsHub /></PageTransition>} />
+            <Route path="/insights/:slug" element={<PageTransition><InsightDetail /></PageTransition>} />
             <Route path="/contacts" element={<PageTransition><Contact /></PageTransition>} />
             <Route path="/legal/privacy" element={<PageTransition><Legal type="privacy" /></PageTransition>} />
             <Route path="/legal/terms" element={<PageTransition><Legal type="terms" /></PageTransition>} />

@@ -70,6 +70,22 @@ const metaByPath = {
       title: 'Professional Services & Mid-Market IT — IT Outsource Ltd.',
       description: 'Pragmatic enterprise-grade IT support, SaaS identity, collaboration and modernization for professional services and mid-market companies.'
     },
+    '/insights': {
+      title: 'Insights & IT Playbooks — IT Outsource Ltd.',
+      description: 'Practical IT playbooks for Microsoft 365 migration, Zero Trust security and tested backup and disaster recovery.'
+    },
+    '/insights/google-workspace-to-microsoft-365-migration': {
+      title: 'Google Workspace to Microsoft 365 Migration Playbook — IT Outsource Ltd.',
+      description: 'A 7-phase practical playbook for migrating mail, files and identity from Google Workspace to Microsoft 365 with minimal downtime.'
+    },
+    '/insights/zero-trust-regulated-mid-market': {
+      title: 'Zero Trust for Regulated Mid-Market — IT Outsource Ltd.',
+      description: 'A practical Zero Trust model using identity, endpoints, Microsoft Defender XDR, Sentinel and governance without enterprise bloat.'
+    },
+    '/insights/backup-immutability-tested-dr': {
+      title: 'Backup, Immutability and Tested DR — IT Outsource Ltd.',
+      description: 'How to make backup useful in real incidents with 3-2-1 strategy, immutable repositories, restore tests and clear RPO/RTO.'
+    },
     '/contacts': {
       title: 'Contact IT Outsource Ltd.',
       description: 'Contact IT Outsource for managed IT, infrastructure, consulting, Microsoft cloud, security, backup and business platform projects.'
@@ -147,6 +163,22 @@ const metaByPath = {
     '/industries/professional-services': {
       title: 'Professional Services и Mid-Market ИТ — Ай Ти Аутсорс ООД',
       description: 'Практична enterprise-grade ИТ поддръжка, SaaS identity, collaboration и modernization за professional services и mid-market компании.'
+    },
+    '/insights': {
+      title: 'Материали и ИТ Playbooks — Ай Ти Аутсорс ООД',
+      description: 'Практични ИТ playbooks за Microsoft 365 migration, Zero Trust сигурност и тестван backup/disaster recovery.'
+    },
+    '/insights/google-workspace-to-microsoft-365-migration': {
+      title: 'Google Workspace към Microsoft 365 Migration Playbook — Ай Ти Аутсорс ООД',
+      description: '7-фазов практичен playbook за миграция на поща, файлове и identity от Google Workspace към Microsoft 365 с минимален downtime.'
+    },
+    '/insights/zero-trust-regulated-mid-market': {
+      title: 'Zero Trust за Regulated Mid-Market — Ай Ти Аутсорс ООД',
+      description: 'Практичен Zero Trust модел с identity, endpoints, Microsoft Defender XDR, Sentinel и governance без enterprise bloat.'
+    },
+    '/insights/backup-immutability-tested-dr': {
+      title: 'Backup, Immutability и Tested DR — Ай Ти Аутсорс ООД',
+      description: 'Как backup става полезен при реални incidents чрез 3-2-1 стратегия, immutable repositories, restore tests и ясни RPO/RTO.'
     },
     '/contacts': {
       title: 'Контакти — Ай Ти Аутсорс ООД',
