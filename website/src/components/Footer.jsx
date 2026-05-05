@@ -12,7 +12,9 @@ const legal = {
     insights: 'Insights',
     privacy: 'Privacy',
     terms: 'Terms',
-    trustLine: 'Microsoft cloud, ISO 27001:2022-aligned governance, GDPR-aware delivery.',
+    trustEyebrow: 'Trust posture',
+    trustLine: 'Built around Microsoft cloud operations, ISO 27001:2022-aligned governance, GDPR-aware delivery, and proven backup / virtualization ecosystems.',
+    trustNote: 'Technology names indicate delivery experience and platform alignment, not a claim of certification unless explicitly stated.',
     registered: 'Registered company',
     address: 'Bulgaria, Sofia 1505, Poduyane, 25 Popova Shapka St., floor 2, apt. 6',
     response: 'Typical response: within 1 business day.'
@@ -27,7 +29,9 @@ const legal = {
     insights: 'Материали',
     privacy: 'Поверителност',
     terms: 'Условия',
-    trustLine: 'Microsoft cloud, ISO 27001:2022-aligned governance и GDPR-aware доставка.',
+    trustEyebrow: 'Позиция на доверие',
+    trustLine: 'Изградено около Microsoft cloud операции, ISO 27001:2022-aligned управление, GDPR-aware доставка и доказани backup / virtualization екосистеми.',
+    trustNote: 'Имената на технологии показват опит и платформена насоченост, не претенция за сертификация, освен ако не е изрично посочено.',
     registered: 'Регистрирана компания',
     address: 'България, София 1505, р-н Подуяне, ул. Попова шапка 25, ет. 2, ап. 6',
     response: 'Типично време за отговор: до 1 работен ден.'
@@ -35,11 +39,13 @@ const legal = {
 }
 
 const solutionLinks = [
-  ['Microsoft Azure', '/solutions'],
-  ['Microsoft 365', '/solutions'],
-  ['Zero Trust Security', '/solutions'],
-  ['Backup & DR', '/solutions']
+  ['Microsoft Azure', '/solutions/microsoft-azure'],
+  ['Microsoft 365', '/solutions/microsoft-365'],
+  ['Zero Trust Security', '/solutions/zero-trust-security'],
+  ['Backup & DR', '/solutions/backup-dr-veeam']
 ]
+
+const trustItems = ['Microsoft cloud', 'ISO 27001:2022 aligned', 'Veeam ecosystem', 'VMware / Proxmox', 'ABM aware', 'GDPR-aware delivery']
 
 function FooterLink({ to, children }) {
   return (
@@ -57,15 +63,25 @@ export default function Footer() {
   return (
     <footer className="relative z-20 border-t border-black/10 bg-white/82 backdrop-blur-xl">
       <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
-        <div className="rounded-3xl border border-black/10 bg-white/70 p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.55)] md:p-6">
-          <div className="grid gap-4 md:grid-cols-3">
-            {['Microsoft cloud', 'ISO 27001:2022 aligned', 'GDPR-aware delivery'].map((item) => (
+        <div className="rounded-3xl border border-black/10 bg-white/75 p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.55)] md:p-6">
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-800">{l.trustEyebrow}</div>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-ink-900/70">{l.trustLine}</p>
+            </div>
+            <Link to="/how-we-deliver" className="text-sm font-semibold text-ink-950 underline decoration-brand-500/40 underline-offset-4 hover:decoration-brand-500">
+              {l.howWeDeliver}
+            </Link>
+          </div>
+
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
+            {trustItems.map((item) => (
               <div key={item} className="rounded-2xl border border-black/10 bg-brand-200/25 px-4 py-3 text-sm font-semibold text-ink-950">
                 {item}
               </div>
             ))}
           </div>
-          <p className="mt-4 text-sm leading-relaxed text-ink-900/65">{l.trustLine}</p>
+          <p className="mt-4 text-xs leading-relaxed text-ink-900/65">{l.trustNote}</p>
         </div>
 
         <div className="mt-10 grid gap-8 md:grid-cols-4">
