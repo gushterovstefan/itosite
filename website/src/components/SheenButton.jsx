@@ -32,7 +32,7 @@ const SheenButton = forwardRef(function SheenButton(
       {...compProps}
       {...props}
       className={
-        'btn-sheen btn-primary inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-ink-950 shadow-lg shadow-brand-500/20 hover:bg-brand-400 ' +
+        'btn-sheen btn-primary inline-flex items-center justify-center rounded-full bg-brand-200/50 px-6 py-3 text-sm font-semibold text-ink-950 ring-1 ring-brand-300/40 shadow-lg shadow-brand-300/20 hover:bg-brand-200/70 ' +
         className
       }
       onMouseMove={(e) => {

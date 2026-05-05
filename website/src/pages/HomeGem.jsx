@@ -1,4 +1,3 @@
-import { lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import GemSection from '../components/GemSection.jsx'
@@ -8,9 +7,6 @@ import { ClickCard } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import SheenButton from '../components/SheenButton.jsx'
 import { useContent } from '../content/index.jsx'
-import logo from '../assets/logo-green.jpg'
-
-const HeroWebGL = lazy(() => import('../components/HeroWebGL.jsx'))
 
 export default function HomeGem() {
   const { content } = useContent()
@@ -19,13 +15,6 @@ export default function HomeGem() {
 
   return (
     <div id="top" className="relative">
-      {/* full-page WebGL background (desktop only) */}
-      <div className="pointer-events-none absolute inset-0 -z-10 hidden md:block">
-        <Suspense fallback={null}>
-          <HeroWebGL logoSrc={logo} showCoin={false} />
-        </Suspense>
-      </div>
-
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 pt-10 md:pt-12">

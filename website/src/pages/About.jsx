@@ -37,8 +37,8 @@ export default function About() {
               <div className="text-sm font-semibold">{c.missionTitle}</div>
               <Icon as={icons.mission} />
             </div>
-            <div className="mt-3 text-sm text-white/70">{c.missionLead}</div>
-            <div className="mt-4 space-y-2 text-sm text-white/70">
+            <div className="mt-3 text-sm text-ink-900/70">{c.missionLead}</div>
+            <div className="mt-4 space-y-2 text-sm text-ink-900/70">
               {c.missionBody.map((p) => (
                 <p key={p}>{p}</p>
               ))}
@@ -50,7 +50,7 @@ export default function About() {
               <div className="text-sm font-semibold">{c.visionTitle}</div>
               <Icon as={icons.vision} />
             </div>
-            <div className="mt-4 space-y-2 text-sm text-white/70">
+            <div className="mt-4 space-y-2 text-sm text-ink-900/70">
               {c.visionBody.map((p) => (
                 <p key={p}>{p}</p>
               ))}
@@ -59,7 +59,7 @@ export default function About() {
               <div className="text-sm font-semibold">{c.purposeTitle}</div>
               <Icon as={icons.mission} className="opacity-60" />
             </div>
-            <div className="mt-2 space-y-2 text-sm text-white/70">
+            <div className="mt-2 space-y-2 text-sm text-ink-900/70">
               {c.purposeBody.map((p) => (
                 <p key={p}>{p}</p>
               ))}
@@ -73,7 +73,7 @@ export default function About() {
               <div className="text-sm font-semibold">{c.testimonialsTitle}</div>
               <Icon as={icons.testimonial} />
             </div>
-            <div className="mt-4 space-y-4 text-sm text-white/70">
+            <div className="mt-4 space-y-4 text-sm text-ink-900/70">
               {c.testimonials.map((t) => (
                 <p key={t}>{t}</p>
               ))}

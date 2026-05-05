@@ -402,6 +402,38 @@ export const contentBG = {
         ]
       },
       {
+        title: 'Zero Trust сигурност с Defender и Sentinel',
+        icon: 'security',
+        bullets: [
+          'Защита на устройства, идентичности и cloud workloads с Microsoft Defender XDR и Sentinel',
+          'Централно откриване, реакция при инциденти и отчетност за реално намаляване на риска'
+        ]
+      },
+      {
+        title: 'Entra ID и SSO консолидация',
+        icon: 'target',
+        bullets: [
+          'Обединяване на SaaS приложения като Zoho, DocuSign, Jira и бизнес системи под една идентичност',
+          'Conditional Access, MFA и пълен audit trail за контролиран достъп'
+        ]
+      },
+      {
+        title: 'Backup и DR с Veeam',
+        icon: 'backup',
+        bullets: [
+          '3-2-1 backup стратегия с immutable repositories и ясни recovery цели',
+          'Тествано възстановяване за VMware, Hyper-V, Microsoft 365 и physical workloads'
+        ]
+      },
+      {
+        title: 'Cloud migration услуги',
+        icon: 'cloud',
+        bullets: [
+          'Поетапна миграция от Google Workspace към Microsoft 365 за поща, файлове и идентичности',
+          'Доказани runbooks, ясна комуникация към потребителите и минимален downtime'
+        ]
+      },
+      {
         title: 'Уеб B2B и B2C решения',
         icon: 'web',
         bullets: [

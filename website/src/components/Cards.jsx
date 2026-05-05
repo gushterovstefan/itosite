@@ -154,7 +154,7 @@ export function BulletList({ items }) {
         <motion.li
           key={b}
           className="flex gap-2"
-          initial={{ opacity: 0, x: -6 }}
+          initial={false}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.25, ease: 'easeOut', delay: i * 0.03 }}

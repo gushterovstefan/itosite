@@ -413,6 +413,38 @@ export const contentEN = {
         ]
       },
       {
+        title: 'Zero Trust Security with Defender & Sentinel',
+        icon: 'security',
+        bullets: [
+          'Protect endpoints, identities, and cloud workloads with Microsoft Defender XDR and Sentinel',
+          'Central detection, incident response, and reporting for measurable risk reduction'
+        ]
+      },
+      {
+        title: 'Entra ID & SSO Consolidation',
+        icon: 'target',
+        bullets: [
+          'Bring SaaS apps such as Zoho, DocuSign, Jira, and business tools under one identity',
+          'Conditional Access, MFA, and a full audit trail for controlled access'
+        ]
+      },
+      {
+        title: 'Backup & DR with Veeam',
+        icon: 'backup',
+        bullets: [
+          'Design a 3-2-1 backup strategy with immutable repositories and clear recovery targets',
+          'Tested recovery for VMware, Hyper-V, Microsoft 365, and physical workloads'
+        ]
+      },
+      {
+        title: 'Cloud Migration Services',
+        icon: 'cloud',
+        bullets: [
+          'Phased Google Workspace to Microsoft 365 migration for mail, files, and identity',
+          'Proven runbooks, clear user communication, and minimal downtime'
+        ]
+      },
+      {
         title: 'Web-Based B2B & B2C Solutions',
         icon: 'web',
         bullets: [
