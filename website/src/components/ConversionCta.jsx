@@ -5,7 +5,7 @@ import { BOOKING_URL } from '../config/booking.js'
 const copy = {
   en: {
     quote: 'Get a quote',
-    discovery: 'Book a 30-minute discovery call',
+    discovery: 'Book a 30-min call',
     defaultTitle: 'Ready to discuss the next step?',
     defaultLead: 'Tell us what you need to modernize, secure or operate. We will respond with a practical next step.',
     supportTitle: 'Need a support model with clear SLAs?',
@@ -26,10 +26,10 @@ const copy = {
     defaultLead: 'Опишете какво искате да модернизирате, защитите или управлявате. Ще върнем практичен next step.',
     supportTitle: 'Нужен ли е модел за поддръжка с ясни SLA?',
     supportLead: 'Споделете средата и необходимото покритие. Можем да подготвим SLA-ориентирано предложение.',
-    supportSecondary: 'Поискайте SLA предложение',
+    supportSecondary: 'Запазете 30-минутен разговор',
     consultingTitle: 'Планирате сложна промяна?',
     consultingLead: 'Можем да прегледаме архитектурата, рисковете и опциите преди проектът да стане скъп за промяна.',
-    consultingSecondary: 'Поискайте 1-страничен architecture review',
+    consultingSecondary: 'Запазете 30-минутен разговор',
     solutionsTitle: 'Искате да превърнем това в конкретен проект?',
     solutionsLead: 'Изберете solution area и ще начертаем пътя: assess, design, implement и operate.',
     infrastructureTitle: 'Нужна ли е устойчива инфраструктура без operational chaos?',
@@ -39,8 +39,8 @@ const copy = {
 
 const variantDefaults = {
   default: ['defaultTitle', 'defaultLead', 'discovery'],
-  support: ['supportTitle', 'supportLead', 'supportSecondary'],
-  consulting: ['consultingTitle', 'consultingLead', 'consultingSecondary'],
+  support: ['supportTitle', 'supportLead', 'discovery'],
+  consulting: ['consultingTitle', 'consultingLead', 'discovery'],
   solutions: ['solutionsTitle', 'solutionsLead', 'discovery'],
   infrastructure: ['infrastructureTitle', 'infrastructureLead', 'discovery']
 }

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { Icon, icons } from './Icons.jsx'
 import SheenButton from './SheenButton.jsx'
+import { useContent } from '../content/index.jsx'
+import { BOOKING_URL } from '../config/booking.js'
 
 export default function PageHero({
   eyebrow,
@@ -11,6 +13,10 @@ export default function PageHero({
   primaryCta = { to: '/contacts', label: 'Contact us' },
   secondaryCta = { to: '/solutions', label: 'Explore solutions' }
 }) {
+  const { lang } = useContent()
+  const bookingLabel = lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-min call'
+  const showSecondary = secondaryCta?.href !== BOOKING_URL
+
   return (
     <section className="relative overflow-hidden pt-10 md:pt-14">
       <div className="pointer-events-none absolute inset-0">
@@ -53,7 +59,15 @@ export default function PageHero({
               >
                 {primaryCta.label}
               </SheenButton>
-              {secondaryCta.href ? (
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              >
+                <span>{bookingLabel}</span>
+              </a>
+              {showSecondary && secondaryCta.href ? (
                 <a
                   href={secondaryCta.href}
                   target="_blank"
@@ -62,14 +76,14 @@ export default function PageHero({
                 >
                   <span>{secondaryCta.label}</span>
                 </a>
-              ) : (
+              ) : showSecondary ? (
                 <Link
                   to={secondaryCta.to}
                   className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
                 >
                   <span>{secondaryCta.label}</span>
                 </Link>
-              )}
+              ) : null}
             </div>
           </div>
 

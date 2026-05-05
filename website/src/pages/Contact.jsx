@@ -27,7 +27,7 @@ const formCopy = {
     submit: 'Prepare email enquiry',
     bookingTitle: 'Discovery call',
     bookingLead: 'Use our Microsoft Bookings page to choose an available time for a 30-minute discovery call.',
-    bookingCta: 'Book in Microsoft Bookings',
+    bookingCta: 'Book a 30-min call',
     responseNote: 'Typical response time: within 1 business day.'
   },
   bg: {

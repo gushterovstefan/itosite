@@ -42,7 +42,7 @@ export default function HomeGem() {
                   rel="noreferrer"
                   className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
                 >
-                  <span>{lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-minute discovery call'}</span>
+                  <span>{lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-min call'}</span>
                 </a>
               </div>
             </div>

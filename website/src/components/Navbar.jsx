@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useContent } from '../content/index.jsx'
 import SheenButton from './SheenButton.jsx'
 import logo from '../assets/logo-globe-small.jpg'
+import { BOOKING_URL } from '../config/booking.js'
 
 function NavItem({ to, label, end, activePath }) {
   const isActive = end ? activePath === to : activePath.startsWith(to)
@@ -37,6 +38,7 @@ export default function Navbar() {
   const drawerRef = useRef(null)
 
   const activePath = useMemo(() => location.pathname, [location.pathname])
+  const bookingLabel = lang === 'bg' ? 'Запазете разговор' : 'Book a 30-min call'
 
   useEffect(() => {
     const update = () => {
@@ -161,10 +163,18 @@ export default function Navbar() {
               </nav>
 
               {/* actions */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
                 <SheenButton to="/contacts" className="hidden px-4 py-2 md:inline-flex">
                   {ui.getQuote}
                 </SheenButton>
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hidden items-center justify-center rounded-full border border-black/10 bg-white/70 px-4 py-2 text-sm font-semibold text-ink-950/90 transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white md:inline-flex"
+                >
+                  {bookingLabel}
+                </a>
 
 
                 <button
@@ -244,6 +254,16 @@ export default function Navbar() {
                   >
                     {ui.getQuote}
                   </SheenButton>
+
+                  <a
+                    href={BOOKING_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => setOpen(false)}
+                    className="inline-flex w-full items-center justify-center rounded-xl border border-black/10 bg-white/80 px-4 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                  >
+                    {bookingLabel}
+                  </a>
 
                   <button
                     type="button"
