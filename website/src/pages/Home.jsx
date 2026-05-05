@@ -200,7 +200,7 @@ export default function Home() {
                   <div className="text-sm font-semibold">{x.title}</div>
                   <Icon as={icons[x.icon] ?? icons.tools} />
                 </div>
-                <div className="mt-2 text-sm text-white/65">{x.description}</div>
+                <div className="mt-2 text-sm text-white/75">{x.description}</div>
               </ClickCard>
             ))}
           </div>
@@ -259,7 +259,7 @@ export default function Home() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <div className="text-sm font-semibold">{c.services.trust.title}</div>
-                <div className="mt-2 text-sm text-white/70">{c.services.trust.description}</div>
+                <div className="mt-2 text-sm text-white/78">{c.services.trust.description}</div>
               </div>
               <span className="grid h-10 w-10 place-items-center rounded-2xl border border-white/10 bg-white/5">
                 <Icon as={icons.security} className="h-6 w-6 text-brand-100" />
@@ -278,7 +278,7 @@ export default function Home() {
                 <div className="text-sm font-semibold">{b.h}</div>
                 <Icon as={icons[b.icon] ?? icons.tools} />
               </div>
-              <div className="mt-2 text-sm text-white/70">{b.p}</div>
+              <div className="mt-2 text-sm text-white/78">{b.p}</div>
             </Card>
           ))}
         </div>
@@ -313,7 +313,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-brand-500/14 via-white/5 to-fuchsia-500/10 p-8 md:p-12">
             <div className="text-xl font-semibold md:text-2xl">Ready to modernize your IT?</div>
-            <div className="mt-2 max-w-2xl text-sm text-white/70 md:text-base">
+            <div className="mt-2 max-w-2xl text-sm text-white/78 md:text-base">
               Your IT needs are placed in the hands of multifunctional and certified experts that use
               their skills and experience to develop specific solutions that match your requirements.
             </div>
