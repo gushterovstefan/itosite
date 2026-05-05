@@ -8,6 +8,8 @@
 
 html, body {
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -58,9 +60,9 @@ body {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(120,212,255,0.60), rgba(34,195,246,0.42), rgba(184,229,255,0.55));
-  opacity: 0.55;
-  filter: blur(10px);
+  background: linear-gradient(90deg, rgba(34,195,246,0.35), rgba(120,212,255,0.26));
+  opacity: 0.28;
+  filter: blur(6px);
   z-index: -2;
 }
 
@@ -69,12 +71,12 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.16), transparent);
-  width: 60%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.10), transparent);
+  width: 42%;
   left: 0;
   top: 0;
-  transform: translateX(-140%) skewX(-18deg);
-  animation: shineSweep 3.6s ease-in-out infinite;
+  transform: translateX(-150%) skewX(-18deg);
+  animation: shineSweep 5.8s ease-in-out infinite;
   z-index: 0;
   pointer-events: none;
 }
@@ -88,15 +90,14 @@ body {
 .btn-sheen::marker { content: none; }
 
 .btn-sheen::before {
-  /* keep existing glow but slightly stronger */
-  opacity: 0.85;
+  opacity: 0.32;
 }
 
 .btn-sheen .sheen {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: radial-gradient(240px circle at var(--mx) var(--my), rgba(255,255,255,0.22), transparent 60%);
+  background: radial-gradient(220px circle at var(--mx) var(--my), rgba(255,255,255,0.16), transparent 60%);
   opacity: 0;
   transition: opacity 240ms ease;
   z-index: 0;
@@ -153,7 +154,7 @@ body {
 .hero-noise {
   background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.12) 1px, transparent 0);
   background-size: 3px 3px;
-  opacity: 0.035;
+  opacity: 0.025;
   mix-blend-mode: overlay;
 }
 

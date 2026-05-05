@@ -1,7 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useContent } from '../content/index.jsx'
-import SheenButton from './SheenButton.jsx'
 import logo from '../assets/logo-globe-small.jpg'
 
 const navCopy = {
@@ -14,7 +13,7 @@ const navCopy = {
       ['Microsoft 365', '/microsoft-365'],
       ['Azure & Infrastructure', '/azure-cloud'],
       ['Cybersecurity', '/cybersecurity'],
-      ['Backup & Disaster Recovery', '/backup-disaster-recovery'],
+      ['Backup & DR', '/backup-disaster-recovery'],
       ['Case Studies', '/case-studies'],
       ['About', '/about'],
       ['Contact', '/contacts']
@@ -47,12 +46,11 @@ function NavItem({ to, label, end, activePath }) {
       to={localizedTo}
       aria-current={isActive ? 'page' : undefined}
       className={
-        'relative rounded-full px-3 py-2 text-[13px] font-semibold tracking-wide transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/70 ' +
-        (isActive ? 'text-navy-950' : 'text-white/72 hover:text-white')
+        'rounded-lg px-2.5 py-2 text-[13px] font-semibold tracking-normal transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 ' +
+        (isActive ? 'bg-navy-950 text-white' : 'text-slate-700 hover:bg-slate-100 hover:text-navy-950')
       }
     >
-      {isActive ? <span className="absolute inset-0 rounded-full bg-brand-300 ring-1 ring-brand-200/60" /> : null}
-      <span className="relative z-10 whitespace-nowrap">{label}</span>
+      <span className="whitespace-nowrap">{label}</span>
     </Link>
   )
 }
@@ -130,19 +128,15 @@ export default function Navbar() {
       />
 
       <div className="mx-auto max-w-7xl px-3 pt-3 sm:px-4">
-        <div className="relative rounded-2xl border border-white/12 bg-navy-950/90 px-3 shadow-[0_14px_50px_-28px_rgba(0,0,0,0.55)] backdrop-blur-xl md:px-4">
-          <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-brand-400/12 via-white/5 to-brand-200/8" />
-          <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/5" />
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px rounded-2xl bg-gradient-to-r from-transparent via-white/18 to-transparent" />
-
-          <div className="relative z-10 flex h-16 items-center justify-between gap-3">
+        <div className="rounded-2xl border border-slate-200/80 bg-white/96 px-3 shadow-[0_12px_36px_-28px_rgba(15,23,42,0.55)] backdrop-blur-xl md:px-4">
+          <div className="flex h-14 items-center justify-between gap-3">
             <Link to={localizedPath('/')} className="flex shrink-0 items-center" onClick={() => setOpen(false)}>
               <img
                 src={logo}
                 alt="IT Outsource Ltd."
                 width="96"
                 height="92"
-                className="h-10 w-auto md:h-12"
+                className="h-8 w-auto md:h-9"
                 loading="eager"
               />
             </Link>
@@ -154,26 +148,29 @@ export default function Navbar() {
             </nav>
 
             <div className="flex shrink-0 items-center gap-2">
-              <SheenButton to="/contacts" className="inline-flex px-3 py-2 text-[12px] font-semibold sm:px-4 sm:text-sm">
+              <Link
+                to={localizedPath('/contacts')}
+                className="hidden items-center justify-center rounded-lg bg-navy-950 px-3 py-2 text-[12px] font-semibold text-white shadow-sm transition hover:bg-navy-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 sm:inline-flex sm:px-4 sm:text-sm"
+              >
                 <span className="hidden sm:inline">{copy.cta}</span>
                 <span className="sm:hidden">{copy.mobileCta}</span>
-              </SheenButton>
+              </Link>
 
               <button
                 type="button"
                 onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
-                className="hidden items-center gap-1 rounded-full border border-white/12 bg-white/8 px-3 py-2 text-xs font-semibold text-white/75 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/70 lg:inline-flex"
+                className="hidden items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-navy-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 lg:inline-flex"
                 aria-label="Toggle language"
               >
-                <span className={lang === 'bg' ? 'text-brand-100' : 'text-white/45'}>BG</span>
-                <span className="text-white/25">/</span>
-                <span className={lang === 'en' ? 'text-brand-100' : 'text-white/45'}>EN</span>
+                <span className={lang === 'bg' ? 'text-navy-950' : 'text-slate-400'}>BG</span>
+                <span className="text-slate-300">/</span>
+                <span className={lang === 'en' ? 'text-navy-950' : 'text-slate-400'}>EN</span>
               </button>
 
               <button
                 ref={menuButtonRef}
                 type="button"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/12 bg-white/10 text-white/85 hover:bg-white/16 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/70 xl:hidden"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-800 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 xl:hidden"
                 aria-label={open ? 'Close menu' : 'Open menu'}
                 aria-expanded={open}
                 aria-controls="mobile-navigation"
@@ -188,7 +185,7 @@ export default function Navbar() {
 
       {open ? (
         <div className="fixed inset-0 z-[60] xl:hidden">
-          <button type="button" aria-label="Close menu" className="absolute inset-0 bg-black/60" onClick={() => setOpen(false)} />
+          <button type="button" aria-label="Close menu" className="absolute inset-0 bg-slate-950/55" onClick={() => setOpen(false)} />
 
           <div
             id="mobile-navigation"
@@ -198,13 +195,13 @@ export default function Navbar() {
             aria-label="Site navigation"
             className="relative mx-auto mt-20 w-full max-w-2xl px-4"
           >
-            <div className="rounded-2xl border border-black/10 bg-white/96 p-3 shadow-2xl backdrop-blur">
+            <div className="rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl">
               <div className="mb-2 flex items-center justify-between px-1">
-                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{copy.menu}</span>
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{copy.menu}</span>
                 <button
                   ref={closeButtonRef}
                   type="button"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-white/80 text-2xl leading-none text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-2xl leading-none text-navy-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70"
                   aria-label="Close menu"
                   onClick={() => setOpen(false)}
                 >
@@ -220,10 +217,10 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className={({ isActive }) =>
                       [
-                        'rounded-xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70',
+                        'rounded-xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70',
                         isActive
-                          ? 'bg-brand-200/60 text-ink-950 ring-1 ring-brand-300/40'
-                          : 'text-ink-950/75 hover:bg-white/70 hover:text-ink-950'
+                          ? 'bg-navy-950 text-white'
+                          : 'text-slate-700 hover:bg-slate-100 hover:text-navy-950'
                       ].join(' ')
                     }
                   >
@@ -233,14 +230,18 @@ export default function Navbar() {
               </div>
 
               <div className="mt-3 grid gap-2 sm:grid-cols-[1fr_auto]">
-                <SheenButton to="/contacts" onClick={() => setOpen(false)} className="w-full rounded-xl px-4 py-3 text-sm font-semibold">
+                <Link
+                  to={localizedPath('/contacts')}
+                  onClick={() => setOpen(false)}
+                  className="inline-flex w-full items-center justify-center rounded-xl bg-navy-950 px-4 py-3 text-sm font-semibold text-white hover:bg-navy-900"
+                >
                   {copy.cta}
-                </SheenButton>
+                </Link>
 
                 <button
                   type="button"
                   onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
-                  className="inline-flex items-center justify-center rounded-xl border border-black/10 bg-white/70 px-4 py-3 text-sm font-semibold text-ink-950/80 hover:text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70"
+                  className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70"
                 >
                   {lang === 'bg' ? 'EN' : 'BG'}
                 </button>

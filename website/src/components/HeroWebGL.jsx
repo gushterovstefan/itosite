@@ -24,8 +24,15 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
     camera.position.set(0, 0, 9)
 
-    // Light theme background (so the hero doesn't look like a different site section)
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false })
+    // Light theme background (so the hero doesn't look like a different site section).
+    // Some browsers/headless previews block WebGL; the decorative layer must fail closed.
+    let renderer
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false })
+    } catch (error) {
+      console.warn('Decorative WebGL background disabled:', error)
+      return
+    }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
     renderer.setClearColor(0xffffff, 1)
 

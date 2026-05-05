@@ -46,8 +46,8 @@ export default function CookieConsent() {
   if (!visible) return null
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[80] px-4 pb-4 sm:px-6" role="region" aria-label={l.title}>
-      <div className="mx-auto max-w-4xl rounded-3xl border border-black/10 bg-white/95 p-4 shadow-[0_20px_90px_-45px_rgba(0,0,0,0.7)] backdrop-blur md:flex md:items-center md:justify-between md:gap-5">
+    <div className="fixed inset-x-0 bottom-0 z-[80] px-3 pb-3 sm:px-6 sm:pb-4" role="region" aria-label={l.title}>
+      <div className="mx-auto max-w-4xl rounded-2xl border border-black/10 bg-white/95 p-3 shadow-[0_20px_90px_-45px_rgba(0,0,0,0.7)] backdrop-blur sm:p-4 md:flex md:items-center md:justify-between md:gap-5">
         <div>
           <div className="text-sm font-semibold text-ink-950">{l.title}</div>
           <p className="mt-1 text-xs leading-relaxed text-ink-900/70 md:text-sm">
@@ -57,18 +57,18 @@ export default function CookieConsent() {
             </Link>
           </p>
         </div>
-        <div className="mt-4 flex flex-col gap-2 sm:flex-row md:mt-0 md:shrink-0">
+        <div className="mt-3 flex flex-col gap-2 sm:flex-row md:mt-0 md:shrink-0">
           <button
             type="button"
             onClick={() => choose('rejected')}
-            className="rounded-full border border-black/10 bg-white px-4 py-2 text-xs font-semibold text-ink-950/80 hover:bg-white/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            className="rounded-full border border-black/10 bg-white px-3 py-2 text-xs font-semibold leading-snug text-ink-950/80 hover:bg-white/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:px-4"
           >
             {l.reject}
           </button>
           <button
             type="button"
             onClick={() => choose('accepted')}
-            className="rounded-full bg-brand-200/60 px-4 py-2 text-xs font-semibold text-ink-950 ring-1 ring-brand-300/50 hover:bg-brand-200/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            className="rounded-full bg-brand-200/60 px-3 py-2 text-xs font-semibold leading-snug text-ink-950 ring-1 ring-brand-300/50 hover:bg-brand-200/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:px-4"
           >
             {l.accept}
           </button>
