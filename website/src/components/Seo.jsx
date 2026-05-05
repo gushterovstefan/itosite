@@ -26,6 +26,22 @@ const metaByPath = {
       title: 'IT Solutions — Azure, Microsoft 365, Security, Backup & DR',
       description: 'Production-ready solutions across Microsoft Azure, Microsoft 365, Zero Trust security, Entra ID, Veeam backup, cloud migration and web platforms.'
     },
+    '/solutions/microsoft-azure': {
+      title: 'Microsoft Azure Solutions — IT Outsource Ltd.',
+      description: 'Azure infrastructure design, secure networking, monitoring, governance, cost control and operational runbooks.'
+    },
+    '/solutions/microsoft-365': {
+      title: 'Microsoft 365 Solutions — IT Outsource Ltd.',
+      description: 'Microsoft 365 collaboration, Teams, SharePoint, Exchange, Entra, Intune and Defender governance for modern workplace operations.'
+    },
+    '/solutions/vmware-proxmox-virtualization': {
+      title: 'VMware & Proxmox Virtualization — IT Outsource Ltd.',
+      description: 'Virtualization assessment, design, migration and operations for VMware and Proxmox private infrastructure.'
+    },
+    '/solutions/azure-hybrid-cloud': {
+      title: 'Azure Hybrid Cloud Integration — IT Outsource Ltd.',
+      description: 'Hybrid cloud integration across on-prem VMware or Proxmox and Azure for secure connectivity, monitoring and disaster recovery.'
+    },
     '/solutions/zero-trust-security': {
       title: 'Zero Trust Security with Defender & Sentinel — IT Outsource Ltd.',
       description: 'Microsoft Defender XDR and Sentinel security delivery across endpoints, identities and cloud workloads with incident response and governance.'
@@ -41,6 +57,14 @@ const metaByPath = {
     '/solutions/cloud-migration': {
       title: 'Cloud Migration Services — IT Outsource Ltd.',
       description: 'Phased Google Workspace to Microsoft 365 migration for mail, files and identity with clear runbooks and minimal downtime.'
+    },
+    '/solutions/web-b2b-b2c': {
+      title: 'Web-Based B2B & B2C Solutions — IT Outsource Ltd.',
+      description: 'Custom ERP-integrated web platforms and business portals for B2B and B2C workflows, automation and operational handover.'
+    },
+    '/solutions/easy-order-platform': {
+      title: 'Easy Order Web Platform — IT Outsource Ltd.',
+      description: 'Integrated order-process platform connecting customers, manufacturers, warehouses and distributors with automated data flow.'
     },
     '/about': {
       title: 'About IT Outsource Ltd.',
@@ -120,6 +144,22 @@ const metaByPath = {
       title: 'ИТ решения — Azure, Microsoft 365, сигурност, backup и DR',
       description: 'Решения за Microsoft Azure, Microsoft 365, Zero Trust сигурност, Entra ID, Veeam backup, cloud migration и уеб платформи.'
     },
+    '/solutions/microsoft-azure': {
+      title: 'Microsoft Azure решения — Ай Ти Аутсорс ООД',
+      description: 'Azure infrastructure design, secure networking, monitoring, governance, cost control и operational runbooks.'
+    },
+    '/solutions/microsoft-365': {
+      title: 'Microsoft 365 решения — Ай Ти Аутсорс ООД',
+      description: 'Microsoft 365 collaboration, Teams, SharePoint, Exchange, Entra, Intune и Defender governance за modern workplace operations.'
+    },
+    '/solutions/vmware-proxmox-virtualization': {
+      title: 'VMware и Proxmox виртуализация — Ай Ти Аутсорс ООД',
+      description: 'Virtualization assessment, design, migration и operations за VMware и Proxmox private infrastructure.'
+    },
+    '/solutions/azure-hybrid-cloud': {
+      title: 'Azure хибридна интеграция — Ай Ти Аутсорс ООД',
+      description: 'Hybrid cloud integration между on-prem VMware/Proxmox и Azure за secure connectivity, monitoring и disaster recovery.'
+    },
     '/solutions/zero-trust-security': {
       title: 'Zero Trust сигурност с Defender и Sentinel — Ай Ти Аутсорс ООД',
       description: 'Microsoft Defender XDR и Sentinel доставка за защита на устройства, идентичности и cloud workloads с incident response и governance.'
@@ -135,6 +175,14 @@ const metaByPath = {
     '/solutions/cloud-migration': {
       title: 'Cloud migration услуги — Ай Ти Аутсорс ООД',
       description: 'Поетапна миграция от Google Workspace към Microsoft 365 за поща, файлове и идентичност с ясни runbooks и минимален downtime.'
+    },
+    '/solutions/web-b2b-b2c': {
+      title: 'Уеб B2B и B2C решения — Ай Ти Аутсорс ООД',
+      description: 'Custom ERP-integrated web platforms и business portals за B2B/B2C workflows, automation и operational handover.'
+    },
+    '/solutions/easy-order-platform': {
+      title: 'Easy Order платформа — Ай Ти Аутсорс ООД',
+      description: 'Интегрирана order-process платформа, свързваща клиенти, производители, складове и дистрибутори с automated data flow.'
     },
     '/about': {
       title: 'За Ай Ти Аутсорс ООД',

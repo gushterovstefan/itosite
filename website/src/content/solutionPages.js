@@ -51,6 +51,84 @@ export const solutionPages = {
       caseTitle: 'Anonymized outcome',
       caseBody: 'A distributed team migrated communication and files in phases, keeping downtime low while improving identity and device governance.',
       caseMetrics: ['phased cutover', 'minimal downtime', 'user comms']
+    },
+    'microsoft-azure': {
+      title: 'Microsoft Azure',
+      eyebrow: 'Cloud Infrastructure',
+      lead: 'Design, build and operate Azure infrastructure with secure networking, governance and cost control.',
+      subline: 'Cloud resources are only useful when they are resilient, monitored and supportable.',
+      icon: 'cloud',
+      buyer: ['IT leaders planning cloud infrastructure', 'Teams replacing aging on-prem platforms', 'Businesses that need secure, scalable hosting'],
+      deliver: ['Azure landing zone and subscription structure', 'Secure networking, monitoring and identity integration', 'Cost governance, tagging and operational reporting', 'Runbooks for support, change and incident handling'],
+      standards: ['Microsoft Azure', 'Landing zones', 'Azure Monitor', 'Entra ID', 'FinOps'],
+      caseTitle: 'Anonymized outcome',
+      caseBody: 'A business infrastructure footprint was moved into a clearer Azure operating model with controlled access, better monitoring and documented ownership.',
+      caseMetrics: ['secure cloud', 'cost control', 'runbooks']
+    },
+    'microsoft-365': {
+      title: 'Microsoft 365',
+      eyebrow: 'Modern Workplace',
+      lead: 'Deploy Microsoft 365 collaboration with security, device alignment and practical governance.',
+      subline: 'Teams, SharePoint and Exchange work best when identity, devices and data rules are designed together.',
+      icon: 'platform',
+      buyer: ['Organizations standardizing collaboration', 'Teams improving mail, files and device governance', 'IT managers reducing workplace support friction'],
+      deliver: ['Teams, SharePoint and Exchange configuration', 'M365 security and governance baseline', 'Entra, Intune and Defender alignment', 'User adoption, support model and admin handover'],
+      standards: ['Microsoft 365', 'Teams', 'SharePoint', 'Exchange', 'Intune'],
+      caseTitle: 'Anonymized outcome',
+      caseBody: 'A workplace environment became easier to operate after collaboration, identity and endpoint controls were aligned under one governance model.',
+      caseMetrics: ['secure collaboration', 'device governance', 'handover']
+    },
+    'vmware-proxmox-virtualization': {
+      title: 'VMware & Proxmox Virtualization',
+      eyebrow: 'Virtualization',
+      lead: 'Consolidate, optimize and operate on-prem virtualization with VMware or Proxmox depending on business and licensing needs.',
+      subline: 'The right virtualization platform balances availability, cost, lifecycle and supportability.',
+      icon: 'virtualization',
+      buyer: ['Organizations modernizing on-prem compute', 'Teams reviewing VMware cost and lifecycle options', 'Businesses that need reliable private infrastructure'],
+      deliver: ['Current-state assessment and capacity planning', 'VMware or Proxmox target architecture', 'Migration plan for workloads and storage', 'Backup, monitoring and operational handover'],
+      standards: ['VMware', 'Proxmox', 'KVM', 'Storage', 'High availability'],
+      caseTitle: 'Anonymized outcome',
+      caseBody: 'A private infrastructure environment gained clearer capacity planning, backup alignment and platform ownership after virtualization redesign.',
+      caseMetrics: ['right-sized hosts', 'HA planning', 'lower risk']
+    },
+    'azure-hybrid-cloud': {
+      title: 'Azure Hybrid Cloud Integration',
+      eyebrow: 'Hybrid Cloud',
+      lead: 'Extend on-prem VMware or Proxmox environments into Azure for scalability, disaster recovery and secure hybrid operations.',
+      subline: 'Hybrid works when connectivity, identity, monitoring and recovery are designed as one system.',
+      icon: 'infrastructure',
+      buyer: ['Teams that cannot move everything to cloud at once', 'Organizations needing DR or burst capacity in Azure', 'IT leaders operating both cloud and on-prem platforms'],
+      deliver: ['Hybrid connectivity and identity design', 'Azure extension for selected workloads and DR scenarios', 'Unified monitoring and backup alignment', 'Operational model for cloud/on-prem ownership'],
+      standards: ['Azure', 'VPN / ExpressRoute', 'Hybrid identity', 'Azure Monitor', 'DR planning'],
+      caseTitle: 'Anonymized outcome',
+      caseBody: 'A hybrid environment reduced operational ambiguity by defining what runs on-prem, what extends to Azure and how both sides are monitored and recovered.',
+      caseMetrics: ['hybrid DR', 'secure connectivity', 'unified monitoring']
+    },
+    'web-b2b-b2c': {
+      title: 'Web-Based B2B & B2C Solutions',
+      eyebrow: 'Business Platforms',
+      lead: 'Custom web platforms integrated with ERP and business systems to match exact operational processes.',
+      subline: 'Useful software reflects the real process — not the other way around.',
+      icon: 'web',
+      buyer: ['Businesses with ordering or workflow complexity', 'Teams that need ERP-integrated customer or partner portals', 'Operations leaders replacing manual data transfer'],
+      deliver: ['Process mapping and platform scope', 'ERP/API integration architecture', 'Secure modular web application delivery', 'Operational handover and support model'],
+      standards: ['React / web apps', 'ERP integration', 'APIs', 'Security boundaries', 'Operational handover'],
+      caseTitle: 'Anonymized outcome',
+      caseBody: 'A workflow-heavy business reduced manual coordination by moving order and data flows into an integrated web platform with clearer ownership.',
+      caseMetrics: ['ERP integration', 'less manual work', 'clear ownership']
+    },
+    'easy-order-platform': {
+      title: 'Easy Order Web Platform',
+      eyebrow: 'Order Management',
+      lead: 'Integrated order-process platform connecting customers, manufacturers, warehouses and distributors.',
+      subline: 'Order workflows become faster when data transfer is automatic and visible to the right parties.',
+      icon: 'tools',
+      buyer: ['Organizations coordinating orders across multiple parties', 'Teams replacing spreadsheet/email order workflows', 'Businesses that need status visibility and fewer manual handoffs'],
+      deliver: ['Order-flow mapping and role model', 'Customer, manufacturer, warehouse and distributor data paths', 'Automation rules and integration points', 'Support, reporting and operational handover'],
+      standards: ['Order workflows', 'Data automation', 'Role-based access', 'ERP integration', 'Reporting'],
+      caseTitle: 'Anonymized outcome',
+      caseBody: 'A multi-party order process became easier to track and operate after replacing manual handoffs with an integrated workflow platform.',
+      caseMetrics: ['automated flow', 'role visibility', 'fewer handoffs']
     }
   },
   bg: {
@@ -105,8 +183,86 @@ export const solutionPages = {
       caseTitle: 'Анонимизиран резултат',
       caseBody: 'Разпределен екип мигрира комуникация и файлове поетапно, с нисък downtime и подобрен identity/device governance.',
       caseMetrics: ['phased cutover', 'minimal downtime', 'user comms']
+    },
+    'microsoft-azure': {
+      title: 'Microsoft Azure',
+      eyebrow: 'Cloud Infrastructure',
+      lead: 'Дизайн, изграждане и управление на Azure infrastructure със сигурна мрежа, governance и cost control.',
+      subline: 'Cloud resources са полезни, когато са resilient, monitored и supportable.',
+      icon: 'cloud',
+      buyer: ['IT лидери, планиращи cloud infrastructure', 'Екипи, заменящи остарели on-prem platforms', 'Бизнеси с нужда от secure, scalable hosting'],
+      deliver: ['Azure landing zone и subscription structure', 'Secure networking, monitoring и identity integration', 'Cost governance, tagging и operational reporting', 'Runbooks за support, change и incident handling'],
+      standards: ['Microsoft Azure', 'Landing zones', 'Azure Monitor', 'Entra ID', 'FinOps'],
+      caseTitle: 'Анонимизиран резултат',
+      caseBody: 'Business infrastructure footprint беше преместен в по-ясен Azure operating model с controlled access, по-добър monitoring и documented ownership.',
+      caseMetrics: ['secure cloud', 'cost control', 'runbooks']
+    },
+    'microsoft-365': {
+      title: 'Microsoft 365',
+      eyebrow: 'Modern Workplace',
+      lead: 'Microsoft 365 collaboration със security, device alignment и практичен governance.',
+      subline: 'Teams, SharePoint и Exchange работят най-добре, когато identity, devices и data rules са проектирани заедно.',
+      icon: 'platform',
+      buyer: ['Организации, стандартизиращи collaboration', 'Екипи, подобряващи mail, files и device governance', 'IT мениджъри, намаляващи workplace support friction'],
+      deliver: ['Teams, SharePoint и Exchange configuration', 'M365 security и governance baseline', 'Entra, Intune и Defender alignment', 'User adoption, support model и admin handover'],
+      standards: ['Microsoft 365', 'Teams', 'SharePoint', 'Exchange', 'Intune'],
+      caseTitle: 'Анонимизиран резултат',
+      caseBody: 'Workplace среда стана по-лесна за управление след alignment на collaboration, identity и endpoint controls в един governance model.',
+      caseMetrics: ['secure collaboration', 'device governance', 'handover']
+    },
+    'vmware-proxmox-virtualization': {
+      title: 'VMware и Proxmox виртуализация',
+      eyebrow: 'Virtualization',
+      lead: 'Консолидация, оптимизация и управление на on-prem virtualization с VMware или Proxmox според business и licensing нужди.',
+      subline: 'Правилната virtualization platform балансира availability, cost, lifecycle и supportability.',
+      icon: 'virtualization',
+      buyer: ['Организации, модернизиращи on-prem compute', 'Екипи, преглеждащи VMware cost и lifecycle options', 'Бизнеси с нужда от reliable private infrastructure'],
+      deliver: ['Current-state assessment и capacity planning', 'VMware или Proxmox target architecture', 'Migration plan за workloads и storage', 'Backup, monitoring и operational handover'],
+      standards: ['VMware', 'Proxmox', 'KVM', 'Storage', 'High availability'],
+      caseTitle: 'Анонимизиран резултат',
+      caseBody: 'Private infrastructure среда получи по-ясно capacity planning, backup alignment и platform ownership след virtualization redesign.',
+      caseMetrics: ['right-sized hosts', 'HA planning', 'lower risk']
+    },
+    'azure-hybrid-cloud': {
+      title: 'Azure хибридна интеграция',
+      eyebrow: 'Hybrid Cloud',
+      lead: 'Разширяване на on-prem VMware или Proxmox към Azure за scalability, disaster recovery и secure hybrid operations.',
+      subline: 'Hybrid работи, когато connectivity, identity, monitoring и recovery са проектирани като една система.',
+      icon: 'infrastructure',
+      buyer: ['Екипи, които не могат да преместят всичко в cloud наведнъж', 'Организации с нужда от DR или burst capacity в Azure', 'IT лидери, управляващи cloud и on-prem platforms'],
+      deliver: ['Hybrid connectivity и identity design', 'Azure extension за selected workloads и DR scenarios', 'Unified monitoring и backup alignment', 'Operational model за cloud/on-prem ownership'],
+      standards: ['Azure', 'VPN / ExpressRoute', 'Hybrid identity', 'Azure Monitor', 'DR planning'],
+      caseTitle: 'Анонимизиран резултат',
+      caseBody: 'Hybrid environment намали operational ambiguity чрез дефиниране какво остава on-prem, какво се разширява към Azure и как се monitor/recover-ват двете страни.',
+      caseMetrics: ['hybrid DR', 'secure connectivity', 'unified monitoring']
+    },
+    'web-b2b-b2c': {
+      title: 'Уеб B2B и B2C решения',
+      eyebrow: 'Business Platforms',
+      lead: 'Custom web platforms, интегрирани с ERP и бизнес системи според точните operational processes.',
+      subline: 'Полезният софтуер отразява реалния процес — не обратното.',
+      icon: 'web',
+      buyer: ['Бизнеси с ordering или workflow complexity', 'Екипи с нужда от ERP-integrated customer/partner portals', 'Operations лидери, заменящи manual data transfer'],
+      deliver: ['Process mapping и platform scope', 'ERP/API integration architecture', 'Secure modular web application delivery', 'Operational handover и support model'],
+      standards: ['React / web apps', 'ERP integration', 'APIs', 'Security boundaries', 'Operational handover'],
+      caseTitle: 'Анонимизиран резултат',
+      caseBody: 'Workflow-heavy business намали manual coordination чрез integrated web platform с по-ясен ownership.',
+      caseMetrics: ['ERP integration', 'less manual work', 'clear ownership']
+    },
+    'easy-order-platform': {
+      title: 'Easy Order платформа',
+      eyebrow: 'Order Management',
+      lead: 'Интегрирана order-process платформа, свързваща клиенти, производители, складове и дистрибутори.',
+      subline: 'Order workflows стават по-бързи, когато data transfer е автоматичен и видим за правилните участници.',
+      icon: 'tools',
+      buyer: ['Организации, координиращи orders между много страни', 'Екипи, заменящи spreadsheet/email order workflows', 'Бизнеси с нужда от status visibility и по-малко manual handoffs'],
+      deliver: ['Order-flow mapping и role model', 'Customer, manufacturer, warehouse и distributor data paths', 'Automation rules и integration points', 'Support, reporting и operational handover'],
+      standards: ['Order workflows', 'Data automation', 'Role-based access', 'ERP integration', 'Reporting'],
+      caseTitle: 'Анонимизиран резултат',
+      caseBody: 'Multi-party order process стана по-лесен за tracking и operation след замяна на manual handoffs с integrated workflow platform.',
+      caseMetrics: ['automated flow', 'role visibility', 'fewer handoffs']
     }
   }
 }
 
-export const solutionSlugs = ['zero-trust-security', 'entra-id-sso', 'backup-dr-veeam', 'cloud-migration']
+export const solutionSlugs = ['microsoft-azure', 'microsoft-365', 'vmware-proxmox-virtualization', 'azure-hybrid-cloud', 'zero-trust-security', 'entra-id-sso', 'backup-dr-veeam', 'cloud-migration', 'web-b2b-b2c', 'easy-order-platform']

@@ -6,6 +6,12 @@ import ConversionCta from '../components/ConversionCta.jsx'
 import { useContent } from '../content/index.jsx'
 
 const solutionLinks = {
+  'Microsoft Azure': '/solutions/microsoft-azure',
+  'Microsoft 365': '/solutions/microsoft-365',
+  'VMware & Proxmox Virtualization': '/solutions/vmware-proxmox-virtualization',
+  'VMware и Proxmox виртуализация': '/solutions/vmware-proxmox-virtualization',
+  'Azure Hybrid Cloud Integration': '/solutions/azure-hybrid-cloud',
+  'Azure хибридна интеграция': '/solutions/azure-hybrid-cloud',
   'Zero Trust Security with Defender & Sentinel': '/solutions/zero-trust-security',
   'Zero Trust сигурност с Defender и Sentinel': '/solutions/zero-trust-security',
   'Entra ID & SSO Consolidation': '/solutions/entra-id-sso',
@@ -13,7 +19,11 @@ const solutionLinks = {
   'Backup & DR with Veeam': '/solutions/backup-dr-veeam',
   'Backup и DR с Veeam': '/solutions/backup-dr-veeam',
   'Cloud Migration Services': '/solutions/cloud-migration',
-  'Cloud migration услуги': '/solutions/cloud-migration'
+  'Cloud migration услуги': '/solutions/cloud-migration',
+  'Web-Based B2B & B2C Solutions': '/solutions/web-b2b-b2c',
+  'Уеб B2B и B2C решения': '/solutions/web-b2b-b2c',
+  'Easy Order Web Platform': '/solutions/easy-order-platform',
+  'Easy Order платформа': '/solutions/easy-order-platform'
 }
 
 export default function Solutions() {
