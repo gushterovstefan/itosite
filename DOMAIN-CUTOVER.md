@@ -2,9 +2,19 @@
 
 This plan is for moving `ito-site` from the temporary Cloudflare Pages URL to the final production domain.
 
-Current production URL: `https://itoutsource.bg`  
+Canonical production URL: `https://itoutsource.bg`  
 Cloudflare Pages project: `itosite`  
 Production branch: `rebuild-gemstyle`
+
+## Current DNS / hosting state checked on 2026-05-05
+
+- `itoutsource.bg` currently resolves to `193.41.64.138`.
+- `itoutsource.bg` currently redirects to `https://www.itoutsource.bg/`.
+- `www.itoutsource.bg` currently serves the old WordPress/Apache site.
+- Nameservers currently observed: `ns1.bdm.microsoftonline.com`, `ns2.bdm.microsoftonline.com`, `ns3.bdm.microsoftonline.com`, `ns4.bdm.microsoftonline.com`.
+- Site-side canonical URLs, Open Graph URLs, sitemap and robots are already updated to `https://itoutsource.bg`.
+
+Cutover is therefore blocked only on external DNS / Cloudflare Pages custom-domain configuration.
 
 ## 1. Decide the canonical domain
 
@@ -28,6 +38,8 @@ Expected DNS patterns:
 
 - Root/apex domain: Cloudflare Pages custom-domain record managed by Cloudflare.
 - `www`: CNAME to the Pages target provided by Cloudflare.
+
+If DNS remains outside Cloudflare, configure the registrar/DNS host with the exact records Cloudflare Pages provides after adding the custom domain. If the DNS host does not support apex flattening/ALIAS/ANAME for `itoutsource.bg`, move DNS to Cloudflare or use `www.itoutsource.bg` as the canonical host instead.
 
 ## 3. Redirect non-canonical host
 
