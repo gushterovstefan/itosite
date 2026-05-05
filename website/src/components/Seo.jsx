@@ -26,6 +26,22 @@ const metaByPath = {
       title: 'IT Solutions — Azure, Microsoft 365, Security, Backup & DR',
       description: 'Production-ready solutions across Microsoft Azure, Microsoft 365, Zero Trust security, Entra ID, Veeam backup, cloud migration and web platforms.'
     },
+    '/solutions/zero-trust-security': {
+      title: 'Zero Trust Security with Defender & Sentinel — IT Outsource Ltd.',
+      description: 'Microsoft Defender XDR and Sentinel security delivery across endpoints, identities and cloud workloads with incident response and governance.'
+    },
+    '/solutions/entra-id-sso': {
+      title: 'Entra ID & SSO Consolidation — IT Outsource Ltd.',
+      description: 'Single sign-on, Conditional Access, MFA and audit trail consolidation for SaaS and business applications using Microsoft Entra ID.'
+    },
+    '/solutions/backup-dr-veeam': {
+      title: 'Backup & DR with Veeam — IT Outsource Ltd.',
+      description: '3-2-1 backup strategy, immutable repositories and tested recovery for VMware, Hyper-V, Microsoft 365 and physical workloads.'
+    },
+    '/solutions/cloud-migration': {
+      title: 'Cloud Migration Services — IT Outsource Ltd.',
+      description: 'Phased Google Workspace to Microsoft 365 migration for mail, files and identity with clear runbooks and minimal downtime.'
+    },
     '/about': {
       title: 'About IT Outsource Ltd.',
       description: 'Learn about IT Outsource Ltd., a Sofia-based IT services company delivering consulting, infrastructure, support and digital solutions.'
@@ -63,6 +79,22 @@ const metaByPath = {
     '/solutions': {
       title: 'ИТ решения — Azure, Microsoft 365, сигурност, backup и DR',
       description: 'Решения за Microsoft Azure, Microsoft 365, Zero Trust сигурност, Entra ID, Veeam backup, cloud migration и уеб платформи.'
+    },
+    '/solutions/zero-trust-security': {
+      title: 'Zero Trust сигурност с Defender и Sentinel — Ай Ти Аутсорс ООД',
+      description: 'Microsoft Defender XDR и Sentinel доставка за защита на устройства, идентичности и cloud workloads с incident response и governance.'
+    },
+    '/solutions/entra-id-sso': {
+      title: 'Entra ID и SSO консолидация — Ай Ти Аутсорс ООД',
+      description: 'SSO, Conditional Access, MFA и audit trail консолидация за SaaS и бизнес приложения чрез Microsoft Entra ID.'
+    },
+    '/solutions/backup-dr-veeam': {
+      title: 'Backup и DR с Veeam — Ай Ти Аутсорс ООД',
+      description: '3-2-1 backup стратегия, immutable repositories и тествано възстановяване за VMware, Hyper-V, Microsoft 365 и physical workloads.'
+    },
+    '/solutions/cloud-migration': {
+      title: 'Cloud migration услуги — Ай Ти Аутсорс ООД',
+      description: 'Поетапна миграция от Google Workspace към Microsoft 365 за поща, файлове и идентичност с ясни runbooks и минимален downtime.'
     },
     '/about': {
       title: 'За Ай Ти Аутсорс ООД',
