@@ -3,6 +3,7 @@ import GemSection from '../components/GemSection.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import InfoList from '../components/InfoList.jsx'
+import ConversionCta from '../components/ConversionCta.jsx'
 import { useContent } from '../content/index.jsx'
 
 export default function Support() {
@@ -69,6 +70,8 @@ export default function Support() {
           </Card>
         </div>
       </GemSection>
+
+      <ConversionCta variant="support" />
     </div>
   )
 }

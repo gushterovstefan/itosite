@@ -16,7 +16,7 @@ export default function Contact() {
         title={c.title}
         lead={c.lead}
         subline={null}
-        primaryCta={{ to: '/it-support-services', label: ui.support }}
+        primaryCta={{ to: '/contacts', label: ui.getQuote ?? ui.contact }}
         secondaryCta={{ to: '/solutions', label: ui.solutions }}
         aside={{
           eyebrow: 'Contact',
@@ -32,7 +32,7 @@ export default function Contact() {
       />
 
       <GemSection eyebrow={ui.contact} title={c.title} lead={c.lead}>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-3">
           <Card revealDelay={0.04}>
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{ui.phoneLabel}</div>
@@ -46,6 +46,19 @@ export default function Contact() {
               <Icon as={icons.mail} />
             </div>
             <div className="mt-2 text-sm text-ink-900/70">{c.email}</div>
+          </Card>
+          <Card revealDelay={0.16} variant="brand" badge="Discovery">
+            <div className="flex items-start justify-between gap-4">
+              <div className="text-sm font-semibold">
+                {content.shared.ui.getQuote === 'Запитване' ? '30-минутен разговор' : '30-minute discovery call'}
+              </div>
+              <Icon as={icons.message} />
+            </div>
+            <p className="mt-3 text-sm leading-relaxed text-ink-900/70">
+              {content.shared.ui.getQuote === 'Запитване'
+                ? 'Пишете ни с кратко описание на проекта. Ще върнем next step до 1 работен ден.'
+                : 'Send a short project brief. We will respond with a practical next step within 1 business day.'}
+            </p>
           </Card>
         </div>
       </GemSection>

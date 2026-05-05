@@ -6,10 +6,12 @@ import Stepper from '../components/Stepper.jsx'
 import { ClickCard } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import SheenButton from '../components/SheenButton.jsx'
+import ProofLayer from '../components/ProofLayer.jsx'
+import ConversionCta from '../components/ConversionCta.jsx'
 import { useContent } from '../content/index.jsx'
 
 export default function HomeGem() {
-  const { content } = useContent()
+  const { content, lang } = useContent()
   const c = content.home
   const ui = content.shared.ui
 
@@ -33,12 +35,12 @@ export default function HomeGem() {
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <SheenButton to="/contacts">{ui.contactUs}</SheenButton>
+                <SheenButton to="/contacts">{ui.getQuote ?? ui.contactUs}</SheenButton>
                 <Link
-                  to="/solutions"
+                  to="/contacts"
                   className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
                 >
-                  <span>{ui.exploreSolutions}</span>
+                  <span>{lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-minute discovery call'}</span>
                 </Link>
               </div>
             </div>
@@ -95,6 +97,8 @@ export default function HomeGem() {
         </div>
       </section>
 
+      <ProofLayer />
+
       {/* KPI strip */}
       <GemSection eyebrow="At a glance" title="Delivery KPIs" lead="Operational discipline with enterprise-ready controls.">
         <KpiStrip
@@ -147,6 +151,8 @@ export default function HomeGem() {
           ]}
         />
       </GemSection>
+
+      <ConversionCta />
     </div>
   )
 }

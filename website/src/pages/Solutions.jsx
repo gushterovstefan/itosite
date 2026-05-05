@@ -2,6 +2,7 @@ import PageHero from '../components/PageHero.jsx'
 import GemSection from '../components/GemSection.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
+import ConversionCta from '../components/ConversionCta.jsx'
 import { useContent } from '../content/index.jsx'
 
 export default function Solutions() {
@@ -45,6 +46,8 @@ export default function Solutions() {
           ))}
         </div>
       </GemSection>
+
+      <ConversionCta variant="solutions" />
     </div>
   )
 }
