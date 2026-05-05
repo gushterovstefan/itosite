@@ -10,12 +10,15 @@ import Support from './pages/Support.jsx'
 import Infrastructure from './pages/Infrastructure.jsx'
 import Solutions from './pages/Solutions.jsx'
 import Contact from './pages/Contact.jsx'
+import Legal from './pages/Legal.jsx'
+import Seo from './components/Seo.jsx'
 
 export default function App() {
   const location = useLocation()
 
   return (
     <ErrorBoundary>
+      <Seo />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route element={<GemLayout />}>
@@ -26,6 +29,8 @@ export default function App() {
             <Route path="/it-infrastructure-services" element={<PageTransition><Infrastructure /></PageTransition>} />
             <Route path="/solutions" element={<PageTransition><Solutions /></PageTransition>} />
             <Route path="/contacts" element={<PageTransition><Contact /></PageTransition>} />
+            <Route path="/legal/privacy" element={<PageTransition><Legal type="privacy" /></PageTransition>} />
+            <Route path="/legal/terms" element={<PageTransition><Legal type="terms" /></PageTransition>} />
           </Route>
         </Routes>
       </AnimatePresence>
