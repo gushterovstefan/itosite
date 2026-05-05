@@ -33,7 +33,7 @@ export default function GemLayout() {
       <main className="relative isolate pt-14 md:pt-16">
         {/* global WebGL network background (desktop only) */}
         {!reduce && desktop ? (
-          <div className="pointer-events-none absolute inset-0 z-0 hidden md:block">
+          <div className="pointer-events-none fixed inset-0 z-0 hidden h-dvh overflow-hidden md:block">
             <Suspense fallback={null}>
               <HeroWebGL logoSrc={logo} showCoin={false} />
             </Suspense>

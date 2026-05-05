@@ -150,6 +150,9 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     const resize = () => {
       const r = host.getBoundingClientRect()
       renderer.setSize(r.width, r.height, false)
+      renderer.domElement.style.display = 'block'
+      renderer.domElement.style.width = '100%'
+      renderer.domElement.style.height = '100%'
       camera.aspect = r.width / Math.max(1, r.height)
       camera.updateProjectionMatrix()
     }
@@ -254,5 +257,5 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     }
   }, [logoSrc, showCoin])
 
-  return <div ref={hostRef} aria-hidden="true" className="pointer-events-none absolute inset-0" />
+  return <div ref={hostRef} aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full overflow-hidden" />
 }
