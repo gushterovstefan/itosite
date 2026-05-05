@@ -16,6 +16,11 @@ const legal = {
     trustLine: 'Built around Microsoft cloud operations, ISO 27001:2022-aligned governance, GDPR-aware delivery, and proven backup / virtualization ecosystems.',
     trustNote: 'Technology names indicate delivery experience and platform alignment, not a claim of certification unless explicitly stated.',
     registered: 'Registered company',
+    legalIdentity: 'Legal identity',
+    companyName: 'IT Outsource Ltd. / Ай Ти Аутсорс ООД',
+    eik: 'EIK / BULSTAT: 200776949',
+    vat: 'VAT number: BG200776949',
+    registeredOffice: 'Registered office and management address: Bulgaria, Sofia 1505, Poduyane, 25 Popova Shapka St., floor 2, apt. 6',
     address: 'Bulgaria, Sofia 1505, Poduyane, 25 Popova Shapka St., floor 2, apt. 6',
     response: 'Typical response: within 1 business day.'
   },
@@ -33,6 +38,11 @@ const legal = {
     trustLine: 'Изградено около Microsoft cloud операции, ISO 27001:2022-aligned управление, GDPR-aware доставка и доказани backup / virtualization екосистеми.',
     trustNote: 'Имената на технологии показват опит и платформена насоченост, не претенция за сертификация, освен ако не е изрично посочено.',
     registered: 'Регистрирана компания',
+    legalIdentity: 'Правна идентификация',
+    companyName: 'Ай Ти Аутсорс ООД / IT Outsource Ltd.',
+    eik: 'ЕИК / БУЛСТАТ: 200776949',
+    vat: 'ДДС / VAT номер: BG200776949',
+    registeredOffice: 'Седалище и адрес на управление: България, гр. София 1505, р-н Подуяне, ул. Попова шапка 25, ет. 2, ап. 6',
     address: 'България, София 1505, р-н Подуяне, ул. Попова шапка 25, ет. 2, ап. 6',
     response: 'Типично време за отговор: до 1 работен ден.'
   }
@@ -91,7 +101,8 @@ export default function Footer() {
             <p className="mt-2 text-sm leading-relaxed text-ink-900/60">{content.shared.tagline}</p>
             <div className="mt-4 space-y-1 text-xs leading-relaxed text-ink-900/70">
               <div>{l.registered}: Ай Ти Аутсорс ООД</div>
-              <div>EIK: 200776949 · VAT: BG200776949</div>
+              <div>{l.eik}</div>
+              <div>{l.vat}</div>
               <div>{l.address}</div>
             </div>
           </div>
@@ -127,6 +138,16 @@ export default function Footer() {
               <FooterLink to="/legal/privacy">{l.privacy}</FooterLink>
               <FooterLink to="/legal/terms">{l.terms}</FooterLink>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-8 rounded-3xl border border-black/10 bg-white/70 p-5 text-xs leading-relaxed text-ink-900/72 md:p-6">
+          <div className="font-semibold uppercase tracking-[0.22em] text-ink-900/70">{l.legalIdentity}</div>
+          <div className="mt-3 grid gap-2 md:grid-cols-2">
+            <div>{l.companyName}</div>
+            <div>{l.eik}</div>
+            <div>{l.vat}</div>
+            <div>{l.registeredOffice}</div>
           </div>
         </div>
 

@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
+import CookieConsent from './CookieConsent.jsx'
 import logo from '../assets/logo-green.jpg'
 
 const HeroWebGL = lazy(() => import('./HeroWebGL.jsx'))
@@ -44,6 +45,7 @@ export default function GemLayout() {
         </div>
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   )
 }
