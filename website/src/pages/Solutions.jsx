@@ -4,6 +4,7 @@ import GemSection from '../components/GemSection.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import SheenButton from '../components/SheenButton.jsx'
+import TrustBlock from '../components/TrustBlock.jsx'
 import { useContent } from '../content/index.jsx'
 
 const pageCopy = {
@@ -280,6 +281,8 @@ export default function Solutions() {
           ))}
         </div>
       </GemSection>
+
+      <TrustBlock compact />
 
       <GemSection eyebrow="Industries" title={c.industriesTitle}>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">

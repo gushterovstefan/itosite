@@ -101,8 +101,8 @@ const metaByPath = {
       description: 'Validated, audit-ready IT environments for CRO, clinical research and regulated life-sciences teams with CSV and GAMP 5 aligned delivery.'
     },
     '/case-studies': {
-      title: 'Case Studies — IT Outsource Ltd.',
-      description: 'Business outcomes and reference patterns for Microsoft cloud, cybersecurity, infrastructure, backup and managed IT delivery.'
+      title: 'Anonymized Case Studies — IT Outsource Ltd.',
+      description: 'Anonymized Microsoft 365 security, Google Workspace migration, Azure disaster recovery and retail infrastructure support case studies.'
     },
     '/about': {
       title: 'About IT Outsource Ltd.',
@@ -114,23 +114,23 @@ const metaByPath = {
     },
     '/industries': {
       title: 'Industries — IT Outsource Ltd.',
-      description: 'IT delivery for retail, life sciences, energy and professional services with relevant solutions, governance and operational ownership.'
+      description: 'IT solutions for retail, healthcare, pharma, CRO, energy, engineering, solar and growing SMB companies where downtime is not acceptable.'
     },
     '/industries/retail': {
       title: 'Retail & E-commerce IT Services — IT Outsource Ltd.',
       description: 'IT support, infrastructure, identity, backup and web-platform delivery for distributed retail and e-commerce operations.'
     },
-    '/industries/life-sciences': {
-      title: 'Life Sciences & Clinical Research IT — IT Outsource Ltd.',
-      description: 'Validated, audit-ready IT environments for clinical research and regulated teams with security, governance and recovery planning.'
+    '/industries/pharma-healthcare': {
+      title: 'Healthcare, Pharma & CRO IT Services — IT Outsource Ltd.',
+      description: 'Secure Microsoft 365, identity, endpoint, backup and support services for healthcare, pharma and CRO teams.'
     },
-    '/industries/energy': {
-      title: 'Energy & Utilities IT Services — IT Outsource Ltd.',
-      description: 'Microsoft cloud, identity, security and governance delivery for distributed energy and utilities teams.'
+    '/industries/energy-engineering': {
+      title: 'Energy, Solar & Engineering IT Services — IT Outsource Ltd.',
+      description: 'Microsoft cloud, cybersecurity, backup, disaster recovery and IT support for energy, solar and engineering companies.'
     },
-    '/industries/professional-services': {
-      title: 'Professional Services & Mid-Market IT — IT Outsource Ltd.',
-      description: 'Pragmatic enterprise-grade IT support, SaaS identity, collaboration and modernization for professional services and mid-market companies.'
+    '/industries/smb': {
+      title: 'SMB & Growing Company IT Services — IT Outsource Ltd.',
+      description: 'Managed IT support, Microsoft 365, cybersecurity, backup and migration services for SMB and growing companies.'
     },
     '/insights': {
       title: 'Insights & IT Playbooks — IT Outsource Ltd.',
@@ -255,8 +255,8 @@ const metaByPath = {
       description: 'Validated, audit-ready ИТ среди за CRO, clinical research и регулирани life-sciences екипи с CSV и GAMP 5 aligned доставка.'
     },
     '/case-studies': {
-      title: 'Казуси — Ай Ти Аутсорс ООД',
-      description: 'Бизнес резултати и reference patterns за Microsoft cloud, киберсигурност, инфраструктура, backup и managed IT delivery.'
+      title: 'Анонимизирани казуси — Ай Ти Аутсорс ООД',
+      description: 'Анонимизирани казуси за Microsoft 365 security, Google Workspace migration, Azure DR и retail infrastructure support.'
     },
     '/about': {
       title: 'За Ай Ти Аутсорс ООД',
@@ -268,23 +268,23 @@ const metaByPath = {
     },
     '/industries': {
       title: 'Индустрии — Ай Ти Аутсорс ООД',
-      description: 'ИТ доставка за retail, life sciences, energy и professional services с релевантни решения, governance и operational ownership.'
+      description: 'ИТ решения за retail, healthcare, pharma, CRO, energy, engineering, solar и growing SMB companies, където downtime не е приемлив.'
     },
     '/industries/retail': {
       title: 'Retail и E-commerce ИТ услуги — Ай Ти Аутсорс ООД',
       description: 'ИТ поддръжка, инфраструктура, identity, backup и web-platform доставка за разпределени retail и e-commerce операции.'
     },
-    '/industries/life-sciences': {
-      title: 'Life Sciences и Clinical Research ИТ — Ай Ти Аутсорс ООД',
-      description: 'Validated, audit-ready ИТ среди за clinical research и regulated екипи със сигурност, governance и recovery planning.'
+    '/industries/pharma-healthcare': {
+      title: 'Healthcare, Pharma и CRO ИТ услуги — Ай Ти Аутсорс ООД',
+      description: 'Secure Microsoft 365, identity, endpoint, backup и support услуги за healthcare, pharma и CRO teams.'
     },
-    '/industries/energy': {
-      title: 'Energy и Utilities ИТ услуги — Ай Ти Аутсорс ООД',
-      description: 'Microsoft cloud, identity, security и governance доставка за разпределени energy и utilities екипи.'
+    '/industries/energy-engineering': {
+      title: 'Energy, Solar и Engineering ИТ услуги — Ай Ти Аутсорс ООД',
+      description: 'Microsoft cloud, cybersecurity, backup, disaster recovery и IT support за energy, solar и engineering companies.'
     },
-    '/industries/professional-services': {
-      title: 'Professional Services и Mid-Market ИТ — Ай Ти Аутсорс ООД',
-      description: 'Практична enterprise-grade ИТ поддръжка, SaaS identity, collaboration и modernization за professional services и mid-market компании.'
+    '/industries/smb': {
+      title: 'SMB и Growing Company ИТ услуги — Ай Ти Аутсорс ООД',
+      description: 'Managed IT support, Microsoft 365, cybersecurity, backup и migration services за SMB и growing companies.'
     },
     '/insights': {
       title: 'Материали и ИТ Playbooks — Ай Ти Аутсорс ООД',

@@ -327,14 +327,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/case-studies"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/case-studies"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/case-studies"/>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/bg/case-studies</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/case-studies"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/case-studies"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/case-studies"/>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/about</loc>
@@ -369,70 +369,70 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries"/>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/bg/industries</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries"/>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/industries/retail</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/retail"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/retail"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/retail"/>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/bg/industries/retail</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/retail"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/retail"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/retail"/>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://itoutsource.bg/industries/life-sciences</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/life-sciences"/>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/life-sciences"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/life-sciences"/>
-    <priority>0.7</priority>
+    <loc>https://itoutsource.bg/industries/pharma-healthcare</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/pharma-healthcare"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/pharma-healthcare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/pharma-healthcare"/>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://itoutsource.bg/bg/industries/life-sciences</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/life-sciences"/>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/life-sciences"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/life-sciences"/>
-    <priority>0.7</priority>
+    <loc>https://itoutsource.bg/bg/industries/pharma-healthcare</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/pharma-healthcare"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/pharma-healthcare"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/pharma-healthcare"/>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://itoutsource.bg/industries/energy</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/energy"/>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/energy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/energy"/>
-    <priority>0.7</priority>
+    <loc>https://itoutsource.bg/industries/energy-engineering</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/energy-engineering"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/energy-engineering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/energy-engineering"/>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://itoutsource.bg/bg/industries/energy</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/energy"/>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/energy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/energy"/>
-    <priority>0.7</priority>
+    <loc>https://itoutsource.bg/bg/industries/energy-engineering</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/energy-engineering"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/energy-engineering"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/energy-engineering"/>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://itoutsource.bg/industries/professional-services</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/professional-services"/>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/professional-services"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/professional-services"/>
-    <priority>0.7</priority>
+    <loc>https://itoutsource.bg/industries/smb</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/smb"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/smb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/smb"/>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://itoutsource.bg/bg/industries/professional-services</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/professional-services"/>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/professional-services"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/professional-services"/>
-    <priority>0.7</priority>
+    <loc>https://itoutsource.bg/bg/industries/smb</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/industries/smb"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/industries/smb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/industries/smb"/>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/insights</loc>

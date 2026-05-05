@@ -3,6 +3,7 @@ import PageHero from '../components/PageHero.jsx'
 import GemSection from '../components/GemSection.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import SheenButton from '../components/SheenButton.jsx'
+import TrustBlock from '../components/TrustBlock.jsx'
 import { useContent } from '../content/index.jsx'
 
 const process = ['Assess', 'Design', 'Implement', 'Support / Optimize']
@@ -300,6 +301,8 @@ export default function ServiceLanding({ slug: propSlug }) {
       <GemSection eyebrow="FAQ" title={lang === 'bg' ? 'Често задавани въпроси' : 'Frequently asked questions'}>
         <FAQ items={page.faqs} />
       </GemSection>
+
+      <TrustBlock compact />
 
       <GemSection eyebrow={lang === 'bg' ? 'Свързани услуги' : 'Related services'} title={lang === 'bg' ? 'Продължете към свързани услуги' : 'Continue to related services'}>
         <div className="flex flex-wrap gap-3">
