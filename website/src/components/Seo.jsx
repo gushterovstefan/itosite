@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { useContent } from '../content/index.jsx'
 
 const origin = 'https://itosite.pages.dev'
+const ogImage = `${origin}/og-image.png`
 
 const metaByPath = {
   en: {
@@ -65,6 +66,10 @@ const metaByPath = {
     '/solutions/easy-order-platform': {
       title: 'Easy Order Web Platform — IT Outsource Ltd.',
       description: 'Integrated order-process platform connecting customers, manufacturers, warehouses and distributors with automated data flow.'
+    },
+    '/solutions/gxp-clinical-research-it': {
+      title: 'GxP & Clinical Research IT — IT Outsource Ltd.',
+      description: 'Validated, audit-ready IT environments for CRO, clinical research and regulated life-sciences teams with CSV and GAMP 5 aligned delivery.'
     },
     '/about': {
       title: 'About IT Outsource Ltd.',
@@ -184,6 +189,10 @@ const metaByPath = {
       title: 'Easy Order платформа — Ай Ти Аутсорс ООД',
       description: 'Интегрирана order-process платформа, свързваща клиенти, производители, складове и дистрибутори с automated data flow.'
     },
+    '/solutions/gxp-clinical-research-it': {
+      title: 'GxP и Clinical Research IT — Ай Ти Аутсорс ООД',
+      description: 'Validated, audit-ready ИТ среди за CRO, clinical research и регулирани life-sciences екипи с CSV и GAMP 5 aligned доставка.'
+    },
     '/about': {
       title: 'За Ай Ти Аутсорс ООД',
       description: 'Информация за Ай Ти Аутсорс ООД — ИТ компания в София за консултации, инфраструктура, поддръжка и дигитални решения.'
@@ -272,7 +281,8 @@ const servicePaths = new Set([
   '/solutions/backup-dr-veeam',
   '/solutions/cloud-migration',
   '/solutions/web-b2b-b2c',
-  '/solutions/easy-order-platform'
+  '/solutions/easy-order-platform',
+  '/solutions/gxp-clinical-research-it'
 ])
 
 function readableLabel(path, data) {
@@ -365,7 +375,15 @@ export default function Seo() {
     setMeta('meta[property="og:type"]', 'content', 'website')
     setMeta('meta[property="og:url"]', 'content', url)
     setMeta('meta[property="og:site_name"]', 'content', 'IT Outsource Ltd.')
+    setMeta('meta[property="og:image"]', 'content', ogImage)
+    setMeta('meta[property="og:image:secure_url"]', 'content', ogImage)
+    setMeta('meta[property="og:image:type"]', 'content', 'image/png')
+    setMeta('meta[property="og:image:width"]', 'content', '1200')
+    setMeta('meta[property="og:image:height"]', 'content', '630')
+    setMeta('meta[property="og:image:alt"]', 'content', 'IT Outsource Ltd. — enterprise IT services, cloud, security and operations')
     setMeta('meta[name="twitter:card"]', 'content', 'summary_large_image')
+    setMeta('meta[name="twitter:image"]', 'content', ogImage)
+    setMeta('meta[name="twitter:image:alt"]', 'content', 'IT Outsource Ltd. — enterprise IT services, cloud, security and operations')
     setLink('canonical', url)
 
     setJsonLd('organization', {

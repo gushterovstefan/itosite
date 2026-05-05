@@ -459,6 +459,14 @@ export const contentEN = {
           'A fully integrated platform for order management',
           'Automated data flow between customers, manufacturers, and distributors'
         ]
+      },
+      {
+        title: 'GxP & Clinical Research IT',
+        icon: 'security',
+        bullets: [
+          'Validated IT environments for CRO, clinical research and regulated teams, aligned to CSV and GAMP 5 thinking',
+          'Controlled change, audit trails, backup evidence and vendor governance without unnecessary consulting bloat'
+        ]
       }
     ]
   },

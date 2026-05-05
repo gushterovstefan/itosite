@@ -23,7 +23,9 @@ const solutionLinks = {
   'Web-Based B2B & B2C Solutions': '/solutions/web-b2b-b2c',
   'Уеб B2B и B2C решения': '/solutions/web-b2b-b2c',
   'Easy Order Web Platform': '/solutions/easy-order-platform',
-  'Easy Order платформа': '/solutions/easy-order-platform'
+  'Easy Order платформа': '/solutions/easy-order-platform',
+  'GxP & Clinical Research IT': '/solutions/gxp-clinical-research-it',
+  'GxP и Clinical Research IT': '/solutions/gxp-clinical-research-it'
 }
 
 export default function Solutions() {

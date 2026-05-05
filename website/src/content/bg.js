@@ -448,6 +448,14 @@ export const contentBG = {
           'Интегрирана платформа за управление на поръчки',
           'Автоматизиран поток на данни между клиенти, производители и дистрибутори'
         ]
+      },
+      {
+        title: 'GxP и Clinical Research IT',
+        icon: 'security',
+        bullets: [
+          'Validated IT среди за CRO, clinical research и регулирани екипи, aligned to CSV и GAMP 5 thinking',
+          'Контролиран change, audit trails, backup evidence и vendor governance без излишна consulting тежест'
+        ]
       }
     ]
   },

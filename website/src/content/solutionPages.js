@@ -129,6 +129,19 @@ export const solutionPages = {
       caseTitle: 'Anonymized outcome',
       caseBody: 'A multi-party order process became easier to track and operate after replacing manual handoffs with an integrated workflow platform.',
       caseMetrics: ['automated flow', 'role visibility', 'fewer handoffs']
+    },
+    'gxp-clinical-research-it': {
+      title: 'GxP & Clinical Research IT',
+      eyebrow: 'Life Sciences IT',
+      lead: 'Validated, audit-ready IT environments for CRO, clinical research and regulated life-sciences teams.',
+      subline: 'Practical CSV and GAMP 5 aligned delivery for systems that need evidence, traceability and controlled change.',
+      icon: 'security',
+      buyer: ['CRO and clinical research teams running regulated workflows', 'Life-sciences organizations preparing for audits or inspections', 'IT leaders who need validation evidence without heavyweight consulting overhead'],
+      deliver: ['GxP-relevant system inventory, ownership and risk classification', 'CSV / GAMP 5 aligned implementation and change-control evidence', 'Identity, backup, audit trail and access-review operating model', 'Vendor governance, SOP alignment and recovery evidence for regulated systems'],
+      standards: ['GxP-aware IT', 'CSV', 'GAMP 5 aligned', 'Audit trails', 'Controlled change'],
+      caseTitle: 'Anonymized outcome',
+      caseBody: 'A regulated research team improved audit readiness by mapping system ownership, access evidence, backup proof and change-control records into one operating model.',
+      caseMetrics: ['audit evidence', 'controlled change', 'clear ownership']
     }
   },
   bg: {
@@ -261,8 +274,21 @@ export const solutionPages = {
       caseTitle: 'Анонимизиран резултат',
       caseBody: 'Multi-party order process стана по-лесен за tracking и operation след замяна на manual handoffs с integrated workflow platform.',
       caseMetrics: ['automated flow', 'role visibility', 'fewer handoffs']
+    },
+    'gxp-clinical-research-it': {
+      title: 'GxP и Clinical Research IT',
+      eyebrow: 'Life Sciences IT',
+      lead: 'Validated, audit-ready ИТ среди за CRO, clinical research и регулирани life-sciences екипи.',
+      subline: 'Практична CSV и GAMP 5 aligned доставка за системи с нужда от evidence, traceability и controlled change.',
+      icon: 'security',
+      buyer: ['CRO и clinical research екипи с regulated workflows', 'Life-sciences организации, подготвящи audits или inspections', 'IT лидери с нужда от validation evidence без тежък consulting overhead'],
+      deliver: ['GxP-relevant system inventory, ownership и risk classification', 'CSV / GAMP 5 aligned implementation и change-control evidence', 'Identity, backup, audit trail и access-review operating model', 'Vendor governance, SOP alignment и recovery evidence за regulated systems'],
+      standards: ['GxP-aware IT', 'CSV', 'GAMP 5 aligned', 'Audit trails', 'Controlled change'],
+      caseTitle: 'Анонимизиран резултат',
+      caseBody: 'Regulated research екип подобри audit readiness чрез mapping на system ownership, access evidence, backup proof и change-control records в един operating model.',
+      caseMetrics: ['audit evidence', 'controlled change', 'clear ownership']
     }
   }
 }
 
-export const solutionSlugs = ['microsoft-azure', 'microsoft-365', 'vmware-proxmox-virtualization', 'azure-hybrid-cloud', 'zero-trust-security', 'entra-id-sso', 'backup-dr-veeam', 'cloud-migration', 'web-b2b-b2c', 'easy-order-platform']
+export const solutionSlugs = ['microsoft-azure', 'microsoft-365', 'vmware-proxmox-virtualization', 'azure-hybrid-cloud', 'zero-trust-security', 'entra-id-sso', 'backup-dr-veeam', 'cloud-migration', 'web-b2b-b2c', 'easy-order-platform', 'gxp-clinical-research-it']
