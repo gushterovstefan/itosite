@@ -165,9 +165,6 @@ export default function Contact() {
               </div>
               <Icon as={icons.calendar ?? icons.message} />
             </div>
-            <div className="mt-6 rounded-2xl border border-dashed border-black/15 bg-white/55 p-4 text-sm text-ink-900/70">
-              {lang === 'bg' ? 'Сигурна Microsoft Bookings страница се отваря в нов таб.' : 'Secure Microsoft Bookings page opens in a new tab.'}
-            </div>
             <div className="mt-5">
               <SheenButton href={BOOKING_URL} target="_blank" rel="noreferrer">{f.bookingCta}</SheenButton>
             </div>
