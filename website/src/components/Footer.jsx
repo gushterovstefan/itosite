@@ -83,8 +83,8 @@ export default function Footer() {
             <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/45">{l.companyTitle}</div>
             <div className="mt-4 grid gap-3 text-sm">
               <FooterLink to="/about">{ui.about}</FooterLink>
+              <FooterLink to="/how-we-deliver">{l.howWeDeliver}</FooterLink>
               <FooterLink to="/contacts">{ui.contact}</FooterLink>
-              <span className="text-ink-900/35">{l.howWeDeliver}</span>
               <span className="text-ink-900/35">{l.industries}</span>
               <span className="text-ink-900/35">{l.insights}</span>
             </div>

@@ -46,6 +46,10 @@ const metaByPath = {
       title: 'About IT Outsource Ltd.',
       description: 'Learn about IT Outsource Ltd., a Sofia-based IT services company delivering consulting, infrastructure, support and digital solutions.'
     },
+    '/how-we-deliver': {
+      title: 'How We Deliver — IT Outsource Ltd.',
+      description: 'A phased IT delivery methodology: Discover, Design, Migrate or Build, Operate and Optimize with clear gates, owners and handover.'
+    },
     '/contacts': {
       title: 'Contact IT Outsource Ltd.',
       description: 'Contact IT Outsource for managed IT, infrastructure, consulting, Microsoft cloud, security, backup and business platform projects.'
@@ -99,6 +103,10 @@ const metaByPath = {
     '/about': {
       title: 'За Ай Ти Аутсорс ООД',
       description: 'Информация за Ай Ти Аутсорс ООД — ИТ компания в София за консултации, инфраструктура, поддръжка и дигитални решения.'
+    },
+    '/how-we-deliver': {
+      title: 'Как работим — Ай Ти Аутсорс ООД',
+      description: 'Фазиран ИТ delivery model: Discover, Design, Migrate/Build, Operate и Optimize с ясни gates, owners и handover.'
     },
     '/contacts': {
       title: 'Контакти — Ай Ти Аутсорс ООД',
