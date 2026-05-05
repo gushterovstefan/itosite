@@ -12,7 +12,7 @@ const formCopy = {
     asideLead: 'Reach us by phone, email, or send a short project brief.',
     response: 'Within 1 business day',
     timezone: 'EET / Sofia',
-    discovery: '30-minute discovery call',
+    discovery: 'Consultation',
     discoveryLead: 'Book directly through Microsoft Bookings, or send a short project brief if you prefer email first.',
     formEyebrow: 'Project enquiry',
     formTitle: 'Tell us what you need',
@@ -25,9 +25,9 @@ const formCopy = {
     message: 'Brief project context',
     fileNote: 'Need to send files? Submit the form, then attach them in your email client before sending.',
     submit: 'Prepare email enquiry',
-    bookingTitle: 'Discovery call',
-    bookingLead: 'Use our Microsoft Bookings page to choose an available time for a 30-minute discovery call.',
-    bookingCta: 'Book a 30-min call',
+    bookingTitle: 'Book a Consultation',
+    bookingLead: 'Use our Microsoft Bookings page to choose an available consultation slot.',
+    bookingCta: 'Book a Consultation',
     responseNote: 'Typical response time: within 1 business day.'
   },
   bg: {
@@ -35,7 +35,7 @@ const formCopy = {
     asideLead: 'Свържете се по телефон, имейл или изпратете кратко описание на проекта.',
     response: 'До 1 работен ден',
     timezone: 'EET / София',
-    discovery: '30-минутен разговор',
+    discovery: 'Консултация',
     discoveryLead: 'Запазете час директно през Microsoft Bookings или изпратете кратко описание, ако предпочитате първо имейл.',
     formEyebrow: 'Запитване за проект',
     formTitle: 'Опишете какво ви трябва',
@@ -48,9 +48,9 @@ const formCopy = {
     message: 'Кратък контекст',
     fileNote: 'Имате файлове? Изпратете формата и ги прикачете в имейл клиента преди изпращане.',
     submit: 'Подгответе имейл запитване',
-    bookingTitle: 'Discovery разговор',
-    bookingLead: 'Използвайте нашата Microsoft Bookings страница, за да изберете удобен час за 30-минутен discovery разговор.',
-    bookingCta: 'Запазете час в Microsoft Bookings',
+    bookingTitle: 'Запазете консултация',
+    bookingLead: 'Използвайте нашата Microsoft Bookings страница, за да изберете удобен час за консултация.',
+    bookingCta: 'Запазете консултация',
     responseNote: 'Типично време за отговор: до 1 работен ден.'
   }
 }

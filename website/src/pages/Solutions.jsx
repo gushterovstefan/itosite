@@ -60,7 +60,7 @@ export default function Solutions() {
             const to = solutionLinks[card.title]
             const Shell = to ? ClickCard : Card
             const props = to
-              ? { to, badge: content.shared.ui.getQuote === 'Запитване' ? 'Детайли' : 'Details' }
+              ? { to, badge: content.shared.ui.getQuote === 'Заявете ИТ оценка' ? 'Детайли' : 'Details' }
               : {}
 
             return (
@@ -74,7 +74,7 @@ export default function Solutions() {
                 </div>
                 {to ? (
                   <div className="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-brand-800">
-                    {content.shared.ui.getQuote === 'Запитване' ? 'Отвори решението' : 'Open solution'}
+                    {content.shared.ui.getQuote === 'Заявете ИТ оценка' ? 'Отвори решението' : 'Open solution'}
                   </div>
                 ) : null}
               </Shell>

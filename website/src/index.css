@@ -17,7 +17,7 @@ body {
 
 /* nicer selection */
 ::selection {
-  background: rgba(116, 173, 60, 0.30);
+  background: rgba(34, 195, 246, 0.30);
 }
 
 /* premium readability helpers */
@@ -58,7 +58,7 @@ body {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(189,235,149,0.55), rgba(134,217,77,0.36), rgba(189,235,149,0.55));
+  background: linear-gradient(90deg, rgba(120,212,255,0.60), rgba(34,195,246,0.42), rgba(184,229,255,0.55));
   opacity: 0.55;
   filter: blur(10px);
   z-index: -2;
@@ -127,8 +127,8 @@ body {
   pointer-events: none;
   opacity: 0.9;
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(116,173,60,0.10), transparent 45%),
-    radial-gradient(circle at 80% 60%, rgba(217,70,239,0.08), transparent 50%);
+    radial-gradient(circle at 20% 20%, rgba(34,195,246,0.10), transparent 45%),
+    radial-gradient(circle at 80% 60%, rgba(0,95,150,0.08), transparent 50%);
   animation: sectionDrift 10s ease-in-out infinite;
 }
 
@@ -144,8 +144,8 @@ body {
 
 .hero-grid {
   background-image:
-    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(120,212,255,0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(120,212,255,0.07) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: radial-gradient(circle at 35% 25%, rgba(0,0,0,1), rgba(0,0,0,0) 65%);
 }
@@ -169,7 +169,7 @@ body {
 
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(116,173,60,0.45), rgba(217,70,239,0.35), transparent);
+  background: linear-gradient(90deg, transparent, rgba(34,195,246,0.55), rgba(120,212,255,0.40), transparent);
   background-size: 200% 100%;
   animation: lineFlow 6s ease-in-out infinite;
 }

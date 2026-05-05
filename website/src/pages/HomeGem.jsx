@@ -18,20 +18,22 @@ export default function HomeGem() {
   return (
     <div id="top" className="relative">
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-navy-950 text-white">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(34,195,246,0.22),transparent_34%),radial-gradient(circle_at_80%_10%,rgba(0,127,189,0.28),transparent_32%),linear-gradient(135deg,#06111f_0%,#081a2e_54%,#0b223b_100%)]" />
+        <div className="pointer-events-none absolute inset-0 hero-grid opacity-40" />
         <div className="mx-auto max-w-6xl px-4 pt-10 md:pt-12">
           <div className="grid items-center gap-10 md:grid-cols-2">
-            <div>
-              <div className="inline-flex items-center gap-3 rounded-full border border-black/10 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-ink-950/75">
-                <span className="h-1.5 w-1.5 rounded-full bg-brand-400" aria-hidden="true" />
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-brand-100">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-300" aria-hidden="true" />
                 {ui.itServicesBadge}
               </div>
 
               <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-6xl">{c.heroTitle}</h1>
-              <p className="mt-5 text-base font-medium text-ink-950/85 md:text-lg">{c.heroSubline}</p>
-              <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-900/65 md:text-base">
-                IT Outsource is a fast growing IT company with more than 10 years of experience designing,
-                implementing, integrating and supporting different IT solutions.
+              <p className="mt-5 text-base font-medium text-white/86 md:text-lg">{c.heroSubline}</p>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/66 md:text-base">
+                Microsoft 365, Azure, Entra ID, Intune, Defender, backup and disaster recovery services — assessed,
+                implemented and operated by engineers who own the technical outcome.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -40,39 +42,39 @@ export default function HomeGem() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
+                  className="rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950"
                 >
-                  <span>{lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-min call'}</span>
+                  <span>{lang === 'bg' ? 'Запазете консултация' : 'Book a Consultation'}</span>
                 </a>
               </div>
             </div>
 
             {/* hero side: logo + metric-like cards (inspired, not a clone) */}
-            <div className="relative">
+            <div className="relative z-10">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="rounded-3xl border border-black/10 bg-white/70 p-8"
+                className="rounded-3xl border border-white/15 bg-white/8 p-8 shadow-[0_30px_120px_-60px_rgba(34,195,246,0.8)] backdrop-blur"
               >
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-ink-900/70">Enterprise delivery</div>
-                  <div className="mt-3 text-4xl font-semibold tracking-tight text-ink-950">10+ years</div>
-                  <div className="mt-2 text-sm text-ink-900/65">Design · Build · Secure · Run</div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-100/80">Enterprise delivery</div>
+                  <div className="mt-3 text-4xl font-semibold tracking-tight text-white">10+ years</div>
+                  <div className="mt-2 text-sm text-white/65">Assess · Design · Migrate · Secure · Operate</div>
                 </div>
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
-                    <div className="text-xs text-ink-900/70">Availability</div>
-                    <div className="mt-1 text-sm font-semibold">24/7 Ops</div>
+                  <div className="rounded-2xl border border-white/12 bg-white/8 px-4 py-3">
+                    <div className="text-xs text-white/58">Microsoft cloud</div>
+                    <div className="mt-1 text-sm font-semibold text-white">M365 + Azure</div>
                   </div>
-                  <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
-                    <div className="text-xs text-ink-900/70">Security</div>
-                    <div className="mt-1 text-sm font-semibold">MFA + Hardening</div>
+                  <div className="rounded-2xl border border-white/12 bg-white/8 px-4 py-3">
+                    <div className="text-xs text-white/58">Security</div>
+                    <div className="mt-1 text-sm font-semibold text-white">Zero Trust</div>
                   </div>
-                  <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
-                    <div className="text-xs text-ink-900/70">Delivery</div>
-                    <div className="mt-1 text-sm font-semibold">SLA-driven</div>
+                  <div className="rounded-2xl border border-white/12 bg-white/8 px-4 py-3">
+                    <div className="text-xs text-white/58">Continuity</div>
+                    <div className="mt-1 text-sm font-semibold text-white">Backup + DR</div>
                   </div>
                 </div>
               </motion.div>
@@ -80,7 +82,7 @@ export default function HomeGem() {
           </div>
 
           {/* SERVICE ENTRY CARDS */}
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="relative z-10 mt-10 grid gap-4 pb-10 md:grid-cols-3">
             {c.highlights.map((x, i) => (
               <ClickCard
                 key={x.title}

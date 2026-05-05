@@ -61,7 +61,7 @@ export default function SolutionDetail() {
         lead={page.lead}
         subline={page.subline}
         primaryCta={{ to: '/contacts', label: content.shared.ui.getQuote ?? content.shared.ui.contact }}
-        secondaryCta={{ href: BOOKING_URL, label: lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-min call' }}
+        secondaryCta={{ href: BOOKING_URL, label: lang === 'bg' ? 'Запазете консултация' : 'Book a Consultation' }}
         aside={{
           eyebrow: 'Solution',
           title: page.eyebrow,

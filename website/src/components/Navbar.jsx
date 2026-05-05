@@ -15,13 +15,13 @@ function NavItem({ to, label, end, activePath }) {
       to={localizedTo}
       aria-current={isActive ? 'page' : undefined}
       className={
-        'relative rounded-full px-3 py-2 text-sm font-medium tracking-wide transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70 ' +
-        (isActive ? 'text-ink-950' : 'text-ink-900/70 hover:text-ink-950')
+        'relative rounded-full px-3 py-2 text-sm font-medium tracking-wide transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/70 ' +
+        (isActive ? 'text-navy-950' : 'text-white/72 hover:text-white')
       }
     >
       {isActive ? (
         <span
-          className="absolute inset-0 rounded-full bg-brand-200/50 ring-1 ring-brand-300/40"
+          className="absolute inset-0 rounded-full bg-brand-300 ring-1 ring-brand-200/60"
         />
       ) : null}
       <span className="relative z-10">{label}</span>
@@ -39,7 +39,7 @@ export default function Navbar() {
   const drawerRef = useRef(null)
 
   const activePath = useMemo(() => basePath, [basePath])
-  const bookingLabel = lang === 'bg' ? 'Запазете разговор' : 'Book a 30-min call'
+  const bookingLabel = lang === 'bg' ? 'Консултация' : 'Consultation'
 
   useEffect(() => {
     const update = () => {
@@ -113,17 +113,17 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50">
       {/* scroll progress */}
       <div
-        className="absolute left-0 top-0 h-[2px] w-full origin-left bg-gradient-to-r from-brand-600 via-brand-500 to-brand-300"
+        className="absolute left-0 top-0 h-[2px] w-full origin-left bg-gradient-to-r from-brand-700 via-brand-400 to-brand-200"
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
 
       <div className="mx-auto max-w-6xl px-4 pt-3">
         <div className="relative">
-          <div className="relative rounded-2xl border border-black/10 bg-white/75 px-4 shadow-[0_14px_50px_-28px_rgba(0,0,0,0.25)] backdrop-blur transition-transform duration-200 hover:-translate-y-0.5">
+          <div className="relative rounded-2xl border border-white/12 bg-navy-950/88 px-4 shadow-[0_14px_50px_-28px_rgba(0,0,0,0.45)] backdrop-blur transition-transform duration-200 hover:-translate-y-0.5">
             {/* glass edge + sheen */}
-            <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-brand-300/16 via-white/70 to-brand-200/10" />
-            <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-black/5" />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-px rounded-2xl bg-gradient-to-r from-transparent via-black/10 to-transparent" />
+            <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-brand-400/12 via-white/5 to-brand-200/8" />
+            <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/5" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-px rounded-2xl bg-gradient-to-r from-transparent via-white/18 to-transparent" />
 
             <div className="relative z-10 flex h-14 items-center justify-between">
               {/* brand: logo only */}
@@ -154,12 +154,12 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
-                  className="ml-1 inline-flex items-center gap-1 rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-ink-900/80 hover:text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70"
+                  className="ml-1 inline-flex items-center gap-1 rounded-full border border-white/12 bg-white/8 px-3 py-2 text-xs font-semibold text-white/75 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/70"
                   aria-label="Toggle language"
                 >
-                  <span className={lang === 'bg' ? 'text-ink-950' : 'text-ink-900/60'}>BG</span>
-                  <span className="text-ink-900/30">/</span>
-                  <span className={lang === 'en' ? 'text-ink-950' : 'text-ink-900/60'}>EN</span>
+                  <span className={lang === 'bg' ? 'text-brand-100' : 'text-white/45'}>BG</span>
+                  <span className="text-white/25">/</span>
+                  <span className={lang === 'en' ? 'text-brand-100' : 'text-white/45'}>EN</span>
                 </button>
               </nav>
 
@@ -172,7 +172,7 @@ export default function Navbar() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="hidden items-center justify-center rounded-full border border-black/10 bg-white/70 px-4 py-2 text-sm font-semibold text-ink-950/90 transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white md:inline-flex"
+                  className="hidden items-center justify-center rounded-full border border-white/12 bg-white/8 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/14 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 md:inline-flex"
                 >
                   {bookingLabel}
                 </a>
