@@ -25,8 +25,8 @@ const metaByPath = {
       description: 'Enterprise architecture, cloud migration, security governance, ERP integration and technical due diligence for IT change.'
     },
     '/solutions': {
-      title: 'IT Solutions — Azure, Microsoft 365, Security, Backup & DR',
-      description: 'Production-ready solutions across Microsoft Azure, Microsoft 365, Zero Trust security, Entra ID, Veeam backup, cloud migration and web platforms.'
+      title: 'Microsoft Cloud, Security & Business Continuity Solutions — IT Outsource Ltd.',
+      description: 'Microsoft 365, Azure, cybersecurity, endpoint, backup, disaster recovery, managed IT support and migration solutions for reliable business IT operations.'
     },
     '/solutions/microsoft-azure': {
       title: 'Microsoft Azure Solutions — IT Outsource Ltd.',
@@ -151,8 +151,8 @@ const metaByPath = {
       description: 'Enterprise архитектура, cloud migration, security governance, ERP интеграции и technical due diligence за ИТ промяна.'
     },
     '/solutions': {
-      title: 'ИТ решения — Azure, Microsoft 365, сигурност, backup и DR',
-      description: 'Решения за Microsoft Azure, Microsoft 365, Zero Trust сигурност, Entra ID, Veeam backup, cloud migration и уеб платформи.'
+      title: 'Microsoft Cloud, Security и Business Continuity решения — Ай Ти Аутсорс ООД',
+      description: 'Microsoft 365, Azure, киберсигурност, endpoint, backup, disaster recovery, managed IT support и migration решения за надеждни бизнес ИТ операции.'
     },
     '/solutions/microsoft-azure': {
       title: 'Microsoft Azure решения — Ай Ти Аутсорс ООД',
