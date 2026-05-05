@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
 import SheenButton from './SheenButton.jsx'
 import { useContent } from '../content/index.jsx'
+import { BOOKING_URL } from '../config/booking.js'
 
 const copy = {
   en: {
@@ -67,12 +67,14 @@ export default function ConversionCta({ variant = 'default', title, lead, second
             </div>
             <div className="flex flex-wrap gap-3 md:justify-end">
               <SheenButton to="/contacts">{l.quote}</SheenButton>
-              <Link
-                to="/contacts"
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 transition hover:bg-white"
               >
                 {secondaryLabel || l[secondaryKey]}
-              </Link>
+              </a>
             </div>
           </div>
         </div>

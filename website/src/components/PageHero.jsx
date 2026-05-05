@@ -45,13 +45,31 @@ export default function PageHero({
             ) : null}
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <SheenButton to={primaryCta.to}>{primaryCta.label}</SheenButton>
-              <Link
-                to={secondaryCta.to}
-                className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
+              <SheenButton
+                to={primaryCta.to}
+                href={primaryCta.href}
+                target={primaryCta.href ? '_blank' : undefined}
+                rel={primaryCta.href ? 'noreferrer' : undefined}
               >
-                <span>{secondaryCta.label}</span>
-              </Link>
+                {primaryCta.label}
+              </SheenButton>
+              {secondaryCta.href ? (
+                <a
+                  href={secondaryCta.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
+                >
+                  <span>{secondaryCta.label}</span>
+                </a>
+              ) : (
+                <Link
+                  to={secondaryCta.to}
+                  className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
+                >
+                  <span>{secondaryCta.label}</span>
+                </Link>
+              )}
             </div>
           </div>
 

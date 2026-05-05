@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import GemSection from '../components/GemSection.jsx'
 import KpiStrip from '../components/KpiStrip.jsx'
@@ -9,6 +8,7 @@ import SheenButton from '../components/SheenButton.jsx'
 import ProofLayer from '../components/ProofLayer.jsx'
 import ConversionCta from '../components/ConversionCta.jsx'
 import { useContent } from '../content/index.jsx'
+import { BOOKING_URL } from '../config/booking.js'
 
 export default function HomeGem() {
   const { content, lang } = useContent()
@@ -36,12 +36,14 @@ export default function HomeGem() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <SheenButton to="/contacts">{ui.getQuote ?? ui.contactUs}</SheenButton>
-                <Link
-                  to="/contacts"
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noreferrer"
                   className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
                 >
                   <span>{lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-minute discovery call'}</span>
-                </Link>
+                </a>
               </div>
             </div>
 

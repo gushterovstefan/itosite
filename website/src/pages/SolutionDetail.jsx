@@ -6,6 +6,7 @@ import { Icon, icons } from '../components/Icons.jsx'
 import ConversionCta from '../components/ConversionCta.jsx'
 import { useContent } from '../content/index.jsx'
 import { solutionPages } from '../content/solutionPages.js'
+import { BOOKING_URL } from '../config/booking.js'
 
 const labels = {
   en: {
@@ -60,7 +61,7 @@ export default function SolutionDetail() {
         lead={page.lead}
         subline={page.subline}
         primaryCta={{ to: '/contacts', label: content.shared.ui.getQuote ?? content.shared.ui.contact }}
-        secondaryCta={{ to: '/contacts', label: l.phases[0] === 'Assess' && lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-minute discovery call' }}
+        secondaryCta={{ href: BOOKING_URL, label: lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-minute discovery call' }}
         aside={{
           eyebrow: 'Solution',
           title: page.eyebrow,

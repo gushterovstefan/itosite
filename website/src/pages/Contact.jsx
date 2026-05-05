@@ -4,6 +4,7 @@ import { Card } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import SheenButton from '../components/SheenButton.jsx'
 import { useContent } from '../content/index.jsx'
+import { BOOKING_URL } from '../config/booking.js'
 
 const formCopy = {
   en: {
@@ -12,7 +13,7 @@ const formCopy = {
     response: 'Within 1 business day',
     timezone: 'EET / Sofia',
     discovery: '30-minute discovery call',
-    discoveryLead: 'Send a short project brief. We will respond with a practical next step within 1 business day.',
+    discoveryLead: 'Book directly through Microsoft Bookings, or send a short project brief if you prefer email first.',
     formEyebrow: 'Project enquiry',
     formTitle: 'Tell us what you need',
     formLead: 'Use the form below for support, infrastructure, consulting, Microsoft cloud, security, backup or web-platform projects.',
@@ -25,8 +26,8 @@ const formCopy = {
     fileNote: 'Need to send files? Submit the form, then attach them in your email client before sending.',
     submit: 'Prepare email enquiry',
     bookingTitle: 'Discovery call',
-    bookingLead: 'A booking widget can be embedded here once Calendly, Cal.com or Microsoft Bookings is available.',
-    bookingCta: 'Request a discovery slot',
+    bookingLead: 'Use our Microsoft Bookings page to choose an available time for a 30-minute discovery call.',
+    bookingCta: 'Book in Microsoft Bookings',
     responseNote: 'Typical response time: within 1 business day.'
   },
   bg: {
@@ -35,7 +36,7 @@ const formCopy = {
     response: 'До 1 работен ден',
     timezone: 'EET / София',
     discovery: '30-минутен разговор',
-    discoveryLead: 'Изпратете кратко описание на проекта. Ще върнем практичен next step до 1 работен ден.',
+    discoveryLead: 'Запазете час директно през Microsoft Bookings или изпратете кратко описание, ако предпочитате първо имейл.',
     formEyebrow: 'Запитване за проект',
     formTitle: 'Опишете какво ви трябва',
     formLead: 'Формата е подходяща за поддръжка, инфраструктура, консултации, Microsoft cloud, сигурност, backup или web-platform проекти.',
@@ -48,8 +49,8 @@ const formCopy = {
     fileNote: 'Имате файлове? Изпратете формата и ги прикачете в имейл клиента преди изпращане.',
     submit: 'Подгответе имейл запитване',
     bookingTitle: 'Discovery разговор',
-    bookingLead: 'Тук може да се вгради booking widget, когато има Calendly, Cal.com или Microsoft Bookings линк.',
-    bookingCta: 'Поискайте час за разговор',
+    bookingLead: 'Използвайте нашата Microsoft Bookings страница, за да изберете удобен час за 30-минутен discovery разговор.',
+    bookingCta: 'Запазете час в Microsoft Bookings',
     responseNote: 'Типично време за отговор: до 1 работен ден.'
   }
 }
@@ -164,11 +165,11 @@ export default function Contact() {
               </div>
               <Icon as={icons.calendar ?? icons.message} />
             </div>
-            <div className="mt-6 rounded-2xl border border-dashed border-black/15 bg-white/55 p-4 text-sm text-ink-900/62">
-              Calendly / Cal.com / Microsoft Bookings
+            <div className="mt-6 rounded-2xl border border-dashed border-black/15 bg-white/55 p-4 text-sm text-ink-900/70">
+              outlook.office.com/book/ITOutsourceLTD1@itoutsource.bg
             </div>
             <div className="mt-5">
-              <SheenButton to="/contacts">{f.bookingCta}</SheenButton>
+              <SheenButton href={BOOKING_URL} target="_blank" rel="noreferrer">{f.bookingCta}</SheenButton>
             </div>
           </Card>
         </div>
