@@ -50,6 +50,26 @@ const metaByPath = {
       title: 'How We Deliver — IT Outsource Ltd.',
       description: 'A phased IT delivery methodology: Discover, Design, Migrate or Build, Operate and Optimize with clear gates, owners and handover.'
     },
+    '/industries': {
+      title: 'Industries — IT Outsource Ltd.',
+      description: 'IT delivery for retail, life sciences, energy and professional services with relevant solutions, governance and operational ownership.'
+    },
+    '/industries/retail': {
+      title: 'Retail & E-commerce IT Services — IT Outsource Ltd.',
+      description: 'IT support, infrastructure, identity, backup and web-platform delivery for distributed retail and e-commerce operations.'
+    },
+    '/industries/life-sciences': {
+      title: 'Life Sciences & Clinical Research IT — IT Outsource Ltd.',
+      description: 'Validated, audit-ready IT environments for clinical research and regulated teams with security, governance and recovery planning.'
+    },
+    '/industries/energy': {
+      title: 'Energy & Utilities IT Services — IT Outsource Ltd.',
+      description: 'Microsoft cloud, identity, security and governance delivery for distributed energy and utilities teams.'
+    },
+    '/industries/professional-services': {
+      title: 'Professional Services & Mid-Market IT — IT Outsource Ltd.',
+      description: 'Pragmatic enterprise-grade IT support, SaaS identity, collaboration and modernization for professional services and mid-market companies.'
+    },
     '/contacts': {
       title: 'Contact IT Outsource Ltd.',
       description: 'Contact IT Outsource for managed IT, infrastructure, consulting, Microsoft cloud, security, backup and business platform projects.'
@@ -107,6 +127,26 @@ const metaByPath = {
     '/how-we-deliver': {
       title: 'Как работим — Ай Ти Аутсорс ООД',
       description: 'Фазиран ИТ delivery model: Discover, Design, Migrate/Build, Operate и Optimize с ясни gates, owners и handover.'
+    },
+    '/industries': {
+      title: 'Индустрии — Ай Ти Аутсорс ООД',
+      description: 'ИТ доставка за retail, life sciences, energy и professional services с релевантни решения, governance и operational ownership.'
+    },
+    '/industries/retail': {
+      title: 'Retail и E-commerce ИТ услуги — Ай Ти Аутсорс ООД',
+      description: 'ИТ поддръжка, инфраструктура, identity, backup и web-platform доставка за разпределени retail и e-commerce операции.'
+    },
+    '/industries/life-sciences': {
+      title: 'Life Sciences и Clinical Research ИТ — Ай Ти Аутсорс ООД',
+      description: 'Validated, audit-ready ИТ среди за clinical research и regulated екипи със сигурност, governance и recovery planning.'
+    },
+    '/industries/energy': {
+      title: 'Energy и Utilities ИТ услуги — Ай Ти Аутсорс ООД',
+      description: 'Microsoft cloud, identity, security и governance доставка за разпределени energy и utilities екипи.'
+    },
+    '/industries/professional-services': {
+      title: 'Professional Services и Mid-Market ИТ — Ай Ти Аутсорс ООД',
+      description: 'Практична enterprise-grade ИТ поддръжка, SaaS identity, collaboration и modernization за professional services и mid-market компании.'
     },
     '/contacts': {
       title: 'Контакти — Ай Ти Аутсорс ООД',

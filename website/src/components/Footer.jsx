@@ -84,8 +84,8 @@ export default function Footer() {
             <div className="mt-4 grid gap-3 text-sm">
               <FooterLink to="/about">{ui.about}</FooterLink>
               <FooterLink to="/how-we-deliver">{l.howWeDeliver}</FooterLink>
+              <FooterLink to="/industries">{l.industries}</FooterLink>
               <FooterLink to="/contacts">{ui.contact}</FooterLink>
-              <span className="text-ink-900/35">{l.industries}</span>
               <span className="text-ink-900/35">{l.insights}</span>
             </div>
           </div>
