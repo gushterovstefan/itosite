@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useContent } from '../content/index.jsx'
 
-const origin = 'https://itosite.pages.dev'
+const origin = 'https://itoutsource.bg'
 const ogImage = `${origin}/og-image.png`
 
 const metaByPath = {

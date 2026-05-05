@@ -2,7 +2,7 @@
 
 This plan is for moving `ito-site` from the temporary Cloudflare Pages URL to the final production domain.
 
-Current production URL: `https://itosite.pages.dev`  
+Current production URL: `https://itoutsource.bg`  
 Cloudflare Pages project: `itosite`  
 Production branch: `rebuild-gemstyle`
 
@@ -45,7 +45,7 @@ Keep HTTPS enabled and avoid redirect chains.
 In the repo, update all canonical references from:
 
 ```js
-https://itosite.pages.dev
+https://itoutsource.bg
 ```
 
 to the chosen production domain.
@@ -86,4 +86,4 @@ After updating the canonical URL:
 
 ## Launch blocker
 
-The final domain has not been confirmed yet. Do not update canonical URLs until Stefan confirms the production domain.
+Final domain confirmed by Stefan: `itoutsource.bg`. Canonical URLs have been updated to `https://itoutsource.bg`.

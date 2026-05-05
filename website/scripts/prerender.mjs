@@ -2,7 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const distDir = new URL('../dist/', import.meta.url).pathname
-const origin = 'https://itosite.pages.dev'
+const origin = 'https://itoutsource.bg'
 const ogImage = `${origin}/og-image.png`
 const baseHtml = readFileSync(join(distDir, 'index.html'), 'utf8')
 
