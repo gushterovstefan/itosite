@@ -1,5 +1,5 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useContent } from '../content/index.jsx'
 import SheenButton from './SheenButton.jsx'
 import logo from '../assets/logo-globe-small.jpg'
@@ -32,12 +32,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
   const location = useLocation()
+  const menuButtonRef = useRef(null)
+  const closeButtonRef = useRef(null)
+  const drawerRef = useRef(null)
 
   const activePath = useMemo(() => location.pathname, [location.pathname])
-
-  useEffect(() => {
-    setOpen(false)
-  }, [location.pathname])
 
   useEffect(() => {
     const update = () => {
@@ -56,7 +55,10 @@ export default function Navbar() {
   // Close on ESC
   useEffect(() => {
     const onKeyDown = (e) => {
-      if (e.key === 'Escape') setOpen(false)
+      if (e.key === 'Escape') {
+        setOpen(false)
+        menuButtonRef.current?.focus()
+      }
     }
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
@@ -65,9 +67,33 @@ export default function Navbar() {
   // Prevent background scroll when menu is open
   useEffect(() => {
     document.documentElement.style.overflow = open ? 'hidden' : ''
+    if (open) window.setTimeout(() => closeButtonRef.current?.focus(), 0)
     return () => {
       document.documentElement.style.overflow = ''
     }
+  }, [open])
+
+  useEffect(() => {
+    if (!open) return undefined
+    const onKeyDown = (event) => {
+      if (event.key !== 'Tab') return
+      const focusable = drawerRef.current?.querySelectorAll(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )
+      if (!focusable?.length) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first.focus()
+      }
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
   }, [open])
 
   const links = [
@@ -142,10 +168,12 @@ export default function Navbar() {
 
 
                 <button
+                  ref={menuButtonRef}
                   type="button"
                   className="ml-1 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-white/70 text-ink-900/80 hover:text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70 md:hidden"
                   aria-label={open ? 'Close menu' : 'Open menu'}
                   aria-expanded={open}
+                  aria-controls="mobile-navigation"
                   onClick={() => setOpen((v) => !v)}
                 >
                   <span className="text-xl leading-none">{open ? '×' : '☰'}</span>
@@ -166,11 +194,19 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
             />
 
-            <div className="relative mx-auto mt-16 w-full max-w-6xl px-4">
+            <div
+              id="mobile-navigation"
+              ref={drawerRef}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Site navigation"
+              className="relative mx-auto mt-16 w-full max-w-6xl px-4"
+            >
               <div className="rounded-2xl border border-black/10 bg-white/95 p-3 shadow-2xl backdrop-blur">
                 <div className="mb-2 flex items-center justify-between px-1">
                   <span className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">Menu</span>
                   <button
+                    ref={closeButtonRef}
                     type="button"
                     className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-white/80 text-2xl leading-none text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70"
                     aria-label="Close menu"
