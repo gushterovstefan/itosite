@@ -11,6 +11,7 @@ const Infrastructure = lazy(() => import('./pages/Infrastructure.jsx'))
 const Solutions = lazy(() => import('./pages/Solutions.jsx'))
 const SolutionDetail = lazy(() => import('./pages/SolutionDetail.jsx'))
 const CaseStudies = lazy(() => import('./pages/CaseStudies.jsx'))
+const ServiceLanding = lazy(() => import('./pages/ServiceLanding.jsx'))
 const HowWeDeliver = lazy(() => import('./pages/HowWeDeliver.jsx'))
 const IndustriesHub = lazy(() => import('./pages/Industries.jsx').then((m) => ({ default: m.IndustriesHub })))
 const IndustryRoute = lazy(() => import('./pages/IndustryRoute.jsx'))
@@ -28,6 +29,13 @@ const routeDefs = [
   ['/it-infrastructure-services', <Infrastructure />],
   ['/solutions', <Solutions />],
   ['/solutions/:slug', <SolutionDetail />],
+  ['/microsoft-365', <ServiceLanding slug="microsoft-365" />],
+  ['/azure-cloud', <ServiceLanding slug="azure-cloud" />],
+  ['/cybersecurity', <ServiceLanding slug="cybersecurity" />],
+  ['/backup-disaster-recovery', <ServiceLanding slug="backup-disaster-recovery" />],
+  ['/managed-it-support', <ServiceLanding slug="managed-it-support" />],
+  ['/google-workspace-to-microsoft-365', <ServiceLanding slug="google-workspace-to-microsoft-365" />],
+  ['/contact', <Contact />],
   ['/case-studies', <CaseStudies />],
   ['/how-we-deliver', <HowWeDeliver />],
   ['/industries', <IndustriesHub />],

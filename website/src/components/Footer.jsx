@@ -13,11 +13,11 @@ const footerCopy = {
     response: 'Typical response: within 1 business day.',
     cta: 'Request IT Assessment',
     services: [
-      ['Managed IT Services', '/it-support-services'],
-      ['Microsoft 365', '/solutions/microsoft-365'],
-      ['Azure & Infrastructure', '/it-infrastructure-services'],
-      ['Cybersecurity', '/solutions/zero-trust-security'],
-      ['Backup & Disaster Recovery', '/solutions/backup-dr-veeam']
+      ['Managed IT Services', '/managed-it-support'],
+      ['Microsoft 365', '/microsoft-365'],
+      ['Azure & Infrastructure', '/azure-cloud'],
+      ['Cybersecurity', '/cybersecurity'],
+      ['Backup & Disaster Recovery', '/backup-disaster-recovery']
     ],
     company: [
       ['Case Studies', '/case-studies'],
@@ -43,11 +43,11 @@ const footerCopy = {
     response: 'Типично време за отговор: до 1 работен ден.',
     cta: 'Заявете ИТ оценка',
     services: [
-      ['Managed IT услуги', '/it-support-services'],
-      ['Microsoft 365', '/solutions/microsoft-365'],
-      ['Azure и инфраструктура', '/it-infrastructure-services'],
-      ['Киберсигурност', '/solutions/zero-trust-security'],
-      ['Backup и Disaster Recovery', '/solutions/backup-dr-veeam']
+      ['Managed IT услуги', '/managed-it-support'],
+      ['Microsoft 365', '/microsoft-365'],
+      ['Azure и инфраструктура', '/azure-cloud'],
+      ['Киберсигурност', '/cybersecurity'],
+      ['Backup и Disaster Recovery', '/backup-disaster-recovery']
     ],
     company: [
       ['Казуси', '/case-studies'],

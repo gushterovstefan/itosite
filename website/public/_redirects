@@ -9,6 +9,13 @@ https://www.itoutsource.bg/* https://itoutsource.bg/:splat 301
 /it-infrastructure-services /it-infrastructure-services/index.html 200
 /it-consulting-services /it-consulting-services/index.html 200
 /solutions /solutions/index.html 200
+/microsoft-365 /microsoft-365/index.html 200
+/azure-cloud /azure-cloud/index.html 200
+/cybersecurity /cybersecurity/index.html 200
+/backup-disaster-recovery /backup-disaster-recovery/index.html 200
+/managed-it-support /managed-it-support/index.html 200
+/google-workspace-to-microsoft-365 /google-workspace-to-microsoft-365/index.html 200
+/contact /contact/index.html 200
 /solutions/microsoft-azure /solutions/microsoft-azure/index.html 200
 /solutions/microsoft-365 /solutions/microsoft-365/index.html 200
 /solutions/vmware-proxmox-virtualization /solutions/vmware-proxmox-virtualization/index.html 200
@@ -40,6 +47,13 @@ https://www.itoutsource.bg/* https://itoutsource.bg/:splat 301
 /bg/it-infrastructure-services /bg/it-infrastructure-services/index.html 200
 /bg/it-consulting-services /bg/it-consulting-services/index.html 200
 /bg/solutions /bg/solutions/index.html 200
+/bg/microsoft-365 /bg/microsoft-365/index.html 200
+/bg/azure-cloud /bg/azure-cloud/index.html 200
+/bg/cybersecurity /bg/cybersecurity/index.html 200
+/bg/backup-disaster-recovery /bg/backup-disaster-recovery/index.html 200
+/bg/managed-it-support /bg/managed-it-support/index.html 200
+/bg/google-workspace-to-microsoft-365 /bg/google-workspace-to-microsoft-365/index.html 200
+/bg/contact /bg/contact/index.html 200
 /bg/solutions/microsoft-azure /bg/solutions/microsoft-azure/index.html 200
 /bg/solutions/microsoft-365 /bg/solutions/microsoft-365/index.html 200
 /bg/solutions/vmware-proxmox-virtualization /bg/solutions/vmware-proxmox-virtualization/index.html 200

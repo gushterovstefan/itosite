@@ -28,6 +28,34 @@ const metaByPath = {
       title: 'Microsoft Cloud, Security & Business Continuity Solutions — IT Outsource Ltd.',
       description: 'Microsoft 365, Azure, cybersecurity, endpoint, backup, disaster recovery, managed IT support and migration solutions for reliable business IT operations.'
     },
+    '/microsoft-365': {
+      title: 'Microsoft 365 Modern Workplace Services — IT Outsource Ltd.',
+      description: 'Microsoft 365 setup, Exchange Online, Teams, SharePoint, OneDrive, Entra ID, Intune, Defender, Conditional Access, MFA, DLP and backup.'
+    },
+    '/azure-cloud': {
+      title: 'Azure Cloud Infrastructure & Migration Services — IT Outsource Ltd.',
+      description: 'Azure landing zones, VM migration, VPN networking, Azure Backup, Site Recovery, monitoring, governance, cost optimization and hybrid infrastructure.'
+    },
+    '/cybersecurity': {
+      title: 'Cybersecurity & Zero Trust Services — IT Outsource Ltd.',
+      description: 'Zero Trust, identity security, endpoint protection, Defender, Intune, Conditional Access, DLP, secure email, monitoring and incident response.'
+    },
+    '/backup-disaster-recovery': {
+      title: 'Backup & Disaster Recovery Services — IT Outsource Ltd.',
+      description: 'Backup strategy, Microsoft 365 backup, server backup, Azure Backup, Site Recovery, immutable backup, restore testing and RTO/RPO planning.'
+    },
+    '/managed-it-support': {
+      title: 'Managed IT Support Services — IT Outsource Ltd.',
+      description: 'Complete IT support, co-managed support, project support, senior escalation, SLA-based support, monitoring, vendor coordination and executive advisory.'
+    },
+    '/google-workspace-to-microsoft-365': {
+      title: 'Google Workspace to Microsoft 365 Migration — IT Outsource Ltd.',
+      description: 'Gmail to Exchange Online, Google Drive to SharePoint and OneDrive, Shared Drives, calendars, contacts, permission mapping and migration batches.'
+    },
+    '/contact': {
+      title: 'Contact IT Outsource Ltd.',
+      description: 'Contact IT Outsource for managed IT, infrastructure, consulting, Microsoft cloud, security, backup and business platform projects.'
+    },
     '/solutions/microsoft-azure': {
       title: 'Microsoft Azure Solutions — IT Outsource Ltd.',
       description: 'Azure infrastructure design, secure networking, monitoring, governance, cost control and operational runbooks.'
@@ -154,6 +182,34 @@ const metaByPath = {
       title: 'Microsoft Cloud, Security и Business Continuity решения — Ай Ти Аутсорс ООД',
       description: 'Microsoft 365, Azure, киберсигурност, endpoint, backup, disaster recovery, managed IT support и migration решения за надеждни бизнес ИТ операции.'
     },
+    '/microsoft-365': {
+      title: 'Microsoft 365 Modern Workplace услуги — Ай Ти Аутсорс ООД',
+      description: 'Microsoft 365 setup, Exchange Online, Teams, SharePoint, OneDrive, Entra ID, Intune, Defender, Conditional Access, MFA, DLP и backup.'
+    },
+    '/azure-cloud': {
+      title: 'Azure Cloud инфраструктура и миграция — Ай Ти Аутсорс ООД',
+      description: 'Azure landing zones, VM migration, VPN networking, Azure Backup, Site Recovery, monitoring, governance, cost optimization и hybrid infrastructure.'
+    },
+    '/cybersecurity': {
+      title: 'Cybersecurity и Zero Trust услуги — Ай Ти Аутсорс ООД',
+      description: 'Zero Trust, identity security, endpoint protection, Defender, Intune, Conditional Access, DLP, secure email, monitoring и incident response.'
+    },
+    '/backup-disaster-recovery': {
+      title: 'Backup и Disaster Recovery услуги — Ай Ти Аутсорс ООД',
+      description: 'Backup strategy, Microsoft 365 backup, server backup, Azure Backup, Site Recovery, immutable backup, restore testing и RTO/RPO planning.'
+    },
+    '/managed-it-support': {
+      title: 'Managed IT Support услуги — Ай Ти Аутсорс ООД',
+      description: 'Complete IT support, co-managed support, project support, senior escalation, SLA-based support, monitoring, vendor coordination и executive advisory.'
+    },
+    '/google-workspace-to-microsoft-365': {
+      title: 'Google Workspace към Microsoft 365 миграция — Ай Ти Аутсорс ООД',
+      description: 'Gmail към Exchange Online, Google Drive към SharePoint и OneDrive, Shared Drives, calendars, contacts, permission mapping и migration batches.'
+    },
+    '/contact': {
+      title: 'Контакти — Ай Ти Аутсорс ООД',
+      description: 'Свържете се с Ай Ти Аутсорс за ИТ поддръжка, инфраструктура, консултации, Microsoft cloud, сигурност и backup проекти.'
+    },
     '/solutions/microsoft-azure': {
       title: 'Microsoft Azure решения — Ай Ти Аутсорс ООД',
       description: 'Azure infrastructure design, secure networking, monitoring, governance, cost control и operational runbooks.'
@@ -267,6 +323,13 @@ const routeLabels = {
   '/it-infrastructure-services': 'IT Infrastructure Services',
   '/it-consulting-services': 'IT Consulting Services',
   '/solutions': 'Solutions',
+  '/microsoft-365': 'Microsoft 365',
+  '/azure-cloud': 'Azure Cloud',
+  '/cybersecurity': 'Cybersecurity',
+  '/backup-disaster-recovery': 'Backup & Disaster Recovery',
+  '/managed-it-support': 'Managed IT Support',
+  '/google-workspace-to-microsoft-365': 'Google Workspace to Microsoft 365',
+  '/contact': 'Contact',
   '/case-studies': 'Case Studies',
   '/about': 'About',
   '/how-we-deliver': 'How We Deliver',
@@ -282,6 +345,12 @@ const servicePaths = new Set([
   '/it-infrastructure-services',
   '/it-consulting-services',
   '/solutions',
+  '/microsoft-365',
+  '/azure-cloud',
+  '/cybersecurity',
+  '/backup-disaster-recovery',
+  '/managed-it-support',
+  '/google-workspace-to-microsoft-365',
   '/solutions/microsoft-azure',
   '/solutions/microsoft-365',
   '/solutions/vmware-proxmox-virtualization',

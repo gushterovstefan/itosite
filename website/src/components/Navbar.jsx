@@ -10,11 +10,11 @@ const navCopy = {
     cta: 'Request IT Assessment',
     mobileCta: 'Assessment',
     links: [
-      ['Services', '/it-support-services'],
-      ['Microsoft 365', '/solutions/microsoft-365'],
-      ['Azure & Infrastructure', '/it-infrastructure-services'],
-      ['Cybersecurity', '/solutions/zero-trust-security'],
-      ['Backup & Disaster Recovery', '/solutions/backup-dr-veeam'],
+      ['Services', '/managed-it-support'],
+      ['Microsoft 365', '/microsoft-365'],
+      ['Azure & Infrastructure', '/azure-cloud'],
+      ['Cybersecurity', '/cybersecurity'],
+      ['Backup & Disaster Recovery', '/backup-disaster-recovery'],
       ['Case Studies', '/case-studies'],
       ['About', '/about'],
       ['Contact', '/contacts']
@@ -25,11 +25,11 @@ const navCopy = {
     cta: 'Заявете ИТ оценка',
     mobileCta: 'Оценка',
     links: [
-      ['Услуги', '/it-support-services'],
-      ['Microsoft 365', '/solutions/microsoft-365'],
-      ['Azure и инфраструктура', '/it-infrastructure-services'],
-      ['Киберсигурност', '/solutions/zero-trust-security'],
-      ['Backup и DR', '/solutions/backup-dr-veeam'],
+      ['Услуги', '/managed-it-support'],
+      ['Microsoft 365', '/microsoft-365'],
+      ['Azure и инфраструктура', '/azure-cloud'],
+      ['Киберсигурност', '/cybersecurity'],
+      ['Backup и DR', '/backup-disaster-recovery'],
       ['Казуси', '/case-studies'],
       ['За нас', '/about'],
       ['Контакти', '/contacts']

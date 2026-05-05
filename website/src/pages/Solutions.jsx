@@ -34,7 +34,7 @@ const pageCopy = {
         title: 'Microsoft 365 Modern Workplace',
         description: 'Secure email, Teams, SharePoint, OneDrive, identity, devices, and collaboration with a controlled Microsoft 365 architecture.',
         icon: 'cloud',
-        to: '/solutions/microsoft-365',
+        to: '/microsoft-365',
         cta: 'Improve Microsoft 365 Security',
         items: ['Exchange Online', 'Teams', 'SharePoint / OneDrive', 'Entra ID', 'Intune', 'Defender', 'Conditional Access', 'MFA', 'DLP / Purview', 'Secure external sharing', 'Microsoft 365 backup']
       },
@@ -42,7 +42,7 @@ const pageCopy = {
         title: 'Azure Infrastructure & Migration',
         description: 'Design and migrate Azure workloads using a secure foundation, governance, backup, monitoring, and cost control.',
         icon: 'infrastructure',
-        to: '/solutions/microsoft-azure',
+        to: '/azure-cloud',
         cta: 'Plan Azure Migration',
         items: ['Azure landing zone design', 'VM migration', 'Networking and VPN', 'Azure Backup', 'Azure Site Recovery', 'Monitoring', 'Governance', 'Cost optimization', 'Hybrid infrastructure']
       },
@@ -50,7 +50,7 @@ const pageCopy = {
         title: 'Cybersecurity & Zero Trust',
         description: 'Protect users, devices, identities, and data with MFA, Conditional Access, Intune, Defender, DLP, and security monitoring.',
         icon: 'security',
-        to: '/solutions/zero-trust-security',
+        to: '/cybersecurity',
         cta: 'Assess Security Posture',
         items: ['MFA', 'Conditional Access', 'Device compliance', 'Endpoint protection', 'Privileged access control', 'Email protection', 'Data loss prevention', 'Secure sharing', 'Security monitoring', 'Incident response process']
       },
@@ -58,7 +58,7 @@ const pageCopy = {
         title: 'Backup & Disaster Recovery',
         description: 'Build tested backup and recovery strategies for Microsoft 365, servers, Azure workloads, databases, and business-critical systems.',
         icon: 'backup',
-        to: '/solutions/backup-dr-veeam',
+        to: '/backup-disaster-recovery',
         cta: 'Build DR Plan',
         items: ['Microsoft 365 backup', 'Server backup', 'Azure Backup', 'Azure Site Recovery', 'Immutable backup', 'Restore testing', 'RTO / RPO planning', 'DR runbooks', 'Executive reporting']
       },
@@ -66,7 +66,7 @@ const pageCopy = {
         title: 'Managed IT Support',
         description: 'Use IT Outsource as your external IT department, senior escalation team, or project-based technical partner.',
         icon: 'support',
-        to: '/it-support-services',
+        to: '/managed-it-support',
         cta: 'Discuss Support Model',
         items: ['Complete IT support', 'Co-managed IT support', 'Project IT support', '2nd / 3rd level expert support', 'Executive IT advisory']
       },
@@ -74,7 +74,7 @@ const pageCopy = {
         title: 'Migration Services',
         description: 'Plan and execute migrations from Google Workspace, legacy infrastructure, hosted environments, and on-premises systems to Microsoft cloud platforms.',
         icon: 'tools',
-        to: '/solutions/cloud-migration',
+        to: '/google-workspace-to-microsoft-365',
         cta: 'Plan Migration',
         items: ['Google Workspace to Microsoft 365', 'Email migration', 'Calendar and contacts migration', 'Drive and Shared Drives migration', 'SharePoint structure', 'Permission mapping', 'Migration assessment', 'Data cleanup before migration']
       }

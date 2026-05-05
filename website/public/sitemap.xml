@@ -19,42 +19,42 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/it-support-services"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/it-support-services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/it-support-services"/>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/bg/it-support-services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/it-support-services"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/it-support-services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/it-support-services"/>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/it-infrastructure-services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/it-infrastructure-services"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/it-infrastructure-services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/it-infrastructure-services"/>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/bg/it-infrastructure-services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/it-infrastructure-services"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/it-infrastructure-services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/it-infrastructure-services"/>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/it-consulting-services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/it-consulting-services"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/it-consulting-services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/it-consulting-services"/>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/bg/it-consulting-services</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/it-consulting-services"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/it-consulting-services"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/it-consulting-services"/>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/solutions</loc>
@@ -69,6 +69,104 @@
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/solutions"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/solutions"/>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/microsoft-365</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/microsoft-365"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/microsoft-365"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/microsoft-365"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/bg/microsoft-365</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/microsoft-365"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/microsoft-365"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/microsoft-365"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/azure-cloud</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/azure-cloud"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/azure-cloud"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/azure-cloud"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/bg/azure-cloud</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/azure-cloud"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/azure-cloud"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/azure-cloud"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/cybersecurity</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/cybersecurity"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/cybersecurity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/cybersecurity"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/bg/cybersecurity</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/cybersecurity"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/cybersecurity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/cybersecurity"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/backup-disaster-recovery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/backup-disaster-recovery"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/backup-disaster-recovery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/backup-disaster-recovery"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/bg/backup-disaster-recovery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/backup-disaster-recovery"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/backup-disaster-recovery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/backup-disaster-recovery"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/managed-it-support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/managed-it-support"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/managed-it-support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/managed-it-support"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/bg/managed-it-support</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/managed-it-support"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/managed-it-support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/managed-it-support"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/google-workspace-to-microsoft-365</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/google-workspace-to-microsoft-365"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/google-workspace-to-microsoft-365"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/google-workspace-to-microsoft-365"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/bg/google-workspace-to-microsoft-365</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/google-workspace-to-microsoft-365"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/google-workspace-to-microsoft-365"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/google-workspace-to-microsoft-365"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/contact"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/contact"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itoutsource.bg/bg/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/contact"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/contact"/>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/solutions/microsoft-azure</loc>
@@ -229,14 +327,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/case-studies"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/case-studies"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/case-studies"/>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/bg/case-studies</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://itoutsource.bg/case-studies"/>
     <xhtml:link rel="alternate" hreflang="bg" href="https://itoutsource.bg/bg/case-studies"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itoutsource.bg/case-studies"/>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://itoutsource.bg/about</loc>
