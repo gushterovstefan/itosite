@@ -243,6 +243,90 @@ const metaByPath = {
   }
 }
 
+const routeLabels = {
+  '/': 'Home',
+  '/it-support-services': 'IT Support Services',
+  '/it-infrastructure-services': 'IT Infrastructure Services',
+  '/it-consulting-services': 'IT Consulting Services',
+  '/solutions': 'Solutions',
+  '/about': 'About',
+  '/how-we-deliver': 'How We Deliver',
+  '/industries': 'Industries',
+  '/insights': 'Insights',
+  '/contacts': 'Contact',
+  '/legal/privacy': 'Privacy Policy',
+  '/legal/terms': 'Terms'
+}
+
+const servicePaths = new Set([
+  '/it-support-services',
+  '/it-infrastructure-services',
+  '/it-consulting-services',
+  '/solutions',
+  '/solutions/microsoft-azure',
+  '/solutions/microsoft-365',
+  '/solutions/vmware-proxmox-virtualization',
+  '/solutions/azure-hybrid-cloud',
+  '/solutions/zero-trust-security',
+  '/solutions/entra-id-sso',
+  '/solutions/backup-dr-veeam',
+  '/solutions/cloud-migration',
+  '/solutions/web-b2b-b2c',
+  '/solutions/easy-order-platform'
+])
+
+function readableLabel(path, data) {
+  if (routeLabels[path]) return routeLabels[path]
+  if (data?.title) return data.title.replace(/ — .+$/, '')
+  const last = path.split('/').filter(Boolean).pop() || 'Home'
+  return last.split('-').map((p) => p.charAt(0).toUpperCase() + p.slice(1)).join(' ')
+}
+
+function breadcrumbFor(path, data) {
+  const parts = path.split('/').filter(Boolean)
+  const items = [{ '@type': 'ListItem', position: 1, name: 'Home', item: origin }]
+  let current = ''
+  parts.forEach((part, index) => {
+    current += `/${part}`
+    items.push({
+      '@type': 'ListItem',
+      position: index + 2,
+      name: index === parts.length - 1 ? readableLabel(path, data) : readableLabel(current),
+      item: `${origin}${current}`
+    })
+  })
+  return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items }
+}
+
+function serviceFor(path, data) {
+  if (!servicePaths.has(path)) return null
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: readableLabel(path, data),
+    description: data.description,
+    provider: {
+      '@type': 'Organization',
+      name: 'IT Outsource Ltd.',
+      url: origin
+    },
+    areaServed: ['Bulgaria', 'European Union'],
+    serviceType: readableLabel(path, data),
+    url: `${origin}${path}`
+  }
+}
+
+function setJsonLd(id, payload) {
+  const old = document.head.querySelector(`script[data-seo-jsonld="${id}"]`)
+  if (old) old.remove()
+  if (!payload) return
+  const script = document.createElement('script')
+  script.type = 'application/ld+json'
+  script.dataset.seoJsonld = id
+  script.textContent = JSON.stringify(payload)
+  document.head.appendChild(script)
+}
+
 function setMeta(selector, attr, value) {
   let el = document.head.querySelector(selector)
   if (!el) {
@@ -284,12 +368,7 @@ export default function Seo() {
     setMeta('meta[name="twitter:card"]', 'content', 'summary_large_image')
     setLink('canonical', url)
 
-    const old = document.head.querySelector('script[data-seo-jsonld="organization"]')
-    if (old) old.remove()
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.dataset.seoJsonld = 'organization'
-    script.textContent = JSON.stringify({
+    setJsonLd('organization', {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'IT Outsource Ltd.',
@@ -306,7 +385,8 @@ export default function Seo() {
         addressCountry: 'BG'
       }
     })
-    document.head.appendChild(script)
+    setJsonLd('breadcrumb', breadcrumbFor(path, data))
+    setJsonLd('service', serviceFor(path, data))
   }, [lang, location.pathname])
 
   return null
