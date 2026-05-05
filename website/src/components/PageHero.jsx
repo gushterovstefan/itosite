@@ -13,7 +13,7 @@ export default function PageHero({
   primaryCta = { to: '/contacts', label: 'Contact us' },
   secondaryCta = { to: '/solutions', label: 'Explore solutions' }
 }) {
-  const { lang } = useContent()
+  const { lang, localizedPath } = useContent()
   const bookingLabel = lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-min call'
   const showSecondary = secondaryCta?.href !== BOOKING_URL
 
@@ -78,7 +78,7 @@ export default function PageHero({
                 </a>
               ) : showSecondary ? (
                 <Link
-                  to={secondaryCta.to}
+                  to={localizedPath(secondaryCta.to)}
                   className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
                 >
                   <span>{secondaryCta.label}</span>

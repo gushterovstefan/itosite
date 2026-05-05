@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useContent } from '../content/index.jsx'
 import SheenButton from './SheenButton.jsx'
@@ -6,11 +6,13 @@ import logo from '../assets/logo-globe-small.jpg'
 import { BOOKING_URL } from '../config/booking.js'
 
 function NavItem({ to, label, end, activePath }) {
+  const { localizedPath } = useContent()
+  const localizedTo = localizedPath(to)
   const isActive = end ? activePath === to : activePath.startsWith(to)
 
   return (
     <Link
-      to={to}
+      to={localizedTo}
       aria-current={isActive ? 'page' : undefined}
       className={
         'relative rounded-full px-3 py-2 text-sm font-medium tracking-wide transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70 ' +
@@ -28,16 +30,15 @@ function NavItem({ to, label, end, activePath }) {
 }
 
 export default function Navbar() {
-  const { lang, setLang, content } = useContent()
+  const { lang, setLang, content, basePath } = useContent()
   const ui = content.shared.ui
   const [open, setOpen] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
-  const location = useLocation()
   const menuButtonRef = useRef(null)
   const closeButtonRef = useRef(null)
   const drawerRef = useRef(null)
 
-  const activePath = useMemo(() => location.pathname, [location.pathname])
+  const activePath = useMemo(() => basePath, [basePath])
   const bookingLabel = lang === 'bg' ? 'Запазете разговор' : 'Book a 30-min call'
 
   useEffect(() => {
@@ -126,7 +127,7 @@ export default function Navbar() {
 
             <div className="relative z-10 flex h-14 items-center justify-between">
               {/* brand: logo only */}
-              <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+              <Link to={lang === 'bg' ? '/bg' : '/'} className="flex items-center" onClick={() => setOpen(false)}>
                 <div className="relative">
                   <img
                     src={logo}
@@ -229,7 +230,7 @@ export default function Navbar() {
                   {links.map((l) => (
                     <NavLink
                       key={l.to}
-                      to={l.to}
+                      to={lang === 'bg' ? `/bg${l.to === '/' ? '' : l.to}` : l.to}
                       end={l.end}
                       onClick={() => setOpen(false)}
                       className={({ isActive }) =>

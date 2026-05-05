@@ -1,5 +1,6 @@
 import { forwardRef, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { useContent } from '../content/index.jsx'
 
 function setVars(el, clientX, clientY) {
   const r = el.getBoundingClientRect()
@@ -18,9 +19,10 @@ const SheenButton = forwardRef(function SheenButton(
   ref
 ) {
   const innerRef = useRef(null)
+  const { localizedPath } = useContent()
 
   const Comp = to ? Link : 'a'
-  const compProps = to ? { to } : { href }
+  const compProps = to ? { to: localizedPath(to) } : { href }
 
   return (
     <Comp

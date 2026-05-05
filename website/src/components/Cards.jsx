@@ -2,6 +2,7 @@ import { motion, useAnimation, useReducedMotion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import Reveal from './Reveal.jsx'
 import CardSpotlight from './CardSpotlight.jsx'
+import { useContent } from '../content/index.jsx'
 
 const variants = {
   default: {
@@ -96,12 +97,13 @@ export function ClickCard({
   badge = null
 }) {
   const nav = useNavigate()
+  const { localizedPath } = useContent()
   const reduce = useReducedMotion()
   const controls = useAnimation()
 
   const go = async () => {
     if (reduce) {
-      nav(to)
+      nav(localizedPath(to))
       return
     }
 
@@ -118,7 +120,7 @@ export function ClickCard({
       transition: { duration: 0.1, ease: 'easeOut' }
     })
 
-    nav(to)
+    nav(localizedPath(to))
   }
 
   const v = variants[variant] ?? variants.default

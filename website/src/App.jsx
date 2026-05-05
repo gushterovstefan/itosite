@@ -19,6 +19,37 @@ const Contact = lazy(() => import('./pages/Contact.jsx'))
 const Legal = lazy(() => import('./pages/Legal.jsx'))
 import Seo from './components/Seo.jsx'
 
+const routeDefs = [
+  ['/', <HomeGem />],
+  ['/about', <About />],
+  ['/it-consulting-services', <Consulting />],
+  ['/it-support-services', <Support />],
+  ['/it-infrastructure-services', <Infrastructure />],
+  ['/solutions', <Solutions />],
+  ['/solutions/:slug', <SolutionDetail />],
+  ['/how-we-deliver', <HowWeDeliver />],
+  ['/industries', <IndustriesHub />],
+  ['/industries/:slug', <IndustryRoute />],
+  ['/insights', <InsightsHub />],
+  ['/insights/:slug', <InsightDetail />],
+  ['/contacts', <Contact />],
+  ['/legal/privacy', <Legal type="privacy" />],
+  ['/legal/terms', <Legal type="terms" />]
+]
+
+function renderRoutes(prefix = '') {
+  return routeDefs.map(([path, element]) => {
+    const routePath = path === '/' ? (prefix || '/') : `${prefix}${path}`
+    return (
+      <Route
+        key={routePath}
+        path={routePath}
+        element={<PageTransition>{element}</PageTransition>}
+      />
+    )
+  })
+}
+
 export default function App() {
   const location = useLocation()
 
@@ -28,21 +59,8 @@ export default function App() {
       <Suspense fallback={<div className="min-h-[60vh]" aria-label="Loading page" />}>
         <Routes location={location} key={location.pathname}>
           <Route element={<GemLayout />}>
-            <Route path="/" element={<PageTransition><HomeGem /></PageTransition>} />
-            <Route path="/about" element={<PageTransition><About /></PageTransition>} />
-            <Route path="/it-consulting-services" element={<PageTransition><Consulting /></PageTransition>} />
-            <Route path="/it-support-services" element={<PageTransition><Support /></PageTransition>} />
-            <Route path="/it-infrastructure-services" element={<PageTransition><Infrastructure /></PageTransition>} />
-            <Route path="/solutions" element={<PageTransition><Solutions /></PageTransition>} />
-            <Route path="/solutions/:slug" element={<PageTransition><SolutionDetail /></PageTransition>} />
-            <Route path="/how-we-deliver" element={<PageTransition><HowWeDeliver /></PageTransition>} />
-            <Route path="/industries" element={<PageTransition><IndustriesHub /></PageTransition>} />
-            <Route path="/industries/:slug" element={<PageTransition><IndustryRoute /></PageTransition>} />
-            <Route path="/insights" element={<PageTransition><InsightsHub /></PageTransition>} />
-            <Route path="/insights/:slug" element={<PageTransition><InsightDetail /></PageTransition>} />
-            <Route path="/contacts" element={<PageTransition><Contact /></PageTransition>} />
-            <Route path="/legal/privacy" element={<PageTransition><Legal type="privacy" /></PageTransition>} />
-            <Route path="/legal/terms" element={<PageTransition><Legal type="terms" /></PageTransition>} />
+            {renderRoutes()}
+            {renderRoutes('/bg')}
           </Route>
         </Routes>
       </Suspense>

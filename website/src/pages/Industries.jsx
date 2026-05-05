@@ -78,7 +78,7 @@ export function IndustriesHub() {
 }
 
 export function IndustryDetail({ slug }) {
-  const { lang, content } = useContent()
+  const { lang, content, localizedPath } = useContent()
   const data = industries[lang] || industries.en
   const page = data.pages[slug] || industries.en.pages[slug]
   const l = labels[lang] || labels.en
@@ -121,7 +121,7 @@ export function IndustryDetail({ slug }) {
           <Card variant="violet" revealDelay={0.04}>
             <div className="text-sm font-semibold">{l.solutions}</div>
             <div className="mt-4"><BulletList items={page.solutions} /></div>
-            <Link className="mt-5 inline-flex rounded-full border border-black/10 bg-white/70 px-4 py-2 text-sm font-semibold text-ink-950 hover:bg-white" to="/solutions">
+            <Link className="mt-5 inline-flex rounded-full border border-black/10 bg-white/70 px-4 py-2 text-sm font-semibold text-ink-950 hover:bg-white" to={localizedPath('/solutions')}>
               {content.shared.ui.solutions}
             </Link>
           </Card>

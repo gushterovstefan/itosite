@@ -48,15 +48,16 @@ const solutionLinks = [
 const trustItems = ['Microsoft cloud', 'ISO 27001:2022 aligned', 'Veeam ecosystem', 'VMware / Proxmox', 'ABM aware', 'GDPR-aware delivery']
 
 function FooterLink({ to, children }) {
+  const { localizedPath } = useContent()
   return (
-    <Link className="text-ink-900/60 transition hover:text-ink-950" to={to}>
+    <Link className="text-ink-900/60 transition hover:text-ink-950" to={localizedPath(to)}>
       {children}
     </Link>
   )
 }
 
 export default function Footer() {
-  const { content, lang } = useContent()
+  const { content, lang, localizedPath } = useContent()
   const ui = content.shared.ui
   const l = legal[lang] || legal.en
 
@@ -69,7 +70,7 @@ export default function Footer() {
               <div className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-800">{l.trustEyebrow}</div>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-ink-900/70">{l.trustLine}</p>
             </div>
-            <Link to="/how-we-deliver" className="text-sm font-semibold text-ink-950 underline decoration-brand-500/40 underline-offset-4 hover:decoration-brand-500">
+            <Link to={localizedPath('/how-we-deliver')} className="text-sm font-semibold text-ink-950 underline decoration-brand-500/40 underline-offset-4 hover:decoration-brand-500">
               {l.howWeDeliver}
             </Link>
           </div>

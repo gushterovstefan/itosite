@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useContent } from '../content/index.jsx'
+import { localizePath, stripLocalePrefix } from '../content/index.jsx'
 
 const origin = 'https://itoutsource.bg'
 const ogImage = `${origin}/og-image.png`
@@ -292,9 +293,9 @@ function readableLabel(path, data) {
   return last.split('-').map((p) => p.charAt(0).toUpperCase() + p.slice(1)).join(' ')
 }
 
-function breadcrumbFor(path, data) {
+function breadcrumbFor(path, data, lang) {
   const parts = path.split('/').filter(Boolean)
-  const items = [{ '@type': 'ListItem', position: 1, name: 'Home', item: origin }]
+  const items = [{ '@type': 'ListItem', position: 1, name: lang === 'bg' ? 'Начало' : 'Home', item: `${origin}${localizePath('/', lang)}` }]
   let current = ''
   parts.forEach((part, index) => {
     current += `/${part}`
@@ -302,13 +303,13 @@ function breadcrumbFor(path, data) {
       '@type': 'ListItem',
       position: index + 2,
       name: index === parts.length - 1 ? readableLabel(path, data) : readableLabel(current),
-      item: `${origin}${current}`
+      item: `${origin}${localizePath(current, lang)}`
     })
   })
   return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items }
 }
 
-function serviceFor(path, data) {
+function serviceFor(path, data, lang) {
   if (!servicePaths.has(path)) return null
   return {
     '@context': 'https://schema.org',
@@ -322,7 +323,7 @@ function serviceFor(path, data) {
     },
     areaServed: ['Bulgaria', 'European Union'],
     serviceType: readableLabel(path, data),
-    url: `${origin}${path}`
+    url: `${origin}${localizePath(path, lang)}`
   }
 }
 
@@ -358,14 +359,30 @@ function setLink(rel, href) {
   el.setAttribute('href', href)
 }
 
+function setAlternateLinks(path) {
+  document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove())
+  const alternates = [
+    ['en', `${origin}${localizePath(path, 'en')}`],
+    ['bg', `${origin}${localizePath(path, 'bg')}`],
+    ['x-default', `${origin}${localizePath(path, 'en')}`]
+  ]
+  alternates.forEach(([hreflang, href]) => {
+    const el = document.createElement('link')
+    el.setAttribute('rel', 'alternate')
+    el.setAttribute('hreflang', hreflang)
+    el.setAttribute('href', href)
+    document.head.appendChild(el)
+  })
+}
+
 export default function Seo() {
   const { lang } = useContent()
   const location = useLocation()
 
   useEffect(() => {
-    const path = location.pathname
+    const path = stripLocalePrefix(location.pathname)
     const data = metaByPath[lang]?.[path] || metaByPath.en[path] || metaByPath.en['/']
-    const url = `${origin}${path}`
+    const url = `${origin}${localizePath(path, lang)}`
 
     document.documentElement.lang = lang === 'bg' ? 'bg' : 'en'
     document.title = data.title
@@ -385,6 +402,7 @@ export default function Seo() {
     setMeta('meta[name="twitter:image"]', 'content', ogImage)
     setMeta('meta[name="twitter:image:alt"]', 'content', 'IT Outsource Ltd. — enterprise IT services, cloud, security and operations')
     setLink('canonical', url)
+    setAlternateLinks(path)
 
     setJsonLd('organization', {
       '@context': 'https://schema.org',
@@ -403,8 +421,8 @@ export default function Seo() {
         addressCountry: 'BG'
       }
     })
-    setJsonLd('breadcrumb', breadcrumbFor(path, data))
-    setJsonLd('service', serviceFor(path, data))
+    setJsonLd('breadcrumb', breadcrumbFor(path, data, lang))
+    setJsonLd('service', serviceFor(path, data, lang))
   }, [lang, location.pathname])
 
   return null

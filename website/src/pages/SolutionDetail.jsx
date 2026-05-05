@@ -47,11 +47,11 @@ const labels = {
 
 export default function SolutionDetail() {
   const { slug } = useParams()
-  const { lang, content } = useContent()
+  const { lang, content, localizedPath } = useContent()
   const page = solutionPages[lang]?.[slug] || solutionPages.en[slug]
   const l = labels[lang] || labels.en
 
-  if (!page) return <Navigate to="/solutions" replace />
+  if (!page) return <Navigate to={localizedPath('/solutions')} replace />
 
   return (
     <div>
