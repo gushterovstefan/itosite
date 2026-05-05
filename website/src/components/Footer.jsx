@@ -1,159 +1,144 @@
 import { Link } from 'react-router-dom'
 import { useContent } from '../content/index.jsx'
 
-const legal = {
+const footerCopy = {
   en: {
+    companyDescription: 'IT Outsource helps companies design, secure, migrate and manage Microsoft 365, Azure, endpoint, backup and disaster recovery environments with clear technical ownership.',
+    servicesTitle: 'Main services',
     companyTitle: 'Company',
-    servicesTitle: 'Services',
-    solutionsTitle: 'Solutions',
-    trustTitle: 'Legal & Trust',
-    howWeDeliver: 'How we deliver',
-    industries: 'Industries',
-    insights: 'Insights',
-    privacy: 'Privacy',
+    contactTitle: 'Contact',
+    legalTitle: 'Legal',
+    privacy: 'Privacy Policy',
     terms: 'Terms',
-    trustEyebrow: 'Trust posture',
-    trustLine: 'Built around Microsoft cloud operations, ISO 27001:2022-aligned governance, GDPR-aware delivery, and proven backup / virtualization ecosystems.',
-    trustNote: 'Technology names indicate delivery experience and platform alignment, not a claim of certification unless explicitly stated.',
-    registered: 'Registered company',
-    legalIdentity: 'Legal identity',
-    companyName: 'IT Outsource Ltd. / Ай Ти Аутсорс ООД',
-    eik: 'EIK / BULSTAT: 200776949',
-    vat: 'VAT number: BG200776949',
-    registeredOffice: 'Registered office and management address: Bulgaria, Sofia 1505, Poduyane, 25 Popova Shapka St., floor 2, apt. 6',
-    address: 'Bulgaria, Sofia 1505, Poduyane, 25 Popova Shapka St., floor 2, apt. 6',
-    response: 'Typical response: within 1 business day.'
+    response: 'Typical response: within 1 business day.',
+    cta: 'Request IT Assessment',
+    services: [
+      ['Managed IT Services', '/it-support-services'],
+      ['Microsoft 365', '/solutions/microsoft-365'],
+      ['Azure & Infrastructure', '/it-infrastructure-services'],
+      ['Cybersecurity', '/solutions/zero-trust-security'],
+      ['Backup & Disaster Recovery', '/solutions/backup-dr-veeam']
+    ],
+    company: [
+      ['Case Studies', '/case-studies'],
+      ['About', '/about'],
+      ['How we deliver', '/how-we-deliver'],
+      ['Contact', '/contacts']
+    ],
+    emailLabel: 'Email',
+    phoneLabel: 'Phone',
+    addressLabel: 'Registered office',
+    address: 'Sofia 1505, Poduyane, 25 Popova Shapka St., floor 2, apt. 6, Bulgaria',
+    legalIdentity: 'IT Outsource Ltd. / Ай Ти Аутсорс ООД · EIK 200776949 · VAT BG200776949',
+    trustLine: 'Microsoft cloud operations, ISO 27001:2022-aligned governance, GDPR-aware delivery and proven backup / virtualization ecosystems.'
   },
   bg: {
+    companyDescription: 'Ай Ти Аутсорс помага на компании да проектират, защитават, мигрират и управляват Microsoft 365, Azure, endpoint, backup и disaster recovery среди с ясна техническа отговорност.',
+    servicesTitle: 'Основни услуги',
     companyTitle: 'Компания',
-    servicesTitle: 'Услуги',
-    solutionsTitle: 'Решения',
-    trustTitle: 'Правна информация и доверие',
-    howWeDeliver: 'Как работим',
-    industries: 'Индустрии',
-    insights: 'Материали',
-    privacy: 'Поверителност',
+    contactTitle: 'Контакти',
+    legalTitle: 'Правна информация',
+    privacy: 'Политика за поверителност',
     terms: 'Условия',
-    trustEyebrow: 'Позиция на доверие',
-    trustLine: 'Изградено около Microsoft cloud операции, ISO 27001:2022-aligned управление, GDPR-aware доставка и доказани backup / virtualization екосистеми.',
-    trustNote: 'Имената на технологии показват опит и платформена насоченост, не претенция за сертификация, освен ако не е изрично посочено.',
-    registered: 'Регистрирана компания',
-    legalIdentity: 'Правна идентификация',
-    companyName: 'Ай Ти Аутсорс ООД / IT Outsource Ltd.',
-    eik: 'ЕИК / БУЛСТАТ: 200776949',
-    vat: 'ДДС / VAT номер: BG200776949',
-    registeredOffice: 'Седалище и адрес на управление: България, гр. София 1505, р-н Подуяне, ул. Попова шапка 25, ет. 2, ап. 6',
-    address: 'България, София 1505, р-н Подуяне, ул. Попова шапка 25, ет. 2, ап. 6',
-    response: 'Типично време за отговор: до 1 работен ден.'
+    response: 'Типично време за отговор: до 1 работен ден.',
+    cta: 'Заявете ИТ оценка',
+    services: [
+      ['Managed IT услуги', '/it-support-services'],
+      ['Microsoft 365', '/solutions/microsoft-365'],
+      ['Azure и инфраструктура', '/it-infrastructure-services'],
+      ['Киберсигурност', '/solutions/zero-trust-security'],
+      ['Backup и Disaster Recovery', '/solutions/backup-dr-veeam']
+    ],
+    company: [
+      ['Казуси', '/case-studies'],
+      ['За нас', '/about'],
+      ['Как работим', '/how-we-deliver'],
+      ['Контакти', '/contacts']
+    ],
+    emailLabel: 'Имейл',
+    phoneLabel: 'Телефон',
+    addressLabel: 'Седалище',
+    address: 'София 1505, р-н Подуяне, ул. Попова шапка 25, ет. 2, ап. 6, България',
+    legalIdentity: 'Ай Ти Аутсорс ООД / IT Outsource Ltd. · ЕИК 200776949 · ДДС BG200776949',
+    trustLine: 'Microsoft cloud операции, ISO 27001:2022-aligned governance, GDPR-aware доставка и доказани backup / virtualization екосистеми.'
   }
 }
 
-const solutionLinks = [
-  ['Microsoft Azure', '/solutions/microsoft-azure'],
-  ['Microsoft 365', '/solutions/microsoft-365'],
-  ['Zero Trust Security', '/solutions/zero-trust-security'],
-  ['Backup & DR', '/solutions/backup-dr-veeam']
-]
-
-const trustItems = ['Microsoft cloud', 'ISO 27001:2022 aligned', 'Veeam ecosystem', 'VMware / Proxmox', 'ABM aware', 'GDPR-aware delivery']
+const email = 'info@itoutsource.bg'
+const phoneDisplay = '+359 887 940 248'
+const phoneHref = '+359887940248'
 
 function FooterLink({ to, children }) {
   const { localizedPath } = useContent()
   return (
-    <Link className="text-ink-900/60 transition hover:text-ink-950" to={localizedPath(to)}>
+    <Link className="text-ink-900/64 transition hover:text-ink-950" to={localizedPath(to)}>
       {children}
     </Link>
   )
 }
 
 export default function Footer() {
-  const { content, lang, localizedPath } = useContent()
-  const ui = content.shared.ui
-  const l = legal[lang] || legal.en
+  const { lang, localizedPath } = useContent()
+  const copy = footerCopy[lang] || footerCopy.en
 
   return (
-    <footer className="relative z-20 border-t border-black/10 bg-white/82 backdrop-blur-xl">
-      <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
-        <div className="rounded-3xl border border-black/10 bg-white/75 p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.55)] md:p-6">
-          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+    <footer className="relative z-20 border-t border-black/10 bg-white/88 backdrop-blur-xl">
+      <div className="mx-auto max-w-7xl px-4 py-10 md:py-12">
+        <div className="rounded-3xl border border-black/10 bg-white/78 p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.55)] md:p-7">
+          <div className="grid gap-8 lg:grid-cols-[1.4fr_0.9fr_0.9fr_1.05fr]">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-800">{l.trustEyebrow}</div>
-              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-ink-900/70">{l.trustLine}</p>
+              <div className="text-sm font-semibold text-ink-950">IT Outsource Ltd.</div>
+              <p className="mt-3 max-w-md text-sm leading-relaxed text-ink-900/68">{copy.companyDescription}</p>
+              <p className="mt-4 rounded-2xl border border-brand-300/30 bg-brand-200/24 px-4 py-3 text-xs leading-relaxed text-ink-900/72">
+                {copy.trustLine}
+              </p>
             </div>
-            <Link to={localizedPath('/how-we-deliver')} className="text-sm font-semibold text-ink-950 underline decoration-brand-500/40 underline-offset-4 hover:decoration-brand-500">
-              {l.howWeDeliver}
-            </Link>
-          </div>
 
-          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
-            {trustItems.map((item) => (
-              <div key={item} className="rounded-2xl border border-black/10 bg-brand-200/25 px-4 py-3 text-sm font-semibold text-ink-950">
-                {item}
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{copy.servicesTitle}</div>
+              <div className="mt-4 grid gap-3 text-sm">
+                {copy.services.map(([label, to]) => <FooterLink key={to} to={to}>{label}</FooterLink>)}
               </div>
-            ))}
-          </div>
-          <p className="mt-4 text-xs leading-relaxed text-ink-900/65">{l.trustNote}</p>
-        </div>
-
-        <div className="mt-10 grid gap-8 md:grid-cols-4">
-          <div>
-            <div className="text-sm font-semibold">IT Outsource Ltd.</div>
-            <p className="mt-2 text-sm leading-relaxed text-ink-900/60">{content.shared.tagline}</p>
-            <div className="mt-4 space-y-1 text-xs leading-relaxed text-ink-900/70">
-              <div>{l.registered}: Ай Ти Аутсорс ООД</div>
-              <div>{l.eik}</div>
-              <div>{l.vat}</div>
-              <div>{l.address}</div>
             </div>
-          </div>
 
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.companyTitle}</div>
-            <div className="mt-4 grid gap-3 text-sm">
-              <FooterLink to="/about">{ui.about}</FooterLink>
-              <FooterLink to="/how-we-deliver">{l.howWeDeliver}</FooterLink>
-              <FooterLink to="/industries">{l.industries}</FooterLink>
-              <FooterLink to="/insights">{l.insights}</FooterLink>
-              <FooterLink to="/contacts">{ui.contact}</FooterLink>
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{copy.companyTitle}</div>
+              <div className="mt-4 grid gap-3 text-sm">
+                {copy.company.map(([label, to]) => <FooterLink key={to} to={to}>{label}</FooterLink>)}
+              </div>
+              <div className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{copy.legalTitle}</div>
+              <div className="mt-4 grid gap-3 text-sm">
+                <FooterLink to="/legal/privacy">{copy.privacy}</FooterLink>
+                <FooterLink to="/legal/terms">{copy.terms}</FooterLink>
+              </div>
             </div>
-          </div>
 
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.servicesTitle}</div>
-            <div className="mt-4 grid gap-3 text-sm">
-              <FooterLink to="/it-support-services">{ui.support}</FooterLink>
-              <FooterLink to="/it-infrastructure-services">{ui.infrastructure}</FooterLink>
-              <FooterLink to="/it-consulting-services">{ui.consulting}</FooterLink>
-              <FooterLink to="/solutions">{ui.solutions}</FooterLink>
-            </div>
-          </div>
-
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.solutionsTitle}</div>
-            <div className="mt-4 grid gap-3 text-sm">
-              {solutionLinks.map(([label, to]) => <FooterLink key={label} to={to}>{label}</FooterLink>)}
-            </div>
-            <div className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.trustTitle}</div>
-            <div className="mt-4 grid gap-3 text-sm">
-              <FooterLink to="/legal/privacy">{l.privacy}</FooterLink>
-              <FooterLink to="/legal/terms">{l.terms}</FooterLink>
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{copy.contactTitle}</div>
+              <div className="mt-4 space-y-3 text-sm text-ink-900/68">
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-900/45">{copy.emailLabel}</div>
+                  <a className="mt-1 inline-block text-ink-950 underline decoration-brand-500/35 underline-offset-4 hover:decoration-brand-500" href={`mailto:${email}`}>{email}</a>
+                </div>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-900/45">{copy.phoneLabel}</div>
+                  <a className="mt-1 inline-block text-ink-950 underline decoration-brand-500/35 underline-offset-4 hover:decoration-brand-500" href={`tel:${phoneHref}`}>{phoneDisplay}</a>
+                </div>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-900/45">{copy.addressLabel}</div>
+                  <div className="mt-1 leading-relaxed">{copy.address}</div>
+                </div>
+              </div>
+              <Link to={localizedPath('/contacts')} className="mt-5 inline-flex rounded-full bg-navy-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-navy-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70">
+                {copy.cta}
+              </Link>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 rounded-3xl border border-black/10 bg-white/70 p-5 text-xs leading-relaxed text-ink-900/72 md:p-6">
-          <div className="font-semibold uppercase tracking-[0.22em] text-ink-900/70">{l.legalIdentity}</div>
-          <div className="mt-3 grid gap-2 md:grid-cols-2">
-            <div>{l.companyName}</div>
-            <div>{l.eik}</div>
-            <div>{l.vat}</div>
-            <div>{l.registeredOffice}</div>
-          </div>
-        </div>
-
-        <div className="mt-10 flex flex-col gap-3 border-t border-black/10 pt-5 text-xs text-ink-900/65 md:flex-row md:items-center md:justify-between">
-          <div>© {new Date().getFullYear()} IT Outsource Ltd. / Ай Ти Аутсорс ООД</div>
-          <div>{l.response}</div>
+        <div className="mt-6 flex flex-col gap-3 border-t border-black/10 pt-5 text-xs leading-relaxed text-ink-900/62 md:flex-row md:items-center md:justify-between">
+          <div>© {new Date().getFullYear()} IT Outsource Ltd. / Ай Ти Аутсорс ООД. {copy.legalIdentity}</div>
+          <div>{copy.response}</div>
         </div>
       </div>
     </footer>

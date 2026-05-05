@@ -72,6 +72,10 @@ const metaByPath = {
       title: 'GxP & Clinical Research IT — IT Outsource Ltd.',
       description: 'Validated, audit-ready IT environments for CRO, clinical research and regulated life-sciences teams with CSV and GAMP 5 aligned delivery.'
     },
+    '/case-studies': {
+      title: 'Case Studies — IT Outsource Ltd.',
+      description: 'Business outcomes and reference patterns for Microsoft cloud, cybersecurity, infrastructure, backup and managed IT delivery.'
+    },
     '/about': {
       title: 'About IT Outsource Ltd.',
       description: 'Learn about IT Outsource Ltd., a Sofia-based IT services company delivering consulting, infrastructure, support and digital solutions.'
@@ -194,6 +198,10 @@ const metaByPath = {
       title: 'GxP и Clinical Research IT — Ай Ти Аутсорс ООД',
       description: 'Validated, audit-ready ИТ среди за CRO, clinical research и регулирани life-sciences екипи с CSV и GAMP 5 aligned доставка.'
     },
+    '/case-studies': {
+      title: 'Казуси — Ай Ти Аутсорс ООД',
+      description: 'Бизнес резултати и reference patterns за Microsoft cloud, киберсигурност, инфраструктура, backup и managed IT delivery.'
+    },
     '/about': {
       title: 'За Ай Ти Аутсорс ООД',
       description: 'Информация за Ай Ти Аутсорс ООД — ИТ компания в София за консултации, инфраструктура, поддръжка и дигитални решения.'
@@ -259,6 +267,7 @@ const routeLabels = {
   '/it-infrastructure-services': 'IT Infrastructure Services',
   '/it-consulting-services': 'IT Consulting Services',
   '/solutions': 'Solutions',
+  '/case-studies': 'Case Studies',
   '/about': 'About',
   '/how-we-deliver': 'How We Deliver',
   '/industries': 'Industries',

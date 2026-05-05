@@ -20,6 +20,7 @@ https://www.itoutsource.bg/* https://itoutsource.bg/:splat 301
 /solutions/web-b2b-b2c /solutions/web-b2b-b2c/index.html 200
 /solutions/easy-order-platform /solutions/easy-order-platform/index.html 200
 /solutions/gxp-clinical-research-it /solutions/gxp-clinical-research-it/index.html 200
+/case-studies /case-studies/index.html 200
 /how-we-deliver /how-we-deliver/index.html 200
 /industries /industries/index.html 200
 /industries/retail /industries/retail/index.html 200
@@ -50,6 +51,7 @@ https://www.itoutsource.bg/* https://itoutsource.bg/:splat 301
 /bg/solutions/web-b2b-b2c /bg/solutions/web-b2b-b2c/index.html 200
 /bg/solutions/easy-order-platform /bg/solutions/easy-order-platform/index.html 200
 /bg/solutions/gxp-clinical-research-it /bg/solutions/gxp-clinical-research-it/index.html 200
+/bg/case-studies /bg/case-studies/index.html 200
 /bg/about /bg/about/index.html 200
 /bg/how-we-deliver /bg/how-we-deliver/index.html 200
 /bg/industries /bg/industries/index.html 200

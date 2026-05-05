@@ -10,6 +10,7 @@ const Support = lazy(() => import('./pages/Support.jsx'))
 const Infrastructure = lazy(() => import('./pages/Infrastructure.jsx'))
 const Solutions = lazy(() => import('./pages/Solutions.jsx'))
 const SolutionDetail = lazy(() => import('./pages/SolutionDetail.jsx'))
+const CaseStudies = lazy(() => import('./pages/CaseStudies.jsx'))
 const HowWeDeliver = lazy(() => import('./pages/HowWeDeliver.jsx'))
 const IndustriesHub = lazy(() => import('./pages/Industries.jsx').then((m) => ({ default: m.IndustriesHub })))
 const IndustryRoute = lazy(() => import('./pages/IndustryRoute.jsx'))
@@ -27,6 +28,7 @@ const routeDefs = [
   ['/it-infrastructure-services', <Infrastructure />],
   ['/solutions', <Solutions />],
   ['/solutions/:slug', <SolutionDetail />],
+  ['/case-studies', <CaseStudies />],
   ['/how-we-deliver', <HowWeDeliver />],
   ['/industries', <IndustriesHub />],
   ['/industries/:slug', <IndustryRoute />],
