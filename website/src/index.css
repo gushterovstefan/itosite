@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html, body {
@@ -261,4 +261,23 @@ body {
   border-radius: 9999px;
   background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0.55), transparent 65%);
   filter: blur(8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .btn-primary::after,
+  .section-bg::before,
+  .section-divider,
+  .hero-float,
+  .coin-sheen {
+    animation: none !important;
+  }
 }

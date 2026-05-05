@@ -1,5 +1,5 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion, useMotionValue, useScroll, useSpring } from 'framer-motion'
+import { AnimatePresence, motion, useMotionValue, useReducedMotion, useScroll, useSpring } from 'framer-motion'
 import { useEffect, useMemo, useState } from 'react'
 import { useContent } from '../content/index.jsx'
 import SheenButton from './SheenButton.jsx'
@@ -11,8 +11,9 @@ function NavItem({ to, label, end, activePath }) {
   return (
     <Link
       to={to}
+      aria-current={isActive ? 'page' : undefined}
       className={
-        'relative rounded-full px-3 py-2 text-sm font-medium tracking-wide transition ' +
+        'relative rounded-full px-3 py-2 text-sm font-medium tracking-wide transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70 ' +
         (isActive ? 'text-ink-950' : 'text-ink-900/70 hover:text-ink-950')
       }
     >
@@ -33,6 +34,7 @@ export default function Navbar() {
   const ui = content.shared.ui
   const [open, setOpen] = useState(false)
   const { scrollYProgress } = useScroll()
+  const reduce = useReducedMotion()
   const location = useLocation()
 
   const activePath = useMemo(() => location.pathname, [location.pathname])
@@ -44,6 +46,10 @@ export default function Navbar() {
   const srx = useSpring(rx, { stiffness: 220, damping: 24 })
   const sry = useSpring(ry, { stiffness: 220, damping: 24 })
   const slift = useSpring(lift, { stiffness: 240, damping: 26 })
+
+  useEffect(() => {
+    setOpen(false)
+  }, [location.pathname])
 
   // Close on ESC
   useEffect(() => {
@@ -84,6 +90,7 @@ export default function Navbar() {
         <motion.div style={{ perspective: 900 }} className="relative">
           <motion.div
             onMouseMove={(e) => {
+              if (reduce) return
               const r = e.currentTarget.getBoundingClientRect()
               const px = (e.clientX - r.left) / r.width
               const py = (e.clientY - r.top) / r.height
@@ -132,7 +139,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
-                  className="ml-1 inline-flex items-center gap-1 rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-ink-900/80 hover:text-ink-950"
+                  className="ml-1 inline-flex items-center gap-1 rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-ink-900/80 hover:text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70"
                   aria-label="Toggle language"
                 >
                   <span className={lang === 'bg' ? 'text-ink-950' : 'text-ink-900/60'}>BG</span>
@@ -150,7 +157,7 @@ export default function Navbar() {
 
                 <button
                   type="button"
-                  className="ml-1 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-white/70 text-ink-900/80 hover:text-ink-950 md:hidden"
+                  className="ml-1 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-white/70 text-ink-900/80 hover:text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70 md:hidden"
                   aria-label={open ? 'Close menu' : 'Open menu'}
                   aria-expanded={open}
                   onClick={() => setOpen((v) => !v)}
@@ -187,6 +194,17 @@ export default function Navbar() {
               className="relative mx-auto mt-16 w-full max-w-6xl px-4"
             >
               <div className="rounded-2xl border border-black/10 bg-white/95 p-3 shadow-2xl backdrop-blur">
+                <div className="mb-2 flex items-center justify-between px-1">
+                  <span className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/45">Menu</span>
+                  <button
+                    type="button"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-white/80 text-2xl leading-none text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70"
+                    aria-label="Close menu"
+                    onClick={() => setOpen(false)}
+                  >
+                    ×
+                  </button>
+                </div>
                 <div className="grid gap-1">
                   {links.map((l) => (
                     <NavLink
@@ -196,9 +214,9 @@ export default function Navbar() {
                       onClick={() => setOpen(false)}
                       className={({ isActive }) =>
                         [
-                          'rounded-xl px-4 py-3 text-sm font-medium transition',
+                          'rounded-xl px-4 py-3 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70',
                           isActive
-                            ? 'bg-white/10 text-ink-950'
+                            ? 'bg-brand-200/50 text-ink-950 ring-1 ring-brand-300/40'
                             : 'text-ink-950/75 hover:bg-white/70 hover:text-ink-950'
                         ].join(' ')
                       }
@@ -220,7 +238,7 @@ export default function Navbar() {
                   <button
                     type="button"
                     onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
-                    className="inline-flex items-center justify-center rounded-xl border border-black/10 bg-white/70 px-4 py-3 text-sm font-semibold text-ink-950/80 hover:text-ink-950"
+                    className="inline-flex items-center justify-center rounded-xl border border-black/10 bg-white/70 px-4 py-3 text-sm font-semibold text-ink-950/80 hover:text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70"
                   >
                     {lang === 'bg' ? 'EN' : 'BG'}
                   </button>

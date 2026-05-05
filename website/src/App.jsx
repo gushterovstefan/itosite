@@ -1,21 +1,23 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import ErrorBoundary from './components/ErrorBoundary.jsx'
 import GemLayout from './components/GemLayout.jsx'
 import PageTransition from './components/PageTransition.jsx'
-import HomeGem from './pages/HomeGem.jsx'
-import About from './pages/About.jsx'
-import Consulting from './pages/Consulting.jsx'
-import Support from './pages/Support.jsx'
-import Infrastructure from './pages/Infrastructure.jsx'
-import Solutions from './pages/Solutions.jsx'
-import SolutionDetail from './pages/SolutionDetail.jsx'
-import HowWeDeliver from './pages/HowWeDeliver.jsx'
-import { IndustriesHub } from './pages/Industries.jsx'
-import IndustryRoute from './pages/IndustryRoute.jsx'
-import { InsightsHub, InsightDetail } from './pages/Insights.jsx'
-import Contact from './pages/Contact.jsx'
-import Legal from './pages/Legal.jsx'
+const HomeGem = lazy(() => import('./pages/HomeGem.jsx'))
+const About = lazy(() => import('./pages/About.jsx'))
+const Consulting = lazy(() => import('./pages/Consulting.jsx'))
+const Support = lazy(() => import('./pages/Support.jsx'))
+const Infrastructure = lazy(() => import('./pages/Infrastructure.jsx'))
+const Solutions = lazy(() => import('./pages/Solutions.jsx'))
+const SolutionDetail = lazy(() => import('./pages/SolutionDetail.jsx'))
+const HowWeDeliver = lazy(() => import('./pages/HowWeDeliver.jsx'))
+const IndustriesHub = lazy(() => import('./pages/Industries.jsx').then((m) => ({ default: m.IndustriesHub })))
+const IndustryRoute = lazy(() => import('./pages/IndustryRoute.jsx'))
+const InsightsHub = lazy(() => import('./pages/Insights.jsx').then((m) => ({ default: m.InsightsHub })))
+const InsightDetail = lazy(() => import('./pages/Insights.jsx').then((m) => ({ default: m.InsightDetail })))
+const Contact = lazy(() => import('./pages/Contact.jsx'))
+const Legal = lazy(() => import('./pages/Legal.jsx'))
 import Seo from './components/Seo.jsx'
 
 export default function App() {
@@ -25,6 +27,7 @@ export default function App() {
     <ErrorBoundary>
       <Seo />
       <AnimatePresence mode="wait">
+        <Suspense fallback={<div className="min-h-[60vh]" aria-label="Loading page" />}>
         <Routes location={location} key={location.pathname}>
           <Route element={<GemLayout />}>
             <Route path="/" element={<PageTransition><HomeGem /></PageTransition>} />
@@ -44,6 +47,7 @@ export default function App() {
             <Route path="/legal/terms" element={<PageTransition><Legal type="terms" /></PageTransition>} />
           </Route>
         </Routes>
+        </Suspense>
       </AnimatePresence>
     </ErrorBoundary>
   )
