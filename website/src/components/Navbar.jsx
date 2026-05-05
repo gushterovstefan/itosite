@@ -3,7 +3,7 @@ import { AnimatePresence, motion, useMotionValue, useReducedMotion, useScroll, u
 import { useEffect, useMemo, useState } from 'react'
 import { useContent } from '../content/index.jsx'
 import SheenButton from './SheenButton.jsx'
-import logo from '../assets/logo-globe.jpg'
+import logo from '../assets/logo-globe-small.jpg'
 
 function NavItem({ to, label, end, activePath }) {
   const isActive = end ? activePath === to : activePath.startsWith(to)
@@ -119,6 +119,8 @@ export default function Navbar() {
                   <img
                     src={logo}
                     alt="IT Outsource Ltd."
+                    width="96"
+                    height="92"
                     className="h-10 w-auto md:h-12"
                     loading="eager"
                   />
@@ -195,7 +197,7 @@ export default function Navbar() {
             >
               <div className="rounded-2xl border border-black/10 bg-white/95 p-3 shadow-2xl backdrop-blur">
                 <div className="mb-2 flex items-center justify-between px-1">
-                  <span className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/45">Menu</span>
+                  <span className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">Menu</span>
                   <button
                     type="button"
                     className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-white/80 text-2xl leading-none text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70"

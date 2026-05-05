@@ -102,7 +102,7 @@ export default function SolutionDetail() {
             <div className="mt-5 grid gap-3 md:grid-cols-5">
               {l.phases.map((phase, i) => (
                 <div key={phase} className="rounded-2xl border border-black/10 bg-white/65 p-3">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-700/75">0{i + 1}</div>
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-800">0{i + 1}</div>
                   <div className="mt-2 text-sm font-semibold text-ink-950">{phase}</div>
                   <p className="mt-2 text-xs leading-relaxed text-ink-900/62">{l.phaseText[i]}</p>
                 </div>

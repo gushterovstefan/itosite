@@ -12,7 +12,7 @@ export default function KpiStrip({ items }) {
         >
           <div className="text-3xl font-semibold tracking-tight md:text-4xl">{kpi.value}</div>
           <div className="mt-2 text-sm font-semibold text-ink-950/85">{kpi.label}</div>
-          {kpi.note ? <div className="mt-1 text-xs text-ink-900/55">{kpi.note}</div> : null}
+          {kpi.note ? <div className="mt-1 text-xs text-ink-900/70">{kpi.note}</div> : null}
         </div>
       ))}
     </div>

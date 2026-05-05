@@ -59,7 +59,7 @@ export default function PageHero({
             <div className="rounded-3xl border border-black/10 bg-white/70 p-7 md:p-8">
               <div className="flex items-start justify-between gap-6">
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-ink-900/55">
+                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-ink-900/70">
                     {aside.eyebrow}
                   </div>
                   <div className="mt-3 text-2xl font-semibold tracking-tight text-ink-950 md:text-3xl">
@@ -78,7 +78,7 @@ export default function PageHero({
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
                   {aside.items.map((it) => (
                     <div key={it.k} className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
-                      <div className="text-xs text-ink-900/55">{it.k}</div>
+                      <div className="text-xs text-ink-900/70">{it.k}</div>
                       <div className="mt-1 text-sm font-semibold">{it.v}</div>
                     </div>
                   ))}

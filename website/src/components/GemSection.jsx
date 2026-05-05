@@ -6,7 +6,7 @@ export default function GemSection({ eyebrow, title, lead, children }) {
       <div className="mx-auto max-w-6xl px-4">
         {eyebrow ? (
           <Reveal>
-            <div className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-200/80">
+            <div className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-800">
               {eyebrow}
             </div>
           </Reveal>

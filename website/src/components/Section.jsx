@@ -18,7 +18,7 @@ export default function Section({ eyebrow, title, lead, children, tight = false,
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-200/80"
+              className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-800"
             >
               {eyebrow}
             </motion.div>

@@ -40,7 +40,7 @@ export default function Support() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <div className="text-sm font-semibold">{c.serviceModelsTitle}</div>
-                <div className="mt-1 text-xs uppercase tracking-[0.18em] text-brand-200/80">
+                <div className="mt-1 text-xs uppercase tracking-[0.18em] text-brand-800">
                   Commercial backbone
                 </div>
               </div>

@@ -49,11 +49,11 @@ export function InsightsHub() {
                   <div>
                     <h2 className="text-lg font-semibold tracking-tight text-ink-950">{article.title}</h2>
                     <p className="mt-3 text-sm leading-relaxed text-ink-900/68">{article.description}</p>
-                    <div className="mt-4 text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/45">{article.readTime}</div>
+                    <div className="mt-4 text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{article.readTime}</div>
                   </div>
                   <Icon as={icons[article.icon] ?? icons.platform} />
                 </div>
-                <div className="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-brand-700/75">{l.open}</div>
+                <div className="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-brand-800">{l.open}</div>
               </ClickCard>
             )
           })}

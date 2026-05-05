@@ -72,7 +72,7 @@ export default function Footer() {
           <div>
             <div className="text-sm font-semibold">IT Outsource Ltd.</div>
             <p className="mt-2 text-sm leading-relaxed text-ink-900/60">{content.shared.tagline}</p>
-            <div className="mt-4 space-y-1 text-xs leading-relaxed text-ink-900/55">
+            <div className="mt-4 space-y-1 text-xs leading-relaxed text-ink-900/70">
               <div>{l.registered}: Ай Ти Аутсорс ООД</div>
               <div>EIK: 200776949 · VAT: BG200776949</div>
               <div>{l.address}</div>
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/45">{l.companyTitle}</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.companyTitle}</div>
             <div className="mt-4 grid gap-3 text-sm">
               <FooterLink to="/about">{ui.about}</FooterLink>
               <FooterLink to="/how-we-deliver">{l.howWeDeliver}</FooterLink>
@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/45">{l.servicesTitle}</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.servicesTitle}</div>
             <div className="mt-4 grid gap-3 text-sm">
               <FooterLink to="/it-support-services">{ui.support}</FooterLink>
               <FooterLink to="/it-infrastructure-services">{ui.infrastructure}</FooterLink>
@@ -101,11 +101,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/45">{l.solutionsTitle}</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.solutionsTitle}</div>
             <div className="mt-4 grid gap-3 text-sm">
               {solutionLinks.map(([label, to]) => <FooterLink key={label} to={to}>{label}</FooterLink>)}
             </div>
-            <div className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/45">{l.trustTitle}</div>
+            <div className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.trustTitle}</div>
             <div className="mt-4 grid gap-3 text-sm">
               <FooterLink to="/legal/privacy">{l.privacy}</FooterLink>
               <FooterLink to="/legal/terms">{l.terms}</FooterLink>
@@ -113,7 +113,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-black/10 pt-5 text-xs text-ink-900/45 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-black/10 pt-5 text-xs text-ink-900/65 md:flex-row md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} IT Outsource Ltd. / Ай Ти Аутсорс ООД</div>
           <div>{l.response}</div>
         </div>

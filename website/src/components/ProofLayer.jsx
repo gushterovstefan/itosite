@@ -57,7 +57,7 @@ export default function ProofLayer() {
         <div className="rounded-3xl border border-black/10 bg-white/76 p-5 backdrop-blur md:p-6">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-700/80">{l.eyebrow}</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-800">{l.eyebrow}</div>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight text-ink-950 md:text-3xl">{l.title}</h2>
               <div className="mt-5 grid gap-2 sm:grid-cols-2">
                 {l.logos.map((item) => (

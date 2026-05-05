@@ -57,7 +57,7 @@ export default function ConversionCta({ variant = 'default', title, lead, second
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-200/35 via-white/50 to-brand-300/20" />
           <div className="relative z-10 grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-700/80">Next step</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-800">Next step</div>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight text-ink-950 md:text-3xl">
                 {title || l[titleKey]}
               </h2>

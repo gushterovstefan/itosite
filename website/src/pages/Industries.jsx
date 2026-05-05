@@ -65,7 +65,7 @@ export function IndustriesHub() {
                   <Icon as={icons[page.icon] ?? icons.platform} />
                 </div>
                 <div className="mt-5"><BulletList items={page.outcomes.slice(0, 2)} /></div>
-                <div className="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-brand-700/75">{l.open}</div>
+                <div className="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-brand-800">{l.open}</div>
               </ClickCard>
             )
           })}

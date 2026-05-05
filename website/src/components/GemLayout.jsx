@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { useReducedMotion } from 'framer-motion'
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
@@ -9,13 +9,22 @@ const HeroWebGL = lazy(() => import('./HeroWebGL.jsx'))
 
 export default function GemLayout() {
   const reduce = useReducedMotion()
+  const [desktop, setDesktop] = useState(false)
+
+  useEffect(() => {
+    const query = window.matchMedia('(min-width: 768px)')
+    const update = () => setDesktop(query.matches)
+    update()
+    query.addEventListener?.('change', update)
+    return () => query.removeEventListener?.('change', update)
+  }, [])
 
   return (
     <div className="min-h-dvh bg-white text-ink-900">
       <Navbar />
       <main className="relative isolate pt-14 md:pt-16">
         {/* global WebGL network background (desktop only) */}
-        {!reduce ? (
+        {!reduce && desktop ? (
           <div className="pointer-events-none absolute inset-0 z-0 hidden md:block">
             <Suspense fallback={null}>
               <HeroWebGL logoSrc={logo} showCoin={false} />

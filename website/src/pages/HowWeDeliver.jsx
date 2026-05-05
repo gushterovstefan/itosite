@@ -140,7 +140,7 @@ export default function HowWeDeliver() {
             <Card key={phase.name} revealDelay={0.04 + i * 0.04} variant={i % 2 ? 'steel' : 'brand'}>
               <div className="grid gap-5 lg:grid-cols-[0.35fr_0.65fr] lg:items-start">
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-700/80">Phase 0{i + 1}</div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-800">Phase 0{i + 1}</div>
                   <h2 className="mt-2 text-2xl font-semibold tracking-tight text-ink-950">{phase.name}</h2>
                   <p className="mt-2 text-sm text-ink-900/62">{phase.duration}</p>
                   <div className="mt-4 rounded-2xl border border-black/10 bg-white/60 p-3 text-sm font-semibold text-ink-950">

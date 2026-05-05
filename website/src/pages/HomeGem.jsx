@@ -54,22 +54,22 @@ export default function HomeGem() {
                 className="rounded-3xl border border-black/10 bg-white/70 p-8"
               >
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-ink-900/55">Enterprise delivery</div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-ink-900/70">Enterprise delivery</div>
                   <div className="mt-3 text-4xl font-semibold tracking-tight text-ink-950">10+ years</div>
                   <div className="mt-2 text-sm text-ink-900/65">Design · Build · Secure · Run</div>
                 </div>
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
                   <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
-                    <div className="text-xs text-ink-900/55">Availability</div>
+                    <div className="text-xs text-ink-900/70">Availability</div>
                     <div className="mt-1 text-sm font-semibold">24/7 Ops</div>
                   </div>
                   <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
-                    <div className="text-xs text-ink-900/55">Security</div>
+                    <div className="text-xs text-ink-900/70">Security</div>
                     <div className="mt-1 text-sm font-semibold">MFA + Hardening</div>
                   </div>
                   <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
-                    <div className="text-xs text-ink-900/55">Delivery</div>
+                    <div className="text-xs text-ink-900/70">Delivery</div>
                     <div className="mt-1 text-sm font-semibold">SLA-driven</div>
                   </div>
                 </div>

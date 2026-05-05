@@ -71,7 +71,7 @@ export default function Solutions() {
                   <BulletList items={card.bullets} />
                 </div>
                 {to ? (
-                  <div className="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-brand-700/75">
+                  <div className="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-brand-800">
                     {content.shared.ui.getQuote === 'Запитване' ? 'Отвори решението' : 'Open solution'}
                   </div>
                 ) : null}
