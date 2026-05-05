@@ -1,5 +1,4 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
-import { useReducedMotion } from 'framer-motion'
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
@@ -8,15 +7,23 @@ import logo from '../assets/logo-green.jpg'
 const HeroWebGL = lazy(() => import('./HeroWebGL.jsx'))
 
 export default function GemLayout() {
-  const reduce = useReducedMotion()
   const [desktop, setDesktop] = useState(false)
+  const [reduce, setReduce] = useState(false)
 
   useEffect(() => {
-    const query = window.matchMedia('(min-width: 768px)')
-    const update = () => setDesktop(query.matches)
+    const desktopQuery = window.matchMedia('(min-width: 768px)')
+    const reduceQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const update = () => {
+      setDesktop(desktopQuery.matches)
+      setReduce(reduceQuery.matches)
+    }
     update()
-    query.addEventListener?.('change', update)
-    return () => query.removeEventListener?.('change', update)
+    desktopQuery.addEventListener?.('change', update)
+    reduceQuery.addEventListener?.('change', update)
+    return () => {
+      desktopQuery.removeEventListener?.('change', update)
+      reduceQuery.removeEventListener?.('change', update)
+    }
   }, [])
 
   return (

@@ -1,5 +1,4 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion, useMotionValue, useReducedMotion, useScroll, useSpring } from 'framer-motion'
 import { useEffect, useMemo, useState } from 'react'
 import { useContent } from '../content/index.jsx'
 import SheenButton from './SheenButton.jsx'
@@ -18,10 +17,8 @@ function NavItem({ to, label, end, activePath }) {
       }
     >
       {isActive ? (
-        <motion.span
-          layoutId="nav-pill"
+        <span
           className="absolute inset-0 rounded-full bg-brand-200/50 ring-1 ring-brand-300/40"
-          transition={{ type: 'spring', stiffness: 420, damping: 34 }}
         />
       ) : null}
       <span className="relative z-10">{label}</span>
@@ -33,23 +30,28 @@ export default function Navbar() {
   const { lang, setLang, content } = useContent()
   const ui = content.shared.ui
   const [open, setOpen] = useState(false)
-  const { scrollYProgress } = useScroll()
-  const reduce = useReducedMotion()
+  const [scrollProgress, setScrollProgress] = useState(0)
   const location = useLocation()
 
   const activePath = useMemo(() => location.pathname, [location.pathname])
 
-  // dynamic 3D tilt for the bar
-  const rx = useMotionValue(0)
-  const ry = useMotionValue(0)
-  const lift = useMotionValue(0)
-  const srx = useSpring(rx, { stiffness: 220, damping: 24 })
-  const sry = useSpring(ry, { stiffness: 220, damping: 24 })
-  const slift = useSpring(lift, { stiffness: 240, damping: 26 })
-
   useEffect(() => {
     setOpen(false)
   }, [location.pathname])
+
+  useEffect(() => {
+    const update = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      setScrollProgress(max > 0 ? Math.min(window.scrollY / max, 1) : 0)
+    }
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    return () => {
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+    }
+  }, [])
 
   // Close on ESC
   useEffect(() => {
@@ -81,32 +83,14 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       {/* scroll progress */}
-      <motion.div
+      <div
         className="absolute left-0 top-0 h-[2px] w-full origin-left bg-gradient-to-r from-brand-600 via-brand-500 to-brand-300"
-        style={{ scaleX: scrollYProgress }}
+        style={{ transform: `scaleX(${scrollProgress})` }}
       />
 
       <div className="mx-auto max-w-6xl px-4 pt-3">
-        <motion.div style={{ perspective: 900 }} className="relative">
-          <motion.div
-            onMouseMove={(e) => {
-              if (reduce) return
-              const r = e.currentTarget.getBoundingClientRect()
-              const px = (e.clientX - r.left) / r.width
-              const py = (e.clientY - r.top) / r.height
-              const max = 6
-              rx.set((0.5 - py) * max)
-              ry.set((px - 0.5) * max)
-              lift.set(-2)
-            }}
-            onMouseLeave={() => {
-              rx.set(0)
-              ry.set(0)
-              lift.set(0)
-            }}
-            style={{ transformStyle: 'preserve-3d', rotateX: srx, rotateY: sry, y: slift }}
-            className="relative rounded-2xl border border-black/10 bg-white/75 px-4 shadow-[0_14px_50px_-28px_rgba(0,0,0,0.25)] backdrop-blur"
-          >
+        <div className="relative">
+          <div className="relative rounded-2xl border border-black/10 bg-white/75 px-4 shadow-[0_14px_50px_-28px_rgba(0,0,0,0.25)] backdrop-blur transition-transform duration-200 hover:-translate-y-0.5">
             {/* glass edge + sheen */}
             <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-brand-300/16 via-white/70 to-brand-200/10" />
             <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-black/5" />
@@ -168,19 +152,13 @@ export default function Navbar() {
                 </button>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
 
       {/* mobile drawer */}
-      <AnimatePresence>
-        {open ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] md:hidden"
-          >
+      {open ? (
+          <div className="fixed inset-0 z-[60] md:hidden">
             <button
               type="button"
               aria-label="Close menu"
@@ -188,13 +166,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
             />
 
-            <motion.div
-              initial={{ y: -12, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -12, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="relative mx-auto mt-16 w-full max-w-6xl px-4"
-            >
+            <div className="relative mx-auto mt-16 w-full max-w-6xl px-4">
               <div className="rounded-2xl border border-black/10 bg-white/95 p-3 shadow-2xl backdrop-blur">
                 <div className="mb-2 flex items-center justify-between px-1">
                   <span className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">Menu</span>
@@ -246,10 +218,9 @@ export default function Navbar() {
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         ) : null}
-      </AnimatePresence>
     </header>
   )
 }

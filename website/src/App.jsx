@@ -1,6 +1,5 @@
 import { lazy, Suspense } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
 import ErrorBoundary from './components/ErrorBoundary.jsx'
 import GemLayout from './components/GemLayout.jsx'
 import PageTransition from './components/PageTransition.jsx'
@@ -26,8 +25,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <Seo />
-      <AnimatePresence mode="wait">
-        <Suspense fallback={<div className="min-h-[60vh]" aria-label="Loading page" />}>
+      <Suspense fallback={<div className="min-h-[60vh]" aria-label="Loading page" />}>
         <Routes location={location} key={location.pathname}>
           <Route element={<GemLayout />}>
             <Route path="/" element={<PageTransition><HomeGem /></PageTransition>} />
@@ -47,8 +45,7 @@ export default function App() {
             <Route path="/legal/terms" element={<PageTransition><Legal type="terms" /></PageTransition>} />
           </Route>
         </Routes>
-        </Suspense>
-      </AnimatePresence>
+      </Suspense>
     </ErrorBoundary>
   )
 }
