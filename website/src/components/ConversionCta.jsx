@@ -7,7 +7,7 @@ const copy = {
     quote: 'Get a quote',
     discovery: 'Book a 30-min call',
     defaultTitle: 'Ready to discuss the next step?',
-    defaultLead: 'Tell us what you need to modernize, secure or operate. We will respond with a practical next step.',
+    defaultLead: 'Tell us what downtime, identity, endpoint, backup or compliance risk you need to reduce. We will respond with a practical next step.',
     supportTitle: 'Need a support model with clear SLAs?',
     supportLead: 'Share your current environment and required coverage. We can prepare an SLA-oriented proposal.',
     supportSecondary: 'Request an SLA proposal',
@@ -15,7 +15,7 @@ const copy = {
     consultingLead: 'We can review the architecture, risks and options before the project becomes expensive to change.',
     consultingSecondary: 'Request a 1-page architecture review',
     solutionsTitle: 'Want to turn this into a scoped project?',
-    solutionsLead: 'Choose the solution area and we will map the path: assess, design, implement and operate.',
+    solutionsLead: 'Choose the area — Microsoft 365, Azure, identity, endpoint, backup or recovery — and we will map the delivery path.',
     infrastructureTitle: 'Need resilient infrastructure without operational chaos?',
     infrastructureLead: 'We can assess the current state and define a secure, supportable target architecture.'
   },

@@ -10,7 +10,7 @@ const copy = {
     eyebrow: 'How we deliver',
     title: 'A controlled delivery model with clear gates, owners and handover.',
     lead: 'We make complex IT change easier to approve, execute and operate by turning it into phased work with visible deliverables.',
-    subline: 'Discover → Design → Migrate / Build → Operate → Optimize',
+    subline: 'Discover → Design → Migrate / Build → Operate → Improve',
     phases: [
       {
         name: 'Discover',
@@ -41,11 +41,11 @@ const copy = {
         gate: 'Operational handover and ownership'
       },
       {
-        name: 'Optimize',
+        name: 'Improve',
         duration: 'Recurring',
         inputs: ['Operational data', 'Incidents and trends', 'Business changes'],
-        deliverables: ['Improvement backlog', 'Cost/security tuning', 'Roadmap recommendations'],
-        gate: 'Quarterly improvement decisions'
+        deliverables: ['Improvement backlog', 'Cost, security and recovery tuning', 'Roadmap recommendations'],
+        gate: 'Quarterly risk and improvement decisions'
       }
     ],
     principles: [
@@ -60,7 +60,7 @@ const copy = {
     eyebrow: 'Как работим',
     title: 'Контролиран delivery model с ясни gates, owners и handover.',
     lead: 'Правим сложната ИТ промяна по-лесна за одобрение, изпълнение и поддръжка чрез фази с видими deliverables.',
-    subline: 'Discover → Design → Migrate / Build → Operate → Optimize',
+    subline: 'Discover → Design → Migrate / Build → Operate → Improve',
     phases: [
       {
         name: 'Discover',
@@ -91,11 +91,11 @@ const copy = {
         gate: 'Operational handover и ownership'
       },
       {
-        name: 'Optimize',
+        name: 'Improve',
         duration: 'регулярно',
         inputs: ['Operational data', 'Incidents и trends', 'Бизнес промени'],
-        deliverables: ['Improvement backlog', 'Cost/security tuning', 'Roadmap препоръки'],
-        gate: 'Quarterly improvement decisions'
+        deliverables: ['Improvement backlog', 'Cost, security and recovery tuning', 'Roadmap препоръки'],
+        gate: 'Quarterly risk and improvement decisions'
       }
     ],
     principles: [

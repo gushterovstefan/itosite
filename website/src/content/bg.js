@@ -19,7 +19,7 @@ export const contentBG = {
       itServicesBadge: 'ИТ услуги и решения',
       servicesEyebrow: 'КАКВО ПРАВИМ',
       servicesTitle: 'Услуги',
-      servicesLead: 'Услуги с фокус върху доставка – издръжливост, сигурност и мащабируемост.',
+      servicesLead: 'Услуги с фокус върху по-малко downtime, по-нисък security риск и поддържани системи.',
       whyEyebrow: 'Защо',
       benefitsEyebrow: 'Ползи',
       consultingAreas: 'Ключови направления',
@@ -43,9 +43,9 @@ export const contentBG = {
         icon: 'support'
       },
       {
-        title: 'Облак и дигитално работно място',
+        title: 'Microsoft cloud и работна среда',
         description:
-          'Сигурни Microsoft 365, Entra/Intune и модерни трансформации на работното място — работещи в реална продукция.',
+          'Сигурни Microsoft 365, Entra ID, Intune и collaboration среди, които намаляват identity и endpoint риска.',
         icon: 'cloud'
       },
       {
@@ -72,7 +72,7 @@ export const contentBG = {
         items: [
           'Хибридна облачна архитектура (Azure, VMware, Backup)',
           'Zero Trust сигурност и идентичност (Entra, MFA, PIM)',
-          'Мрежов дизайн и оптимизация',
+          'Мрежов дизайн и performance tuning',
           'Backup, DR и непрекъсваемост на бизнеса',
           'Управление на сървъри и платформи за бази данни'
         ]
@@ -112,8 +112,8 @@ export const contentBG = {
           icon: 'consulting'
         },
         {
-          h: 'Прагматична модернизация',
-          p: 'Модернизираме това, което има значение — без да чупим продукцията.',
+          h: 'Намаляване на legacy риска',
+          p: 'Подобряваме cloud, workplace и infrastructure среди без прекъсване на продукцията.',
           icon: 'cloud'
         }
       ]
@@ -133,24 +133,24 @@ export const contentBG = {
       items: [
         'Audit-ready операции и контрол на промени',
         'Сигурност и непрекъсваемост, вградени в ежедневната доставка',
-        'Предвидими разходи и скалируеми модели на услуга'
+        'Предвидими разходи и service модели, съобразени с risk и business criticality'
       ]
     }
   },
   about: {
     missionTitle: 'Мисия',
     missionLead:
-      'Нашата мисия е да ви помогнем да изградите най-подходящата ИТ среда чрез най-добрите ИТ решения.',
+      'Нашата мисия е да помагаме на организациите да управляват сигурни и надеждни ИТ среди, които намаляват downtime, контролират риска и дават измерими резултати.',
     missionBody: [
-      'Днешният бизнес се развива във високо конкурентна среда.',
-      'Анализираме ИТ средата в дълбочина, за да предложим най-подходящото решение и висококачествена поддръжка – максимална стойност от ИТ инвестициите.',
-      'Използваме експертизата си, за да внедрим технология, която реално влияе на настоящето и подпомага растежа.'
+      'Ръководствата имат нужда от ИТ среди, които остават налични, защитават данните и осигуряват доказателства при одити и compliance проверки.',
+      'Оценяваме текущата ИТ среда, намираме рискове и operational gaps, и изграждаме support модели за по-добър uptime, security и cost control.',
+      'Използваме practically delivery опит, за да модернизираме legacy infrastructure, защитим Microsoft 365 и подобрим backup/recovery readiness.'
     ],
     visionTitle: 'Визия',
-    visionBody: ['Да бъдем най-ценният партньор за нашите клиенти'],
+    visionBody: ['Да бъдем партньорът, на когото клиентите разчитат за сигурни, надеждни и audit-ready ИТ операции'],
     purposeTitle: 'Цел',
     purposeBody: [
-      'Целта ни е да предоставяме правилните ИТ решения, които водят до прогрес и стабилна ИТ среда за вашата компания.'
+      'Целта ни е да помагаме на компаниите да изграждат стабилни ИТ среди с контролирана идентичност, защитени endpoints, тествано recovery и ясна operational ownership.'
     ],
     testimonialsTitle: 'Клиентите за нас',
     testimonials: [
@@ -171,7 +171,7 @@ export const contentBG = {
         icon: 'consulting',
         bullets: [
           'Одит на архитектурата – системи, интеграции и зависимости',
-          'Идентифициране на рискове: сигурност, непрекъсваемост, vendor lock-in, скалируемост',
+          'Идентифициране на рискове: security exposure, continuity gaps, vendor lock-in, cost pressure и supportability',
           'Препоръки за решения с опции и компромиси'
         ]
       },
@@ -266,7 +266,7 @@ export const contentBG = {
         ]
       },
       {
-        title: 'Виртуализация и оптимизация',
+        title: 'Виртуализация и намаляване на platform риска',
         icon: 'virtualization',
         bullets: [
           'VMware vSphere — HA, vMotion, clustering',
@@ -296,7 +296,7 @@ export const contentBG = {
           'Microsoft 365 governance: Entra, Intune, Defender, SharePoint, Exchange, Teams',
           'Tenant сигурност и lifecycle управление',
           'On-prem lifecycle (patching, updates, monitoring)',
-          'Оптимизация на storage, backup и производителност'
+          'Performance tuning за storage, backup и platform operations'
         ]
       }
     ]
@@ -365,15 +365,15 @@ export const contentBG = {
   solutions: {
     title: 'Решения',
     lead:
-      'Enterprise платформи и решения, доставени със сигурност, governance и оперативна отговорност.',
+      'Microsoft cloud, security, backup и platform решения с governance, recovery planning и operational ownership.',
     subline:
-      'Модерен стек — облак, workplace, виртуализация и уеб платформи — готови за продукция.',
+      'Cloud, workplace, virtualization и web platforms, проектирани да намаляват operational risk и да останат supportable в продукция.',
     cards: [
       {
         title: 'Microsoft Azure',
         icon: 'cloud',
         bullets: [
-          'Изграждане, мащабиране и управление на инфраструктура в Azure с контрол на разходите',
+          'Управление на Azure infrastructure със secure networking, monitored workloads, cost control и clear operational ownership',
           'Устойчив дизайн с правилна мрежа, мониторинг и governance'
         ]
       },
@@ -389,7 +389,7 @@ export const contentBG = {
         title: 'VMware и Proxmox виртуализация',
         icon: 'virtualization',
         bullets: [
-          'Консолидация и оптимизация на on-prem ресурси с VMware или Proxmox',
+          'Намаляване на hardware sprawl, licensing pressure и platform risk във VMware или Proxmox среди',
           'Right-sizing, availability и по-нисък operating cost'
         ]
       },
@@ -397,7 +397,7 @@ export const contentBG = {
         title: 'Azure хибридна интеграция',
         icon: 'infrastructure',
         bullets: [
-          'Разширяване на VMware/Proxmox среда към Azure за мащабируемост и DR',
+          'Разширяване на VMware/Proxmox среда към Azure за disaster recovery, monitored hybrid operations и controlled migration',
           'Единна идентичност, сигурна свързаност и консистентен мониторинг'
         ]
       },
@@ -462,7 +462,7 @@ export const contentBG = {
   contact: {
     title: 'КОНТАКТИ',
     lead:
-      'Ако имате нужда от допълнителна информация за услугите и решенията на IT Outsource, не се колебайте да се свържете с нас.',
+      'Кажете ни какво трябва да защитите, модернизирате или възстановявате. Ще отговорим с практична следваща стъпка.',
     phone: '+359 887 940248',
     email: 'info@itoutsource.bg'
   }

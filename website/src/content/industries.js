@@ -3,7 +3,7 @@ export const industries = {
     hub: {
       eyebrow: 'Industries',
       title: 'IT delivery shaped around how your business actually operates.',
-      lead: 'Buyers self-identify by context faster than by service category. These verticals map IT Outsource capabilities to real operational patterns.',
+      lead: 'Each industry carries different downtime, compliance, identity, endpoint and recovery risks. These pages connect IT delivery to those operating realities.',
       subline: 'Retail, life sciences, energy and professional services require different risk models — but the same delivery discipline.'
     },
     pages: {
@@ -32,20 +32,20 @@ export const industries = {
       energy: {
         title: 'Energy & Utilities',
         eyebrow: 'Industry',
-        lead: 'Modern Microsoft cloud, identity, security and governance for distributed teams in energy and infrastructure-led businesses.',
+        lead: 'Secure Microsoft cloud, identity, endpoint and governance controls for distributed energy and infrastructure-led businesses.',
         icon: 'cloud',
         outcomes: ['M365, identity and device governance for growing teams', 'Security and compliance readiness aligned to ISO/GDPR expectations', 'Migration and support runbooks for distributed operations'],
         solutions: ['Cloud Migration Services', 'Entra ID & SSO Consolidation', 'Zero Trust Security with Defender & Sentinel', 'IT Consulting Services'],
         caseTitle: 'Anonymized energy pattern',
-        caseBody: 'A fast-growing energy organization needs consistent collaboration, identity control and compliance documentation across markets and teams. The work is both technical and governance-led.',
+        caseBody: 'An energy organization operating across markets needs consistent collaboration, identity control and compliance documentation. The work is both technical and governance-led.',
         metrics: ['M365 governance', 'ISO readiness', 'distributed teams']
       },
       'professional-services': {
         title: 'Professional Services & Mid-Market',
         eyebrow: 'Industry',
-        lead: 'A pragmatic IT operating model for companies that need enterprise-grade controls without enterprise bureaucracy.',
+        lead: 'A practical IT operating model for companies that need controlled identity, secure collaboration and predictable support without enterprise bureaucracy.',
         icon: 'tools',
-        outcomes: ['Right-sized support and infrastructure ownership', 'Secure collaboration and SaaS identity consolidation', 'Architecture reviews and modernization roadmaps'],
+        outcomes: ['Right-sized support and infrastructure ownership', 'Secure collaboration and SaaS identity consolidation', 'Architecture reviews and risk-based infrastructure roadmaps'],
         solutions: ['IT Support Services', 'IT Consulting Services', 'Microsoft 365', 'Entra ID & SSO Consolidation'],
         caseTitle: 'Anonymized mid-market pattern',
         caseBody: 'Professional services teams need reliability, secure collaboration and predictable support while keeping overhead lean. The delivery model focuses on practical controls and business continuity.',
@@ -97,9 +97,9 @@ export const industries = {
       'professional-services': {
         title: 'Professional Services и Mid-Market',
         eyebrow: 'Индустрия',
-        lead: 'Практичен ИТ operating model за компании, които искат enterprise-grade controls без enterprise bureaucracy.',
+        lead: 'Практичен ИТ operating model за компании, които искат controlled identity, secure collaboration и predictable support без enterprise bureaucracy.',
         icon: 'tools',
-        outcomes: ['Right-sized support и infrastructure ownership', 'Secure collaboration и SaaS identity consolidation', 'Architecture reviews и modernization roadmaps'],
+        outcomes: ['Right-sized support и infrastructure ownership', 'Secure collaboration и SaaS identity consolidation', 'Architecture reviews и risk-based infrastructure roadmaps'],
         solutions: ['IT Support Services', 'IT Consulting Services', 'Microsoft 365', 'Entra ID & SSO Consolidation'],
         caseTitle: 'Анонимизиран mid-market pattern',
         caseBody: 'Professional services екипите имат нужда от reliability, secure collaboration и predictable support с lean overhead. Delivery model-ът се фокусира върху practical controls и business continuity.',

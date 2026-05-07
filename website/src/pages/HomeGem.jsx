@@ -32,8 +32,7 @@ export default function HomeGem() {
               <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-6xl">{c.heroTitle}</h1>
               <p className="mt-5 text-base font-medium text-[#F8FAFC] md:text-lg">{c.heroSubline}</p>
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#94A3B8] md:text-base">
-                IT Outsource is a fast growing IT company with more than 10 years of experience designing,
-                implementing, integrating and supporting different IT solutions.
+                IT Outsource helps organizations reduce downtime, secure Microsoft 365, modernize legacy infrastructure, and improve backup and recovery readiness.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">

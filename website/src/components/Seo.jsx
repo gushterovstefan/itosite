@@ -9,7 +9,7 @@ const metaByPath = {
   en: {
     '/': {
       title: 'IT Outsource Ltd. — Managed IT, Cloud & Security Services',
-      description: 'IT Outsource designs, builds, secures and operates enterprise IT environments across support, infrastructure, consulting and cloud solutions.'
+      description: 'IT Outsource helps organizations reduce downtime, secure Microsoft 365, control identity and endpoint risk, and improve backup recovery readiness.'
     },
     '/it-support-services': {
       title: 'IT Support Services — IT Outsource Ltd.',
@@ -25,7 +25,7 @@ const metaByPath = {
     },
     '/solutions': {
       title: 'Enterprise IT, Cloud & Security Solutions — IT Outsource Ltd.',
-      description: 'Microsoft 365, Azure, endpoint, backup and disaster recovery environments designed, migrated, secured and supported with enterprise-grade governance.'
+      description: 'Microsoft 365, Azure, endpoint, backup and disaster recovery environments designed, migrated, secured and supported with audit-ready governance.'
     },
     '/solutions/microsoft-azure': {
       title: 'Microsoft Azure Solutions — IT Outsource Ltd.',
@@ -33,7 +33,7 @@ const metaByPath = {
     },
     '/solutions/microsoft-365': {
       title: 'Microsoft 365 Solutions — IT Outsource Ltd.',
-      description: 'Microsoft 365 collaboration, Teams, SharePoint, Exchange, Entra, Intune and Defender governance for modern workplace operations.'
+      description: 'Secure Microsoft 365 collaboration across Teams, SharePoint and Exchange with Entra, Intune and Defender governance.'
     },
     '/solutions/vmware-proxmox-virtualization': {
       title: 'VMware & Proxmox Virtualization — IT Outsource Ltd.',
@@ -73,11 +73,11 @@ const metaByPath = {
     },
     '/about': {
       title: 'About IT Outsource Ltd.',
-      description: 'Learn about IT Outsource Ltd., a Sofia-based IT services company delivering consulting, infrastructure, support and digital solutions.'
+      description: 'Learn about IT Outsource Ltd., a Sofia-based IT services company focused on uptime, Microsoft security, infrastructure risk and recovery readiness.'
     },
     '/how-we-deliver': {
       title: 'How We Deliver — IT Outsource Ltd.',
-      description: 'A phased IT delivery methodology: Discover, Design, Migrate or Build, Operate and Optimize with clear gates, owners and handover.'
+      description: 'A phased IT delivery methodology: Discover, Design, Migrate or Build, Operate and Improve with clear gates, owners and handover.'
     },
     '/industries': {
       title: 'Industries — IT Outsource Ltd.',
@@ -97,7 +97,7 @@ const metaByPath = {
     },
     '/industries/professional-services': {
       title: 'Professional Services & Mid-Market IT — IT Outsource Ltd.',
-      description: 'Pragmatic enterprise-grade IT support, SaaS identity, collaboration and modernization for professional services and mid-market companies.'
+      description: 'Practical IT support, SaaS identity control, secure collaboration and infrastructure roadmaps for professional services and mid-market companies.'
     },
     '/insights': {
       title: 'Insights & IT Playbooks — IT Outsource Ltd.',
@@ -195,11 +195,11 @@ const metaByPath = {
     },
     '/about': {
       title: 'За Ай Ти Аутсорс ООД',
-      description: 'Информация за Ай Ти Аутсорс ООД — ИТ компания в София за консултации, инфраструктура, поддръжка и дигитални решения.'
+      description: 'Информация за Ай Ти Аутсорс ООД — ИТ компания в София с фокус върху uptime, Microsoft security, infrastructure risk и recovery readiness.'
     },
     '/how-we-deliver': {
       title: 'Как работим — Ай Ти Аутсорс ООД',
-      description: 'Фазиран ИТ delivery model: Discover, Design, Migrate/Build, Operate и Optimize с ясни gates, owners и handover.'
+      description: 'Фазиран ИТ delivery model: Discover, Design, Migrate/Build, Operate и Improve с ясни gates, owners и handover.'
     },
     '/industries': {
       title: 'Индустрии — Ай Ти Аутсорс ООД',
@@ -219,7 +219,7 @@ const metaByPath = {
     },
     '/industries/professional-services': {
       title: 'Professional Services и Mid-Market ИТ — Ай Ти Аутсорс ООД',
-      description: 'Практична enterprise-grade ИТ поддръжка, SaaS identity, collaboration и modernization за professional services и mid-market компании.'
+      description: 'Практична ИТ поддръжка, SaaS identity control, secure collaboration и infrastructure roadmaps за professional services и mid-market компании.'
     },
     '/insights': {
       title: 'Материали и ИТ Playbooks — Ай Ти Аутсорс ООД',

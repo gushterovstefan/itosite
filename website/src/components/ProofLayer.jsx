@@ -6,14 +6,14 @@ const copy = {
     title: 'Enterprise IT delivery for regulated, distributed and uptime-sensitive businesses.',
     logos: ['Bulgarian retail operations', 'EU clinical research organization', 'Renewable energy group', 'Professional services teams'],
     metrics: [
-      ['10+ yrs', 'designing, integrating and supporting IT solutions'],
+      ['10+ yrs', 'reducing downtime and operating critical IT environments'],
       ['24/7', 'operations mindset for business-critical environments'],
       ['ISO/GDPR', 'governance-aware delivery and documentation']
     ],
     cases: [
       {
-        title: 'Workspace modernization',
-        body: 'A distributed organization moved toward Microsoft 365 governance with identity, device and operational controls defined upfront.',
+        title: 'Microsoft 365 security and governance',
+        body: 'A distributed organization strengthened Microsoft 365 with identity, device and operational controls defined before rollout.',
         metrics: ['M365', 'Entra/Intune', 'phased rollout']
       },
       {
@@ -28,13 +28,13 @@ const copy = {
     title: 'Enterprise ИТ доставка за регулирани, разпределени и uptime-sensitive бизнеси.',
     logos: ['Български retail операции', 'EU clinical research организация', 'Група за възобновяема енергия', 'Professional services екипи'],
     metrics: [
-      ['10+ г.', 'дизайн, интеграция и поддръжка на ИТ решения'],
+      ['10+ г.', 'намаляване на downtime и управление на критични ИТ среди'],
       ['24/7', 'оперативен подход за бизнес-критични среди'],
       ['ISO/GDPR', 'governance-aware доставка и документация']
     ],
     cases: [
       {
-        title: 'Модернизация на работна среда',
+        title: 'Microsoft 365 security и governance',
         body: 'Разпределена организация премина към Microsoft 365 governance с identity, device и operational контроли, дефинирани предварително.',
         metrics: ['M365', 'Entra/Intune', 'phased rollout']
       },

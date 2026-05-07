@@ -39,7 +39,7 @@ const outcomes = [
   {
     title: 'Modernize Infrastructure',
     icon: 'infrastructure',
-    text: 'Move from legacy servers and fragmented tools to scalable Microsoft 365 and Azure-based platforms.'
+    text: 'Move from legacy servers and fragmented tools to governed Microsoft 365 and Azure platforms with clearer ownership.'
   },
   {
     title: 'Improve Productivity',
@@ -97,21 +97,21 @@ const projectExperience = [
 ]
 
 const solutionDescriptions = {
-  'Microsoft Azure': 'Build scalable, secure cloud foundations with governance, networking, monitoring, cost control, and operational runbooks from day one.',
+  'Microsoft Azure': 'Build secure Azure foundations with governance, networking, monitoring, cost control, and operational runbooks from day one.',
   'Microsoft 365': 'Modernize collaboration, email, documents, device access, and identity so teams can work securely from anywhere.',
-  'VMware & Proxmox Virtualization': 'Stabilize and optimize virtualization platforms while planning practical migration, resilience, and ownership models.',
-  'Azure Hybrid Cloud Integration': 'Connect on-premises infrastructure with Azure services for better resilience, management, and staged modernization.',
+  'VMware & Proxmox Virtualization': 'Stabilize virtualization platforms while reducing licensing pressure, resilience gaps, and unclear ownership.',
+  'Azure Hybrid Cloud Integration': 'Connect on-premises infrastructure with Azure services for better resilience, management, and staged migration.',
   'Zero Trust Security with Defender & Sentinel': 'Reduce exposure with identity-first access, threat protection, monitoring, and incident response workflows.',
   'Entra ID & SSO Consolidation': 'Simplify access, reduce password risk, and improve user experience with consolidated identity and single sign-on.',
   'Backup & DR with Veeam': 'Protect critical systems with tested recovery plans, immutable backups, and disaster recovery processes that match business risk.',
   'Cloud Migration Services': 'Move workloads and users with less disruption through discovery, planning, migration, validation, and post-go-live support.',
-  'Web-Based B2B & B2C Solutions': 'Create secure business platforms that improve customer experience, internal workflows, and digital service delivery.',
+  'Web-Based B2B & B2C Solutions': 'Create secure ERP-integrated business platforms that reduce manual handoffs and clarify operational ownership.',
   'Easy Order Web Platform': 'Digitize ordering flows with practical web tooling that reduces manual work and improves process visibility.',
   'GxP & Clinical Research IT': 'Support regulated environments with governance-aware infrastructure, documentation, continuity, and operational controls.'
 }
 
 function solutionDescriptionFor(card) {
-  return solutionDescriptions[card.title] ?? 'Plan, implement, secure, and support this solution with a practical delivery model focused on measurable business outcomes.'
+  return solutionDescriptions[card.title] ?? 'Plan, implement, secure, and support this environment with clear ownership, risk controls, and operational handover.'
 }
 
 export default function Solutions() {
@@ -123,7 +123,7 @@ export default function Solutions() {
       <PageHero
         eyebrow="IT Solutions"
         title="Enterprise IT, Cloud & Security Solutions for Growing Businesses"
-        lead="We design, migrate, secure, and support Microsoft 365, Azure, endpoint, backup, and disaster recovery environments — with enterprise-grade governance and practical delivery experience."
+        lead="We design, migrate, secure, and support Microsoft 365, Azure, endpoint, backup, and disaster recovery environments — with audit-ready governance and practical delivery experience."
         trustLine="Microsoft 365 • Azure • Security • Backup • Disaster Recovery • Endpoint Management"
         primaryCta={{ href: BOOKING_URL, label: 'Book a Consultation' }}
         secondaryCta={{ to: '/solutions', label: 'View Solutions' }}

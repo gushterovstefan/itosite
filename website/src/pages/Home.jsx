@@ -153,8 +153,8 @@ export default function Home() {
               {c.heroSubline}
             </motion.p>
             <motion.p variants={fadeUp} className="mt-3 prose-lead">
-              IT Outsource is a fast growing IT company with more than 10 years of experience designing,
-              implementing, integrating and supporting different IT solutions.
+              IT Outsource helps organizations reduce downtime, secure Microsoft 365, modernize legacy infrastructure,
+              and improve backup and recovery readiness.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
@@ -310,10 +310,9 @@ export default function Home() {
       <section className="border-t border-white/10 py-14">
         <div className="mx-auto max-w-6xl px-4">
           <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-[#2563EB]/14 via-[#0B1728] to-[#38BDF8]/10 p-8 md:p-12">
-            <div className="text-xl font-semibold md:text-2xl">Ready to modernize your IT?</div>
+            <div className="text-xl font-semibold md:text-2xl">Ready to reduce IT risk?</div>
             <div className="mt-2 max-w-2xl text-sm text-white/78 md:text-base">
-              Your IT needs are placed in the hands of multifunctional and certified experts that use
-              their skills and experience to develop specific solutions that match your requirements.
+              We can assess your Microsoft 365, endpoint, infrastructure, and backup environment, then define the practical next step.
             </div>
             <div className="mt-6">
               <SheenButton to="/contacts" className="px-5 py-2.5 text-sm font-medium">

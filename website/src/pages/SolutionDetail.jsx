@@ -17,7 +17,7 @@ const labels = {
     tooling: 'Tooling & standards',
     caseStudy: 'Case study',
     faq: 'FAQ',
-    phases: ['Assess', 'Design', 'Migrate / Build', 'Operate', 'Optimize'],
+    phases: ['Assess', 'Design', 'Migrate / Build', 'Operate', 'Improve'],
     phaseText: ['Baseline current state and risks', 'Define target architecture and controls', 'Implement with runbooks and sign-off gates', 'Monitor, support and report', 'Improve cost, security and resilience'],
     questions: [
       ['How long does it take?', 'Most engagements start with a short assessment, then move into a scoped delivery plan with clear milestones.'],
@@ -34,8 +34,8 @@ const labels = {
     tooling: 'Инструменти и стандарти',
     caseStudy: 'Case study',
     faq: 'FAQ',
-    phases: ['Assess', 'Design', 'Migrate / Build', 'Operate', 'Optimize'],
-    phaseText: ['Оценка на текущо състояние и рискове', 'Дефиниране на target architecture и контроли', 'Имплементация с runbooks и sign-off gates', 'Мониторинг, поддръжка и отчетност', 'Оптимизация на разходи, сигурност и устойчивост'],
+    phases: ['Assess', 'Design', 'Migrate / Build', 'Operate', 'Improve'],
+    phaseText: ['Оценка на текущо състояние и рискове', 'Дефиниране на target architecture и контроли', 'Имплементация с runbooks и sign-off gates', 'Мониторинг, поддръжка и отчетност', 'Подобряване на разходи, сигурност и устойчивост'],
     questions: [
       ['Колко време отнема?', 'Повечето ангажименти започват с кратък assessment, след което преминават в scoped delivery план с ясни milestones.'],
       ['Можете ли да работите с нашия вътрешен IT екип?', 'Да. Можем да водим доставката или да работим като specialist extension на вътрешния екип.'],

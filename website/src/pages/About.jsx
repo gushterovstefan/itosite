@@ -21,12 +21,12 @@ export default function About() {
         aside={{
           eyebrow: 'Company',
           title: 'IT Outsource Ltd.',
-          lead: 'Designing, implementing, integrating and supporting IT solutions.',
+          lead: 'Reducing downtime, securing Microsoft environments, and improving recovery readiness.',
           icon: 'mission',
           items: [
-            { k: 'Focus', v: 'Quality' },
-            { k: 'Approach', v: 'Pragmatic' },
-            { k: 'Delivery', v: 'Reliable' }
+            { k: 'Focus', v: 'Risk control' },
+            { k: 'Approach', v: 'Evidence-led' },
+            { k: 'Delivery', v: 'Operate-ready' }
           ]
         }}
       />

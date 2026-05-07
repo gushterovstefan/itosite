@@ -19,7 +19,7 @@ export const contentEN = {
       itServicesBadge: 'IT services & solutions',
       servicesEyebrow: 'WHAT WE DO',
       servicesTitle: 'Services',
-      servicesLead: 'Delivery-first services built for uptime, security, and scale.',
+      servicesLead: 'Services focused on reducing downtime, controlling security risk, and keeping systems supportable.',
       whyEyebrow: 'Why',
       benefitsEyebrow: 'Benefits',
       writeUs: 'Write us',
@@ -44,13 +44,13 @@ export const contentEN = {
       {
         title: 'Cloud & Digital Workplace',
         description:
-          'Secure Microsoft 365, Entra/Intune, and modern workplace transformations that actually work in production.',
+          'Secure Microsoft 365, Entra ID, Intune, and collaboration environments that reduce identity and endpoint risk.',
         icon: 'cloud'
       },
       {
         title: 'Infrastructure & Platforms',
         description:
-          'Design, deployment, and lifecycle management of hybrid and cloud infrastructure built for resilience.',
+          'Modernize legacy infrastructure, improve recovery readiness, and keep hybrid platforms supportable.',
         icon: 'infrastructure'
       }
     ],
@@ -71,7 +71,7 @@ export const contentEN = {
         items: [
           'Hybrid Cloud Architecture (Azure, VMware, Backup)',
           'Zero Trust Security & Identity (Entra, MFA, PIM)',
-          'Network Design & Optimization',
+          'Network Design & Performance Tuning',
           'Backup, DR, and Business Continuity',
           'Server & Database Platform Management'
         ]
@@ -111,8 +111,8 @@ export const contentEN = {
           icon: 'consulting'
         },
         {
-          h: 'Pragmatic modernization',
-          p: 'We modernize what matters (cloud, workplace, infrastructure) without breaking production.',
+          h: 'Legacy risk reduction',
+          p: 'We improve cloud, workplace and infrastructure environments without disrupting production.',
           icon: 'cloud'
         }
       ]
@@ -132,25 +132,25 @@ export const contentEN = {
       items: [
         'Audit-ready operations and change control',
         'Security and continuity built into day-to-day delivery',
-        'Predictable costs with scalable service models'
+        'Predictable costs with service models aligned to risk and business criticality'
       ]
     }
   },
   about: {
     missionTitle: 'Our Mission',
-    missionLead: 'Our mission is to help you build the most appropriate IT environment by delivering the best possible IT solutions.',
+    missionLead: 'Our mission is to help organizations run secure, reliable IT environments that reduce downtime, control risk, and support measurable business outcomes.',
     missionBody: [
-      'Current business operates in a highly competitive environment.',
-      'We are committed to analyze the IT environment in order to deliver the most appropriate solution and offer high quality support to our clients achieving the maximum from their IT investment.',
-      'We take advantage of our expertise and experience to implement the most suitable IT technology that could really affect the present day and shape the future by helping your company grow and develop.'
+      'Business leaders need IT environments that stay available, secure sensitive data, and provide evidence when audits or compliance reviews arrive.',
+      'We assess the current IT environment, identify risk and operational gaps, and deliver support models that improve uptime, security, and cost control.',
+      'We use practical delivery experience to modernize legacy infrastructure, secure Microsoft 365, improve backup and recovery readiness, and prepare organizations for controlled growth.'
     ],
     visionTitle: 'Vision',
-    visionBody: ['To be our clients’ most valued partner'],
+    visionBody: ['To be the partner clients trust for secure, reliable and audit-ready IT operations'],
     purposeTitle: 'Purpose',
-    purposeBody: ['Our purpose is to provide the right IT solutions that power progress and help companies establish their stable IT environment.'],
+    purposeBody: ['Our purpose is to help companies build stable IT environments with controlled identity, protected endpoints, tested recovery, and clear operational ownership.'],
     testimonialsTitle: 'What our customers say',
     testimonials: [
-      'We would like to express our satisfaction for being a client of IT Outsource since the beginning of 2014. We have trusted the construction and maintenance of the entire IT infrastructure to them. As a result of their unconditional professionalism and constrictive ideas, our company not only optimize and increase the efficiency of our business processes, but also warrant the security and reliability of the entire information stream.”',
+      'Since 2014, IT Outsource has supported the construction and maintenance of our IT infrastructure, helping us improve business process efficiency while strengthening the security and reliability of our information flow.',
       '“I would like to express our sincere gratitude to our partner IT Outsource since 2009 for the achieved results of our corporation. The development of a strategic platform for our business and clients and the fast and adequate reaction when solving different cases and problems give us the opportunity to appraise them for their services and recommend them as a reliable partner.”',
       '“IT Outsource was our consultant at a very important moment of M.J. Dairies development. Year 2011 was the year of implementing and introducing new IT systems, building reliable data base and network communication as part of our Business Consolidation Project. We are really pleased of their professional services including the approach and the positive results that we have seen over the years. The performed audit and detail analysis followed by the right advice, proposed suitable solutions, needed Information systems and support laid the basis of our current IT environment. The communication between our and their team was clear and focused. Their instructions were implemented as our new standard for work. We want to express our gratitude to IT Outsource! We see IT Outsource as a reliable partner for our next IT Project.”'
     ]
@@ -158,7 +158,7 @@ export const contentEN = {
   consulting: {
     title: 'IT Consulting Services',
     lead:
-      'Executive-level technical clarity — architecture, security, and modernization decisions backed by evidence, not opinion.',
+      'Executive-level technical clarity — architecture, security and risk-reduction decisions backed by evidence, not opinion.',
     subline:
       'We help you de-risk change, align stakeholders, and execute with measurable outcomes.',
 
@@ -168,7 +168,7 @@ export const contentEN = {
         icon: 'consulting',
         bullets: [
           'Architecture review and audit across systems, integrations, and dependencies',
-          'Risk identification: security, continuity, vendor lock-in, and scalability',
+          'Risk identification: security exposure, continuity gaps, vendor lock-in, cost pressure, and supportability',
           'Decision-ready recommendations with options and trade-offs'
         ]
       },
@@ -237,7 +237,7 @@ export const contentEN = {
           'Performance and capacity analysis (CPU, RAM, Storage, IOPS)',
           'TCO comparison: VMware/Proxmox on-prem vs Azure IaaS vs Azure PaaS',
           'Identification of single points of failure and technical debt',
-          '12–24 month modernization roadmap with clear migration steps'
+          '12–24 month risk-reduction roadmap with clear migration steps'
         ],
         definition:
           'We tell you exactly where your infrastructure is weak, expensive, or risky — and how to fix it.'
@@ -269,7 +269,7 @@ export const contentEN = {
         definition: 'Encrypted, resilient connectivity that keeps working when things fail.'
       },
       {
-        title: 'Virtualization & Platform Optimization',
+        title: 'Virtualization & Platform Risk Reduction',
         icon: 'virtualization',
         bullets: [
           'VMware vSphere — enterprise virtualization, HA, vMotion, clustering',
@@ -301,7 +301,7 @@ export const contentEN = {
           'Microsoft 365 (O365) governance: Entra ID, Intune, Defender, SharePoint, Exchange, Teams',
           'Tenant security, data protection, and lifecycle management',
           'On-prem (VMware/Proxmox) platform lifecycle management (patching, updates, monitoring)',
-          'Storage, backup, and performance optimization'
+          'Storage, backup, and performance tuning'
         ],
         definition:
           'We don’t just build infrastructure — we run it, measure it, and keep it compliant.'
@@ -325,7 +325,7 @@ export const contentEN = {
       },
       {
         title: 'Joint IT Support',
-        description: 'We partner with your internal team and cover gaps 24/7.'
+        description: 'We work with your internal team to cover after-hours, specialist and escalation gaps.'
       },
       {
         title: 'Specialized IT Support',
@@ -375,16 +375,16 @@ export const contentEN = {
   solutions: {
     title: 'Solutions',
     lead:
-      'Enterprise platforms and solutions delivered with security, governance, and operational ownership.',
+      'Microsoft cloud, security, backup, and platform solutions delivered with governance, recovery planning, and operational ownership.',
     subline:
-      'A modern stack spanning cloud, workplace, virtualization, and custom web platforms — built to run in production.',
+      'Cloud, workplace, virtualization, and web platforms designed to reduce operational risk and stay supportable in production.',
 
     cards: [
       {
         title: 'Microsoft Azure',
         icon: 'cloud',
         bullets: [
-          'Build, scale, and run your infrastructure on Azure with secure cloud resources, global reach, and cost control',
+          'Run Azure infrastructure with secure networking, monitored workloads, cost control, and clear operational ownership',
           'Design for resilience with proper networking, monitoring, and governance'
         ]
       },
@@ -392,7 +392,7 @@ export const contentEN = {
         title: 'Microsoft 365',
         icon: 'platform',
         bullets: [
-          'Deliver productivity and collaboration (Teams, SharePoint, Exchange) with enterprise-grade security',
+          'Improve collaboration across Teams, SharePoint, and Exchange while securing identity, devices, and data access',
           'Device and identity alignment across Entra ID, Intune, and Defender'
         ]
       },
@@ -400,7 +400,7 @@ export const contentEN = {
         title: 'VMware & Proxmox Virtualization',
         icon: 'virtualization',
         bullets: [
-          'Consolidate and optimize on-prem resources using VMware’s enterprise ecosystem or Proxmox’s open-source flexibility',
+          'Reduce hardware sprawl, licensing pressure, and platform risk across VMware or Proxmox environments',
           'Right-size workloads, improve availability, and reduce operating cost'
         ]
       },
@@ -408,7 +408,7 @@ export const contentEN = {
         title: 'Azure Hybrid Cloud Integration',
         icon: 'infrastructure',
         bullets: [
-          'Seamlessly extend on-prem VMware or Proxmox environments into Azure for hybrid scalability and DR',
+          'Extend on-prem VMware or Proxmox environments into Azure for disaster recovery, monitored hybrid operations, and controlled migration',
           'Secure connectivity, identity integration, and consistent monitoring across platforms'
         ]
       },
@@ -448,7 +448,7 @@ export const contentEN = {
         title: 'Web-Based B2B & B2C Solutions',
         icon: 'web',
         bullets: [
-          'Custom-built web applications integrated with your ERP, tailored to your exact business processes',
+          'ERP-integrated web applications that reduce manual work, clarify ownership, and support controlled business processes',
           'Modular architecture with clear ownership, security boundaries, and operational handover'
         ]
       },
@@ -472,7 +472,7 @@ export const contentEN = {
   },
   contact: {
     title: 'CONTACTS',
-    lead: 'If you need additional information concerning IT Outsource Solutions & Services, please do not hesitate to contact us.',
+    lead: 'Tell us what you need to secure, modernize or recover. We will respond with a practical next step.',
     phone: '+359 887 940248',
     email: 'info@itoutsource.bg'
   }
