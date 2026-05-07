@@ -58,7 +58,7 @@ export default function HomeGem() {
               >
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-[0.28em] text-[#CBD5E1]">Enterprise delivery</div>
-                  <div className="mt-3 text-4xl font-semibold tracking-tight text-[#F8FAFC]">10+ years</div>
+                  <div className="mt-3 text-4xl font-semibold tracking-tight text-[#F8FAFC]">15+ years</div>
                   <div className="mt-2 text-sm text-[#94A3B8]">Design · Build · Secure · Run</div>
                 </div>
 
@@ -106,7 +106,7 @@ export default function HomeGem() {
       <GemSection eyebrow="At a glance" title="Delivery KPIs" lead="Operational discipline with enterprise-ready controls.">
         <KpiStrip
           items={[
-            { value: '10+ yrs', label: 'Experience', note: 'Design · Integrate · Support' },
+            { value: '15+ yrs', label: 'Experience', note: 'Design · Integrate · Support' },
             { value: '24/7', label: 'Operations', note: 'SLA-driven support' },
             { value: 'MFA', label: 'Security baseline', note: 'Hardening + policies' },
             { value: 'Fast', label: 'Response times', note: 'Clear escalation paths' }

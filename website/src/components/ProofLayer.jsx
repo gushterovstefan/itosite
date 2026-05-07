@@ -6,7 +6,7 @@ const copy = {
     title: 'Enterprise IT delivery for regulated, distributed and uptime-sensitive businesses.',
     logos: ['Bulgarian retail operations', 'EU clinical research organization', 'Renewable energy group', 'Professional services teams'],
     metrics: [
-      ['10+ yrs', 'reducing downtime and operating critical IT environments'],
+      ['15+ yrs', 'reducing downtime and operating critical IT environments'],
       ['24/7', 'operations mindset for business-critical environments'],
       ['ISO/GDPR', 'governance-aware delivery and documentation']
     ],
@@ -28,7 +28,7 @@ const copy = {
     title: 'Enterprise ИТ доставка за регулирани, разпределени и uptime-sensitive бизнеси.',
     logos: ['Български retail операции', 'EU clinical research организация', 'Група за възобновяема енергия', 'Professional services екипи'],
     metrics: [
-      ['10+ г.', 'намаляване на downtime и управление на критични ИТ среди'],
+      ['15+ г.', 'намаляване на downtime и управление на критични ИТ среди'],
       ['24/7', 'оперативен подход за бизнес-критични среди'],
       ['ISO/GDPR', 'governance-aware доставка и документация']
     ],
