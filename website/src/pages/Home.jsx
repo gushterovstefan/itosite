@@ -45,13 +45,6 @@ export default function Home() {
 
   return (
     <div id="top" className="relative bg-[#07111F] text-[#F8FAFC]">
-      {/* Home background WebGL (desktop only) */}
-      <div className="pointer-events-none absolute inset-0 -z-10 hidden md:block">
-        <Suspense fallback={null}>
-          <HeroWebGL logoSrc={logo} showCoin={false} />
-        </Suspense>
-      </div>
-
       {/* Intro logo pop (desktop only) */}
       {showIntro ? (
         <motion.div
@@ -88,6 +81,11 @@ export default function Home() {
           <div className="hero-float absolute -left-40 -top-40 h-96 w-96 rounded-full bg-[#2563EB]/14 blur-3xl" />
           <div className="hero-float absolute -bottom-56 right-0 h-[32rem] w-[32rem] rounded-full bg-[#38BDF8]/10 blur-3xl" />
           <div className="hero-float absolute inset-0 bg-[linear-gradient(180deg,#07111F_0%,#0B1728_100%)]" />
+          <div className="absolute inset-0 z-[1] hidden opacity-80 md:block [mask-image:linear-gradient(to_bottom,black_0%,black_70%,transparent_100%)]">
+            <Suspense fallback={null}>
+              <HeroWebGL logoSrc={logo} showCoin={false} />
+            </Suspense>
+          </div>
 
           {/* subtle grid + noise */}
           <div className="absolute inset-0 hero-grid" />
@@ -133,7 +131,7 @@ export default function Home() {
           ) : null}
         </div>
 
-        <div className="mx-auto max-w-6xl px-4 pt-20 pb-6 md:pt-28 md:pb-8">
+        <div className="relative z-10 mx-auto max-w-6xl px-4 pt-20 pb-6 md:pt-28 md:pb-8">
           {/* (moved) WebGL now runs as full-page background */}
           <motion.div
             initial="hidden"

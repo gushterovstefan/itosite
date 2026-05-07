@@ -6,7 +6,7 @@ function isDesktop() {
   return window.matchMedia('(min-width: 768px)').matches
 }
 
-export default function HeroWebGL({ logoSrc, showCoin = true }) {
+export default function HeroWebGL({ logoSrc, showCoin = true, className = '' }) {
   const hostRef = useRef(null)
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     const field = new THREE.Group()
     scene.add(field)
 
-    const COUNT = 120
+    const COUNT = 150
     const positions = new Float32Array(COUNT * 3)
     const velocities = new Float32Array(COUNT * 3)
     const bounds = { x: 8, y: 4.5, z: 2.2 }
@@ -69,7 +69,7 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
       size: 0.05,
       sizeAttenuation: true,
       transparent: true,
-      opacity: 0.42,
+      opacity: 0.72,
       depthWrite: false
     })
 
@@ -79,7 +79,7 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     const lineMat = new THREE.LineBasicMaterial({
       color: 0x2563eb,
       transparent: true,
-      opacity: 0.24,
+      opacity: 0.42,
       depthWrite: false
     })
     const lineGeom = new THREE.BufferGeometry()
@@ -254,5 +254,5 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     }
   }, [logoSrc, showCoin])
 
-  return <div ref={hostRef} aria-hidden="true" className="pointer-events-none absolute inset-0" />
+  return <div ref={hostRef} aria-hidden="true" className={`pointer-events-none absolute inset-0 ${className}`} />
 }
