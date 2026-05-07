@@ -2,6 +2,7 @@ import PageHero from '../components/PageHero.jsx'
 import GemSection from '../components/GemSection.jsx'
 import { Card, ClickCard } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
+import SheenButton from '../components/SheenButton.jsx'
 import ConversionCta from '../components/ConversionCta.jsx'
 import { useContent } from '../content/index.jsx'
 import { BOOKING_URL } from '../config/booking.js'
@@ -74,6 +75,24 @@ const industries = [
     title: 'Professional Services',
     icon: 'consulting',
     text: 'Cloud productivity, security, backup, and managed IT operations.'
+  }
+]
+
+const projectExperience = [
+  {
+    title: 'Microsoft 365 Security & Compliance Deployment',
+    icon: 'security',
+    text: 'Designed secure Microsoft 365 environments with identity, endpoint, backup, and compliance controls.'
+  },
+  {
+    title: 'Google Workspace to Microsoft 365 Migration',
+    icon: 'cloud',
+    text: 'Planned and executed structured migration programs with assessment, cleanup, migration, validation, and user adoption.'
+  },
+  {
+    title: 'Backup & Disaster Recovery Architecture',
+    icon: 'backup',
+    text: 'Designed recovery models for Microsoft 365 and infrastructure workloads with documented restore testing and business continuity planning.'
   }
 ]
 
@@ -167,6 +186,29 @@ export default function Solutions() {
               </div>
             </Card>
           ))}
+        </div>
+      </GemSection>
+
+      <GemSection
+        eyebrow="Proof of delivery"
+        title="Selected Project Experience"
+        lead="Representative project patterns that show how strategy, migration, security, and continuity work come together in real environments."
+      >
+        <div className="grid gap-4 lg:grid-cols-3">
+          {projectExperience.map((project, i) => (
+            <Card key={project.title} revealDelay={0.04 + i * 0.04} variant={i === 0 ? 'brand' : 'steel'} className="h-full">
+              <div className="flex h-full flex-col">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-[#0B1728]">
+                  <Icon as={icons[project.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
+                </span>
+                <div className="mt-5 text-lg font-semibold tracking-tight text-[#F8FAFC]">{project.title}</div>
+                <p className="mt-3 grow text-sm leading-relaxed text-[#CBD5E1]">{project.text}</p>
+              </div>
+            </Card>
+          ))}
+        </div>
+        <div className="mt-6 flex justify-center md:justify-start">
+          <SheenButton to="/contacts" className="px-7 py-3.5 text-base">Discuss a Similar Project</SheenButton>
         </div>
       </GemSection>
 
