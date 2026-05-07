@@ -153,7 +153,7 @@ export default function Home() {
               {c.heroSubline}
             </motion.p>
             <motion.p variants={fadeUp} className="mt-3 prose-lead">
-              IT Outsource helps organizations reduce downtime, secure Microsoft 365, modernize legacy infrastructure,
+              IT Outsource helps organizations reduce downtime, strengthen Microsoft 365 security, modernize legacy infrastructure,
               and improve backup and recovery readiness.
             </motion.p>
 

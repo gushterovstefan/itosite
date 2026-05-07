@@ -2,7 +2,7 @@ export const contentEN = {
   shared: {
     email: 'info@itoutsource.bg',
     phone: '+359 887 940248',
-    tagline: 'Make technology an ASSET for your business NOT a PROBLEM',
+    tagline: 'Turn technology into a business advantage',
     ui: {
       home: 'Home',
       support: 'Support',
@@ -32,8 +32,8 @@ export const contentEN = {
     }
   },
   home: {
-    heroTitle: 'Make technology an ASSET for your business NOT a PROBLEM',
-    heroSubline: 'From strategy to operations — we design it, build it, secure it, and run it.',
+    heroTitle: 'Turn technology into a business advantage',
+    heroSubline: 'From strategy to operations — we design it, build it, secure it, and support it.',
     highlights: [
       {
         title: 'Managed IT Operations',
