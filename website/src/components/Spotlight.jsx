@@ -1,60 +1,16 @@
-import { useEffect, useRef } from 'react'
-import { motion, useMotionTemplate, useMotionValue, useReducedMotion } from 'framer-motion'
-
 /**
- * Elementra-ish cursor spotlight.
- * Renders a subtle radial gradient that follows pointer/touch.
+ * Static spotlight layer.
+ * Avoids pointer-tracking JavaScript and respects reduced-motion by using no animation.
  */
 export default function Spotlight({ className = '' }) {
-  const reduce = useReducedMotion()
-  const ref = useRef(null)
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-
-  useEffect(() => {
-    if (reduce) return
-    const el = ref.current
-    if (!el) return
-
-    const move = (clientX, clientY) => {
-      const r = el.getBoundingClientRect()
-      x.set(clientX - r.left)
-      y.set(clientY - r.top)
-    }
-
-    const onPointerMove = (e) => move(e.clientX, e.clientY)
-    const onTouchMove = (e) => {
-      const t = e.touches?.[0]
-      if (t) move(t.clientX, t.clientY)
-    }
-
-    window.addEventListener('pointermove', onPointerMove, { passive: true })
-    window.addEventListener('touchmove', onTouchMove, { passive: true })
-
-    // initialize near top-left so it doesn't flash from (0,0)
-    const r = el.getBoundingClientRect()
-    x.set(r.width * 0.25)
-    y.set(r.height * 0.25)
-
-    return () => {
-      window.removeEventListener('pointermove', onPointerMove)
-      window.removeEventListener('touchmove', onTouchMove)
-    }
-  }, [reduce, x, y])
-
-  const background = useMotionTemplate`radial-gradient(260px circle at ${x}px ${y}px, rgba(37,99,235,0.12), rgba(56,189,248,0.07), transparent 62%)`
-
-  if (reduce) return null
-
   return (
-    <motion.div
-      ref={ref}
+    <div
       aria-hidden="true"
-      className={
-        'pointer-events-none absolute inset-0 opacity-55 mix-blend-screen ' +
-        className
-      }
-      style={{ background }}
+      className={'pointer-events-none absolute inset-0 opacity-45 mix-blend-screen ' + className}
+      style={{
+        background:
+          'radial-gradient(340px circle at 24% 18%, rgba(37,99,235,0.12), rgba(56,189,248,0.06), transparent 64%)'
+      }}
     />
   )
 }

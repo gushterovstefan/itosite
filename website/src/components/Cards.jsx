@@ -1,4 +1,3 @@
-import { motion, useAnimation, useReducedMotion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import Reveal from './Reveal.jsx'
 
@@ -51,42 +50,28 @@ export function Card({ children, className = '', revealDelay = 0, underlay = nul
 
   return (
     <Reveal delay={revealDelay}>
-      <motion.div
-        whileHover={{ y: -2 }}
-        transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-        className={'group relative overflow-hidden rounded-2xl border p-5 shadow-[0_18px_55px_-42px_rgba(0,0,0,0.9)] transition md:p-6 ' + v.card + ' ' + className}
+      <div
+        className={'group relative overflow-hidden rounded-2xl border p-5 shadow-[0_18px_55px_-42px_rgba(0,0,0,0.9)] transition-transform duration-150 ease-out hover:-translate-y-0.5 motion-reduce:transform-none motion-reduce:transition-none md:p-6 ' + v.card + ' ' + className}
       >
         <CardShell underlay={underlay} variant={variant} badge={badge}>{children}</CardShell>
-      </motion.div>
+      </div>
     </Reveal>
   )
 }
 
 export function ClickCard({ to, children, className = '', revealDelay = 0, underlay = null, variant = 'default', badge = null }) {
   const nav = useNavigate()
-  const reduce = useReducedMotion()
-  const controls = useAnimation()
-
-  const go = async () => {
-    if (!reduce) await controls.start({ y: -2, transition: { duration: 0.08, ease: 'easeOut' } })
-    nav(to)
-  }
-
   const v = variants[variant] ?? variants.default
 
   return (
     <Reveal delay={revealDelay}>
-      <motion.button
+      <button
         type="button"
-        onClick={go}
-        animate={controls}
-        whileHover={reduce ? undefined : { y: -2 }}
-        whileTap={reduce ? undefined : { scale: 0.99 }}
-        transition={{ type: 'spring', stiffness: 260, damping: 24 }}
-        className={'group relative w-full overflow-hidden rounded-2xl border p-5 text-left shadow-[0_18px_55px_-42px_rgba(0,0,0,0.9)] transition focus:outline-none focus:ring-2 focus:ring-[#38BDF8]/60 md:p-6 ' + v.card + ' ' + className}
+        onClick={() => nav(to)}
+        className={'group relative w-full overflow-hidden rounded-2xl border p-5 text-left shadow-[0_18px_55px_-42px_rgba(0,0,0,0.9)] transition-transform duration-150 ease-out hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-[#38BDF8]/60 motion-reduce:transform-none motion-reduce:transition-none md:p-6 ' + v.card + ' ' + className}
       >
         <CardShell underlay={underlay} variant={variant} badge={badge}>{children}</CardShell>
-      </motion.button>
+      </button>
     </Reveal>
   )
 }
@@ -94,11 +79,11 @@ export function ClickCard({ to, children, className = '', revealDelay = 0, under
 export function BulletList({ items }) {
   return (
     <ul className="space-y-2 text-sm leading-relaxed text-[#CBD5E1]">
-      {items.map((b, i) => (
-        <motion.li key={b} className="flex gap-2.5" initial={false} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.25, ease: 'easeOut', delay: i * 0.03 }}>
+      {items.map((b) => (
+        <li key={b} className="flex gap-2.5">
           <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#22C55E]" />
           <span>{b}</span>
-        </motion.li>
+        </li>
       ))}
     </ul>
   )

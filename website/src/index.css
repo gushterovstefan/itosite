@@ -333,5 +333,12 @@ body {
 
 @keyframes network-pulse {
   0%, 100% { opacity: 0.48; transform: scale(0.9); transform-box: fill-box; transform-origin: center; }
-  50% { opacity: 1; transform: scale(1.45); transform-box: fill-box; transform-origin: center; }
+  50% { opacity: 1; transform: scale(1.18); transform-box: fill-box; transform-origin: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .network-backdrop__svg path,
+  .network-backdrop__svg circle {
+    animation: none !important;
+  }
 }
