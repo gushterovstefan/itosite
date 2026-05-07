@@ -191,7 +191,7 @@ function TileList({ items }) {
   return (
     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => (
-        <div key={item} className="rounded-2xl border border-black/10 bg-white/70 px-4 py-3 text-sm font-semibold text-ink-950">
+        <div key={item} className="rounded-2xl border border-slate-200/90 bg-white/90 px-4 py-3 text-sm font-semibold text-ink-950 shadow-[0_16px_55px_-48px_rgba(15,23,42,0.75)]">
           {item}
         </div>
       ))}
@@ -223,7 +223,7 @@ export default function ServiceLanding({ slug: propSlug }) {
   const cta = lang === 'bg' ? 'Заявете ИТ оценка' : 'Request IT Assessment'
 
   return (
-    <div>
+    <div className="service-page bg-slate-50 text-ink-900">
       <PageHero
         eyebrow={lang === 'bg' ? 'Услуга' : 'Service'}
         title={page.headline}
@@ -243,10 +243,12 @@ export default function ServiceLanding({ slug: propSlug }) {
         }}
       />
 
+      <div className="relative -mt-10 pt-10 md:-mt-14 md:pt-14">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-[radial-gradient(circle_at_50%_0%,rgba(34,195,246,0.12),transparent_58%)]" />
       <GemSection eyebrow={lang === 'bg' ? 'Проблеми' : 'Problems'} title={lang === 'bg' ? 'Какви болки решава услугата' : 'Pain points this service solves'}>
         <div className="grid gap-4 md:grid-cols-2">
           {page.problems.map((problem, index) => (
-            <Card key={problem} revealDelay={0.04 + index * 0.04} variant={index % 2 ? 'steel' : 'brand'}>
+            <Card key={problem} revealDelay={0.04 + index * 0.04} variant="default">
               <div className="flex gap-3">
                 <span className="mt-1 grid h-7 w-7 shrink-0 place-items-center rounded-xl bg-brand-100 text-xs font-bold text-brand-800">{index + 1}</span>
                 <p className="text-sm leading-relaxed text-ink-900/74">{problem}</p>
@@ -259,7 +261,7 @@ export default function ServiceLanding({ slug: propSlug }) {
       <GemSection eyebrow={lang === 'bg' ? 'Delivery' : 'What we deliver'} title={lang === 'bg' ? 'Какво доставяме' : 'What we deliver'}>
         <div className="grid gap-4 lg:grid-cols-4">
           {page.deliver.map(([title, body], index) => (
-            <Card key={title} revealDelay={0.04 + index * 0.04} variant={index % 2 ? 'steel' : 'brand'}>
+            <Card key={title} revealDelay={0.04 + index * 0.04} variant={index === 0 ? 'brand' : 'default'}>
               <div className="text-base font-semibold text-ink-950">{title}</div>
               <p className="mt-3 text-sm leading-relaxed text-ink-900/70">{body}</p>
             </Card>
@@ -307,11 +309,11 @@ export default function ServiceLanding({ slug: propSlug }) {
       <GemSection eyebrow={lang === 'bg' ? 'Свързани услуги' : 'Related services'} title={lang === 'bg' ? 'Продължете към свързани услуги' : 'Continue to related services'}>
         <div className="flex flex-wrap gap-3">
           {page.related.map((related) => (
-            <Link key={related} to={localizedPath(`/${related}`)} className="rounded-full border border-black/10 bg-white/80 px-4 py-2 text-sm font-semibold text-ink-950 transition hover:bg-white">
+            <Link key={related} to={localizedPath(`/${related}`)} className="rounded-full border border-slate-200 bg-white/90 px-4 py-2 text-sm font-semibold text-ink-950 shadow-sm transition hover:border-brand-200 hover:bg-white">
               {pages[related].headline}
             </Link>
           ))}
-          <Link to={localizedPath('/contacts')} className="rounded-full border border-black/10 bg-navy-950 px-4 py-2 text-sm font-semibold text-white transition hover:bg-navy-900">
+          <Link to={localizedPath('/contacts')} className="rounded-full border border-navy-950 bg-navy-950 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-navy-900">
             {lang === 'bg' ? 'Контакти' : 'Contact'}
           </Link>
         </div>
@@ -330,6 +332,7 @@ export default function ServiceLanding({ slug: propSlug }) {
           </div>
         </div>
       </section>
+      </div>
     </div>
   )
 }

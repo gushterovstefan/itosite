@@ -5,19 +5,19 @@ import { useContent } from '../content/index.jsx'
 
 const variants = {
   default: {
-    card: 'border-slate-200 bg-white',
-    top: 'from-slate-50 via-white to-transparent'
+    card: 'border-slate-200/90 bg-white/90',
+    top: 'from-slate-50 via-white/70 to-transparent'
   },
   brand: {
-    card: 'border-cyan-200/70 bg-cyan-50/80',
-    top: 'from-cyan-100/65 via-white/50 to-transparent'
+    card: 'border-brand-200/80 bg-white/95 ring-1 ring-brand-200/25',
+    top: 'from-brand-100/55 via-white/65 to-transparent'
   },
   violet: {
-    card: 'border-blue-200/70 bg-blue-50/80',
-    top: 'from-blue-100/60 via-white/50 to-transparent'
+    card: 'border-blue-200/70 bg-white/95',
+    top: 'from-blue-100/45 via-white/65 to-transparent'
   },
   steel: {
-    card: 'border-slate-200 bg-slate-50/90',
+    card: 'border-slate-200/90 bg-slate-50/84',
     top: 'from-white via-slate-50/80 to-transparent'
   },
   amber: {
@@ -63,7 +63,7 @@ export function Card({
         whileHover={{ y: -2 }}
         transition={{ type: 'spring', stiffness: 260, damping: 24 }}
         className={
-          'group relative overflow-hidden rounded-2xl border p-5 shadow-[0_14px_45px_-38px_rgba(15,23,42,0.6)] transition-shadow hover:shadow-[0_18px_55px_-40px_rgba(15,23,42,0.65)] md:p-6 ' +
+          'group relative overflow-hidden rounded-2xl border p-5 shadow-[0_18px_65px_-48px_rgba(15,23,42,0.72)] transition-shadow hover:shadow-[0_22px_75px_-52px_rgba(15,23,42,0.76)] md:p-6 ' +
           v.card +
           ' ' +
           className
@@ -110,7 +110,7 @@ export function ClickCard({
         whileTap={reduce ? undefined : { scale: 0.99 }}
         transition={{ type: 'spring', stiffness: 260, damping: 24 }}
         className={
-          'group relative w-full overflow-hidden rounded-2xl border p-5 text-left shadow-[0_14px_45px_-38px_rgba(15,23,42,0.6)] transition-shadow hover:shadow-[0_18px_55px_-40px_rgba(15,23,42,0.65)] focus:outline-none focus:ring-2 focus:ring-brand-500/60 md:p-6 ' +
+          'group relative w-full overflow-hidden rounded-2xl border p-5 text-left shadow-[0_18px_65px_-48px_rgba(15,23,42,0.72)] transition-shadow hover:shadow-[0_22px_75px_-52px_rgba(15,23,42,0.76)] focus:outline-none focus:ring-2 focus:ring-brand-500/60 md:p-6 ' +
           v.card +
           ' ' +
           className

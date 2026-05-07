@@ -46,8 +46,8 @@ function NavItem({ to, label, end, activePath }) {
       to={localizedTo}
       aria-current={isActive ? 'page' : undefined}
       className={
-        'rounded-lg px-2.5 py-2 text-[13px] font-semibold tracking-normal transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 ' +
-        (isActive ? 'bg-navy-950 text-white' : 'text-slate-700 hover:bg-slate-100 hover:text-navy-950')
+        'rounded-lg px-2.5 py-2 text-[13px] font-semibold tracking-normal transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/80 ' +
+        (isActive ? 'bg-white/12 text-white shadow-inner shadow-white/5' : 'text-white/78 hover:bg-white/10 hover:text-white')
       }
     >
       <span className="whitespace-nowrap">{label}</span>
@@ -128,7 +128,7 @@ export default function Navbar() {
       />
 
       <div className="mx-auto max-w-7xl px-3 pt-3 sm:px-4">
-        <div className="rounded-2xl border border-slate-200/80 bg-white/96 px-3 shadow-[0_12px_36px_-28px_rgba(15,23,42,0.55)] backdrop-blur-xl md:px-4">
+        <div className="rounded-2xl border border-white/12 bg-navy-950/95 px-3 shadow-[0_18px_70px_-36px_rgba(0,0,0,0.9)] ring-1 ring-brand-200/10 backdrop-blur-xl md:px-4">
           <div className="flex h-14 items-center justify-between gap-3">
             <Link to={localizedPath('/')} className="flex shrink-0 items-center" onClick={() => setOpen(false)}>
               <img
@@ -150,7 +150,7 @@ export default function Navbar() {
             <div className="flex shrink-0 items-center gap-2">
               <Link
                 to={localizedPath('/contacts')}
-                className="hidden items-center justify-center rounded-lg bg-navy-950 px-3 py-2 text-[12px] font-semibold text-white shadow-sm transition hover:bg-navy-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 sm:inline-flex sm:px-4 sm:text-sm"
+                className="hidden items-center justify-center rounded-lg bg-brand-300 px-3 py-2 text-[12px] font-semibold text-navy-950 shadow-[0_10px_30px_-18px_rgba(34,195,246,0.9)] transition hover:bg-brand-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-200/90 sm:inline-flex sm:px-4 sm:text-sm"
               >
                 <span className="hidden sm:inline">{copy.cta}</span>
                 <span className="sm:hidden">{copy.mobileCta}</span>
@@ -159,18 +159,18 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
-                className="hidden items-center gap-1 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-navy-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 lg:inline-flex"
+                className="hidden items-center gap-1 rounded-lg border border-white/12 bg-white/7 px-3 py-2 text-xs font-semibold text-white/78 hover:bg-white/12 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/80 lg:inline-flex"
                 aria-label="Toggle language"
               >
-                <span className={lang === 'bg' ? 'text-navy-950' : 'text-slate-400'}>BG</span>
-                <span className="text-slate-300">/</span>
-                <span className={lang === 'en' ? 'text-navy-950' : 'text-slate-400'}>EN</span>
+                <span className={lang === 'bg' ? 'text-white' : 'text-white/40'}>BG</span>
+                <span className="text-white/30">/</span>
+                <span className={lang === 'en' ? 'text-white' : 'text-white/40'}>EN</span>
               </button>
 
               <button
                 ref={menuButtonRef}
                 type="button"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-800 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/70 xl:hidden"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/12 bg-white/7 text-white hover:bg-white/12 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/80 xl:hidden"
                 aria-label={open ? 'Close menu' : 'Open menu'}
                 aria-expanded={open}
                 aria-controls="mobile-navigation"

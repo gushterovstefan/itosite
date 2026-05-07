@@ -20,11 +20,11 @@ export default function PageHero({
   return (
     <section className="relative overflow-hidden bg-navy-950 pt-24 text-white md:pt-28">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(34,195,246,0.14),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.04),transparent_42%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_8%,rgba(34,195,246,0.18),transparent_34%),radial-gradient(circle_at_82%_30%,rgba(120,212,255,0.09),transparent_35%),linear-gradient(180deg,rgba(255,255,255,0.045),transparent_40%,rgba(248,250,252,0.08)_82%,rgba(248,250,252,0.18)_100%)]" />
         <div className="absolute inset-0 hero-grid opacity-20" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4">
+      <div className="relative mx-auto max-w-7xl px-4 pb-14 md:pb-20">
         <div className="grid min-w-0 gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
           <div className="min-w-0 max-w-3xl">
             {eyebrow ? (
@@ -119,8 +119,11 @@ export default function PageHero({
           ) : null}
         </div>
 
-        <div className="mt-10 h-px bg-white/10" />
+        <div className="mt-10 h-px bg-gradient-to-r from-transparent via-brand-200/28 to-transparent" />
       </div>
+
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent via-slate-50/8 to-slate-50" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 -bottom-px h-px bg-slate-50" />
     </section>
   )
 }
