@@ -186,6 +186,29 @@ const projectExperience = [
   }
 ]
 
+const deliverySteps = [
+  {
+    title: 'Assess',
+    text: 'We review the current environment, risks, licensing, data, identity model, endpoints, and business requirements.'
+  },
+  {
+    title: 'Design',
+    text: 'We create a practical target architecture, migration plan, security baseline, and implementation roadmap.'
+  },
+  {
+    title: 'Implement',
+    text: 'We configure, migrate, secure, test, and document the environment.'
+  },
+  {
+    title: 'Validate',
+    text: 'We perform user acceptance testing, restore testing, access validation, and security checks.'
+  },
+  {
+    title: 'Operate',
+    text: 'We provide support, monitoring, optimization, reporting, and continuous improvement.'
+  }
+]
+
 export default function Solutions() {
   return (
     <div>
@@ -269,6 +292,43 @@ export default function Solutions() {
                 </div>
               </div>
             </ClickCard>
+          ))}
+        </div>
+      </GemSection>
+
+      <GemSection
+        eyebrow="How we deliver"
+        title="A structured delivery approach"
+        lead="Enterprise IT work needs clear stages, evidence, and handover — not ad hoc implementation."
+      >
+        <div className="relative hidden lg:block">
+          <div className="absolute left-0 right-0 top-8 h-px bg-white/[0.12]" aria-hidden="true" />
+          <div className="grid grid-cols-5 gap-4">
+            {deliverySteps.map((step, i) => (
+              <article key={step.title} className="relative rounded-3xl border border-white/[0.12] bg-[#101E31] p-5 shadow-[0_18px_55px_-42px_rgba(0,0,0,0.9)]">
+                <div className="relative z-10 mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#38BDF8]/45 bg-[#0B1726] text-sm font-semibold text-[#FFFFFF]">
+                  {i + 1}
+                </div>
+                <h2 className="text-lg font-semibold tracking-tight text-[#FFFFFF]">{step.title}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid gap-4 lg:hidden">
+          {deliverySteps.map((step, i) => (
+            <Card key={step.title} revealDelay={0.04 + i * 0.03} variant="steel">
+              <div className="flex gap-4">
+                <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full border border-[#38BDF8]/45 bg-[#0B1726] text-sm font-semibold text-[#FFFFFF]">
+                  {i + 1}
+                </div>
+                <div>
+                  <h2 className="text-lg font-semibold tracking-tight text-[#FFFFFF]">{step.title}</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-[#CBD5E1]">{step.text}</p>
+                </div>
+              </div>
+            </Card>
           ))}
         </div>
       </GemSection>
