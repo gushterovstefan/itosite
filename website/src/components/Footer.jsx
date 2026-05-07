@@ -49,7 +49,7 @@ const trustItems = ['Microsoft cloud', 'ISO 27001:2022 aligned', 'Veeam ecosyste
 
 function FooterLink({ to, children }) {
   return (
-    <Link className="text-ink-900/60 transition hover:text-ink-950" to={to}>
+    <Link className="text-[#94A3B8] transition hover:text-[#F8FAFC]" to={to}>
       {children}
     </Link>
   )
@@ -61,34 +61,34 @@ export default function Footer() {
   const l = legal[lang] || legal.en
 
   return (
-    <footer className="relative z-20 border-t border-black/10 bg-white/82 backdrop-blur-xl">
+    <footer className="relative z-20 border-t border-white/10 bg-[#0B1728] backdrop-blur-xl">
       <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
-        <div className="rounded-3xl border border-black/10 bg-white/75 p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.55)] md:p-6">
+        <div className="rounded-3xl border border-white/10 bg-[#101E33] p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.55)] md:p-6">
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-800">{l.trustEyebrow}</div>
-              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-ink-900/70">{l.trustLine}</p>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#CBD5E1]">{l.trustLine}</p>
             </div>
-            <Link to="/how-we-deliver" className="text-sm font-semibold text-ink-950 underline decoration-brand-500/40 underline-offset-4 hover:decoration-brand-500">
+            <Link to="/how-we-deliver" className="text-sm font-semibold text-[#F8FAFC] underline decoration-brand-500/40 underline-offset-4 hover:decoration-brand-500">
               {l.howWeDeliver}
             </Link>
           </div>
 
           <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
             {trustItems.map((item) => (
-              <div key={item} className="rounded-2xl border border-black/10 bg-brand-200/25 px-4 py-3 text-sm font-semibold text-ink-950">
+              <div key={item} className="rounded-2xl border border-white/10 bg-brand-200/25 px-4 py-3 text-sm font-semibold text-[#F8FAFC]">
                 {item}
               </div>
             ))}
           </div>
-          <p className="mt-4 text-xs leading-relaxed text-ink-900/65">{l.trustNote}</p>
+          <p className="mt-4 text-xs leading-relaxed text-[#94A3B8]">{l.trustNote}</p>
         </div>
 
         <div className="mt-10 grid gap-8 md:grid-cols-4">
           <div>
             <div className="text-sm font-semibold">IT Outsource Ltd.</div>
-            <p className="mt-2 text-sm leading-relaxed text-ink-900/60">{content.shared.tagline}</p>
-            <div className="mt-4 space-y-1 text-xs leading-relaxed text-ink-900/70">
+            <p className="mt-2 text-sm leading-relaxed text-[#94A3B8]">{content.shared.tagline}</p>
+            <div className="mt-4 space-y-1 text-xs leading-relaxed text-[#CBD5E1]">
               <div>{l.registered}: Ай Ти Аутсорс ООД</div>
               <div>EIK: 200776949 · VAT: BG200776949</div>
               <div>{l.address}</div>
@@ -96,7 +96,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.companyTitle}</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#94A3B8]">{l.companyTitle}</div>
             <div className="mt-4 grid gap-3 text-sm">
               <FooterLink to="/about">{ui.about}</FooterLink>
               <FooterLink to="/how-we-deliver">{l.howWeDeliver}</FooterLink>
@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.servicesTitle}</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#94A3B8]">{l.servicesTitle}</div>
             <div className="mt-4 grid gap-3 text-sm">
               <FooterLink to="/it-support-services">{ui.support}</FooterLink>
               <FooterLink to="/it-infrastructure-services">{ui.infrastructure}</FooterLink>
@@ -117,11 +117,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.solutionsTitle}</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#94A3B8]">{l.solutionsTitle}</div>
             <div className="mt-4 grid gap-3 text-sm">
               {solutionLinks.map(([label, to]) => <FooterLink key={label} to={to}>{label}</FooterLink>)}
             </div>
-            <div className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{l.trustTitle}</div>
+            <div className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] text-[#94A3B8]">{l.trustTitle}</div>
             <div className="mt-4 grid gap-3 text-sm">
               <FooterLink to="/legal/privacy">{l.privacy}</FooterLink>
               <FooterLink to="/legal/terms">{l.terms}</FooterLink>
@@ -129,7 +129,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-black/10 pt-5 text-xs text-ink-900/65 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-5 text-xs text-[#94A3B8] md:flex-row md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} IT Outsource Ltd. / Ай Ти Аутсорс ООД</div>
           <div>{l.response}</div>
         </div>

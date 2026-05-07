@@ -80,7 +80,7 @@ export default function SolutionDetail() {
           {page.buyer.map((item, i) => (
             <Card key={item} revealDelay={0.04 + i * 0.04} variant="brand">
               <div className="flex items-start justify-between gap-4">
-                <p className="text-sm font-semibold leading-relaxed text-ink-950">{item}</p>
+                <p className="text-sm font-semibold leading-relaxed text-[#F8FAFC]">{item}</p>
                 <Icon as={icons.target} />
               </div>
             </Card>
@@ -90,7 +90,7 @@ export default function SolutionDetail() {
 
       <GemSection eyebrow="Delivery" title={l.deliver} lead={page.subline}>
         <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
-          <Card variant="violet" revealDelay={0.04}>
+          <Card variant="steel" revealDelay={0.04}>
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{l.deliver}</div>
               <Icon as={icons[page.icon] ?? icons.platform} />
@@ -102,10 +102,10 @@ export default function SolutionDetail() {
             <div className="text-sm font-semibold">{l.how}</div>
             <div className="mt-5 grid gap-3 md:grid-cols-5">
               {l.phases.map((phase, i) => (
-                <div key={phase} className="rounded-2xl border border-black/10 bg-white/65 p-3">
+                <div key={phase} className="rounded-2xl border border-white/10 bg-[#101E33] p-3">
                   <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-800">0{i + 1}</div>
-                  <div className="mt-2 text-sm font-semibold text-ink-950">{phase}</div>
-                  <p className="mt-2 text-xs leading-relaxed text-ink-900/62">{l.phaseText[i]}</p>
+                  <div className="mt-2 text-sm font-semibold text-[#F8FAFC]">{phase}</div>
+                  <p className="mt-2 text-xs leading-relaxed text-[#94A3B8]">{l.phaseText[i]}</p>
                 </div>
               ))}
             </div>
@@ -118,9 +118,9 @@ export default function SolutionDetail() {
           <Card variant="brand" revealDelay={0.04}>
             <div className="grid gap-3 md:grid-cols-5">
               {l.phases.map((phase, i) => (
-                <div key={phase} className="relative rounded-2xl border border-black/10 bg-white/70 p-4 text-center">
-                  <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-brand-200/70 text-xs font-bold text-ink-950">{i + 1}</div>
-                  <div className="mt-3 text-xs font-semibold text-ink-950">{phase}</div>
+                <div key={phase} className="relative rounded-2xl border border-white/10 bg-[#101E33] p-4 text-center">
+                  <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-brand-200/70 text-xs font-bold text-[#F8FAFC]">{i + 1}</div>
+                  <div className="mt-3 text-xs font-semibold text-[#F8FAFC]">{phase}</div>
                 </div>
               ))}
             </div>
@@ -130,7 +130,7 @@ export default function SolutionDetail() {
             <div className="text-sm font-semibold">{l.tooling}</div>
             <div className="mt-4 flex flex-wrap gap-2">
               {page.standards.map((item) => (
-                <span key={item} className="rounded-full border border-black/10 bg-white/75 px-3 py-1 text-xs font-semibold text-ink-900/65">{item}</span>
+                <span key={item} className="rounded-full border border-white/10 bg-[#101E33] px-3 py-1 text-xs font-semibold text-[#94A3B8]">{item}</span>
               ))}
             </div>
           </Card>
@@ -141,7 +141,7 @@ export default function SolutionDetail() {
         <div className="grid gap-4 md:grid-cols-3">
           {page.caseMetrics.map((metric, i) => (
             <Card key={metric} revealDelay={0.04 + i * 0.04}>
-              <div className="text-2xl font-semibold tracking-tight text-ink-950">{metric}</div>
+              <div className="text-2xl font-semibold tracking-tight text-[#F8FAFC]">{metric}</div>
             </Card>
           ))}
         </div>
@@ -151,8 +151,8 @@ export default function SolutionDetail() {
         <div className="grid gap-4 md:grid-cols-2">
           {l.questions.map(([q, a], i) => (
             <Card key={q} revealDelay={0.04 + i * 0.04} variant={i % 2 ? 'steel' : 'brand'}>
-              <div className="text-sm font-semibold text-ink-950">{q}</div>
-              <p className="mt-3 text-sm leading-relaxed text-ink-900/68">{a}</p>
+              <div className="text-sm font-semibold text-[#F8FAFC]">{q}</div>
+              <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{a}</p>
             </Card>
           ))}
         </div>

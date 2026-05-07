@@ -38,20 +38,20 @@ export default function About() {
               <div className="text-sm font-semibold">{c.missionTitle}</div>
               <Icon as={icons.mission} />
             </div>
-            <div className="mt-3 text-sm text-ink-900/70">{c.missionLead}</div>
-            <div className="mt-4 space-y-2 text-sm text-ink-900/70">
+            <div className="mt-3 text-sm text-[#CBD5E1]">{c.missionLead}</div>
+            <div className="mt-4 space-y-2 text-sm text-[#CBD5E1]">
               {c.missionBody.map((p) => (
                 <p key={p}>{p}</p>
               ))}
             </div>
           </Card>
 
-          <Card revealDelay={0.10} variant="violet" badge="Vision">
+          <Card revealDelay={0.10} variant="steel" badge="Vision">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.visionTitle}</div>
               <Icon as={icons.vision} />
             </div>
-            <div className="mt-4 space-y-2 text-sm text-ink-900/70">
+            <div className="mt-4 space-y-2 text-sm text-[#CBD5E1]">
               {c.visionBody.map((p) => (
                 <p key={p}>{p}</p>
               ))}
@@ -60,7 +60,7 @@ export default function About() {
               <div className="text-sm font-semibold">{c.purposeTitle}</div>
               <Icon as={icons.mission} className="opacity-60" />
             </div>
-            <div className="mt-2 space-y-2 text-sm text-ink-900/70">
+            <div className="mt-2 space-y-2 text-sm text-[#CBD5E1]">
               {c.purposeBody.map((p) => (
                 <p key={p}>{p}</p>
               ))}
@@ -74,7 +74,7 @@ export default function About() {
               <div className="text-sm font-semibold">{c.testimonialsTitle}</div>
               <Icon as={icons.testimonial} />
             </div>
-            <div className="mt-4 space-y-4 text-sm text-ink-900/70">
+            <div className="mt-4 space-y-4 text-sm text-[#CBD5E1]">
               {c.testimonials.map((t) => (
                 <p key={t}>{t}</p>
               ))}

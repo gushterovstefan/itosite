@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 html, body {
@@ -11,18 +11,18 @@ html, body {
 }
 
 body {
-  @apply bg-white text-ink-900 antialiased;
+  @apply bg-[#07111F] text-[#F8FAFC] antialiased;
   font-feature-settings: 'ss01' on, 'cv02' on;
 }
 
 /* nicer selection */
 ::selection {
-  background: rgba(116, 173, 60, 0.30);
+  background: rgba(56, 189, 248, 0.30);
 }
 
 /* premium readability helpers */
 .prose-lead {
-  @apply text-base leading-relaxed text-ink-900/70 md:text-lg;
+  @apply text-base leading-relaxed text-[#CBD5E1] md:text-lg;
 }
 
 .h1 {
@@ -58,9 +58,9 @@ body {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(189,235,149,0.55), rgba(134,217,77,0.36), rgba(189,235,149,0.55));
-  opacity: 0.55;
-  filter: blur(10px);
+  background: linear-gradient(90deg, rgba(37,99,235,0.45), rgba(56,189,248,0.30));
+  opacity: 0.34;
+  filter: blur(8px);
   z-index: -2;
 }
 
@@ -127,8 +127,7 @@ body {
   pointer-events: none;
   opacity: 0.9;
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(116,173,60,0.10), transparent 45%),
-    radial-gradient(circle at 80% 60%, rgba(217,70,239,0.08), transparent 50%);
+    linear-gradient(180deg, rgba(11,23,40,0.55), rgba(7,17,31,0.85));
   animation: sectionDrift 10s ease-in-out infinite;
 }
 
@@ -169,7 +168,7 @@ body {
 
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(116,173,60,0.45), rgba(217,70,239,0.35), transparent);
+  background: linear-gradient(90deg, transparent, rgba(37,99,235,0.45), rgba(56,189,248,0.28), transparent);
   background-size: 200% 100%;
   animation: lineFlow 6s ease-in-out infinite;
 }
@@ -198,7 +197,7 @@ body {
   transform: translateZ(36px);
   filter:
     drop-shadow(0 34px 90px rgba(0, 0, 0, 0.82))
-    drop-shadow(0 0 80px rgba(168, 85, 247, 0.18));
+    drop-shadow(0 0 70px rgba(56, 189, 248, 0.12));
 }
 
 /* fake thickness */
@@ -223,7 +222,7 @@ body {
     conic-gradient(from 120deg,
       rgba(255,255,255,0.00),
       rgba(255,255,255,0.16),
-      rgba(217,70,239,0.10),
+      rgba(56,189,248,0.10),
       rgba(255,255,255,0.08),
       rgba(255,255,255,0.00)
     );

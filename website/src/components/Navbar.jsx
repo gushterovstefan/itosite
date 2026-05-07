@@ -13,16 +13,11 @@ function NavItem({ to, label, end, activePath }) {
       to={to}
       aria-current={isActive ? 'page' : undefined}
       className={
-        'relative rounded-full px-3 py-2 text-sm font-medium tracking-wide transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70 ' +
-        (isActive ? 'text-ink-950' : 'text-ink-900/70 hover:text-ink-950')
+        'relative rounded-lg px-3 py-2 text-sm font-semibold tracking-normal transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 ' +
+        (isActive ? 'bg-white/10 text-[#F8FAFC]' : 'text-[#CBD5E1] hover:bg-white/8 hover:text-[#F8FAFC]')
       }
     >
-      {isActive ? (
-        <span
-          className="absolute inset-0 rounded-full bg-brand-200/50 ring-1 ring-brand-300/40"
-        />
-      ) : null}
-      <span className="relative z-10">{label}</span>
+      {label}
     </Link>
   )
 }
@@ -54,7 +49,6 @@ export default function Navbar() {
     }
   }, [])
 
-  // Close on ESC
   useEffect(() => {
     const onKeyDown = (e) => {
       if (e.key === 'Escape') {
@@ -66,7 +60,6 @@ export default function Navbar() {
     return () => window.removeEventListener('keydown', onKeyDown)
   }, [])
 
-  // Prevent background scroll when menu is open
   useEffect(() => {
     document.documentElement.style.overflow = open ? 'hidden' : ''
     if (open) window.setTimeout(() => closeButtonRef.current?.focus(), 0)
@@ -110,173 +103,88 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      {/* scroll progress */}
       <div
-        className="absolute left-0 top-0 h-[2px] w-full origin-left bg-gradient-to-r from-brand-600 via-brand-500 to-brand-300"
+        className="absolute left-0 top-0 h-[2px] w-full origin-left bg-[#2563EB]"
         style={{ transform: `scaleX(${scrollProgress})` }}
       />
 
       <div className="mx-auto max-w-6xl px-4 pt-3">
-        <div className="relative">
-          <div className="relative rounded-2xl border border-black/10 bg-white/75 px-4 shadow-[0_14px_50px_-28px_rgba(0,0,0,0.25)] backdrop-blur transition-transform duration-200 hover:-translate-y-0.5">
-            {/* glass edge + sheen */}
-            <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r from-brand-300/16 via-white/70 to-brand-200/10" />
-            <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-black/5" />
-            <div className="pointer-events-none absolute inset-x-0 top-0 h-px rounded-2xl bg-gradient-to-r from-transparent via-black/10 to-transparent" />
+        <div className="rounded-2xl border border-white/10 bg-[#07111F]/95 px-4 shadow-[0_18px_70px_-38px_rgba(0,0,0,0.95)] backdrop-blur-xl">
+          <div className="flex h-14 items-center justify-between gap-3">
+            <Link to="/" className="flex shrink-0 items-center" onClick={() => setOpen(false)}>
+              <img src={logo} alt="IT Outsource Ltd." width="96" height="92" className="h-9 w-auto md:h-10" loading="eager" />
+            </Link>
 
-            <div className="relative z-10 flex h-14 items-center justify-between">
-              {/* brand: logo only */}
-              <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
-                <div className="relative">
-                  <img
-                    src={logo}
-                    alt="IT Outsource Ltd."
-                    width="96"
-                    height="92"
-                    className="h-10 w-auto md:h-12"
-                    loading="eager"
-                  />
-                </div>
-              </Link>
+            <nav className="hidden items-center gap-1 md:flex" aria-label="Primary navigation">
+              {links.map((l) => (
+                <NavItem key={l.to} to={l.to} end={l.end} label={l.label} activePath={activePath} />
+              ))}
+              <button
+                type="button"
+                onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
+                className="ml-1 inline-flex items-center gap-1 rounded-lg border border-white/10 bg-[#101E33] px-3 py-2 text-xs font-semibold text-[#CBD5E1] hover:text-[#F8FAFC] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70"
+                aria-label="Toggle language"
+              >
+                <span className={lang === 'bg' ? 'text-[#F8FAFC]' : 'text-[#94A3B8]'}>BG</span>
+                <span className="text-[#94A3B8]">/</span>
+                <span className={lang === 'en' ? 'text-[#F8FAFC]' : 'text-[#94A3B8]'}>EN</span>
+              </button>
+            </nav>
 
-              {/* links */}
-              <nav className="hidden items-center gap-1 md:flex">
-                {links.map((l) => (
-                  <NavItem
-                    key={l.to}
-                    to={l.to}
-                    end={l.end}
-                    label={l.label}
-                    activePath={activePath}
-                  />
-                ))}
-                <button
-                  type="button"
-                  onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
-                  className="ml-1 inline-flex items-center gap-1 rounded-full border border-black/10 bg-white/70 px-3 py-2 text-xs font-semibold text-ink-900/80 hover:text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70"
-                  aria-label="Toggle language"
-                >
-                  <span className={lang === 'bg' ? 'text-ink-950' : 'text-ink-900/60'}>BG</span>
-                  <span className="text-ink-900/30">/</span>
-                  <span className={lang === 'en' ? 'text-ink-950' : 'text-ink-900/60'}>EN</span>
-                </button>
-              </nav>
+            <div className="flex items-center gap-2">
+              <SheenButton to="/contacts" className="hidden px-4 py-2 md:inline-flex">
+                {ui.getQuote}
+              </SheenButton>
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="hidden items-center justify-center rounded-full border border-white/10 bg-[#101E33] px-4 py-2 text-sm font-semibold text-[#F8FAFC] transition hover:bg-[#0B1728] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 md:inline-flex"
+              >
+                {bookingLabel}
+              </a>
 
-              {/* actions */}
-              <div className="flex items-center gap-2">
-                <SheenButton to="/contacts" className="hidden px-4 py-2 md:inline-flex">
-                  {ui.getQuote}
-                </SheenButton>
-                <a
-                  href={BOOKING_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hidden items-center justify-center rounded-full border border-black/10 bg-white/70 px-4 py-2 text-sm font-semibold text-ink-950/90 transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white md:inline-flex"
-                >
-                  {bookingLabel}
-                </a>
-
-
-                <button
-                  ref={menuButtonRef}
-                  type="button"
-                  className="ml-1 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-black/10 bg-white/70 text-ink-900/80 hover:text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70 md:hidden"
-                  aria-label={open ? 'Close menu' : 'Open menu'}
-                  aria-expanded={open}
-                  aria-controls="mobile-navigation"
-                  onClick={() => setOpen((v) => !v)}
-                >
-                  <span className="text-xl leading-none">{open ? '×' : '☰'}</span>
-                </button>
-              </div>
+              <button
+                ref={menuButtonRef}
+                type="button"
+                className="ml-1 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-[#101E33] text-[#F8FAFC] hover:bg-[#0B1728] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 md:hidden"
+                aria-label={open ? 'Close menu' : 'Open menu'}
+                aria-expanded={open}
+                aria-controls="mobile-navigation"
+                onClick={() => setOpen((v) => !v)}
+              >
+                <span className="text-xl leading-none">{open ? '×' : '☰'}</span>
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* mobile drawer */}
       {open ? (
-          <div className="fixed inset-0 z-[60] md:hidden">
-            <button
-              type="button"
-              aria-label="Close menu"
-              className="absolute inset-0 bg-black/60"
-              onClick={() => setOpen(false)}
-            />
-
-            <div
-              id="mobile-navigation"
-              ref={drawerRef}
-              role="dialog"
-              aria-modal="true"
-              aria-label="Site navigation"
-              className="relative mx-auto mt-16 w-full max-w-6xl px-4"
-            >
-              <div className="rounded-2xl border border-black/10 bg-white/95 p-3 shadow-2xl backdrop-blur">
-                <div className="mb-2 flex items-center justify-between px-1">
-                  <span className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">Menu</span>
-                  <button
-                    ref={closeButtonRef}
-                    type="button"
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-white/80 text-2xl leading-none text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70"
-                    aria-label="Close menu"
-                    onClick={() => setOpen(false)}
-                  >
-                    ×
-                  </button>
-                </div>
-                <div className="grid gap-1">
-                  {links.map((l) => (
-                    <NavLink
-                      key={l.to}
-                      to={l.to}
-                      end={l.end}
-                      onClick={() => setOpen(false)}
-                      className={({ isActive }) =>
-                        [
-                          'rounded-xl px-4 py-3 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70',
-                          isActive
-                            ? 'bg-brand-200/50 text-ink-950 ring-1 ring-brand-300/40'
-                            : 'text-ink-950/75 hover:bg-white/70 hover:text-ink-950'
-                        ].join(' ')
-                      }
-                    >
-                      {l.label}
-                    </NavLink>
-                  ))}
-                </div>
-
-                <div className="mt-3 grid gap-2">
-                  <SheenButton
-                    to="/contacts"
-                    onClick={() => setOpen(false)}
-                    className="w-full rounded-xl px-4 py-3 text-sm font-semibold"
-                  >
-                    {ui.getQuote}
-                  </SheenButton>
-
-                  <a
-                    href={BOOKING_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={() => setOpen(false)}
-                    className="inline-flex w-full items-center justify-center rounded-xl border border-black/10 bg-white/80 px-4 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    {bookingLabel}
-                  </a>
-
-                  <button
-                    type="button"
-                    onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
-                    className="inline-flex items-center justify-center rounded-xl border border-black/10 bg-white/70 px-4 py-3 text-sm font-semibold text-ink-950/80 hover:text-ink-950 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400/70"
-                  >
-                    {lang === 'bg' ? 'EN' : 'BG'}
-                  </button>
-                </div>
+        <div className="fixed inset-0 z-[60] md:hidden">
+          <button type="button" aria-label="Close menu" className="absolute inset-0 bg-black/70" onClick={() => setOpen(false)} />
+          <div id="mobile-navigation" ref={drawerRef} role="dialog" aria-modal="true" aria-label="Site navigation" className="relative mx-auto mt-16 w-full max-w-6xl px-4">
+            <div className="rounded-2xl border border-white/10 bg-[#07111F] p-3 shadow-2xl">
+              <div className="mb-2 flex items-center justify-between px-1">
+                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#94A3B8]">Menu</span>
+                <button ref={closeButtonRef} type="button" className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-[#101E33] text-2xl leading-none text-[#F8FAFC] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70" aria-label="Close menu" onClick={() => setOpen(false)}>×</button>
+              </div>
+              <div className="grid gap-1">
+                {links.map((l) => (
+                  <NavLink key={l.to} to={l.to} end={l.end} onClick={() => setOpen(false)} className={({ isActive }) => ['rounded-xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70', isActive ? 'bg-white/10 text-[#F8FAFC]' : 'text-[#CBD5E1] hover:bg-white/8 hover:text-[#F8FAFC]'].join(' ')}>
+                    {l.label}
+                  </NavLink>
+                ))}
+              </div>
+              <div className="mt-3 grid gap-2">
+                <SheenButton to="/contacts" onClick={() => setOpen(false)} className="w-full rounded-xl px-4 py-3 text-sm font-semibold">{ui.getQuote}</SheenButton>
+                <a href={BOOKING_URL} target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm font-semibold text-[#F8FAFC] hover:bg-[#0B1728]">{bookingLabel}</a>
+                <button type="button" onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')} className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm font-semibold text-[#CBD5E1] hover:text-[#F8FAFC]">BG / EN</button>
               </div>
             </div>
           </div>
-        ) : null}
+        </div>
+      ) : null}
     </header>
   )
 }

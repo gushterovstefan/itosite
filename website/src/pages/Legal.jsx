@@ -85,7 +85,7 @@ export default function Legal({ type }) {
           {page.sections.map(([title, body], i) => (
             <Card key={title} revealDelay={0.04 + i * 0.04} variant={i % 2 ? 'steel' : 'brand'}>
               <div className="text-sm font-semibold">{title}</div>
-              <p className="mt-3 text-sm leading-relaxed text-ink-900/70">{body}</p>
+              <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{body}</p>
             </Card>
           ))}
         </div>

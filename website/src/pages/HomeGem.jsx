@@ -22,14 +22,14 @@ export default function HomeGem() {
         <div className="mx-auto max-w-6xl px-4 pt-10 md:pt-12">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
-              <div className="inline-flex items-center gap-3 rounded-full border border-black/10 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-ink-950/75">
+              <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-[#101E33] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#CBD5E1]">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-400" aria-hidden="true" />
                 {ui.itServicesBadge}
               </div>
 
               <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-6xl">{c.heroTitle}</h1>
-              <p className="mt-5 text-base font-medium text-ink-950/85 md:text-lg">{c.heroSubline}</p>
-              <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-900/65 md:text-base">
+              <p className="mt-5 text-base font-medium text-[#F8FAFC] md:text-lg">{c.heroSubline}</p>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#94A3B8] md:text-base">
                 IT Outsource is a fast growing IT company with more than 10 years of experience designing,
                 implementing, integrating and supporting different IT solutions.
               </p>
@@ -40,7 +40,7 @@ export default function HomeGem() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 hover:bg-white/10"
+                  className="rounded-full border border-white/10 bg-[#101E33] px-6 py-3 text-sm font-semibold text-[#F8FAFC] hover:bg-[#14243D]"
                 >
                   <span>{lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-min call'}</span>
                 </a>
@@ -53,25 +53,25 @@ export default function HomeGem() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="rounded-3xl border border-black/10 bg-white/70 p-8"
+                className="rounded-3xl border border-white/10 bg-[#101E33] p-8"
               >
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-ink-900/70">Enterprise delivery</div>
-                  <div className="mt-3 text-4xl font-semibold tracking-tight text-ink-950">10+ years</div>
-                  <div className="mt-2 text-sm text-ink-900/65">Design · Build · Secure · Run</div>
+                  <div className="text-xs font-semibold uppercase tracking-[0.28em] text-[#CBD5E1]">Enterprise delivery</div>
+                  <div className="mt-3 text-4xl font-semibold tracking-tight text-[#F8FAFC]">10+ years</div>
+                  <div className="mt-2 text-sm text-[#94A3B8]">Design · Build · Secure · Run</div>
                 </div>
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
-                    <div className="text-xs text-ink-900/70">Availability</div>
+                  <div className="rounded-2xl border border-white/10 bg-[#101E33]0 px-4 py-3">
+                    <div className="text-xs text-[#CBD5E1]">Availability</div>
                     <div className="mt-1 text-sm font-semibold">24/7 Ops</div>
                   </div>
-                  <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
-                    <div className="text-xs text-ink-900/70">Security</div>
+                  <div className="rounded-2xl border border-white/10 bg-[#101E33]0 px-4 py-3">
+                    <div className="text-xs text-[#CBD5E1]">Security</div>
                     <div className="mt-1 text-sm font-semibold">MFA + Hardening</div>
                   </div>
-                  <div className="rounded-2xl border border-black/10 bg-white/700 px-4 py-3">
-                    <div className="text-xs text-ink-900/70">Delivery</div>
+                  <div className="rounded-2xl border border-white/10 bg-[#101E33]0 px-4 py-3">
+                    <div className="text-xs text-[#CBD5E1]">Delivery</div>
                     <div className="mt-1 text-sm font-semibold">SLA-driven</div>
                   </div>
                 </div>
@@ -85,14 +85,14 @@ export default function HomeGem() {
               <ClickCard
                 key={x.title}
                 to={i === 0 ? '/it-support-services' : i === 1 ? '/solutions' : '/it-infrastructure-services'}
-                variant={i === 0 ? 'brand' : i === 1 ? 'violet' : 'steel'}
+                variant={i === 0 ? 'brand' : i === 1 ? 'steel' : 'steel'}
                 badge={i === 0 ? 'Support' : i === 1 ? 'Solutions' : 'Infrastructure'}
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="text-sm font-semibold">{x.title}</div>
                   <Icon as={icons[x.icon] ?? icons.tools} />
                 </div>
-                <div className="mt-3 text-sm text-ink-900/70">{x.description}</div>
+                <div className="mt-3 text-sm text-[#CBD5E1]">{x.description}</div>
               </ClickCard>
             ))}
           </div>
@@ -121,7 +121,7 @@ export default function HomeGem() {
               <div className="text-sm font-semibold">{c.services.support.title}</div>
               <Icon as={icons.support} />
             </div>
-            <div className="mt-3 text-sm text-ink-900/70">{c.services.support.items[0]}</div>
+            <div className="mt-3 text-sm text-[#CBD5E1]">{c.services.support.items[0]}</div>
           </ClickCard>
 
           <ClickCard to="/it-infrastructure-services" variant="steel" badge="Platforms">
@@ -129,15 +129,15 @@ export default function HomeGem() {
               <div className="text-sm font-semibold">{c.services.infrastructure.title}</div>
               <Icon as={icons.infrastructure} />
             </div>
-            <div className="mt-3 text-sm text-ink-900/70">{c.services.infrastructure.items[0]}</div>
+            <div className="mt-3 text-sm text-[#CBD5E1]">{c.services.infrastructure.items[0]}</div>
           </ClickCard>
 
-          <ClickCard to="/it-consulting-services" variant="violet" badge="Strategy">
+          <ClickCard to="/it-consulting-services" variant="steel" badge="Strategy">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{c.services.consulting.title}</div>
               <Icon as={icons.consulting} />
             </div>
-            <div className="mt-3 text-sm text-ink-900/70">{c.services.consulting.items[0]}</div>
+            <div className="mt-3 text-sm text-[#CBD5E1]">{c.services.consulting.items[0]}</div>
           </ClickCard>
         </div>
       </GemSection>

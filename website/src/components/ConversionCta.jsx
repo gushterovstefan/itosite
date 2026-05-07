@@ -53,15 +53,15 @@ export default function ConversionCta({ variant = 'default', title, lead, second
   return (
     <section className="py-8 md:py-10">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/78 p-6 shadow-[0_22px_90px_-60px_rgba(0,0,0,0.75)] backdrop-blur md:p-8">
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#101E33] p-6 shadow-[0_22px_90px_-60px_rgba(0,0,0,0.75)] backdrop-blur md:p-8">
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-200/35 via-white/50 to-brand-300/20" />
           <div className="relative z-10 grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-800">Next step</div>
-              <h2 className="mt-3 text-2xl font-semibold tracking-tight text-ink-950 md:text-3xl">
+              <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[#F8FAFC] md:text-3xl">
                 {title || l[titleKey]}
               </h2>
-              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-900/68 md:text-base">
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#CBD5E1] md:text-base">
                 {lead || l[leadKey]}
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function ConversionCta({ variant = 'default', title, lead, second
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white/70 px-6 py-3 text-sm font-semibold text-ink-950/90 transition hover:bg-white"
+                className="inline-flex items-center justify-center rounded-full border border-white/10 bg-[#101E33] px-6 py-3 text-sm font-semibold text-[#F8FAFC] transition hover:bg-[#14243D]"
               >
                 {secondaryLabel || l[secondaryKey]}
               </a>

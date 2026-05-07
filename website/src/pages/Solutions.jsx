@@ -64,7 +64,7 @@ export default function Solutions() {
               : {}
 
             return (
-              <Shell key={card.title} revealDelay={0.04 + i * 0.04} variant="violet" {...props}>
+              <Shell key={card.title} revealDelay={0.04 + i * 0.04} variant="steel" {...props}>
                 <div className="flex items-start justify-between gap-4">
                   <div className="text-sm font-semibold">{card.title}</div>
                   <Icon as={icons[card.icon] ?? icons.platform} />

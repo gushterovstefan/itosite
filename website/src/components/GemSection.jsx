@@ -2,23 +2,23 @@ import Reveal from './Reveal.jsx'
 
 export default function GemSection({ eyebrow, title, lead, children }) {
   return (
-    <section className="py-8 md:py-10">
+    <section className="bg-[#07111F] py-8 text-[#F8FAFC] md:py-10">
       <div className="mx-auto max-w-6xl px-4">
         {eyebrow ? (
           <Reveal>
-            <div className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-800">
+            <div className="text-xs font-semibold uppercase tracking-[0.24em] text-[#38BDF8]">
               {eyebrow}
             </div>
           </Reveal>
         ) : null}
         {title ? (
           <Reveal delay={0.05}>
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-5xl">{title}</h2>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-[#F8FAFC] md:text-5xl">{title}</h2>
           </Reveal>
         ) : null}
         {lead ? (
           <Reveal delay={0.1}>
-            <p className="mt-2 max-w-3xl text-base text-ink-900/70 md:text-lg">{lead}</p>
+            <p className="mt-2 max-w-3xl text-base leading-relaxed text-[#CBD5E1] md:text-lg">{lead}</p>
           </Reveal>
         ) : null}
         {children ? <div className="mt-5">{children}</div> : null}

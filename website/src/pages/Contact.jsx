@@ -108,21 +108,21 @@ export default function Contact() {
               <div className="text-sm font-semibold">{ui.phoneLabel}</div>
               <Icon as={icons.phone} />
             </div>
-            <div className="mt-2 text-sm text-ink-900/70">{c.phone}</div>
+            <div className="mt-2 text-sm text-[#CBD5E1]">{c.phone}</div>
           </Card>
           <Card revealDelay={0.10}>
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{ui.emailLabel}</div>
               <Icon as={icons.mail} />
             </div>
-            <div className="mt-2 text-sm text-ink-900/70">{c.email}</div>
+            <div className="mt-2 text-sm text-[#CBD5E1]">{c.email}</div>
           </Card>
           <Card revealDelay={0.16} variant="brand" badge="Discovery">
             <div className="flex items-start justify-between gap-4">
               <div className="text-sm font-semibold">{f.discovery}</div>
               <Icon as={icons.message} />
             </div>
-            <p className="mt-3 text-sm leading-relaxed text-ink-900/70">{f.discoveryLead}</p>
+            <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{f.discoveryLead}</p>
           </Card>
         </div>
       </GemSection>
@@ -132,12 +132,12 @@ export default function Contact() {
           <Card revealDelay={0.04}>
             <form className="grid gap-3" onSubmit={handleSubmit}>
               <div className="grid gap-3 md:grid-cols-2">
-                <input name="name" required className="rounded-xl border border-black/10 bg-white/75 px-4 py-3 text-sm text-ink-950 outline-none placeholder:text-ink-900/65 focus:border-brand-400" placeholder={f.name} />
-                <input name="company" className="rounded-xl border border-black/10 bg-white/75 px-4 py-3 text-sm text-ink-950 outline-none placeholder:text-ink-900/65 focus:border-brand-400" placeholder={f.company} />
-                <input name="email" required type="email" className="rounded-xl border border-black/10 bg-white/75 px-4 py-3 text-sm text-ink-950 outline-none placeholder:text-ink-900/65 focus:border-brand-400" placeholder={f.email} />
-                <input name="phone" className="rounded-xl border border-black/10 bg-white/75 px-4 py-3 text-sm text-ink-950 outline-none placeholder:text-ink-900/65 focus:border-brand-400" placeholder={f.phone} />
+                <input name="name" required className="rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none placeholder:text-[#94A3B8] focus:border-brand-400" placeholder={f.name} />
+                <input name="company" className="rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none placeholder:text-[#94A3B8] focus:border-brand-400" placeholder={f.company} />
+                <input name="email" required type="email" className="rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none placeholder:text-[#94A3B8] focus:border-brand-400" placeholder={f.email} />
+                <input name="phone" className="rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none placeholder:text-[#94A3B8] focus:border-brand-400" placeholder={f.phone} />
               </div>
-              <select name="topic" aria-label={f.topic} className="rounded-xl border border-black/10 bg-white/75 px-4 py-3 text-sm text-ink-950 outline-none focus:border-brand-400" defaultValue="">
+              <select name="topic" aria-label={f.topic} className="rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none focus:border-brand-400" defaultValue="">
                 <option value="" disabled>{f.topic}</option>
                 <option>Managed IT support</option>
                 <option>Infrastructure / virtualization</option>
@@ -146,10 +146,10 @@ export default function Contact() {
                 <option>Backup / DR</option>
                 <option>Web platform</option>
               </select>
-              <textarea name="message" required className="min-h-36 rounded-xl border border-black/10 bg-white/75 px-4 py-3 text-sm text-ink-950 outline-none placeholder:text-ink-900/65 focus:border-brand-400" placeholder={f.message} />
+              <textarea name="message" required className="min-h-36 rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none placeholder:text-[#94A3B8] focus:border-brand-400" placeholder={f.message} />
               <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                <p className="text-xs leading-relaxed text-ink-900/70">{f.fileNote}</p>
-                <button type="submit" className="btn-sheen btn-primary rounded-full bg-brand-200/50 px-6 py-3 text-sm font-semibold text-ink-950 ring-1 ring-brand-300/40 hover:bg-brand-200/70">
+                <p className="text-xs leading-relaxed text-[#CBD5E1]">{f.fileNote}</p>
+                <button type="submit" className="btn-sheen btn-primary rounded-full bg-brand-200/50 px-6 py-3 text-sm font-semibold text-[#F8FAFC] ring-1 ring-brand-300/40 hover:bg-brand-200/70">
                   <span className="sheen" aria-hidden="true" />
                   <span>{f.submit}</span>
                 </button>
@@ -161,7 +161,7 @@ export default function Contact() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <div className="text-sm font-semibold">{f.bookingTitle}</div>
-                <p className="mt-3 text-sm leading-relaxed text-ink-900/70">{f.bookingLead}</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{f.bookingLead}</p>
               </div>
               <Icon as={icons.calendar ?? icons.message} />
             </div>

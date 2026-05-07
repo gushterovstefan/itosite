@@ -47,9 +47,9 @@ export function InsightsHub() {
               <ClickCard key={slug} to={`/insights/${slug}`} revealDelay={0.04 + i * 0.04} variant={i % 2 ? 'steel' : 'brand'} badge={article.eyebrow}>
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <h2 className="text-lg font-semibold tracking-tight text-ink-950">{article.title}</h2>
-                    <p className="mt-3 text-sm leading-relaxed text-ink-900/68">{article.description}</p>
-                    <div className="mt-4 text-xs font-semibold uppercase tracking-[0.22em] text-ink-900/65">{article.readTime}</div>
+                    <h2 className="text-lg font-semibold tracking-tight text-[#F8FAFC]">{article.title}</h2>
+                    <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{article.description}</p>
+                    <div className="mt-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#94A3B8]">{article.readTime}</div>
                   </div>
                   <Icon as={icons[article.icon] ?? icons.platform} />
                 </div>
@@ -101,23 +101,23 @@ export function InsightDetail() {
           <div className="grid gap-4">
             {article.sections.map(([title, body], i) => (
               <Card key={title} revealDelay={0.04 + i * 0.03} variant={i % 2 ? 'steel' : 'brand'}>
-                <h2 className="text-lg font-semibold tracking-tight text-ink-950">{title}</h2>
-                <p className="mt-3 text-sm leading-relaxed text-ink-900/70">{body}</p>
+                <h2 className="text-lg font-semibold tracking-tight text-[#F8FAFC]">{title}</h2>
+                <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{body}</p>
               </Card>
             ))}
           </div>
 
           <div className="sticky top-24 grid gap-4">
-            <Card variant="violet" revealDelay={0.08} badge={l.checklist}>
+            <Card variant="steel" revealDelay={0.08} badge={l.checklist}>
               <div className="text-sm font-semibold">{l.checklist}</div>
               <div className="mt-4"><BulletList items={article.checklist} /></div>
             </Card>
             <Card variant="amber" revealDelay={0.12}>
               <div className="text-sm font-semibold">{l.related}</div>
               <div className="mt-4 grid gap-2 text-sm">
-                <Link className="rounded-xl border border-black/10 bg-white/65 px-3 py-2 font-semibold text-ink-950 hover:bg-white" to="/solutions/cloud-migration">Cloud Migration</Link>
-                <Link className="rounded-xl border border-black/10 bg-white/65 px-3 py-2 font-semibold text-ink-950 hover:bg-white" to="/solutions/zero-trust-security">Zero Trust Security</Link>
-                <Link className="rounded-xl border border-black/10 bg-white/65 px-3 py-2 font-semibold text-ink-950 hover:bg-white" to="/solutions/backup-dr-veeam">Backup & DR</Link>
+                <Link className="rounded-xl border border-white/10 bg-[#101E33] px-3 py-2 font-semibold text-[#F8FAFC] hover:bg-[#14243D]" to="/solutions/cloud-migration">Cloud Migration</Link>
+                <Link className="rounded-xl border border-white/10 bg-[#101E33] px-3 py-2 font-semibold text-[#F8FAFC] hover:bg-[#14243D]" to="/solutions/zero-trust-security">Zero Trust Security</Link>
+                <Link className="rounded-xl border border-white/10 bg-[#101E33] px-3 py-2 font-semibold text-[#F8FAFC] hover:bg-[#14243D]" to="/solutions/backup-dr-veeam">Backup & DR</Link>
               </div>
             </Card>
           </div>

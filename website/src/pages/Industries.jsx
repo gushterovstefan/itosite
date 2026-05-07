@@ -59,8 +59,8 @@ export function IndustriesHub() {
               <ClickCard key={slug} to={`/industries/${slug}`} revealDelay={0.04 + i * 0.04} variant={i % 2 ? 'steel' : 'brand'} badge={page.eyebrow}>
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <h2 className="text-lg font-semibold tracking-tight text-ink-950">{page.title}</h2>
-                    <p className="mt-3 text-sm leading-relaxed text-ink-900/68">{page.lead}</p>
+                    <h2 className="text-lg font-semibold tracking-tight text-[#F8FAFC]">{page.title}</h2>
+                    <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{page.lead}</p>
                   </div>
                   <Icon as={icons[page.icon] ?? icons.platform} />
                 </div>
@@ -108,7 +108,7 @@ export function IndustryDetail({ slug }) {
           {page.outcomes.map((item, i) => (
             <Card key={item} revealDelay={0.04 + i * 0.04} variant="brand">
               <div className="flex items-start justify-between gap-4">
-                <p className="text-sm font-semibold leading-relaxed text-ink-950">{item}</p>
+                <p className="text-sm font-semibold leading-relaxed text-[#F8FAFC]">{item}</p>
                 <Icon as={icons.target} />
               </div>
             </Card>
@@ -118,19 +118,19 @@ export function IndustryDetail({ slug }) {
 
       <GemSection eyebrow="Solutions" title={l.solutions} lead={page.caseBody}>
         <div className="grid gap-4 md:grid-cols-2">
-          <Card variant="violet" revealDelay={0.04}>
+          <Card variant="steel" revealDelay={0.04}>
             <div className="text-sm font-semibold">{l.solutions}</div>
             <div className="mt-4"><BulletList items={page.solutions} /></div>
-            <Link className="mt-5 inline-flex rounded-full border border-black/10 bg-white/70 px-4 py-2 text-sm font-semibold text-ink-950 hover:bg-white" to="/solutions">
+            <Link className="mt-5 inline-flex rounded-full border border-white/10 bg-[#101E33] px-4 py-2 text-sm font-semibold text-[#F8FAFC] hover:bg-[#14243D]" to="/solutions">
               {content.shared.ui.solutions}
             </Link>
           </Card>
           <Card variant="steel" revealDelay={0.10} badge={l.caseStudy}>
-            <h2 className="text-lg font-semibold tracking-tight text-ink-950">{page.caseTitle}</h2>
-            <p className="mt-3 text-sm leading-relaxed text-ink-900/68">{page.caseBody}</p>
+            <h2 className="text-lg font-semibold tracking-tight text-[#F8FAFC]">{page.caseTitle}</h2>
+            <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{page.caseBody}</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {page.metrics.map((metric) => (
-                <span key={metric} className="rounded-full border border-black/10 bg-white/75 px-3 py-1 text-xs font-semibold text-ink-900/65">{metric}</span>
+                <span key={metric} className="rounded-full border border-white/10 bg-[#101E33] px-3 py-1 text-xs font-semibold text-[#94A3B8]">{metric}</span>
               ))}
             </div>
           </Card>

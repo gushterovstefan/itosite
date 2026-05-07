@@ -9,16 +9,8 @@ function setVars(el, clientX, clientY) {
   el.style.setProperty('--my', `${y}px`)
 }
 
-/**
- * Primary CTA button with cursor-follow sheen.
- * Works with react-router <Link> via `to`.
- */
-const SheenButton = forwardRef(function SheenButton(
-  { to, href, children, className = '', ...props },
-  ref
-) {
+const SheenButton = forwardRef(function SheenButton({ to, href, children, className = '', ...props }, ref) {
   const innerRef = useRef(null)
-
   const Comp = to ? Link : 'a'
   const compProps = to ? { to } : { href }
 
@@ -31,10 +23,7 @@ const SheenButton = forwardRef(function SheenButton(
       }}
       {...compProps}
       {...props}
-      className={
-        'btn-sheen btn-primary inline-flex items-center justify-center rounded-full bg-brand-200/50 px-6 py-3 text-sm font-semibold text-ink-950 ring-1 ring-brand-300/40 shadow-lg shadow-brand-300/20 hover:bg-brand-200/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white ' +
-        className
-      }
+      className={'btn-sheen btn-primary inline-flex items-center justify-center rounded-full bg-[#2563EB] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_38px_-22px_rgba(37,99,235,0.9)] ring-1 ring-[#38BDF8]/25 transition hover:bg-[#1D4ED8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 ' + className}
       onMouseMove={(e) => {
         if (innerRef.current) setVars(innerRef.current, e.clientX, e.clientY)
         props.onMouseMove?.(e)
