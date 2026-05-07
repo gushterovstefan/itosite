@@ -2,7 +2,7 @@ import Reveal from './Reveal.jsx'
 
 export default function GemSection({ eyebrow, title, lead, children, dark = false }) {
   return (
-    <section className={(dark ? 'dark-section bg-[#07111F] text-[#F8FAFC]' : 'light-section bg-[#F8FAFC] text-[#0F172A]') + ' pb-8 pt-6 md:pb-10 md:pt-6'}>
+    <section className={(dark ? 'dark-section bg-[#081526] text-[#F8FAFC]' : 'light-section bg-[#EEF4FA] text-[#0F172A]') + ' pb-8 pt-6 md:pb-10 md:pt-6'}>
       <div className="mx-auto max-w-6xl px-4">
         {eyebrow ? (
           <Reveal>

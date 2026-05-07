@@ -32,7 +32,12 @@ export default function Infrastructure() {
         }}
       />
 
-      <GemSection eyebrow={ui.infrastructure} title={c.title} lead={c.punchline}>
+      <GemSection
+        dark
+        eyebrow="INFRASTRUCTURE"
+        title="Infrastructure Built for Hybrid Reality"
+        lead="Azure, Microsoft 365, VMware and Proxmox rarely live in isolation. We design and operate them as one controlled environment — with security, backup and accountability built in."
+      >
         <div className="grid gap-4 lg:grid-cols-2">
           {c.cards.map((card, i) => (
             <Card key={card.title} revealDelay={0.04 + i * 0.04} variant="steel">
