@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useContent } from '../content/index.jsx'
+import brandBanner from '../assets/brand-banner-600.jpg'
 
 const legal = {
   en: {
@@ -83,7 +84,16 @@ export default function Footer() {
 
         <div className="mt-10 grid gap-8 md:grid-cols-4">
           <div>
-            <div className="text-sm font-semibold">IT Outsource Ltd.</div>
+            <img
+              src={brandBanner}
+              alt="IT Outsource Ltd. — Enterprise IT, Cloud, Operations"
+              width="600"
+              height="160"
+              className="w-full max-w-[260px] rounded-2xl border border-white/10 bg-[#07111F] object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="mt-4 text-sm font-semibold">IT Outsource Ltd.</div>
             <p className="mt-2 text-sm leading-relaxed text-[#94A3B8]">{content.shared.tagline}</p>
             <div className="mt-4 space-y-1 text-xs leading-relaxed text-[#CBD5E1]">
               <div>{l.registered}: Ай Ти Аутсорс ООД</div>

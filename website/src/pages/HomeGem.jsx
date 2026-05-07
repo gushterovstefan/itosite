@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import GemSection from '../components/GemSection.jsx'
 import KpiStrip from '../components/KpiStrip.jsx'
 import Stepper from '../components/Stepper.jsx'
@@ -8,6 +7,7 @@ import SheenButton from '../components/SheenButton.jsx'
 import ProofLayer from '../components/ProofLayer.jsx'
 import ConversionCta from '../components/ConversionCta.jsx'
 import NetworkBackdrop from '../components/NetworkBackdrop.jsx'
+import brandBanner from '../assets/brand-banner-600.jpg'
 import { useContent } from '../content/index.jsx'
 import { BOOKING_URL } from '../config/booking.js'
 
@@ -50,13 +50,18 @@ export default function HomeGem() {
 
             {/* hero side: logo + metric-like cards (inspired, not a clone) */}
             <div className="relative bg-[#07111F] text-[#F8FAFC]">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="rounded-3xl border border-white/10 bg-[#101E33] p-8"
-              >
-                <div>
+              <div className="rounded-3xl border border-white/10 bg-[#101E33] p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.65)] md:p-8">
+                <img
+                  src={brandBanner}
+                  alt="IT Outsource Ltd. — Enterprise IT, Cloud, Operations"
+                  width="600"
+                  height="160"
+                  className="w-full rounded-2xl border border-white/10 bg-[#07111F] object-contain"
+                  loading="eager"
+                  decoding="async"
+                />
+
+                <div className="mt-6">
                   <div className="text-xs font-semibold uppercase tracking-[0.28em] text-[#CBD5E1]">Enterprise delivery</div>
                   <div className="mt-3 text-4xl font-semibold tracking-tight text-[#F8FAFC]">15+ years</div>
                   <div className="mt-2 text-sm text-[#94A3B8]">Design · Build · Secure · Run</div>
@@ -76,7 +81,7 @@ export default function HomeGem() {
                     <div className="mt-1 text-sm font-semibold">SLA-driven</div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
 

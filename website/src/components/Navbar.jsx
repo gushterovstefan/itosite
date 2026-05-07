@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useContent } from '../content/index.jsx'
-import logo from '../assets/logo-globe-small.jpg'
+import logo from '../assets/brand-icon.png'
 import { BOOKING_URL } from '../config/booking.js'
 
 function NavItem({ to, label, end, activePath, onClick }) {
@@ -93,8 +93,8 @@ export default function Navbar() {
     <header className="enterprise-header fixed inset-x-0 top-0 z-50 h-16 border-b border-white/[0.08] bg-[#07111F] shadow-[0_18px_60px_-46px_rgba(0,0,0,0.95)] md:h-[72px]">
       <div className="mx-auto flex h-full max-w-6xl items-center justify-between gap-3 px-4">
         <Link to="/" className="flex shrink-0 items-center gap-3" aria-label="IT Outsource home">
-          <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-xl border border-white/10 bg-[#F8FAFC] p-1 md:h-11 md:w-11">
-            <img src={logo} alt="IT Outsource Ltd." width="96" height="92" className="h-full w-full object-contain" loading="eager" />
+          <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-xl border border-white/10 bg-[#07111F] p-0.5 md:h-11 md:w-11">
+            <img src={logo} alt="IT Outsource Ltd." width="512" height="512" className="h-full w-full object-cover" loading="eager" />
           </span>
           <span className="hidden leading-tight xl:block">
             <span className="block text-sm font-semibold tracking-tight text-[#F8FAFC]">IT Outsource</span>

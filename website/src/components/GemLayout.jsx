@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
-import logo from '../assets/logo-green.jpg'
+import logo from '../assets/brand-icon.png'
 
 const HeroWebGL = lazy(() => import('./HeroWebGL.jsx'))
 
