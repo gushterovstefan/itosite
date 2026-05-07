@@ -6,8 +6,8 @@ export default function KpiStrip({ items }) {
           key={kpi.label}
           className={[
             'rounded-3xl border border-white/10 bg-[#101E33] p-6',
-            i === 0 ? 'bg-gradient-to-b from-brand-500/14 to-white/5' : '',
-            i === 3 ? 'bg-gradient-to-b from-[#38BDF8]/10 to-white/5' : ''
+            i === 0 ? 'bg-gradient-to-b from-[#2563EB]/14 to-[#0B1728]' : '',
+            i === 3 ? 'bg-gradient-to-b from-[#38BDF8]/10 to-[#0B1728]' : ''
           ].join(' ')}
         >
           <div className="text-3xl font-semibold tracking-tight md:text-4xl">{kpi.value}</div>

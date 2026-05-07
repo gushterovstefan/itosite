@@ -42,7 +42,7 @@ export default function Spotlight({ className = '' }) {
     }
   }, [reduce, x, y])
 
-  const background = useMotionTemplate`radial-gradient(260px circle at ${x}px ${y}px, rgba(116,173,60,0.12), rgba(217,70,239,0.07), transparent 62%)`
+  const background = useMotionTemplate`radial-gradient(260px circle at ${x}px ${y}px, rgba(37,99,235,0.12), rgba(56,189,248,0.07), transparent 62%)`
 
   if (reduce) return null
 

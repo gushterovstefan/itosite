@@ -7,7 +7,7 @@ export default function Stepper({ steps }) {
         <li key={s.title} className="rounded-3xl border border-white/10 bg-[#101E33] p-6">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="grid h-9 w-9 place-items-center rounded-2xl border border-white/10 bg-[#101E33]0 text-sm font-semibold text-[#F8FAFC]">
+              <div className="grid h-9 w-9 place-items-center rounded-2xl border border-white/10 bg-[#0B1728] text-sm font-semibold text-[#F8FAFC]">
                 {String(idx + 1).padStart(2, '0')}
               </div>
               <div className="text-sm font-semibold">{s.title}</div>

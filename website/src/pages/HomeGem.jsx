@@ -16,7 +16,7 @@ export default function HomeGem() {
   const ui = content.shared.ui
 
   return (
-    <div id="top" className="relative">
+    <div id="top" className="relative bg-[#07111F] text-[#F8FAFC]">
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 pt-10 md:pt-12">
@@ -48,7 +48,7 @@ export default function HomeGem() {
             </div>
 
             {/* hero side: logo + metric-like cards (inspired, not a clone) */}
-            <div className="relative">
+            <div className="relative bg-[#07111F] text-[#F8FAFC]">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -62,15 +62,15 @@ export default function HomeGem() {
                 </div>
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-2xl border border-white/10 bg-[#101E33]0 px-4 py-3">
+                  <div className="rounded-2xl border border-white/10 bg-[#0B1728] px-4 py-3">
                     <div className="text-xs text-[#CBD5E1]">Availability</div>
                     <div className="mt-1 text-sm font-semibold">24/7 Ops</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-[#101E33]0 px-4 py-3">
+                  <div className="rounded-2xl border border-white/10 bg-[#0B1728] px-4 py-3">
                     <div className="text-xs text-[#CBD5E1]">Security</div>
                     <div className="mt-1 text-sm font-semibold">MFA + Hardening</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-[#101E33]0 px-4 py-3">
+                  <div className="rounded-2xl border border-white/10 bg-[#0B1728] px-4 py-3">
                     <div className="text-xs text-[#CBD5E1]">Delivery</div>
                     <div className="mt-1 text-sm font-semibold">SLA-driven</div>
                   </div>

@@ -14,7 +14,7 @@ function NavItem({ to, label, end, activePath }) {
       aria-current={isActive ? 'page' : undefined}
       className={
         'relative rounded-lg px-3 py-2 text-sm font-semibold tracking-normal transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 ' +
-        (isActive ? 'bg-white/10 text-[#F8FAFC]' : 'text-[#CBD5E1] hover:bg-white/8 hover:text-[#F8FAFC]')
+        (isActive ? 'bg-[#101E33] text-[#F8FAFC]' : 'text-[#CBD5E1] hover:bg-[#101E33] hover:text-[#F8FAFC]')
       }
     >
       {label}
@@ -171,7 +171,7 @@ export default function Navbar() {
               </div>
               <div className="grid gap-1">
                 {links.map((l) => (
-                  <NavLink key={l.to} to={l.to} end={l.end} onClick={() => setOpen(false)} className={({ isActive }) => ['rounded-xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70', isActive ? 'bg-white/10 text-[#F8FAFC]' : 'text-[#CBD5E1] hover:bg-white/8 hover:text-[#F8FAFC]'].join(' ')}>
+                  <NavLink key={l.to} to={l.to} end={l.end} onClick={() => setOpen(false)} className={({ isActive }) => ['rounded-xl px-4 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70', isActive ? 'bg-[#101E33] text-[#F8FAFC]' : 'text-[#CBD5E1] hover:bg-[#101E33] hover:text-[#F8FAFC]'].join(' ')}>
                     {l.label}
                   </NavLink>
                 ))}

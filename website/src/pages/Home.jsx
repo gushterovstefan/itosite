@@ -44,7 +44,7 @@ export default function Home() {
   const watermarkRotate = useTransform(scrollY, [0, 600], [0, -6])
 
   return (
-    <div id="top" className="relative">
+    <div id="top" className="relative bg-[#07111F] text-[#F8FAFC]">
       {/* Home background WebGL (desktop only) */}
       <div className="pointer-events-none absolute inset-0 -z-10 hidden md:block">
         <Suspense fallback={null}>
@@ -87,7 +87,7 @@ export default function Home() {
           {/* animated gradient glow */}
           <div className="hero-float absolute -left-40 -top-40 h-96 w-96 rounded-full bg-[#2563EB]/14 blur-3xl" />
           <div className="hero-float absolute -bottom-56 right-0 h-[32rem] w-[32rem] rounded-full bg-[#38BDF8]/10 blur-3xl" />
-          <div className="hero-float absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(116,173,60,0.16),transparent_45%),radial-gradient(circle_at_80%_60%,rgba(217,70,239,0.10),transparent_52%)]" />
+          <div className="hero-float absolute inset-0 bg-[linear-gradient(180deg,#07111F_0%,#0B1728_100%)]" />
 
           {/* subtle grid + noise */}
           <div className="absolute inset-0 hero-grid" />
@@ -142,7 +142,7 @@ export default function Home() {
             className="max-w-3xl"
           >
             <motion.div variants={fadeUp} className="inline-flex">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-brand-200/90">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#101E33] px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-brand-200/90">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-400" aria-hidden="true" />
                 {ui.itServicesBadge}
               </span>
@@ -163,7 +163,7 @@ export default function Home() {
               <SheenButton to="/contacts">{ui.contactUs}</SheenButton>
               <Link
                 to="/solutions"
-                className="rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-[#14243D]"
+                className="rounded-full border border-white/15 bg-[#101E33] px-6 py-3 text-sm font-semibold text-[#F8FAFC] hover:bg-[#14243D]"
               >
                 <span>{ui.exploreSolutions}</span>
               </Link>
@@ -261,7 +261,7 @@ export default function Home() {
                 <div className="text-sm font-semibold">{c.services.trust.title}</div>
                 <div className="mt-2 text-sm text-white/78">{c.services.trust.description}</div>
               </div>
-              <span className="grid h-10 w-10 place-items-center rounded-2xl border border-white/10 bg-white/5">
+              <span className="grid h-10 w-10 place-items-center rounded-2xl border border-white/10 bg-[#101E33]">
                 <Icon as={icons.security} className="h-6 w-6 text-brand-100" />
               </span>
             </div>
@@ -311,7 +311,7 @@ export default function Home() {
       {/* CTA */}
       <section className="border-t border-white/10 py-14">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-brand-500/14 via-white/5 to-[#38BDF8]/10 p-8 md:p-12">
+          <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-[#2563EB]/14 via-[#0B1728] to-[#38BDF8]/10 p-8 md:p-12">
             <div className="text-xl font-semibold md:text-2xl">Ready to modernize your IT?</div>
             <div className="mt-2 max-w-2xl text-sm text-white/78 md:text-base">
               Your IT needs are placed in the hands of multifunctional and certified experts that use

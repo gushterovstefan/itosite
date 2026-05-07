@@ -15,6 +15,11 @@ body {
   font-feature-settings: 'ss01' on, 'cv02' on;
 }
 
+#root {
+  min-height: 100%;
+  background: #07111F;
+}
+
 /* nicer selection */
 ::selection {
   background: rgba(56, 189, 248, 0.30);
@@ -237,7 +242,7 @@ body {
   border-radius: 9999px;
   background:
     radial-gradient(520px circle at 20% 18%, rgba(255,255,255,0.24), transparent 45%),
-    radial-gradient(520px circle at 82% 72%, rgba(217,70,239,0.18), transparent 55%),
+    radial-gradient(520px circle at 82% 72%, rgba(56,189,248,0.12), transparent 55%),
     linear-gradient(110deg, transparent, rgba(255,255,255,0.14), transparent);
   mix-blend-mode: screen;
   opacity: 0.85;

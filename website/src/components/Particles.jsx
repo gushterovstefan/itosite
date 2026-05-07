@@ -18,7 +18,7 @@ export default function Particles() {
       {dots.map((p, i) => (
         <motion.div
           key={i}
-          className="absolute rounded-full bg-white"
+          className="absolute rounded-full bg-[#38BDF8]"
           style={{ left: p.x, top: p.y, width: p.s, height: p.s, opacity: 0.06 }}
           animate={{ y: [0, -10, 0], opacity: [0.06, 0.12, 0.06] }}
           transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: p.d }}

@@ -21,7 +21,7 @@ export default function PageHero({
     <section className="relative overflow-hidden bg-[#07111F] pt-12 text-[#F8FAFC] md:pt-16">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(180deg,#07111F_0%,#0B1728_100%)]" />
-        <div className="absolute inset-x-0 top-0 h-px bg-white/10" />
+        <div className="absolute inset-x-0 top-0 h-px bg-[#101E33]" />
         <div className="absolute inset-0 hero-grid opacity-20" />
       </div>
 
@@ -43,9 +43,9 @@ export default function PageHero({
               <SheenButton to={primaryCta.to} href={primaryCta.href} target={primaryCta.href ? '_blank' : undefined} rel={primaryCta.href ? 'noreferrer' : undefined}>{primaryCta.label}</SheenButton>
               <a href={BOOKING_URL} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-[#101E33] px-6 py-3 text-sm font-semibold text-[#F8FAFC] transition hover:bg-[#0B1728] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70"><span>{bookingLabel}</span></a>
               {showSecondary && secondaryCta.href ? (
-                <a href={secondaryCta.href} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-transparent px-6 py-3 text-sm font-semibold text-[#CBD5E1] hover:bg-white/8"><span>{secondaryCta.label}</span></a>
+                <a href={secondaryCta.href} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-transparent px-6 py-3 text-sm font-semibold text-[#CBD5E1] hover:bg-[#101E33]"><span>{secondaryCta.label}</span></a>
               ) : showSecondary ? (
-                <Link to={secondaryCta.to} className="rounded-full border border-white/10 bg-transparent px-6 py-3 text-sm font-semibold text-[#CBD5E1] hover:bg-white/8"><span>{secondaryCta.label}</span></Link>
+                <Link to={secondaryCta.to} className="rounded-full border border-white/10 bg-transparent px-6 py-3 text-sm font-semibold text-[#CBD5E1] hover:bg-[#101E33]"><span>{secondaryCta.label}</span></Link>
               ) : null}
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function PageHero({
           ) : null}
         </div>
 
-        <div className="mt-10 h-px bg-white/10" />
+        <div className="mt-10 h-px bg-[#101E33]" />
       </div>
     </section>
   )
