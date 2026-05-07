@@ -326,6 +326,39 @@ function serviceFor(path, data) {
   }
 }
 
+function websiteFor() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${origin}/#website`,
+    name: 'IT Outsource Ltd.',
+    url: origin,
+    publisher: { '@id': `${origin}/#organization` },
+    inLanguage: 'en',
+    potentialAction: {
+      '@type': 'ContactAction',
+      target: `${origin}/contacts`,
+      name: 'Book a consultation'
+    }
+  }
+}
+
+function webPageFor(path, data) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': path.startsWith('/insights') || path === '/how-we-deliver' ? 'Article' : 'WebPage',
+    '@id': `${origin}${path}#webpage`,
+    url: `${origin}${path}`,
+    name: data.title,
+    headline: data.title,
+    description: data.description,
+    image: ogImage,
+    isPartOf: { '@id': `${origin}/#website` },
+    publisher: { '@id': `${origin}/#organization` },
+    inLanguage: 'en'
+  }
+}
+
 function setJsonLd(id, payload) {
   const old = document.head.querySelector(`script[data-seo-jsonld="${id}"]`)
   if (old) old.remove()
@@ -370,11 +403,14 @@ export default function Seo() {
     document.documentElement.lang = lang === 'bg' ? 'bg' : 'en'
     document.title = data.title
     setMeta('meta[name="description"]', 'content', data.description)
+    setMeta('meta[name="robots"]', 'content', 'index, follow, max-image-preview:large')
+    setMeta('meta[name="theme-color"]', 'content', '#07111F')
     setMeta('meta[property="og:title"]', 'content', data.title)
     setMeta('meta[property="og:description"]', 'content', data.description)
     setMeta('meta[property="og:type"]', 'content', 'website')
     setMeta('meta[property="og:url"]', 'content', url)
     setMeta('meta[property="og:site_name"]', 'content', 'IT Outsource Ltd.')
+    setMeta('meta[property="og:locale"]', 'content', lang === 'bg' ? 'bg_BG' : 'en_US')
     setMeta('meta[property="og:image"]', 'content', ogImage)
     setMeta('meta[property="og:image:secure_url"]', 'content', ogImage)
     setMeta('meta[property="og:image:type"]', 'content', 'image/png')
@@ -382,27 +418,36 @@ export default function Seo() {
     setMeta('meta[property="og:image:height"]', 'content', '630')
     setMeta('meta[property="og:image:alt"]', 'content', 'IT Outsource Ltd. — enterprise IT services, cloud, security and operations')
     setMeta('meta[name="twitter:card"]', 'content', 'summary_large_image')
+    setMeta('meta[name="twitter:title"]', 'content', data.title)
+    setMeta('meta[name="twitter:description"]', 'content', data.description)
     setMeta('meta[name="twitter:image"]', 'content', ogImage)
     setMeta('meta[name="twitter:image:alt"]', 'content', 'IT Outsource Ltd. — enterprise IT services, cloud, security and operations')
     setLink('canonical', url)
 
     setJsonLd('organization', {
       '@context': 'https://schema.org',
-      '@type': 'Organization',
+      '@type': ['Organization', 'LocalBusiness'],
+      '@id': `${origin}/#organization`,
       name: 'IT Outsource Ltd.',
       alternateName: 'Ай Ти Аутсорс ООД',
       url: origin,
+      logo: `${origin}/favicon.png`,
+      image: ogImage,
       email: 'info@itoutsource.bg',
       telephone: '+359887940248',
       vatID: 'BG200776949',
+      priceRange: '$$',
       address: {
         '@type': 'PostalAddress',
         streetAddress: '25 Popova Shapka St., floor 2, apt. 6',
         addressLocality: 'Sofia',
         postalCode: '1505',
         addressCountry: 'BG'
-      }
+      },
+      areaServed: [{ '@type': 'Country', name: 'Bulgaria' }, { '@type': 'Place', name: 'European Union' }]
     })
+    setJsonLd('website', websiteFor())
+    setJsonLd('webpage', webPageFor(path, data))
     setJsonLd('breadcrumb', breadcrumbFor(path, data))
     setJsonLd('service', serviceFor(path, data))
   }, [lang, location.pathname])
