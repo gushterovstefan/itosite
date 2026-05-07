@@ -96,9 +96,6 @@ export default function Navbar() {
           <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-xl border border-white/10 bg-[#07111F] p-0.5 md:h-11 md:w-11">
             <img src={logo} alt="IT Outsource Ltd." width="512" height="512" className="h-full w-full object-cover" loading="eager" />
           </span>
-          <span className="hidden text-sm font-semibold uppercase tracking-[0.08em] text-[#F8FAFC] xl:block">
-            IT Outsource Ltd.
-          </span>
         </Link>
 
         <nav className="hidden min-w-0 flex-1 items-center justify-center gap-1 lg:flex" aria-label="Primary navigation">
