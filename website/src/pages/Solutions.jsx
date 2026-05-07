@@ -32,24 +32,34 @@ const solutionLinks = {
 
 const outcomes = [
   {
-    title: 'Reduce IT Risk',
-    icon: 'security',
-    text: 'Security, identity, endpoint protection, backup, and recovery designed to reduce operational and compliance exposure.'
-  },
-  {
-    title: 'Modernize Infrastructure',
+    title: 'Legacy infrastructure risk',
     icon: 'infrastructure',
-    text: 'Move from legacy servers and fragmented tools to governed Microsoft 365 and Azure platforms with clearer ownership.'
+    text: 'Many companies still depend on aging servers, outdated ERP environments, weak backup models, or fragmented IT ownership.'
   },
   {
-    title: 'Improve Productivity',
-    icon: 'tools',
-    text: 'Help teams work faster with better collaboration, document management, automation, and AI readiness.'
+    title: 'Microsoft 365 underutilization',
+    icon: 'cloud',
+    text: 'Organizations often pay for Microsoft 365 but use only email and Teams, while security, compliance, DLP, Intune, and automation remain unused.'
   },
   {
-    title: 'Protect Business Continuity',
+    title: 'Weak endpoint control',
+    icon: 'security',
+    text: 'Unmanaged laptops, local admin rights, poor patching, and inconsistent device policies create avoidable operational and security risk.'
+  },
+  {
+    title: 'Business continuity gaps',
     icon: 'backup',
-    text: 'Design backup, disaster recovery, monitoring, and incident response processes before downtime becomes a board-level issue.'
+    text: 'Backups exist, but restore testing, RTO/RPO planning, disaster recovery scenarios, and ownership are often missing.'
+  },
+  {
+    title: 'Cloud migration complexity',
+    icon: 'cloud',
+    text: 'Moving from Google Workspace, legacy file servers, or on-prem systems to Microsoft 365 and Azure requires planning, cleanup, permissions mapping, testing, and adoption.'
+  },
+  {
+    title: 'Lack of executive visibility',
+    icon: 'assessment',
+    text: 'Management needs clear reporting, risk visibility, project governance, and predictable IT costs.'
   }
 ]
 
@@ -184,11 +194,11 @@ export default function Solutions() {
       </section>
 
       <GemSection
-        eyebrow="Business outcomes"
-        title="What We Help You Solve"
-        lead="Technology decisions only matter when they reduce risk, improve continuity, and help the business move faster."
+        eyebrow="Problems we solve"
+        title="What we help you solve"
+        lead="Buyers do not start with technologies — they start with risk, downtime, cost, unclear ownership, and decisions that need evidence."
       >
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {outcomes.map((item, i) => (
             <Card key={item.title} revealDelay={0.04 + i * 0.04} variant={i === 0 ? 'brand' : 'steel'} className="h-full">
               <div className="flex h-full flex-col">
