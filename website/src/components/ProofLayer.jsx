@@ -52,7 +52,7 @@ export default function ProofLayer() {
   const l = copy[lang] || copy.en
 
   return (
-    <section className="light-section bg-[#F8FAFC] py-8 text-[#0F172A] md:py-10">
+    <section className="dark-section bg-[#0B1626] py-8 text-[#F8FAFC] md:py-10">
       <div className="mx-auto max-w-6xl px-4">
         <div className="rounded-3xl border border-white/[0.12] bg-[#101E2F] p-5 backdrop-blur md:p-6">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">

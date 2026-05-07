@@ -7,7 +7,7 @@
   --color-bg-dark: #07111F;
   --color-bg-section: #0B1B2B;
   --color-bg-card: #101E2F;
-  --color-bg-light: #F8FAFC;
+  --color-bg-light: #EEF4FA;
   --color-text-primary: #F8FAFC;
   --color-text-secondary: #CBD5E1;
   --color-text-muted: #94A3B8;
@@ -43,28 +43,14 @@ body {
   @apply text-base leading-relaxed text-[#CBD5E1] md:text-lg;
 }
 
-/* Hybrid design system: light content areas must override dark-card utilities. */
+/* Light sections are allowed only as soft blue-gray fields; cards stay dark for consistency. */
+.light-section [class*="border-white/[0.12]"] {
+  border-color: rgba(15, 23, 42, 0.14) !important;
+}
+
 .light-section [class*="bg-[#101E2F]"],
 .light-section [class*="bg-[#0B1B2B]"] {
-  background-color: #F8FAFC !important;
-}
-
-.light-section [class*="border-white/[0.12]"] {
-  border-color: rgba(15, 23, 42, 0.12) !important;
-}
-
-.light-section [class*="text-[#F8FAFC]"] {
-  color: #0F172A !important;
-}
-
-.light-section [class*="text-[#CBD5E1]"],
-.light-section [class*="text-[#94A3B8]"] {
-  color: #334155 !important;
-}
-
-.light-section [class*="text-[#38BDF8]"],
-.light-section [class*="text-[#2F80ED]"] {
-  color: #0F172A !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
 .light-section .btn-primary,
