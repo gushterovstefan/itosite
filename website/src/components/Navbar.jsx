@@ -15,8 +15,8 @@ function NavItem({ to, label, end, activePath, onClick }) {
       className={
         'inline-flex items-center rounded-lg px-3 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 ' +
         (isActive
-          ? 'bg-[#101E33] text-[#F8FAFC] shadow-inner shadow-white/5'
-          : 'text-[#CBD5E1] hover:bg-[#101E33] hover:text-[#F8FAFC]')
+          ? 'bg-[#2563EB] text-white shadow-[0_10px_24px_-18px_rgba(37,99,235,0.95)]'
+          : 'text-[#F8FAFC] hover:bg-[#101E33] hover:text-white')
       }
     >
       {label}
@@ -90,11 +90,15 @@ export default function Navbar() {
   ]
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-16 border-b border-white/[0.08] bg-[#07111F]/96 shadow-[0_18px_60px_-46px_rgba(0,0,0,0.95)] backdrop-blur-xl md:h-[72px]">
+    <header className="enterprise-header fixed inset-x-0 top-0 z-50 h-16 border-b border-white/[0.08] bg-[#07111F] shadow-[0_18px_60px_-46px_rgba(0,0,0,0.95)] md:h-[72px]">
       <div className="mx-auto flex h-full max-w-6xl items-center justify-between gap-3 px-4">
         <Link to="/" className="flex shrink-0 items-center gap-3" aria-label="IT Outsource home">
-          <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-xl border border-white/10 bg-[#0B1728] md:h-11 md:w-11">
-            <img src={logo} alt="IT Outsource Ltd." width="96" height="92" className="h-9 w-auto md:h-10" loading="eager" />
+          <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-xl border border-white/10 bg-[#F8FAFC] p-1 md:h-11 md:w-11">
+            <img src={logo} alt="IT Outsource Ltd." width="96" height="92" className="h-full w-full object-contain" loading="eager" />
+          </span>
+          <span className="hidden leading-tight xl:block">
+            <span className="block text-sm font-semibold tracking-tight text-[#F8FAFC]">IT Outsource</span>
+            <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#94A3B8]">Services & Solutions</span>
           </span>
         </Link>
 
@@ -108,7 +112,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setLang(lang === 'bg' ? 'en' : 'bg')}
-            className="hidden items-center gap-1 rounded-lg border border-white/10 bg-[#101E33] px-3 py-2 text-xs font-semibold text-[#CBD5E1] hover:text-[#F8FAFC] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 sm:inline-flex"
+            className="hidden items-center gap-1 rounded-lg border border-white/10 bg-[#101E33] px-3 py-2 text-xs font-semibold text-[#F8FAFC] hover:bg-[#0B1728] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 sm:inline-flex"
             aria-label="Toggle language"
           >
             <span className={lang === 'bg' ? 'text-[#F8FAFC]' : 'text-[#94A3B8]'}>BG</span>
@@ -120,7 +124,7 @@ export default function Navbar() {
             href={BOOKING_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-10 items-center justify-center rounded-full bg-[#2563EB] px-3 text-xs font-semibold text-white shadow-[0_14px_34px_-20px_rgba(37,99,235,0.95)] ring-1 ring-[#38BDF8]/25 transition hover:bg-[#1D4ED8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 sm:px-4 sm:text-sm md:px-5"
+            className="inline-flex h-10 items-center justify-center rounded-full bg-[#2563EB] px-3 text-xs font-bold text-white shadow-[0_14px_34px_-20px_rgba(37,99,235,0.95)] ring-1 ring-[#38BDF8]/35 transition hover:bg-[#1D4ED8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 sm:px-4 sm:text-sm md:px-5"
           >
             {consultationLabel}
           </a>
