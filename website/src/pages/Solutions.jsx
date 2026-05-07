@@ -1,34 +1,10 @@
 import PageHero from '../components/PageHero.jsx'
 import GemSection from '../components/GemSection.jsx'
-import { Card, ClickCard } from '../components/Cards.jsx'
+import { BulletList, Card, ClickCard } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import SheenButton from '../components/SheenButton.jsx'
 import ConversionCta from '../components/ConversionCta.jsx'
-import { useContent } from '../content/index.jsx'
 import { BOOKING_URL } from '../config/booking.js'
-
-const solutionLinks = {
-  'Microsoft Azure': '/solutions/microsoft-azure',
-  'Microsoft 365': '/solutions/microsoft-365',
-  'VMware & Proxmox Virtualization': '/solutions/vmware-proxmox-virtualization',
-  'VMware и Proxmox виртуализация': '/solutions/vmware-proxmox-virtualization',
-  'Azure Hybrid Cloud Integration': '/solutions/azure-hybrid-cloud',
-  'Azure хибридна интеграция': '/solutions/azure-hybrid-cloud',
-  'Zero Trust Security with Defender & Sentinel': '/solutions/zero-trust-security',
-  'Zero Trust сигурност с Defender и Sentinel': '/solutions/zero-trust-security',
-  'Entra ID & SSO Consolidation': '/solutions/entra-id-sso',
-  'Entra ID и SSO консолидация': '/solutions/entra-id-sso',
-  'Backup & DR with Veeam': '/solutions/backup-dr-veeam',
-  'Backup и DR с Veeam': '/solutions/backup-dr-veeam',
-  'Cloud Migration Services': '/solutions/cloud-migration',
-  'Cloud migration услуги': '/solutions/cloud-migration',
-  'Web-Based B2B & B2C Solutions': '/solutions/web-b2b-b2c',
-  'Уеб B2B и B2C решения': '/solutions/web-b2b-b2c',
-  'Easy Order Web Platform': '/solutions/easy-order-platform',
-  'Easy Order платформа': '/solutions/easy-order-platform',
-  'GxP & Clinical Research IT': '/solutions/gxp-clinical-research-it',
-  'GxP и Clinical Research IT': '/solutions/gxp-clinical-research-it'
-}
 
 const outcomes = [
   {
@@ -64,6 +40,110 @@ const outcomes = [
 ]
 
 const expertiseBadges = ['Microsoft 365', 'Azure', 'Intune', 'Defender', 'Veeam', 'SharePoint', 'Entra ID', 'Sentinel']
+
+const coreSolutions = [
+  {
+    title: 'Microsoft 365 Modern Workplace',
+    icon: 'cloud',
+    outcome: 'Improve collaboration, security, and productivity across the organization.',
+    bullets: [
+      'Microsoft 365 tenant design',
+      'Exchange Online, SharePoint, OneDrive, Teams',
+      'Entra ID identity governance',
+      'Conditional Access',
+      'MFA and security defaults',
+      'Migration from Google Workspace or legacy mail platforms',
+      'User adoption and training'
+    ],
+    cta: 'Explore Microsoft 365 services',
+    to: '/solutions/microsoft-365'
+  },
+  {
+    title: 'Endpoint Management with Intune',
+    icon: 'security',
+    outcome: 'Standardize and secure company devices.',
+    bullets: [
+      'Windows and macOS device enrollment',
+      'Intune policy design',
+      'Compliance policies',
+      'Autopilot deployment',
+      'Application deployment',
+      'Local admin control',
+      'Defender integration',
+      'Remote wipe and device lifecycle'
+    ],
+    cta: 'Secure company devices',
+    to: '/contacts'
+  },
+  {
+    title: 'Cybersecurity & Compliance',
+    icon: 'security',
+    outcome: 'Reduce risk and improve security governance.',
+    bullets: [
+      'Microsoft Defender for Endpoint',
+      'Defender for Cloud Apps',
+      'Defender for Office 365',
+      'Microsoft Sentinel',
+      'DLP policies',
+      'Audit and compliance configuration',
+      'Secure access policies',
+      'Incident response preparation'
+    ],
+    cta: 'Improve security posture',
+    to: '/solutions/zero-trust-security'
+  },
+  {
+    title: 'Azure Infrastructure',
+    icon: 'cloud',
+    outcome: 'Build scalable, secure, and resilient cloud infrastructure.',
+    bullets: [
+      'Azure VM design',
+      'Networking and VPN',
+      'Azure backup',
+      'Storage design',
+      'Monitoring',
+      'Cost optimization',
+      'Hybrid infrastructure',
+      'Secure remote access'
+    ],
+    cta: 'Plan Azure infrastructure',
+    to: '/solutions/microsoft-azure'
+  },
+  {
+    title: 'Backup & Disaster Recovery',
+    icon: 'backup',
+    outcome: 'Protect business data and reduce downtime.',
+    bullets: [
+      'Microsoft 365 backup',
+      'Veeam Backup for Microsoft 365',
+      'Azure Site Recovery',
+      'Restore testing',
+      'RTO/RPO definition',
+      'Disaster recovery runbooks',
+      'Executive DR reporting',
+      'Business continuity planning'
+    ],
+    cta: 'Build a recovery plan',
+    to: '/solutions/backup-dr-veeam'
+  },
+  {
+    title: 'Managed IT Services',
+    icon: 'support',
+    outcome: 'Keep IT stable, supported, and aligned with business priorities.',
+    bullets: [
+      'Helpdesk support',
+      'Infrastructure monitoring',
+      'Microsoft 365 administration',
+      'Vendor coordination',
+      'Security maintenance',
+      'Backup checks',
+      'Monthly reporting',
+      'IT roadmap planning'
+    ],
+    cta: 'Discuss managed IT support',
+    to: '/it-support-services'
+  }
+]
 
 const industries = [
   {
@@ -106,62 +186,7 @@ const projectExperience = [
   }
 ]
 
-const solutionDescriptions = {
-  'Microsoft Azure': 'Build secure Azure foundations with governance, networking, monitoring, cost control, and operational runbooks from day one.',
-  'Microsoft 365': 'Modernize collaboration, email, documents, device access, and identity so teams can work securely from anywhere.',
-  'VMware & Proxmox Virtualization': 'Stabilize virtualization platforms while reducing licensing pressure, resilience gaps, and unclear ownership.',
-  'Azure Hybrid Cloud Integration': 'Connect on-premises infrastructure with Azure services for better resilience, management, and staged migration.',
-  'Zero Trust Security with Defender & Sentinel': 'Reduce exposure with identity-first access, threat protection, monitoring, and incident response workflows.',
-  'Entra ID & SSO Consolidation': 'Simplify access, reduce password risk, and improve user experience with consolidated identity and single sign-on.',
-  'Backup & DR with Veeam': 'Protect critical systems with tested recovery plans, immutable backups, and disaster recovery processes that match business risk.',
-  'Cloud Migration Services': 'Move workloads and users with less disruption through discovery, planning, migration, validation, and post-go-live support.',
-  'Web-Based B2B & B2C Solutions': 'Create secure ERP-integrated business platforms that reduce manual handoffs and clarify operational ownership.',
-  'Easy Order Web Platform': 'Digitize ordering flows with practical web tooling that reduces manual work and improves process visibility.',
-  'GxP & Clinical Research IT': 'Support regulated environments with governance-aware infrastructure, documentation, continuity, and operational controls.'
-}
-
-const solutionGroups = [
-  {
-    title: 'Microsoft 365 & Modern Workplace',
-    lead: 'Secure collaboration, email, files, migration, SharePoint, Teams, Intune and user adoption under one governed Microsoft 365 operating model.',
-    titles: ['Microsoft 365', 'Cloud Migration Services']
-  },
-  {
-    title: 'Azure Cloud & Infrastructure',
-    lead: 'Modernize legacy infrastructure with Azure, hybrid connectivity, virtualization, monitoring, cost control and practical runbooks.',
-    titles: ['Microsoft Azure', 'Azure Hybrid Cloud Integration', 'VMware & Proxmox Virtualization']
-  },
-  {
-    title: 'Cybersecurity & Identity',
-    lead: 'Control identity risk, endpoint exposure, access policies, security monitoring and audit evidence across Microsoft security platforms.',
-    titles: ['Zero Trust Security with Defender & Sentinel', 'Entra ID & SSO Consolidation', 'GxP & Clinical Research IT']
-  },
-  {
-    title: 'Backup & Disaster Recovery',
-    lead: 'Improve backup and recovery readiness with clear RPO/RTO targets, immutable backup design, restore testing and continuity planning.',
-    titles: ['Backup & DR with Veeam']
-  },
-  {
-    title: 'Endpoint & Device Management',
-    lead: 'Standardize device compliance, endpoint protection, Intune policies and support ownership for Windows, macOS and mobile users.',
-    titles: ['Microsoft 365', 'Zero Trust Security with Defender & Sentinel', 'Entra ID & SSO Consolidation']
-  }
-]
-
-function cardsForGroup(cards, group) {
-  return group.titles
-    .map((title) => cards.find((card) => card.title === title))
-    .filter(Boolean)
-}
-
-function solutionDescriptionFor(card) {
-  return solutionDescriptions[card.title] ?? 'Plan, implement, secure, and support this environment with clear ownership, risk controls, and operational handover.'
-}
-
 export default function Solutions() {
-  const { content } = useContent()
-  const c = content.solutions
-
   return (
     <div>
       <PageHero
@@ -170,7 +195,7 @@ export default function Solutions() {
         lead="We design, migrate, secure, and support Microsoft 365, Azure, endpoint, backup, and disaster recovery environments — with audit-ready governance and practical delivery experience."
         trustLine="Microsoft 365 • Azure • Security • Backup • Disaster Recovery • Endpoint Management"
         primaryCta={{ href: BOOKING_URL, label: 'Book a Consultation' }}
-        secondaryCta={{ to: '#core-it-solutions', label: 'Core IT Solutions' }}
+        secondaryCta={{ to: '#core-solutions', label: 'Core Solutions' }}
       />
 
       <section className="border-y border-white/[0.12] bg-[#0B1726] py-6 text-[#FFFFFF]">
@@ -215,55 +240,35 @@ export default function Solutions() {
 
       <GemSection
         eyebrow="Core solutions"
-        title="Core IT Solutions"
-        lead="A board-level view of the Microsoft, Azure, security, backup, endpoint and infrastructure work we deliver."
+        title="Core Solutions"
+        lead="Six practical solution areas that connect Microsoft, Azure, endpoint, security, backup and managed support work to business outcomes."
       >
-        <div id="core-it-solutions" className="grid gap-6">
-          {solutionGroups.map((group, groupIndex) => (
-            <section key={group.title} aria-labelledby={group.title.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and')} className="rounded-3xl border border-white/[0.12] bg-[#0B1726] p-5 md:p-6">
-              <h2 id={group.title.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and')} className="text-2xl font-semibold tracking-tight text-[#FFFFFF] md:text-3xl">{group.title}</h2>
-              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#CBD5E1] md:text-base">{group.lead}</p>
-              <div className="mt-5 grid gap-4 lg:grid-cols-2">
-                {cardsForGroup(c.cards, group).map((card, i) => {
-                  const to = solutionLinks[card.title]
-                  const Shell = to ? ClickCard : Card
-                  const props = to
-                    ? { to, badge: 'Solution' }
-                    : {}
+        <div id="core-solutions" className="grid gap-4 lg:grid-cols-2">
+          {coreSolutions.map((solution, i) => (
+            <ClickCard key={solution.title} to={solution.to} revealDelay={0.04 + i * 0.03} variant="steel" className="h-full" badge="Solution">
+              <div className="flex h-full flex-col">
+                <div className="flex items-start gap-4">
+                  <span className="grid h-11 w-11 flex-none place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1726]">
+                    <Icon as={icons[solution.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
+                  </span>
+                  <div>
+                    <h2 className="text-xl font-semibold tracking-tight text-[#FFFFFF] md:text-2xl">{solution.title}</h2>
+                    <p className="mt-2 text-sm font-semibold leading-relaxed text-[#CBD5E1]">Outcome: {solution.outcome}</p>
+                  </div>
+                </div>
 
-                  return (
-                    <Shell key={`${group.title}-${card.title}`} revealDelay={0.04 + (groupIndex + i) * 0.03} variant="steel" className="h-full" {...props}>
-                      <div className="flex h-full flex-col">
-                        <div className="flex items-start gap-4">
-                          <span className="grid h-11 w-11 flex-none place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1726]">
-                            <Icon as={icons[card.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
-                          </span>
-                          <div>
-                            <div className="text-lg font-semibold tracking-tight text-[#FFFFFF]">{card.title}</div>
-                            <p className="mt-2 text-sm leading-relaxed text-[#CBD5E1]">{solutionDescriptionFor(card)}</p>
-                          </div>
-                        </div>
+                <div className="mt-6 grow">
+                  <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#94A3B8]">Includes</div>
+                  <div className="mt-3">
+                    <BulletList items={solution.bullets} />
+                  </div>
+                </div>
 
-                        <div className="mt-6">
-                          <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#94A3B8]">Key capabilities</div>
-                          <div className="mt-3 flex flex-wrap gap-2">
-                            {card.bullets.slice(0, 4).map((capability) => (
-                              <span key={capability} className="rounded-full border border-white/[0.12] bg-[#0B1726] px-3 py-1 text-xs font-medium text-[#CBD5E1]">
-                                {capability}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        <div className="mt-6 text-sm font-semibold text-[#38BDF8]">
-                          {to ? 'Learn more →' : 'Learn more'}
-                        </div>
-                      </div>
-                    </Shell>
-                  )
-                })}
+                <div className="mt-6 text-sm font-semibold text-[#38BDF8]">
+                  {solution.cta} →
+                </div>
               </div>
-            </section>
+            </ClickCard>
           ))}
         </div>
       </GemSection>
