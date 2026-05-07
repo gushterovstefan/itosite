@@ -163,18 +163,18 @@ export default function Solutions() {
         secondaryCta={{ to: '#core-it-solutions', label: 'Core IT Solutions' }}
       />
 
-      <section className="border-y border-white/[0.08] bg-[#0B1728] py-6 text-[#F8FAFC]">
+      <section className="border-y border-white/[0.12] bg-[#0B1726] py-6 text-[#FFFFFF]">
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#38BDF8]">Technology expertise</div>
-              <p className="mt-2 max-w-2xl text-base font-semibold leading-relaxed text-[#F8FAFC]">
+              <p className="mt-2 max-w-2xl text-base font-semibold leading-relaxed text-[#FFFFFF]">
                 Trusted for Microsoft 365, Azure, Security, Backup and IT Governance Projects
               </p>
             </div>
             <div className="flex flex-wrap gap-2 lg:max-w-xl lg:justify-end">
               {expertiseBadges.map((badge) => (
-                <span key={badge} className="rounded-full border border-white/10 bg-[#101E33] px-3 py-1.5 text-xs font-semibold text-[#CBD5E1]">
+                <span key={badge} className="rounded-full border border-white/[0.12] bg-[#101E31] px-3 py-1.5 text-xs font-semibold text-[#CBD5E1]">
                   {badge}
                 </span>
               ))}
@@ -192,10 +192,10 @@ export default function Solutions() {
           {outcomes.map((item, i) => (
             <Card key={item.title} revealDelay={0.04 + i * 0.04} variant={i === 0 ? 'brand' : 'steel'} className="h-full">
               <div className="flex h-full flex-col">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-[#0B1728]">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1726]">
                   <Icon as={icons[item.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
                 </span>
-                <div className="mt-5 text-lg font-semibold tracking-tight text-[#F8FAFC]">{item.title}</div>
+                <div className="mt-5 text-lg font-semibold tracking-tight text-[#FFFFFF]">{item.title}</div>
                 <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{item.text}</p>
               </div>
             </Card>
@@ -210,8 +210,8 @@ export default function Solutions() {
       >
         <div id="core-it-solutions" className="grid gap-6">
           {solutionGroups.map((group, groupIndex) => (
-            <section key={group.title} aria-labelledby={group.title.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and')} className="rounded-3xl border border-white/10 bg-[#0B1728] p-5 md:p-6">
-              <h2 id={group.title.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and')} className="text-2xl font-semibold tracking-tight text-[#F8FAFC] md:text-3xl">{group.title}</h2>
+            <section key={group.title} aria-labelledby={group.title.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and')} className="rounded-3xl border border-white/[0.12] bg-[#0B1726] p-5 md:p-6">
+              <h2 id={group.title.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and')} className="text-2xl font-semibold tracking-tight text-[#FFFFFF] md:text-3xl">{group.title}</h2>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#CBD5E1] md:text-base">{group.lead}</p>
               <div className="mt-5 grid gap-4 lg:grid-cols-2">
                 {cardsForGroup(c.cards, group).map((card, i) => {
@@ -225,11 +225,11 @@ export default function Solutions() {
                     <Shell key={`${group.title}-${card.title}`} revealDelay={0.04 + (groupIndex + i) * 0.03} variant="steel" className="h-full" {...props}>
                       <div className="flex h-full flex-col">
                         <div className="flex items-start gap-4">
-                          <span className="grid h-11 w-11 flex-none place-items-center rounded-2xl border border-white/10 bg-[#0B1728]">
+                          <span className="grid h-11 w-11 flex-none place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1726]">
                             <Icon as={icons[card.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
                           </span>
                           <div>
-                            <div className="text-lg font-semibold tracking-tight text-[#F8FAFC]">{card.title}</div>
+                            <div className="text-lg font-semibold tracking-tight text-[#FFFFFF]">{card.title}</div>
                             <p className="mt-2 text-sm leading-relaxed text-[#CBD5E1]">{solutionDescriptionFor(card)}</p>
                           </div>
                         </div>
@@ -238,7 +238,7 @@ export default function Solutions() {
                           <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#94A3B8]">Key capabilities</div>
                           <div className="mt-3 flex flex-wrap gap-2">
                             {card.bullets.slice(0, 4).map((capability) => (
-                              <span key={capability} className="rounded-full border border-white/10 bg-[#0B1728] px-3 py-1 text-xs font-medium text-[#CBD5E1]">
+                              <span key={capability} className="rounded-full border border-white/[0.12] bg-[#0B1726] px-3 py-1 text-xs font-medium text-[#CBD5E1]">
                                 {capability}
                               </span>
                             ))}
@@ -267,10 +267,10 @@ export default function Solutions() {
           {industries.map((industry, i) => (
             <Card key={industry.title} revealDelay={0.04 + i * 0.04} variant={i === 1 ? 'brand' : 'steel'} className="h-full">
               <div className="flex h-full flex-col">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-[#0B1728]">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1726]">
                   <Icon as={icons[industry.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
                 </span>
-                <div className="mt-5 text-lg font-semibold tracking-tight text-[#F8FAFC]">{industry.title}</div>
+                <div className="mt-5 text-lg font-semibold tracking-tight text-[#FFFFFF]">{industry.title}</div>
                 <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{industry.text}</p>
               </div>
             </Card>
@@ -287,10 +287,10 @@ export default function Solutions() {
           {projectExperience.map((project, i) => (
             <Card key={project.title} revealDelay={0.04 + i * 0.04} variant={i === 0 ? 'brand' : 'steel'} className="h-full">
               <div className="flex h-full flex-col">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-[#0B1728]">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1726]">
                   <Icon as={icons[project.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
                 </span>
-                <div className="mt-5 text-lg font-semibold tracking-tight text-[#F8FAFC]">{project.title}</div>
+                <div className="mt-5 text-lg font-semibold tracking-tight text-[#FFFFFF]">{project.title}</div>
                 <p className="mt-3 grow text-sm leading-relaxed text-[#CBD5E1]">{project.text}</p>
               </div>
             </Card>

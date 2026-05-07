@@ -140,20 +140,20 @@ export default function HowWeDeliver() {
             <Card key={phase.name} revealDelay={0.04 + i * 0.04} variant={i % 2 ? 'steel' : 'brand'}>
               <div className="grid gap-5 lg:grid-cols-[0.35fr_0.65fr] lg:items-start">
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-800">Phase 0{i + 1}</div>
-                  <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#F8FAFC]">{phase.name}</h2>
+                  <div className="text-xs font-semibold uppercase tracking-[0.24em] text-[#38BDF8]">Phase 0{i + 1}</div>
+                  <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#FFFFFF]">{phase.name}</h2>
                   <p className="mt-2 text-sm text-[#94A3B8]">{phase.duration}</p>
-                  <div className="mt-4 rounded-2xl border border-white/10 bg-[#101E33] p-3 text-sm font-semibold text-[#F8FAFC]">
+                  <div className="mt-4 rounded-2xl border border-white/[0.12] bg-[#101E31] p-3 text-sm font-semibold text-[#FFFFFF]">
                     Gate: {phase.gate}
                   </div>
                 </div>
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
-                    <div className="text-sm font-semibold text-[#F8FAFC]">Inputs</div>
+                    <div className="text-sm font-semibold text-[#FFFFFF]">Inputs</div>
                     <div className="mt-3"><BulletList items={phase.inputs} /></div>
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-[#F8FAFC]">Deliverables</div>
+                    <div className="text-sm font-semibold text-[#FFFFFF]">Deliverables</div>
                     <div className="mt-3"><BulletList items={phase.deliverables} /></div>
                   </div>
                 </div>
@@ -168,7 +168,7 @@ export default function HowWeDeliver() {
           {l.principles.map((item, i) => (
             <Card key={item} revealDelay={0.04 + i * 0.04} variant="steel">
               <div className="flex items-start justify-between gap-4">
-                <p className="text-sm font-semibold leading-relaxed text-[#F8FAFC]">{item}</p>
+                <p className="text-sm font-semibold leading-relaxed text-[#FFFFFF]">{item}</p>
                 <Icon as={icons.governance ?? icons.platform} />
               </div>
             </Card>

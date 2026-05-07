@@ -4,6 +4,18 @@
 
 :root {
   color-scheme: dark;
+  --color-bg-dark: #07111F;
+  --color-bg-section: #0B1726;
+  --color-bg-card: #101E31;
+  --color-bg-light: #F7F9FC;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #94A3B8;
+  --color-text-dark: #0F172A;
+  --color-accent: #2563EB;
+  --color-accent-hover: #1D4ED8;
+  --color-cyan: #38BDF8;
+  --color-border: rgba(255,255,255,0.12);
 }
 
 html, body {
@@ -12,7 +24,7 @@ html, body {
 }
 
 body {
-  @apply bg-[#07111F] text-[#F8FAFC] antialiased;
+  @apply bg-[#07111F] text-[#FFFFFF] antialiased;
   font-feature-settings: 'ss01' on, 'cv02' on;
 }
 
@@ -64,7 +76,7 @@ body {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(37,99,235,0.45), rgba(56,189,248,0.30));
+  background: rgba(37,99,235,0.42);
   opacity: 0.34;
   filter: blur(8px);
   z-index: -2;
@@ -75,7 +87,7 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.16), transparent);
+  background: rgba(255,255,255,0.10);
   width: 60%;
   left: 0;
   top: 0;
@@ -132,8 +144,7 @@ body {
   z-index: 0;
   pointer-events: none;
   opacity: 0.9;
-  background-image:
-    linear-gradient(180deg, rgba(11,23,40,0.55), rgba(7,17,31,0.85));
+  background: rgba(11,23,38,0.55);
   animation: sectionDrift 10s ease-in-out infinite;
 }
 
@@ -174,8 +185,7 @@ body {
 
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(37,99,235,0.45), rgba(56,189,248,0.28), transparent);
-  background-size: 200% 100%;
+  background: rgba(255,255,255,0.12);
   animation: lineFlow 6s ease-in-out infinite;
 }
 
@@ -289,7 +299,7 @@ body {
 
 .enterprise-header {
   background: #07111F !important;
-  color: #F8FAFC;
+  color: #FFFFFF;
   border-bottom-color: rgba(255, 255, 255, 0.08) !important;
 }
 

@@ -27,7 +27,7 @@ export default function GemLayout() {
   }, [])
 
   return (
-    <div className="min-h-dvh bg-[#07111F] text-[#F8FAFC]">
+    <div className="min-h-dvh bg-[#07111F] text-[#FFFFFF]">
       <Navbar />
       <main className="relative isolate overflow-hidden pt-16 md:pt-[72px]">
         {/* global WebGL network background (desktop only) */}

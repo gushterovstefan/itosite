@@ -17,20 +17,20 @@ export default function HomeGem() {
   const ui = content.shared.ui
 
   return (
-    <div id="top" className="relative bg-[#07111F] text-[#F8FAFC]">
+    <div id="top" className="relative bg-[#07111F] text-[#FFFFFF]">
       {/* HERO */}
-      <section className="relative overflow-hidden">
-        <NetworkBackdrop className="z-0" />
+      <section className="relative overflow-hidden" style={{ background: 'radial-gradient(circle at top right, rgba(37,99,235,0.28), transparent 35%), linear-gradient(180deg, #07111F 0%, #0B1726 100%)' }}>
+        <NetworkBackdrop className="z-0 opacity-70" />
         <div className="relative z-10 mx-auto max-w-6xl px-4 pt-10 md:pt-12">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
-              <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-[#101E33] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#CBD5E1]">
-                <span className="h-1.5 w-1.5 rounded-full bg-brand-400" aria-hidden="true" />
+              <div className="inline-flex items-center gap-3 rounded-full border border-white/[0.12] bg-[#101E31] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#CBD5E1]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#38BDF8]" aria-hidden="true" />
                 {ui.itServicesBadge}
               </div>
 
               <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-6xl">{c.heroTitle}</h1>
-              <p className="mt-5 text-base font-medium text-[#F8FAFC] md:text-lg">{c.heroSubline}</p>
+              <p className="mt-5 text-base font-medium text-[#FFFFFF] md:text-lg">{c.heroSubline}</p>
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#94A3B8] md:text-base">
                 IT Outsource helps organizations reduce downtime, secure Microsoft 365, modernize legacy infrastructure, and improve backup and recovery readiness.
               </p>
@@ -41,7 +41,7 @@ export default function HomeGem() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-white/10 bg-[#101E33] px-6 py-3 text-sm font-semibold text-[#F8FAFC] hover:bg-[#14243D]"
+                  className="rounded-full border border-white/[0.12] bg-[#101E31] px-6 py-3 text-sm font-semibold text-[#FFFFFF] hover:bg-[#0B1726]"
                 >
                   <span>{lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-min call'}</span>
                 </a>
@@ -49,34 +49,34 @@ export default function HomeGem() {
             </div>
 
             {/* hero side: logo + metric-like cards (inspired, not a clone) */}
-            <div className="relative bg-[#07111F] text-[#F8FAFC]">
-              <div className="rounded-3xl border border-white/10 bg-[#101E33] p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.65)] md:p-8">
+            <div className="relative text-[#FFFFFF]">
+              <div className="rounded-3xl border border-white/[0.12] bg-[#101E31] p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.65)] md:p-8">
                 <img
                   src={brandBanner}
                   alt="IT Outsource Ltd. — Enterprise IT, Cloud, Operations"
                   width="600"
                   height="160"
-                  className="w-full rounded-2xl border border-white/10 bg-[#07111F] object-contain"
+                  className="w-full rounded-2xl border border-white/[0.12] bg-[#07111F] object-contain"
                   loading="eager"
                   decoding="async"
                 />
 
                 <div className="mt-6">
                   <div className="text-xs font-semibold uppercase tracking-[0.28em] text-[#CBD5E1]">Enterprise delivery</div>
-                  <div className="mt-3 text-4xl font-semibold tracking-tight text-[#F8FAFC]">15+ years</div>
+                  <div className="mt-3 text-4xl font-semibold tracking-tight text-[#FFFFFF]">15+ years</div>
                   <div className="mt-2 text-sm text-[#94A3B8]">Design · Build · Secure · Run</div>
                 </div>
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-2xl border border-white/10 bg-[#0B1728] px-4 py-3">
+                  <div className="rounded-2xl border border-white/[0.12] bg-[#0B1726] px-4 py-3">
                     <div className="text-xs text-[#CBD5E1]">Availability</div>
                     <div className="mt-1 text-sm font-semibold">24/7 Ops</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-[#0B1728] px-4 py-3">
+                  <div className="rounded-2xl border border-white/[0.12] bg-[#0B1726] px-4 py-3">
                     <div className="text-xs text-[#CBD5E1]">Security</div>
                     <div className="mt-1 text-sm font-semibold">MFA + Hardening</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-[#0B1728] px-4 py-3">
+                  <div className="rounded-2xl border border-white/[0.12] bg-[#0B1726] px-4 py-3">
                     <div className="text-xs text-[#CBD5E1]">Delivery</div>
                     <div className="mt-1 text-sm font-semibold">SLA-driven</div>
                   </div>

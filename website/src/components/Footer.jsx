@@ -48,7 +48,7 @@ const trustItems = ['Microsoft cloud', 'ISO 27001:2022 aligned', 'Veeam ecosyste
 
 function FooterLink({ to, children }) {
   return (
-    <Link className="text-[#94A3B8] transition hover:text-[#F8FAFC]" to={to}>
+    <Link className="text-[#94A3B8] transition hover:text-[#FFFFFF]" to={to}>
       {children}
     </Link>
   )
@@ -60,22 +60,22 @@ export default function Footer() {
   const l = legal[lang] || legal.en
 
   return (
-    <footer className="relative z-20 border-t border-white/10 bg-[#0B1728] backdrop-blur-xl">
+    <footer className="relative z-20 border-t border-white/[0.12] bg-[#0B1726] backdrop-blur-xl">
       <div className="mx-auto max-w-6xl px-4 py-10 md:py-12">
-        <div className="rounded-3xl border border-white/10 bg-[#101E33] p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.55)] md:p-6">
+        <div className="rounded-3xl border border-white/[0.12] bg-[#101E31] p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.55)] md:p-6">
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-800">{l.trustEyebrow}</div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#38BDF8]">{l.trustEyebrow}</div>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#CBD5E1]">{l.trustLine}</p>
             </div>
-            <Link to="/how-we-deliver" className="text-sm font-semibold text-[#F8FAFC] underline decoration-brand-500/40 underline-offset-4 hover:decoration-brand-500">
+            <Link to="/how-we-deliver" className="text-sm font-semibold text-[#FFFFFF] underline decoration-[#2563EB]/40 underline-offset-4 hover:decoration-[#2563EB]">
               {l.howWeDeliver}
             </Link>
           </div>
 
           <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
             {trustItems.map((item) => (
-              <div key={item} className="rounded-2xl border border-white/10 bg-brand-200/25 px-4 py-3 text-sm font-semibold text-[#F8FAFC]">
+              <div key={item} className="rounded-2xl border border-white/[0.12] bg-[#0B1726] px-4 py-3 text-sm font-semibold text-[#FFFFFF]">
                 {item}
               </div>
             ))}
@@ -89,7 +89,7 @@ export default function Footer() {
               alt="IT Outsource Ltd. — Enterprise IT, Cloud, Operations"
               width="600"
               height="160"
-              className="w-full max-w-[260px] rounded-2xl border border-white/10 bg-[#07111F] object-contain"
+              className="w-full max-w-[260px] rounded-2xl border border-white/[0.12] bg-[#07111F] object-contain"
               loading="lazy"
               decoding="async"
             />
@@ -136,7 +136,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-5 text-xs text-[#94A3B8] md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-white/[0.12] pt-5 text-xs text-[#94A3B8] md:flex-row md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} IT Outsource Ltd. / Ай Ти Аутсорс ООД</div>
           <div>{l.response}</div>
         </div>

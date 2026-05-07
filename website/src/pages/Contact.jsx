@@ -132,12 +132,12 @@ export default function Contact() {
           <Card revealDelay={0.04}>
             <form className="grid gap-3" onSubmit={handleSubmit}>
               <div className="grid gap-3 md:grid-cols-2">
-                <input name="name" required className="rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none placeholder:text-[#94A3B8] focus:border-brand-400" placeholder={f.name} />
-                <input name="company" className="rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none placeholder:text-[#94A3B8] focus:border-brand-400" placeholder={f.company} />
-                <input name="email" required type="email" className="rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none placeholder:text-[#94A3B8] focus:border-brand-400" placeholder={f.email} />
-                <input name="phone" className="rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none placeholder:text-[#94A3B8] focus:border-brand-400" placeholder={f.phone} />
+                <input name="name" required className="rounded-xl border border-white/[0.12] bg-[#101E31] px-4 py-3 text-sm text-[#FFFFFF] outline-none placeholder:text-[#94A3B8] focus:border-[#38BDF8]" placeholder={f.name} />
+                <input name="company" className="rounded-xl border border-white/[0.12] bg-[#101E31] px-4 py-3 text-sm text-[#FFFFFF] outline-none placeholder:text-[#94A3B8] focus:border-[#38BDF8]" placeholder={f.company} />
+                <input name="email" required type="email" className="rounded-xl border border-white/[0.12] bg-[#101E31] px-4 py-3 text-sm text-[#FFFFFF] outline-none placeholder:text-[#94A3B8] focus:border-[#38BDF8]" placeholder={f.email} />
+                <input name="phone" className="rounded-xl border border-white/[0.12] bg-[#101E31] px-4 py-3 text-sm text-[#FFFFFF] outline-none placeholder:text-[#94A3B8] focus:border-[#38BDF8]" placeholder={f.phone} />
               </div>
-              <select name="topic" aria-label={f.topic} className="rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none focus:border-brand-400" defaultValue="">
+              <select name="topic" aria-label={f.topic} className="rounded-xl border border-white/[0.12] bg-[#101E31] px-4 py-3 text-sm text-[#FFFFFF] outline-none focus:border-[#38BDF8]" defaultValue="">
                 <option value="" disabled>{f.topic}</option>
                 <option>Managed IT support</option>
                 <option>Infrastructure / virtualization</option>
@@ -146,10 +146,10 @@ export default function Contact() {
                 <option>Backup / DR</option>
                 <option>Web platform</option>
               </select>
-              <textarea name="message" required className="min-h-36 rounded-xl border border-white/10 bg-[#101E33] px-4 py-3 text-sm text-[#F8FAFC] outline-none placeholder:text-[#94A3B8] focus:border-brand-400" placeholder={f.message} />
+              <textarea name="message" required className="min-h-36 rounded-xl border border-white/[0.12] bg-[#101E31] px-4 py-3 text-sm text-[#FFFFFF] outline-none placeholder:text-[#94A3B8] focus:border-[#38BDF8]" placeholder={f.message} />
               <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                 <p className="text-xs leading-relaxed text-[#CBD5E1]">{f.fileNote}</p>
-                <button type="submit" className="btn-sheen btn-primary rounded-full bg-brand-200/50 px-6 py-3 text-sm font-semibold text-[#F8FAFC] ring-1 ring-brand-300/40 hover:bg-brand-200/70">
+                <button type="submit" className="btn-sheen btn-primary rounded-full bg-[#2563EB] px-6 py-3 text-sm font-semibold text-[#FFFFFF] ring-1 ring-[#38BDF8]/40 hover:bg-[#2563EB]">
                   <span className="sheen" aria-hidden="true" />
                   <span>{f.submit}</span>
                 </button>

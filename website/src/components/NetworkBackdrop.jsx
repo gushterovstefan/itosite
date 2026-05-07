@@ -1,7 +1,6 @@
 export default function NetworkBackdrop({ className = '' }) {
   return (
     <div className={`network-backdrop pointer-events-none absolute inset-0 overflow-hidden ${className}`} aria-hidden="true">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_24%,rgba(56,189,248,0.16),transparent_34%),radial-gradient(circle_at_20%_16%,rgba(37,99,235,0.14),transparent_36%)]" />
       <svg className="network-backdrop__svg absolute inset-0 h-full w-full" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid slice">
         <g className="network-backdrop__layer network-backdrop__layer--one">
           <path d="M64 110 L184 194 L318 150 L504 224 L716 128 L928 216 L1138 118" />
