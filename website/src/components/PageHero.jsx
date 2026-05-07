@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Icon, icons } from './Icons.jsx'
+import NetworkBackdrop from './NetworkBackdrop.jsx'
 import SheenButton from './SheenButton.jsx'
 import { BOOKING_URL } from '../config/booking.js'
 
@@ -17,8 +18,9 @@ export default function PageHero({
   const bookingLabel = 'Book a Consultation'
 
   return (
-    <section className="relative overflow-hidden bg-[#07111F] pt-12 text-[#F8FAFC] md:pt-16">
-      <div className="pointer-events-none absolute inset-0">
+    <section className="relative isolate overflow-hidden bg-[#07111F] pt-12 text-[#F8FAFC] md:pt-16">
+      <NetworkBackdrop className="z-0 opacity-80" />
+      <div className="pointer-events-none absolute inset-0 z-[1]">
         <div className="absolute right-[-8rem] top-[-10rem] h-[28rem] w-[28rem] rounded-full bg-[#2563EB]/18 blur-3xl" />
         <div className="absolute inset-x-0 top-0 h-px bg-white/[0.08]" />
       </div>
