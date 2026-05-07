@@ -98,7 +98,7 @@ export default function Navbar() {
           </span>
           <span className="hidden leading-tight xl:block">
             <span className="block text-sm font-semibold tracking-tight text-[#F8FAFC]">IT Outsource</span>
-            <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#94A3B8]">Services & Solutions</span>
+            <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#94A3B8]">Enterprise IT · Cloud · Operations</span>
           </span>
         </Link>
 
