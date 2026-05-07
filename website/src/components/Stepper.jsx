@@ -4,10 +4,10 @@ export default function Stepper({ steps }) {
   return (
     <ol className="grid gap-4 md:grid-cols-4">
       {steps.map((s, idx) => (
-        <li key={s.title} className="rounded-3xl border border-white/[0.12] bg-[#101E31] p-6">
+        <li key={s.title} className="rounded-3xl border border-white/[0.12] bg-[#101E2F] p-6">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="grid h-9 w-9 place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1726] text-sm font-semibold text-[#FFFFFF]">
+              <div className="grid h-9 w-9 place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1B2B] text-sm font-semibold text-[#F8FAFC]">
                 {String(idx + 1).padStart(2, '0')}
               </div>
               <div className="text-sm font-semibold">{s.title}</div>

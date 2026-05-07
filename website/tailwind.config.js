@@ -5,23 +5,23 @@ export default {
     extend: {
       colors: {
         ink: {
-          950: '#FFFFFF',
+          950: '#F8FAFC',
           900: '#CBD5E1',
           800: '#94A3B8',
           dark: '#0F172A'
         },
         navy: {
           950: '#07111F',
-          900: '#0B1726',
-          800: '#101E31'
+          900: '#0B1B2B',
+          800: '#101E2F'
         },
         brand: {
-          500: '#2563EB',
-          600: '#1D4ED8'
+          500: '#2F80ED',
+          600: '#2F80ED'
         },
         accent: {
           sky: '#38BDF8',
-          success: '#22C55E'
+          success: '#38BDF8'
         }
       }
     }

@@ -9,7 +9,7 @@ const HeroWebGL = lazy(() => import('./HeroWebGL.jsx'))
 
 export default function SiteLayout() {
   return (
-    <div className="relative min-h-dvh overflow-hidden bg-[#07111F] text-[#FFFFFF]">
+    <div className="relative min-h-dvh overflow-hidden bg-[#07111F] text-[#F8FAFC]">
       <Navbar />
       <main className="relative isolate overflow-hidden pt-16 md:pt-[72px]">
         {/* global WebGL network background (desktop only) */}

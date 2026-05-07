@@ -2,11 +2,11 @@ import { useNavigate } from 'react-router-dom'
 import Reveal from './Reveal.jsx'
 
 const variants = {
-  default: 'border-white/[0.12] bg-[#101E31]',
-  brand: 'border-white/[0.12] bg-[#101E31]',
-  cyan: 'border-white/[0.12] bg-[#101E31]',
-  steel: 'border-white/[0.12] bg-[#101E31]',
-  amber: 'border-white/[0.12] bg-[#101E31]'
+  default: 'border-white/[0.12] bg-[#101E2F]',
+  brand: 'border-white/[0.12] bg-[#101E2F]',
+  cyan: 'border-white/[0.12] bg-[#101E2F]',
+  steel: 'border-white/[0.12] bg-[#101E2F]',
+  amber: 'border-white/[0.12] bg-[#101E2F]'
 }
 
 function CardShell({ children, className = '', underlay = null, badge = null }) {
@@ -16,7 +16,7 @@ function CardShell({ children, className = '', underlay = null, badge = null }) 
 
       {badge ? (
         <div className="absolute left-4 top-4 z-20">
-          <span className="inline-flex max-w-[15rem] items-center truncate rounded-full border border-white/[0.12] bg-[#0B1726] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#CBD5E1]">
+          <span className="inline-flex max-w-[15rem] items-center truncate rounded-full border border-white/[0.12] bg-[#0B1B2B] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#CBD5E1]">
             {badge}
           </span>
         </div>
@@ -63,7 +63,7 @@ export function BulletList({ items }) {
     <ul className="space-y-2 text-sm leading-relaxed text-[#CBD5E1]">
       {items.map((b) => (
         <li key={b} className="flex gap-2.5">
-          <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#22C55E]" />
+          <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[#38BDF8]" />
           <span>{b}</span>
         </li>
       ))}

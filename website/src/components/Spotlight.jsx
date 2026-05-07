@@ -9,7 +9,7 @@ export default function Spotlight({ className = '' }) {
       className={'pointer-events-none absolute inset-0 opacity-45 mix-blend-screen ' + className}
       style={{
         background:
-          'radial-gradient(340px circle at 24% 18%, rgba(37,99,235,0.12), rgba(56,189,248,0.06), transparent 64%)'
+          'radial-gradient(340px circle at 24% 18%, rgba(47,128,237,0.12), rgba(56,189,248,0.06), transparent 64%)'
       }}
     />
   )

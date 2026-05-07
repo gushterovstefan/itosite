@@ -23,7 +23,7 @@ const SheenButton = forwardRef(function SheenButton({ to, href, children, classN
       }}
       {...compProps}
       {...props}
-      className={'btn-sheen btn-primary inline-flex items-center justify-center rounded-full bg-[#2563EB] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_38px_-22px_rgba(37,99,235,0.9)] ring-1 ring-[#38BDF8]/25 transition hover:bg-[#1D4ED8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 ' + className}
+      className={'btn-sheen btn-primary inline-flex items-center justify-center rounded-full bg-[#2F80ED] px-6 py-3 text-sm font-semibold text-[#0F172A] shadow-[0_14px_38px_-22px_rgba(47,128,237,0.9)] ring-1 ring-[#38BDF8]/25 transition hover:bg-[#2F80ED] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 ' + className}
       onMouseMove={(e) => {
         if (innerRef.current) setVars(innerRef.current, e.clientX, e.clientY)
         props.onMouseMove?.(e)

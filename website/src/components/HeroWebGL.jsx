@@ -133,7 +133,7 @@ export default function HeroWebGL({ logoSrc, showCoin = true, className = '' }) 
       const gctx = glowCanvas.getContext('2d')
       const grd = gctx.createRadialGradient(64, 64, 8, 64, 64, 64)
       grd.addColorStop(0, 'rgba(56,189,248,0.38)')
-      grd.addColorStop(0.55, 'rgba(37,99,235,0.12)')
+      grd.addColorStop(0.55, 'rgba(47,128,237,0.12)')
       grd.addColorStop(1, 'rgba(0,0,0,0)')
       gctx.fillStyle = grd
       gctx.fillRect(0, 0, 128, 128)

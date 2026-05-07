@@ -17,20 +17,20 @@ export default function HomeGem() {
   const ui = content.shared.ui
 
   return (
-    <div id="top" className="relative bg-[#07111F] text-[#FFFFFF]">
+    <div id="top" className="relative bg-[#07111F] text-[#F8FAFC]">
       {/* HERO */}
-      <section className="relative overflow-hidden" style={{ background: 'radial-gradient(circle at top right, rgba(37,99,235,0.28), transparent 35%), linear-gradient(180deg, #07111F 0%, #0B1726 100%)' }}>
+      <section className="relative overflow-hidden" style={{ background: 'radial-gradient(circle at top right, rgba(47,128,237,0.28), transparent 35%), linear-gradient(180deg, #07111F 0%, #0B1B2B 100%)' }}>
         <NetworkBackdrop className="z-0 opacity-70" />
         <div className="relative z-10 mx-auto max-w-6xl px-4 pt-10 md:pt-12">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
-              <div className="inline-flex items-center gap-3 rounded-full border border-white/[0.12] bg-[#101E31] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#CBD5E1]">
+              <div className="inline-flex items-center gap-3 rounded-full border border-white/[0.12] bg-[#101E2F] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#CBD5E1]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#38BDF8]" aria-hidden="true" />
                 {ui.itServicesBadge}
               </div>
 
               <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-6xl">{c.heroTitle}</h1>
-              <p className="mt-5 text-base font-medium text-[#FFFFFF] md:text-lg">{c.heroSubline}</p>
+              <p className="mt-5 text-base font-medium text-[#F8FAFC] md:text-lg">{c.heroSubline}</p>
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-[#94A3B8] md:text-base">
                 IT Outsource helps organizations reduce downtime, strengthen Microsoft 365 security, modernize legacy infrastructure, and improve backup and recovery readiness.
               </p>
@@ -41,7 +41,7 @@ export default function HomeGem() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-full border border-white/[0.12] bg-[#101E31] px-6 py-3 text-sm font-semibold text-[#FFFFFF] hover:bg-[#0B1726]"
+                  className="rounded-full border border-white/[0.12] bg-[#101E2F] px-6 py-3 text-sm font-semibold text-[#F8FAFC] hover:bg-[#0B1B2B]"
                 >
                   <span>{lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-min call'}</span>
                 </a>
@@ -49,8 +49,8 @@ export default function HomeGem() {
             </div>
 
             {/* hero side: logo + metric-like cards (inspired, not a clone) */}
-            <div className="relative text-[#FFFFFF]">
-              <div className="rounded-3xl border border-white/[0.12] bg-[#101E31] p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.65)] md:p-8">
+            <div className="relative text-[#F8FAFC]">
+              <div className="rounded-3xl border border-white/[0.12] bg-[#101E2F] p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.65)] md:p-8">
                 <img
                   src={brandBanner}
                   alt="IT Outsource Ltd. — Enterprise IT, Cloud, Operations"
@@ -63,20 +63,20 @@ export default function HomeGem() {
 
                 <div className="mt-6">
                   <div className="text-xs font-semibold uppercase tracking-[0.28em] text-[#CBD5E1]">Enterprise delivery</div>
-                  <div className="mt-3 text-4xl font-semibold tracking-tight text-[#FFFFFF]">15+ years</div>
+                  <div className="mt-3 text-4xl font-semibold tracking-tight text-[#F8FAFC]">15+ years</div>
                   <div className="mt-2 text-sm text-[#94A3B8]">Design · Build · Secure · Run</div>
                 </div>
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-2xl border border-white/[0.12] bg-[#0B1726] px-4 py-3">
+                  <div className="rounded-2xl border border-white/[0.12] bg-[#0B1B2B] px-4 py-3">
                     <div className="text-xs text-[#CBD5E1]">Availability</div>
                     <div className="mt-1 text-sm font-semibold">24/7 Ops</div>
                   </div>
-                  <div className="rounded-2xl border border-white/[0.12] bg-[#0B1726] px-4 py-3">
+                  <div className="rounded-2xl border border-white/[0.12] bg-[#0B1B2B] px-4 py-3">
                     <div className="text-xs text-[#CBD5E1]">Security</div>
                     <div className="mt-1 text-sm font-semibold">MFA + Hardening</div>
                   </div>
-                  <div className="rounded-2xl border border-white/[0.12] bg-[#0B1726] px-4 py-3">
+                  <div className="rounded-2xl border border-white/[0.12] bg-[#0B1B2B] px-4 py-3">
                     <div className="text-xs text-[#CBD5E1]">Delivery</div>
                     <div className="mt-1 text-sm font-semibold">SLA-driven</div>
                   </div>
@@ -85,17 +85,17 @@ export default function HomeGem() {
             </div>
           </div>
 
-          <div className="mt-10 rounded-3xl border border-white/[0.12] bg-[#101E31] p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.65)] md:p-6">
+          <div className="mt-10 rounded-3xl border border-white/[0.12] bg-[#101E2F] p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.65)] md:p-6">
             <div className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center">
               <div>
                 <div className="text-xs font-semibold uppercase tracking-[0.24em] text-[#38BDF8]">Delivery approach</div>
-                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#FFFFFF] md:text-3xl">How we deliver</h2>
+                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#F8FAFC] md:text-3xl">How we deliver</h2>
                 <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#CBD5E1] md:text-base">
                   A structured path from assessment and design to implementation, validation, and ongoing operations.
                 </p>
                 <Link
                   to="/how-we-deliver"
-                  className="mt-5 inline-flex items-center justify-center rounded-full border border-white/[0.12] bg-[#0B1726] px-5 py-2.5 text-sm font-semibold text-[#FFFFFF] transition hover:border-[#38BDF8]/45 hover:text-[#38BDF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70"
+                  className="mt-5 inline-flex items-center justify-center rounded-full border border-white/[0.12] bg-[#0B1B2B] px-5 py-2.5 text-sm font-semibold text-[#F8FAFC] transition hover:border-[#38BDF8]/45 hover:text-[#38BDF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70"
                 >
                   See our delivery model →
                 </Link>
@@ -103,8 +103,8 @@ export default function HomeGem() {
 
               <div className="grid gap-2 sm:grid-cols-5">
                 {['Assess', 'Design', 'Implement', 'Validate', 'Operate'].map((step, i) => (
-                  <div key={step} className="rounded-2xl border border-white/[0.12] bg-[#0B1726] px-3 py-3 text-center">
-                    <div className="mx-auto flex h-8 w-8 items-center justify-center rounded-full border border-[#38BDF8]/45 text-xs font-semibold text-[#FFFFFF]">
+                  <div key={step} className="rounded-2xl border border-white/[0.12] bg-[#0B1B2B] px-3 py-3 text-center">
+                    <div className="mx-auto flex h-8 w-8 items-center justify-center rounded-full border border-[#38BDF8]/45 text-xs font-semibold text-[#F8FAFC]">
                       {i + 1}
                     </div>
                     <div className="mt-2 text-xs font-semibold text-[#CBD5E1]">{step}</div>

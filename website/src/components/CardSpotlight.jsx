@@ -8,7 +8,7 @@ export default function CardSpotlight({ className = '' }) {
   const x = useMotionValue(0)
   const y = useMotionValue(0)
 
-  const background = useMotionTemplate`radial-gradient(170px circle at ${x}px ${y}px, rgba(37,99,235,0.14), rgba(56,189,248,0.08), transparent 62%)`
+  const background = useMotionTemplate`radial-gradient(170px circle at ${x}px ${y}px, rgba(47,128,237,0.14), rgba(56,189,248,0.08), transparent 62%)`
 
   if (reduce) return null
 

@@ -221,18 +221,18 @@ export default function Solutions() {
         secondaryCta={{ to: '#core-solutions', label: 'Core Solutions' }}
       />
 
-      <section className="border-y border-white/[0.12] bg-[#0B1726] py-6 text-[#FFFFFF]">
+      <section className="border-y border-white/[0.12] bg-[#0B1B2B] py-6 text-[#F8FAFC]">
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#38BDF8]">Technology expertise</div>
-              <p className="mt-2 max-w-2xl text-base font-semibold leading-relaxed text-[#FFFFFF]">
+              <p className="mt-2 max-w-2xl text-base font-semibold leading-relaxed text-[#F8FAFC]">
                 Trusted for Microsoft 365, Azure, Security, Backup and IT Governance Projects
               </p>
             </div>
             <div className="flex flex-wrap gap-2 lg:max-w-xl lg:justify-end">
               {expertiseBadges.map((badge) => (
-                <span key={badge} className="rounded-full border border-white/[0.12] bg-[#101E31] px-3 py-1.5 text-xs font-semibold text-[#CBD5E1]">
+                <span key={badge} className="rounded-full border border-white/[0.12] bg-[#101E2F] px-3 py-1.5 text-xs font-semibold text-[#CBD5E1]">
                   {badge}
                 </span>
               ))}
@@ -250,10 +250,10 @@ export default function Solutions() {
           {outcomes.map((item, i) => (
             <Card key={item.title} revealDelay={0.04 + i * 0.04} variant={i === 0 ? 'brand' : 'steel'} className="h-full">
               <div className="flex h-full flex-col">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1726]">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1B2B]">
                   <Icon as={icons[item.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
                 </span>
-                <div className="mt-5 text-lg font-semibold tracking-tight text-[#FFFFFF]">{item.title}</div>
+                <div className="mt-5 text-lg font-semibold tracking-tight text-[#F8FAFC]">{item.title}</div>
                 <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{item.text}</p>
               </div>
             </Card>
@@ -271,11 +271,11 @@ export default function Solutions() {
             <ClickCard key={solution.title} to={solution.to} revealDelay={0.04 + i * 0.03} variant="steel" className="h-full" badge="Solution">
               <div className="flex h-full flex-col">
                 <div className="flex items-start gap-4">
-                  <span className="grid h-11 w-11 flex-none place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1726]">
+                  <span className="grid h-11 w-11 flex-none place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1B2B]">
                     <Icon as={icons[solution.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
                   </span>
                   <div>
-                    <h2 className="text-xl font-semibold tracking-tight text-[#FFFFFF] md:text-2xl">{solution.title}</h2>
+                    <h2 className="text-xl font-semibold tracking-tight text-[#F8FAFC] md:text-2xl">{solution.title}</h2>
                     <p className="mt-2 text-sm font-semibold leading-relaxed text-[#CBD5E1]">Outcome: {solution.outcome}</p>
                   </div>
                 </div>
@@ -305,11 +305,11 @@ export default function Solutions() {
           <div className="absolute left-0 right-0 top-8 h-px bg-white/[0.12]" aria-hidden="true" />
           <div className="grid grid-cols-5 gap-4">
             {deliverySteps.map((step, i) => (
-              <article key={step.title} className="relative rounded-3xl border border-white/[0.12] bg-[#101E31] p-5 shadow-[0_18px_55px_-42px_rgba(0,0,0,0.9)]">
-                <div className="relative z-10 mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#38BDF8]/45 bg-[#0B1726] text-sm font-semibold text-[#FFFFFF]">
+              <article key={step.title} className="relative rounded-3xl border border-white/[0.12] bg-[#101E2F] p-5 shadow-[0_18px_55px_-42px_rgba(0,0,0,0.9)]">
+                <div className="relative z-10 mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#38BDF8]/45 bg-[#0B1B2B] text-sm font-semibold text-[#F8FAFC]">
                   {i + 1}
                 </div>
-                <h2 className="text-lg font-semibold tracking-tight text-[#FFFFFF]">{step.title}</h2>
+                <h2 className="text-lg font-semibold tracking-tight text-[#F8FAFC]">{step.title}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{step.text}</p>
               </article>
             ))}
@@ -320,11 +320,11 @@ export default function Solutions() {
           {deliverySteps.map((step, i) => (
             <Card key={step.title} revealDelay={0.04 + i * 0.03} variant="steel">
               <div className="flex gap-4">
-                <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full border border-[#38BDF8]/45 bg-[#0B1726] text-sm font-semibold text-[#FFFFFF]">
+                <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full border border-[#38BDF8]/45 bg-[#0B1B2B] text-sm font-semibold text-[#F8FAFC]">
                   {i + 1}
                 </div>
                 <div>
-                  <h2 className="text-lg font-semibold tracking-tight text-[#FFFFFF]">{step.title}</h2>
+                  <h2 className="text-lg font-semibold tracking-tight text-[#F8FAFC]">{step.title}</h2>
                   <p className="mt-2 text-sm leading-relaxed text-[#CBD5E1]">{step.text}</p>
                 </div>
               </div>
@@ -342,10 +342,10 @@ export default function Solutions() {
           {industries.map((industry, i) => (
             <Card key={industry.title} revealDelay={0.04 + i * 0.04} variant={i === 1 ? 'brand' : 'steel'} className="h-full">
               <div className="flex h-full flex-col">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1726]">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1B2B]">
                   <Icon as={icons[industry.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
                 </span>
-                <div className="mt-5 text-lg font-semibold tracking-tight text-[#FFFFFF]">{industry.title}</div>
+                <div className="mt-5 text-lg font-semibold tracking-tight text-[#F8FAFC]">{industry.title}</div>
                 <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{industry.text}</p>
               </div>
             </Card>
@@ -362,10 +362,10 @@ export default function Solutions() {
           {projectExperience.map((project, i) => (
             <Card key={project.title} revealDelay={0.04 + i * 0.04} variant={i === 0 ? 'brand' : 'steel'} className="h-full">
               <div className="flex h-full flex-col">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1726]">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/[0.12] bg-[#0B1B2B]">
                   <Icon as={icons[project.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
                 </span>
-                <div className="mt-5 text-lg font-semibold tracking-tight text-[#FFFFFF]">{project.title}</div>
+                <div className="mt-5 text-lg font-semibold tracking-tight text-[#F8FAFC]">{project.title}</div>
                 <p className="mt-3 grow text-sm leading-relaxed text-[#CBD5E1]">{project.text}</p>
               </div>
             </Card>

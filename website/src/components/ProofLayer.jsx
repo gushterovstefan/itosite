@@ -52,16 +52,16 @@ export default function ProofLayer() {
   const l = copy[lang] || copy.en
 
   return (
-    <section className="py-8 md:py-10">
+    <section className="light-section bg-[#F8FAFC] py-8 text-[#0F172A] md:py-10">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="rounded-3xl border border-white/[0.12] bg-[#101E31] p-5 backdrop-blur md:p-6">
+        <div className="rounded-3xl border border-white/[0.12] bg-[#101E2F] p-5 backdrop-blur md:p-6">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
               <div className="text-xs font-semibold uppercase tracking-[0.24em] text-[#38BDF8]">{l.eyebrow}</div>
-              <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[#FFFFFF] md:text-3xl">{l.title}</h2>
+              <h2 className="mt-3 text-2xl font-semibold tracking-tight text-[#F8FAFC] md:text-3xl">{l.title}</h2>
               <div className="mt-5 grid gap-2 sm:grid-cols-2">
                 {l.logos.map((item) => (
-                  <div key={item} className="rounded-2xl border border-white/[0.12] bg-[#101E31] px-4 py-3 text-sm font-semibold text-[#CBD5E1]">
+                  <div key={item} className="rounded-2xl border border-white/[0.12] bg-[#101E2F] px-4 py-3 text-sm font-semibold text-[#CBD5E1]">
                     {item}
                   </div>
                 ))}
@@ -71,8 +71,8 @@ export default function ProofLayer() {
             <div className="grid gap-4">
               <div className="grid gap-3 md:grid-cols-3">
                 {l.metrics.map(([value, label]) => (
-                  <div key={value} className="rounded-2xl border border-white/[0.12] bg-[#0B1726] p-4">
-                    <div className="text-2xl font-semibold tracking-tight text-[#FFFFFF]">{value}</div>
+                  <div key={value} className="rounded-2xl border border-white/[0.12] bg-[#0B1B2B] p-4">
+                    <div className="text-2xl font-semibold tracking-tight text-[#F8FAFC]">{value}</div>
                     <div className="mt-2 text-xs leading-relaxed text-[#94A3B8]">{label}</div>
                   </div>
                 ))}
@@ -80,12 +80,12 @@ export default function ProofLayer() {
 
               <div className="grid gap-3 md:grid-cols-2">
                 {l.cases.map((item) => (
-                  <article key={item.title} className="rounded-2xl border border-white/[0.12] bg-[#101E31] p-4">
-                    <h3 className="text-sm font-semibold text-[#FFFFFF]">{item.title}</h3>
+                  <article key={item.title} className="rounded-2xl border border-white/[0.12] bg-[#101E2F] p-4">
+                    <h3 className="text-sm font-semibold text-[#F8FAFC]">{item.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-[#CBD5E1]">{item.body}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.metrics.map((metric) => (
-                        <span key={metric} className="rounded-full border border-white/[0.12] bg-[#101E31] px-3 py-1 text-[11px] font-semibold text-[#94A3B8]">
+                        <span key={metric} className="rounded-full border border-white/[0.12] bg-[#101E2F] px-3 py-1 text-[11px] font-semibold text-[#94A3B8]">
                           {metric}
                         </span>
                       ))}

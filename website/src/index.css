@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light dark;
   --color-bg-dark: #07111F;
-  --color-bg-section: #0B1726;
-  --color-bg-card: #101E31;
-  --color-bg-light: #F7F9FC;
-  --color-text-primary: #FFFFFF;
+  --color-bg-section: #0B1B2B;
+  --color-bg-card: #101E2F;
+  --color-bg-light: #F8FAFC;
+  --color-text-primary: #F8FAFC;
   --color-text-secondary: #CBD5E1;
   --color-text-muted: #94A3B8;
   --color-text-dark: #0F172A;
-  --color-accent: #2563EB;
-  --color-accent-hover: #1D4ED8;
+  --color-accent: #2F80ED;
+  --color-accent-hover: #2F80ED;
   --color-cyan: #38BDF8;
   --color-border: rgba(255,255,255,0.12);
 }
@@ -24,7 +24,7 @@ html, body {
 }
 
 body {
-  @apply bg-[#07111F] text-[#FFFFFF] antialiased;
+  @apply bg-[#07111F] text-[#F8FAFC] antialiased;
   font-feature-settings: 'ss01' on, 'cv02' on;
 }
 
@@ -41,6 +41,35 @@ body {
 /* premium readability helpers */
 .prose-lead {
   @apply text-base leading-relaxed text-[#CBD5E1] md:text-lg;
+}
+
+/* Hybrid design system: light content areas must override dark-card utilities. */
+.light-section [class*="bg-[#101E2F]"],
+.light-section [class*="bg-[#0B1B2B]"] {
+  background-color: #F8FAFC !important;
+}
+
+.light-section [class*="border-white/[0.12]"] {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+.light-section [class*="text-[#F8FAFC]"] {
+  color: #0F172A !important;
+}
+
+.light-section [class*="text-[#CBD5E1]"],
+.light-section [class*="text-[#94A3B8]"] {
+  color: #334155 !important;
+}
+
+.light-section [class*="text-[#38BDF8]"],
+.light-section [class*="text-[#2F80ED]"] {
+  color: #0F172A !important;
+}
+
+.light-section .btn-primary,
+.light-section [class*="bg-[#2F80ED]"] {
+  color: #0F172A !important;
 }
 
 .h1 {
@@ -76,7 +105,7 @@ body {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: rgba(37,99,235,0.42);
+  background: rgba(47,128,237,0.42);
   opacity: 0.34;
   filter: blur(8px);
   z-index: -2;
@@ -144,7 +173,7 @@ body {
   z-index: 0;
   pointer-events: none;
   opacity: 0.9;
-  background: rgba(11,23,38,0.55);
+  background: rgba(11,27,43,0.55);
   animation: sectionDrift 10s ease-in-out infinite;
 }
 
@@ -299,7 +328,7 @@ body {
 
 .enterprise-header {
   background: rgba(7, 17, 31, 0.88) !important;
-  color: #FFFFFF;
+  color: #F8FAFC;
   border-bottom-color: rgba(255, 255, 255, 0.08) !important;
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);

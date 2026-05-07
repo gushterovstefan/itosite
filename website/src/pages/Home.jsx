@@ -44,7 +44,7 @@ export default function Home() {
   const watermarkRotate = useTransform(scrollY, [0, 600], [0, -6])
 
   return (
-    <div id="top" className="relative bg-[#07111F] text-[#FFFFFF]">
+    <div id="top" className="relative bg-[#07111F] text-[#F8FAFC]">
       {/* Intro logo pop (desktop only) */}
       {showIntro ? (
         <motion.div
@@ -78,9 +78,9 @@ export default function Home() {
       >
         <div className="pointer-events-none absolute inset-0">
           {/* animated gradient glow */}
-          <div className="hero-float absolute -left-40 -top-40 h-96 w-96 rounded-full bg-[#2563EB]/14 blur-3xl" />
+          <div className="hero-float absolute -left-40 -top-40 h-96 w-96 rounded-full bg-[#2F80ED]/14 blur-3xl" />
           <div className="hero-float absolute -bottom-56 right-0 h-[32rem] w-[32rem] rounded-full bg-[#38BDF8]/10 blur-3xl" />
-          <div className="hero-float absolute inset-0 bg-[linear-gradient(180deg,#07111F_0%,#0B1726_100%)]" />
+          <div className="hero-float absolute inset-0 bg-[linear-gradient(180deg,#07111F_0%,#0B1B2B_100%)]" />
           <div className="absolute inset-0 z-[1] hidden opacity-80 md:block [mask-image:linear-gradient(to_bottom,black_0%,black_70%,transparent_100%)]">
             <Suspense fallback={null}>
               <HeroWebGL logoSrc={logo} showCoin={false} />
@@ -120,7 +120,7 @@ export default function Home() {
                 <span className="text-[15px] font-extrabold tracking-[0.28em] text-[#38BDF8] opacity-[0.22]">
                   IT
                 </span>
-                <span className="mx-3 text-[15px] font-extrabold tracking-[0.28em] text-white/20">
+                <span className="mx-3 text-[15px] font-extrabold tracking-[0.28em] text-[#F8FAFC]/20">
                   OUTSOURCE
                 </span>
                 <span className="text-[15px] font-extrabold tracking-[0.28em] text-[#38BDF8] opacity-[0.18]">
@@ -140,7 +140,7 @@ export default function Home() {
             className="max-w-3xl"
           >
             <motion.div variants={fadeUp} className="inline-flex">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-[#101E31] px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-[#CBD5E1]">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-[#101E2F] px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-[#CBD5E1]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#38BDF8]" aria-hidden="true" />
                 {ui.itServicesBadge}
               </span>
@@ -149,7 +149,7 @@ export default function Home() {
             <motion.h1 variants={fadeUp} className="mt-4 h1">
               {c.heroTitle}
             </motion.h1>
-            <motion.p variants={fadeUp} className="mt-5 text-base font-medium text-white/85 md:text-lg">
+            <motion.p variants={fadeUp} className="mt-5 text-base font-medium text-[#F8FAFC]/85 md:text-lg">
               {c.heroSubline}
             </motion.p>
             <motion.p variants={fadeUp} className="mt-3 prose-lead">
@@ -161,7 +161,7 @@ export default function Home() {
               <SheenButton to="/contacts">{ui.contactUs}</SheenButton>
               <Link
                 to="/solutions"
-                className="rounded-full border border-white/15 bg-[#101E31] px-6 py-3 text-sm font-semibold text-[#FFFFFF] hover:bg-[#0B1726]"
+                className="rounded-full border border-white/15 bg-[#101E2F] px-6 py-3 text-sm font-semibold text-[#F8FAFC] hover:bg-[#0B1B2B]"
               >
                 <span>{ui.exploreSolutions}</span>
               </Link>
@@ -184,7 +184,7 @@ export default function Home() {
                       <span className="text-[15px] font-extrabold tracking-[0.28em] text-[#38BDF8] opacity-[0.22]">
                         IT
                       </span>
-                      <span className="mx-3 text-[15px] font-extrabold tracking-[0.28em] text-white/20">
+                      <span className="mx-3 text-[15px] font-extrabold tracking-[0.28em] text-[#F8FAFC]/20">
                         OUTSOURCE
                       </span>
                       <span className="text-[15px] font-extrabold tracking-[0.28em] text-[#38BDF8] opacity-[0.18]">
@@ -198,7 +198,7 @@ export default function Home() {
                   <div className="text-sm font-semibold">{x.title}</div>
                   <Icon as={icons[x.icon] ?? icons.tools} />
                 </div>
-                <div className="mt-2 text-sm text-white/75">{x.description}</div>
+                <div className="mt-2 text-sm text-[#F8FAFC]/75">{x.description}</div>
               </ClickCard>
             ))}
           </div>
@@ -257,9 +257,9 @@ export default function Home() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <div className="text-sm font-semibold">{c.services.trust.title}</div>
-                <div className="mt-2 text-sm text-white/78">{c.services.trust.description}</div>
+                <div className="mt-2 text-sm text-[#F8FAFC]/78">{c.services.trust.description}</div>
               </div>
-              <span className="grid h-10 w-10 place-items-center rounded-2xl border border-white/[0.12] bg-[#101E31]">
+              <span className="grid h-10 w-10 place-items-center rounded-2xl border border-white/[0.12] bg-[#101E2F]">
                 <Icon as={icons.security} className="h-6 w-6 text-[#CBD5E1]" />
               </span>
             </div>
@@ -276,7 +276,7 @@ export default function Home() {
                 <div className="text-sm font-semibold">{b.h}</div>
                 <Icon as={icons[b.icon] ?? icons.tools} />
               </div>
-              <div className="mt-2 text-sm text-white/78">{b.p}</div>
+              <div className="mt-2 text-sm text-[#F8FAFC]/78">{b.p}</div>
             </Card>
           ))}
         </div>
@@ -309,9 +309,9 @@ export default function Home() {
       {/* CTA */}
       <section className="border-t border-white/[0.12] py-14">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="rounded-3xl border border-white/[0.12] bg-[#101E31] p-8 md:p-12">
+          <div className="rounded-3xl border border-white/[0.12] bg-[#101E2F] p-8 md:p-12">
             <div className="text-xl font-semibold md:text-2xl">Ready to reduce IT risk?</div>
-            <div className="mt-2 max-w-2xl text-sm text-white/78 md:text-base">
+            <div className="mt-2 max-w-2xl text-sm text-[#F8FAFC]/78 md:text-base">
               We can assess your Microsoft 365, endpoint, infrastructure, and backup environment, then define the practical next step.
             </div>
             <div className="mt-6">
