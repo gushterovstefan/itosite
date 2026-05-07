@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom'
 import GemSection from '../components/GemSection.jsx'
 import KpiStrip from '../components/KpiStrip.jsx'
-import Stepper from '../components/Stepper.jsx'
 import { ClickCard } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import SheenButton from '../components/SheenButton.jsx'
@@ -85,6 +85,35 @@ export default function HomeGem() {
             </div>
           </div>
 
+          <div className="mt-10 rounded-3xl border border-white/[0.12] bg-[#101E31] p-5 shadow-[0_18px_70px_-48px_rgba(0,0,0,0.65)] md:p-6">
+            <div className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center">
+              <div>
+                <div className="text-xs font-semibold uppercase tracking-[0.24em] text-[#38BDF8]">Delivery approach</div>
+                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-[#FFFFFF] md:text-3xl">How we deliver</h2>
+                <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#CBD5E1] md:text-base">
+                  A structured path from assessment and design to implementation, validation, and ongoing operations.
+                </p>
+                <Link
+                  to="/how-we-deliver"
+                  className="mt-5 inline-flex items-center justify-center rounded-full border border-white/[0.12] bg-[#0B1726] px-5 py-2.5 text-sm font-semibold text-[#FFFFFF] transition hover:border-[#38BDF8]/45 hover:text-[#38BDF8] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70"
+                >
+                  See our delivery model →
+                </Link>
+              </div>
+
+              <div className="grid gap-2 sm:grid-cols-5">
+                {['Assess', 'Design', 'Implement', 'Validate', 'Operate'].map((step, i) => (
+                  <div key={step} className="rounded-2xl border border-white/[0.12] bg-[#0B1726] px-3 py-3 text-center">
+                    <div className="mx-auto flex h-8 w-8 items-center justify-center rounded-full border border-[#38BDF8]/45 text-xs font-semibold text-[#FFFFFF]">
+                      {i + 1}
+                    </div>
+                    <div className="mt-2 text-xs font-semibold text-[#CBD5E1]">{step}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* SERVICE ENTRY CARDS */}
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {c.highlights.map((x, i) => (
@@ -146,18 +175,6 @@ export default function HomeGem() {
             <div className="mt-3 text-sm text-[#CBD5E1]">{c.services.consulting.items[0]}</div>
           </ClickCard>
         </div>
-      </GemSection>
-
-      {/* Stepper */}
-      <GemSection eyebrow="Process" title="How we deliver" lead="A clear, repeatable engagement model — from assessment to ongoing support.">
-        <Stepper
-          steps={[
-            { title: 'Assess', icon: 'consulting', body: 'Understand requirements, risks, and current state.' },
-            { title: 'Design', icon: 'platform', body: 'Define architecture, security, and a delivery plan.' },
-            { title: 'Implement', icon: 'tools', body: 'Build, integrate, automate, and document.' },
-            { title: 'Run', icon: 'support', body: 'Operate with monitoring, SLAs, and continuous improvement.' }
-          ]}
-        />
       </GemSection>
 
       <ConversionCta />
