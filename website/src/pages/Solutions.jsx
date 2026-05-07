@@ -4,6 +4,7 @@ import { Card, ClickCard, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import ConversionCta from '../components/ConversionCta.jsx'
 import { useContent } from '../content/index.jsx'
+import { BOOKING_URL } from '../config/booking.js'
 
 const solutionLinks = {
   'Microsoft Azure': '/solutions/microsoft-azure',
@@ -35,23 +36,12 @@ export default function Solutions() {
   return (
     <div>
       <PageHero
-        eyebrow={content.shared.ui.solutions}
-        title={c.title}
-        lead={c.lead}
-        subline={c.subline}
-        primaryCta={{ to: '/contacts', label: content.shared.ui.contactUs ?? content.shared.ui.contact }}
-        secondaryCta={{ to: '/it-support-services', label: content.shared.ui.support }}
-        aside={{
-          eyebrow: 'Solutions',
-          title: 'Modern IT building blocks',
-          lead: 'Implement, integrate and support solutions that match your requirements.',
-          icon: 'platform',
-          items: [
-            { k: 'Delivery', v: 'End-to-end' },
-            { k: 'Security', v: 'By design' },
-            { k: 'Support', v: 'SLA-ready' }
-          ]
-        }}
+        eyebrow="IT Solutions"
+        title="Enterprise IT, Cloud & Security Solutions for Growing Businesses"
+        lead="We design, migrate, secure, and support Microsoft 365, Azure, endpoint, backup, and disaster recovery environments — with enterprise-grade governance and practical delivery experience."
+        trustLine="Microsoft 365 • Azure • Security • Backup • Disaster Recovery • Endpoint Management"
+        primaryCta={{ href: BOOKING_URL, label: 'Book a Consultation' }}
+        secondaryCta={{ to: '/solutions', label: 'View Solutions' }}
       />
 
       <GemSection eyebrow={content.shared.ui.solutions} title={c.title} lead={c.lead}>

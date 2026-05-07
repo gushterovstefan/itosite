@@ -24,8 +24,8 @@ const metaByPath = {
       description: 'Enterprise architecture, cloud migration, security governance, ERP integration and technical due diligence for IT change.'
     },
     '/solutions': {
-      title: 'IT Solutions — Azure, Microsoft 365, Security, Backup & DR',
-      description: 'Production-ready solutions across Microsoft Azure, Microsoft 365, Zero Trust security, Entra ID, Veeam backup, cloud migration and web platforms.'
+      title: 'Enterprise IT, Cloud & Security Solutions — IT Outsource Ltd.',
+      description: 'Microsoft 365, Azure, endpoint, backup and disaster recovery environments designed, migrated, secured and supported with enterprise-grade governance.'
     },
     '/solutions/microsoft-azure': {
       title: 'Microsoft Azure Solutions — IT Outsource Ltd.',
