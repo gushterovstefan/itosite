@@ -11,7 +11,7 @@ const routeMeta = {
   '/it-support-services': ['IT Support Services — IT Outsource Ltd.', 'SLA-driven managed IT support, service desk, endpoint management, remote and on-site support for business-critical operations.'],
   '/it-infrastructure-services': ['IT Infrastructure Services — IT Outsource Ltd.', 'Hybrid infrastructure, virtualization, networking, backup, DR and secure platform operations for resilient business systems.'],
   '/it-consulting-services': ['IT Consulting Services — IT Outsource Ltd.', 'Enterprise architecture, cloud migration, security governance, ERP integration and technical due diligence for IT change.'],
-  '/solutions': ['IT Solutions — Azure, Microsoft 365, Security, Backup & DR', 'Production-ready solutions across Microsoft Azure, Microsoft 365, Zero Trust security, Entra ID, Veeam backup, cloud migration and web platforms.'],
+  '/solutions': ['IT Solutions for Microsoft 365, Azure, Security & Disaster Recovery | IT Outsource Ltd.', 'IT Outsource Ltd. provides Microsoft 365, Azure, cybersecurity, backup, disaster recovery, endpoint management and managed IT consulting services for growing businesses.'],
   '/solutions/microsoft-azure': ['Microsoft Azure Solutions — IT Outsource Ltd.', 'Azure infrastructure design, secure networking, monitoring, governance, cost control and operational runbooks.'],
   '/solutions/microsoft-365': ['Microsoft 365 Solutions — IT Outsource Ltd.', 'Microsoft 365 collaboration, Teams, SharePoint, Exchange, Entra, Intune and Defender governance for modern workplace operations.'],
   '/solutions/vmware-proxmox-virtualization': ['VMware & Proxmox Virtualization — IT Outsource Ltd.', 'Virtualization assessment, design, migration and operations for VMware and Proxmox private infrastructure.'],

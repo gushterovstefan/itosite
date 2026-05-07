@@ -110,6 +110,40 @@ const solutionDescriptions = {
   'GxP & Clinical Research IT': 'Support regulated environments with governance-aware infrastructure, documentation, continuity, and operational controls.'
 }
 
+const solutionGroups = [
+  {
+    title: 'Microsoft 365 & Modern Workplace',
+    lead: 'Secure collaboration, email, files, migration, SharePoint, Teams, Intune and user adoption under one governed Microsoft 365 operating model.',
+    titles: ['Microsoft 365', 'Cloud Migration Services']
+  },
+  {
+    title: 'Azure Cloud & Infrastructure',
+    lead: 'Modernize legacy infrastructure with Azure, hybrid connectivity, virtualization, monitoring, cost control and practical runbooks.',
+    titles: ['Microsoft Azure', 'Azure Hybrid Cloud Integration', 'VMware & Proxmox Virtualization']
+  },
+  {
+    title: 'Cybersecurity & Identity',
+    lead: 'Control identity risk, endpoint exposure, access policies, security monitoring and audit evidence across Microsoft security platforms.',
+    titles: ['Zero Trust Security with Defender & Sentinel', 'Entra ID & SSO Consolidation', 'GxP & Clinical Research IT']
+  },
+  {
+    title: 'Backup & Disaster Recovery',
+    lead: 'Improve backup and recovery readiness with clear RPO/RTO targets, immutable backup design, restore testing and continuity planning.',
+    titles: ['Backup & DR with Veeam']
+  },
+  {
+    title: 'Endpoint & Device Management',
+    lead: 'Standardize device compliance, endpoint protection, Intune policies and support ownership for Windows, macOS and mobile users.',
+    titles: ['Microsoft 365', 'Zero Trust Security with Defender & Sentinel', 'Entra ID & SSO Consolidation']
+  }
+]
+
+function cardsForGroup(cards, group) {
+  return group.titles
+    .map((title) => cards.find((card) => card.title === title))
+    .filter(Boolean)
+}
+
 function solutionDescriptionFor(card) {
   return solutionDescriptions[card.title] ?? 'Plan, implement, secure, and support this environment with clear ownership, risk controls, and operational handover.'
 }
@@ -122,11 +156,11 @@ export default function Solutions() {
     <div>
       <PageHero
         eyebrow="IT Solutions"
-        title="Enterprise IT, Cloud & Security Solutions for Growing Businesses"
+        title="Enterprise IT, Cloud & Security Solutions"
         lead="We design, migrate, secure, and support Microsoft 365, Azure, endpoint, backup, and disaster recovery environments — with audit-ready governance and practical delivery experience."
         trustLine="Microsoft 365 • Azure • Security • Backup • Disaster Recovery • Endpoint Management"
         primaryCta={{ href: BOOKING_URL, label: 'Book a Consultation' }}
-        secondaryCta={{ to: '/solutions', label: 'View Solutions' }}
+        secondaryCta={{ to: '#core-it-solutions', label: 'Core IT Solutions' }}
       />
 
       <section className="border-y border-white/[0.08] bg-[#0B1728] py-6 text-[#F8FAFC]">
@@ -165,6 +199,61 @@ export default function Solutions() {
                 <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{item.text}</p>
               </div>
             </Card>
+          ))}
+        </div>
+      </GemSection>
+
+      <GemSection
+        eyebrow="Core solutions"
+        title="Core IT Solutions"
+        lead="A board-level view of the Microsoft, Azure, security, backup, endpoint and infrastructure work we deliver."
+      >
+        <div id="core-it-solutions" className="grid gap-6">
+          {solutionGroups.map((group, groupIndex) => (
+            <section key={group.title} aria-labelledby={group.title.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and')} className="rounded-3xl border border-white/10 bg-[#0B1728] p-5 md:p-6">
+              <h2 id={group.title.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and')} className="text-2xl font-semibold tracking-tight text-[#F8FAFC] md:text-3xl">{group.title}</h2>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#CBD5E1] md:text-base">{group.lead}</p>
+              <div className="mt-5 grid gap-4 lg:grid-cols-2">
+                {cardsForGroup(c.cards, group).map((card, i) => {
+                  const to = solutionLinks[card.title]
+                  const Shell = to ? ClickCard : Card
+                  const props = to
+                    ? { to, badge: 'Solution' }
+                    : {}
+
+                  return (
+                    <Shell key={`${group.title}-${card.title}`} revealDelay={0.04 + (groupIndex + i) * 0.03} variant="steel" className="h-full" {...props}>
+                      <div className="flex h-full flex-col">
+                        <div className="flex items-start gap-4">
+                          <span className="grid h-11 w-11 flex-none place-items-center rounded-2xl border border-white/10 bg-[#0B1728]">
+                            <Icon as={icons[card.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
+                          </span>
+                          <div>
+                            <div className="text-lg font-semibold tracking-tight text-[#F8FAFC]">{card.title}</div>
+                            <p className="mt-2 text-sm leading-relaxed text-[#CBD5E1]">{solutionDescriptionFor(card)}</p>
+                          </div>
+                        </div>
+
+                        <div className="mt-6">
+                          <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#94A3B8]">Key capabilities</div>
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {card.bullets.slice(0, 4).map((capability) => (
+                              <span key={capability} className="rounded-full border border-white/10 bg-[#0B1728] px-3 py-1 text-xs font-medium text-[#CBD5E1]">
+                                {capability}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="mt-6 text-sm font-semibold text-[#38BDF8]">
+                          {to ? 'Learn more →' : 'Learn more'}
+                        </div>
+                      </div>
+                    </Shell>
+                  )
+                })}
+              </div>
+            </section>
           ))}
         </div>
       </GemSection>
@@ -212,50 +301,12 @@ export default function Solutions() {
         </div>
       </GemSection>
 
-      <GemSection eyebrow={content.shared.ui.solutions} title={c.title} lead={c.lead}>
-        <div className="grid gap-4 lg:grid-cols-2">
-          {c.cards.map((card, i) => {
-            const to = solutionLinks[card.title]
-            const Shell = to ? ClickCard : Card
-            const props = to
-              ? { to, badge: 'Solution' }
-              : {}
-
-            return (
-              <Shell key={card.title} revealDelay={0.04 + i * 0.04} variant="steel" className="h-full" {...props}>
-                <div className="flex h-full flex-col">
-                  <div className="flex items-start gap-4">
-                    <span className="grid h-11 w-11 flex-none place-items-center rounded-2xl border border-white/10 bg-[#0B1728]">
-                      <Icon as={icons[card.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
-                    </span>
-                    <div>
-                      <div className="text-lg font-semibold tracking-tight text-[#F8FAFC]">{card.title}</div>
-                      <p className="mt-2 text-sm leading-relaxed text-[#CBD5E1]">{solutionDescriptionFor(card)}</p>
-                    </div>
-                  </div>
-
-                  <div className="mt-6">
-                    <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#94A3B8]">Key capabilities</div>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {card.bullets.slice(0, 4).map((capability) => (
-                        <span key={capability} className="rounded-full border border-white/10 bg-[#0B1728] px-3 py-1 text-xs font-medium text-[#CBD5E1]">
-                          {capability}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="mt-6 text-sm font-semibold text-[#38BDF8]">
-                    {to ? 'Learn more →' : 'Learn more'}
-                  </div>
-                </div>
-              </Shell>
-            )
-          })}
-        </div>
-      </GemSection>
-
-      <ConversionCta variant="solutions" />
+      <ConversionCta
+        variant="solutions"
+        title="Start with an IT Assessment"
+        lead="We can review Microsoft 365, Azure, identity, endpoint, backup and recovery readiness, then define the highest-value next step."
+        secondaryLabel="Book a 30-min call"
+      />
     </div>
   )
 }

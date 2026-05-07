@@ -24,8 +24,8 @@ const metaByPath = {
       description: 'Enterprise architecture, cloud migration, security governance, ERP integration and technical due diligence for IT change.'
     },
     '/solutions': {
-      title: 'Enterprise IT, Cloud & Security Solutions — IT Outsource Ltd.',
-      description: 'Microsoft 365, Azure, endpoint, backup and disaster recovery environments designed, migrated, secured and supported with audit-ready governance.'
+      title: 'IT Solutions for Microsoft 365, Azure, Security & Disaster Recovery | IT Outsource Ltd.',
+      description: 'IT Outsource Ltd. provides Microsoft 365, Azure, cybersecurity, backup, disaster recovery, endpoint management and managed IT consulting services for growing businesses.'
     },
     '/solutions/microsoft-azure': {
       title: 'Microsoft Azure Solutions — IT Outsource Ltd.',
