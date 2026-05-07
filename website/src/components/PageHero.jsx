@@ -25,7 +25,7 @@ export default function PageHero({
         <div className="absolute inset-x-0 top-0 h-px bg-white/[0.08]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-6xl px-4 py-14 md:py-20">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-6 pt-12 md:pb-8 md:pt-16">
         <div className={aside ? 'grid gap-10 md:grid-cols-[minmax(0,1fr)_360px] md:items-start' : ''}>
           <div>
             {eyebrow ? (
