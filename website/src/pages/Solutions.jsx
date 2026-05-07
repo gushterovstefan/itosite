@@ -52,6 +52,31 @@ const outcomes = [
   }
 ]
 
+const expertiseBadges = ['Microsoft 365', 'Azure', 'Intune', 'Defender', 'Veeam', 'SharePoint', 'Entra ID', 'Sentinel']
+
+const industries = [
+  {
+    title: 'Retail & Distribution',
+    icon: 'platform',
+    text: 'Cloud, ERP infrastructure, store operations, endpoint management, backup, and disaster recovery.'
+  },
+  {
+    title: 'Pharma & Clinical Research',
+    icon: 'security',
+    text: 'Secure Microsoft 365 environments, compliance-focused collaboration, identity governance, and data protection.'
+  },
+  {
+    title: 'Energy & Solar',
+    icon: 'cloud',
+    text: 'Microsoft 365 migration, endpoint standardization, document governance, and project collaboration.'
+  },
+  {
+    title: 'Professional Services',
+    icon: 'consulting',
+    text: 'Cloud productivity, security, backup, and managed IT operations.'
+  }
+]
+
 const solutionDescriptions = {
   'Microsoft Azure': 'Build scalable, secure cloud foundations with governance, networking, monitoring, cost control, and operational runbooks from day one.',
   'Microsoft 365': 'Modernize collaboration, email, documents, device access, and identity so teams can work securely from anywhere.',
@@ -85,6 +110,26 @@ export default function Solutions() {
         secondaryCta={{ to: '/solutions', label: 'View Solutions' }}
       />
 
+      <section className="border-y border-white/[0.08] bg-[#0B1728] py-6 text-[#F8FAFC]">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#38BDF8]">Technology expertise</div>
+              <p className="mt-2 max-w-2xl text-base font-semibold leading-relaxed text-[#F8FAFC]">
+                Trusted for Microsoft 365, Azure, Security, Backup and IT Governance Projects
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2 lg:max-w-xl lg:justify-end">
+              {expertiseBadges.map((badge) => (
+                <span key={badge} className="rounded-full border border-white/10 bg-[#101E33] px-3 py-1.5 text-xs font-semibold text-[#CBD5E1]">
+                  {badge}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <GemSection
         eyebrow="Business outcomes"
         title="What We Help You Solve"
@@ -99,6 +144,26 @@ export default function Solutions() {
                 </span>
                 <div className="mt-5 text-lg font-semibold tracking-tight text-[#F8FAFC]">{item.title}</div>
                 <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{item.text}</p>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </GemSection>
+
+      <GemSection
+        eyebrow="Industry credibility"
+        title="Industries We Support"
+        lead="Practical IT delivery for business environments where uptime, security, collaboration, and governance matter."
+      >
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {industries.map((industry, i) => (
+            <Card key={industry.title} revealDelay={0.04 + i * 0.04} variant={i === 1 ? 'brand' : 'steel'} className="h-full">
+              <div className="flex h-full flex-col">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-[#0B1728]">
+                  <Icon as={icons[industry.icon] ?? icons.platform} className="h-6 w-6 text-[#38BDF8]" />
+                </span>
+                <div className="mt-5 text-lg font-semibold tracking-tight text-[#F8FAFC]">{industry.title}</div>
+                <p className="mt-3 text-sm leading-relaxed text-[#CBD5E1]">{industry.text}</p>
               </div>
             </Card>
           ))}
