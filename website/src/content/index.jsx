@@ -1,76 +1,32 @@
-import React, { createContext, useContext, useEffect, useMemo } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import i18next from 'i18next'
+import React, { createContext, useContext, useMemo, useState } from 'react'
 import { contentEN } from './en.js'
 import { contentBG } from './bg.js'
 
 const ContentCtx = createContext(null)
 
-if (!i18next.isInitialized) {
-  i18next.init({
-    lng: 'en',
-    fallbackLng: 'en',
-    supportedLngs: ['en', 'bg'],
-    resources: {
-      en: { translation: contentEN },
-      bg: { translation: contentBG }
-    },
-    interpolation: { escapeValue: false }
-  })
-}
-
-export function stripLocalePrefix(pathname = '/') {
-  if (pathname === '/bg') return '/'
-  if (pathname.startsWith('/bg/')) return pathname.slice(3) || '/'
-  return pathname || '/'
-}
-
-export function localeFromPath(pathname = '/') {
-  return pathname === '/bg' || pathname.startsWith('/bg/') ? 'bg' : 'en'
-}
-
-export function localizePath(pathname = '/', lang = 'en') {
-  const clean = stripLocalePrefix(pathname)
-  if (lang === 'bg') return clean === '/' ? '/bg' : `/bg${clean}`
-  return clean
-}
-
 export function ContentProvider({ children }) {
-  const location = useLocation()
-  const navigate = useNavigate()
-  const lang = localeFromPath(location.pathname)
-
-  useEffect(() => {
-    i18next.changeLanguage(lang)
+  const [lang, setLangState] = useState(() => {
     try {
-      localStorage.setItem('lang', lang)
+      return localStorage.getItem('lang') || 'en'
     } catch {
-      // ignore
+      return 'en'
     }
-  }, [lang])
+  })
 
   const setLang = (next) => {
-    const normalized = next === 'bg' ? 'bg' : 'en'
+    setLangState(next)
     try {
-      localStorage.setItem('lang', normalized)
+      localStorage.setItem('lang', next)
     } catch {
       // ignore
     }
-    const target = `${localizePath(location.pathname, normalized)}${location.search}${location.hash}`
-    navigate(target)
   }
 
   const value = useMemo(() => {
     const picked = lang === 'bg' ? contentBG : contentEN
     const content = picked || contentEN
-    return {
-      lang,
-      setLang,
-      content,
-      basePath: stripLocalePrefix(location.pathname),
-      localizedPath: (path, nextLang = lang) => localizePath(path, nextLang)
-    }
-  }, [lang, location.pathname])
+    return { lang, setLang, content }
+  }, [lang])
 
   return <ContentCtx.Provider value={value}>{children}</ContentCtx.Provider>
 }

@@ -24,15 +24,8 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100)
     camera.position.set(0, 0, 9)
 
-    // Light theme background (so the hero doesn't look like a different site section).
-    // Some browsers/headless previews block WebGL; the decorative layer must fail closed.
-    let renderer
-    try {
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false })
-    } catch (error) {
-      console.warn('Decorative WebGL background disabled:', error)
-      return
-    }
+    // Light theme background (so the hero doesn't look like a different site section)
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false })
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
     renderer.setClearColor(0xffffff, 1)
 
@@ -157,9 +150,6 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     const resize = () => {
       const r = host.getBoundingClientRect()
       renderer.setSize(r.width, r.height, false)
-      renderer.domElement.style.display = 'block'
-      renderer.domElement.style.width = '100%'
-      renderer.domElement.style.height = '100%'
       camera.aspect = r.width / Math.max(1, r.height)
       camera.updateProjectionMatrix()
     }
@@ -264,5 +254,5 @@ export default function HeroWebGL({ logoSrc, showCoin = true }) {
     }
   }, [logoSrc, showCoin])
 
-  return <div ref={hostRef} aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full overflow-hidden" />
+  return <div ref={hostRef} aria-hidden="true" className="pointer-events-none absolute inset-0" />
 }

@@ -47,11 +47,11 @@ const labels = {
 
 export default function SolutionDetail() {
   const { slug } = useParams()
-  const { lang, content, localizedPath } = useContent()
+  const { lang, content } = useContent()
   const page = solutionPages[lang]?.[slug] || solutionPages.en[slug]
   const l = labels[lang] || labels.en
 
-  if (!page) return <Navigate to={localizedPath('/solutions')} replace />
+  if (!page) return <Navigate to="/solutions" replace />
 
   return (
     <div>
@@ -61,7 +61,7 @@ export default function SolutionDetail() {
         lead={page.lead}
         subline={page.subline}
         primaryCta={{ to: '/contacts', label: content.shared.ui.getQuote ?? content.shared.ui.contact }}
-        secondaryCta={{ href: BOOKING_URL, label: lang === 'bg' ? 'Запазете консултация' : 'Book a Consultation' }}
+        secondaryCta={{ href: BOOKING_URL, label: lang === 'bg' ? 'Запазете 30-минутен разговор' : 'Book a 30-min call' }}
         aside={{
           eyebrow: 'Solution',
           title: page.eyebrow,

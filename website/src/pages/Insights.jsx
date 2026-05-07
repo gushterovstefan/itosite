@@ -67,12 +67,12 @@ export function InsightsHub() {
 
 export function InsightDetail() {
   const { slug } = useParams()
-  const { lang, content, localizedPath } = useContent()
+  const { lang, content } = useContent()
   const data = insights[lang] || insights.en
   const article = data.articles[slug] || insights.en.articles[slug]
   const l = labels[lang] || labels.en
 
-  if (!article) return <Navigate to={localizedPath('/insights')} replace />
+  if (!article) return <Navigate to="/insights" replace />
 
   return (
     <div>
@@ -115,9 +115,9 @@ export function InsightDetail() {
             <Card variant="amber" revealDelay={0.12}>
               <div className="text-sm font-semibold">{l.related}</div>
               <div className="mt-4 grid gap-2 text-sm">
-                <Link className="rounded-xl border border-black/10 bg-white/65 px-3 py-2 font-semibold text-ink-950 hover:bg-white" to={localizedPath('/solutions/cloud-migration')}>Cloud Migration</Link>
-                <Link className="rounded-xl border border-black/10 bg-white/65 px-3 py-2 font-semibold text-ink-950 hover:bg-white" to={localizedPath('/solutions/zero-trust-security')}>Zero Trust Security</Link>
-                <Link className="rounded-xl border border-black/10 bg-white/65 px-3 py-2 font-semibold text-ink-950 hover:bg-white" to={localizedPath('/solutions/backup-dr-veeam')}>Backup & DR</Link>
+                <Link className="rounded-xl border border-black/10 bg-white/65 px-3 py-2 font-semibold text-ink-950 hover:bg-white" to="/solutions/cloud-migration">Cloud Migration</Link>
+                <Link className="rounded-xl border border-black/10 bg-white/65 px-3 py-2 font-semibold text-ink-950 hover:bg-white" to="/solutions/zero-trust-security">Zero Trust Security</Link>
+                <Link className="rounded-xl border border-black/10 bg-white/65 px-3 py-2 font-semibold text-ink-950 hover:bg-white" to="/solutions/backup-dr-veeam">Backup & DR</Link>
               </div>
             </Card>
           </div>

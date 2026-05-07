@@ -11,15 +11,15 @@ export const contentEN = {
       solutions: 'Solutions',
       about: 'About',
       contact: 'Contact',
-      getQuote: 'Request IT Assessment',
+      getQuote: 'Get a quote',
       modernUi: 'Modern UI (v1)',
-      contactUs: 'Request IT Assessment',
+      contactUs: 'Contact us',
       exploreSolutions: 'Explore solutions',
-      talkToUs: 'Book a Consultation',
-      itServicesBadge: 'Microsoft cloud · cybersecurity · managed IT',
+      talkToUs: 'Talk to us',
+      itServicesBadge: 'IT services & solutions',
       servicesEyebrow: 'WHAT WE DO',
       servicesTitle: 'Services',
-      servicesLead: 'Microsoft cloud, identity, endpoint, backup and infrastructure services delivered with clear technical ownership.',
+      servicesLead: 'Delivery-first services built for uptime, security, and scale.',
       whyEyebrow: 'Why',
       benefitsEyebrow: 'Benefits',
       writeUs: 'Write us',
@@ -32,25 +32,25 @@ export const contentEN = {
     }
   },
   home: {
-    heroTitle: 'Design, secure, migrate and manage Microsoft cloud environments with confidence',
-    heroSubline: 'IT Outsource helps companies modernize Microsoft 365, Azure, endpoint security, backup and disaster recovery with clear ownership from assessment to operation.',
+    heroTitle: 'Make technology an ASSET for your business NOT a PROBLEM',
+    heroSubline: 'From strategy to operations — we design it, build it, secure it, and run it.',
     highlights: [
       {
         title: 'Managed IT Operations',
         description:
-          'Structured managed IT with SLA-driven support, endpoint governance, escalation ownership and operational continuity.',
+          'Proactive monitoring, rapid incident resolution, and service continuity you can rely on.',
         icon: 'support'
       },
       {
         title: 'Cloud & Digital Workplace',
         description:
-          'Microsoft 365, Entra ID, Intune and Azure environments designed for secure adoption, migration and day-two operations.',
+          'Secure Microsoft 365, Entra/Intune, and modern workplace transformations that actually work in production.',
         icon: 'cloud'
       },
       {
         title: 'Infrastructure & Platforms',
         description:
-          'Backup, disaster recovery, virtualization and hybrid infrastructure engineered for resilience and tested recovery.',
+          'Design, deployment, and lifecycle management of hybrid and cloud infrastructure built for resilience.',
         icon: 'infrastructure'
       }
     ],

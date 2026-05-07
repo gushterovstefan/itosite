@@ -1,6 +1,5 @@
 import { forwardRef, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { useContent } from '../content/index.jsx'
 
 function setVars(el, clientX, clientY) {
   const r = el.getBoundingClientRect()
@@ -19,10 +18,9 @@ const SheenButton = forwardRef(function SheenButton(
   ref
 ) {
   const innerRef = useRef(null)
-  const { localizedPath } = useContent()
 
   const Comp = to ? Link : 'a'
-  const compProps = to ? { to: localizedPath(to) } : { href }
+  const compProps = to ? { to } : { href }
 
   return (
     <Comp
@@ -34,7 +32,7 @@ const SheenButton = forwardRef(function SheenButton(
       {...compProps}
       {...props}
       className={
-        'btn-sheen btn-primary inline-flex items-center justify-center rounded-full bg-brand-400 px-6 py-3 text-sm font-semibold text-navy-950 ring-1 ring-brand-200/60 shadow-lg shadow-brand-500/25 transition hover:bg-brand-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300/80 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950 ' +
+        'btn-sheen btn-primary inline-flex items-center justify-center rounded-full bg-brand-200/50 px-6 py-3 text-sm font-semibold text-ink-950 ring-1 ring-brand-300/40 shadow-lg shadow-brand-300/20 hover:bg-brand-200/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-700/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white ' +
         className
       }
       onMouseMove={(e) => {

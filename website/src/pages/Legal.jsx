@@ -10,9 +10,7 @@ const copy = {
       title: 'Privacy Policy',
       lead: 'How IT Outsource Ltd. handles website and business contact information.',
       sections: [
-        ['Data we collect', 'We may process business contact details provided through email, phone, meetings, bookings, or website forms: name, company, email, phone, company size, main interest, project context and message content.'],
-        ['Contact form security', 'The website contact form prepares an email in your own mail client. It does not expose API keys or secrets in frontend code and includes basic spam protection through a hidden verification field, completion timing, browser validation and GDPR consent.'],
-        ['Cookies', 'The website uses essential cookies for core operation. Optional analytics cookies are used only after cookie consent. You can reject optional cookies from the cookie consent banner.'],
+        ['Data we collect', 'We may process business contact details provided through email, phone, meetings, or website forms: name, company, email, phone, project context and message content.'],
         ['Purpose', 'We use this information to respond to enquiries, prepare proposals, deliver services, maintain business records and meet legal obligations.'],
         ['Retention', 'Business communication is retained only as long as needed for legitimate business, contractual or legal purposes.'],
         ['Your rights', 'You may request access, correction or deletion of personal data by contacting info@itoutsource.bg.']
@@ -36,9 +34,7 @@ const copy = {
       title: 'Политика за поверителност',
       lead: 'Как Ай Ти Аутсорс ООД обработва информация от сайта и бизнес контакти.',
       sections: [
-        ['Данни, които обработваме', 'Можем да обработваме бизнес контактни данни, предоставени по имейл, телефон, срещи, booking или форми на сайта: име, компания, имейл, телефон, размер на компанията, основен интерес, контекст на проекта и съдържание на съобщението.'],
-        ['Сигурност на контактната форма', 'Контактната форма подготвя имейл във вашия mail client. Тя не expose-ва API keys или secrets във frontend кода и включва базова spam protection чрез hidden verification field, completion timing, browser validation и GDPR consent.'],
-        ['Бисквитки', 'Сайтът използва необходими бисквитки за основната си работа. Незадължителни аналитични бисквитки се използват само след съгласие за бисквитки. Можете да откажете незадължителните бисквитки от банера за съгласие.'],
+        ['Данни, които обработваме', 'Можем да обработваме бизнес контактни данни, предоставени по имейл, телефон, срещи или форми на сайта: име, компания, имейл, телефон, контекст на проекта и съдържание на съобщението.'],
         ['Цел', 'Използваме информацията за отговор на запитвания, подготовка на оферти, доставка на услуги, бизнес архив и законови задължения.'],
         ['Съхранение', 'Бизнес комуникацията се съхранява само доколкото е необходимо за легитимни бизнес, договорни или законови цели.'],
         ['Вашите права', 'Можете да поискате достъп, корекция или изтриване на лични данни на info@itoutsource.bg.']
@@ -74,11 +70,11 @@ export default function Legal({ type }) {
         aside={{
           eyebrow: 'IT Outsource Ltd.',
           title: 'BG200776949',
-          lead: lang === 'bg' ? 'София, България · ЕИК / БУЛСТАТ 200776949' : 'Sofia, Bulgaria · EIK / BULSTAT 200776949',
+          lead: 'Sofia, Bulgaria · EIK 200776949',
           icon: 'governance',
           items: [
             { k: 'Status', v: lang === 'bg' ? 'Активен' : 'Active' },
-            { k: lang === 'bg' ? 'ДДС / VAT' : 'VAT', v: 'BG200776949' },
+            { k: 'VAT', v: 'BG200776949' },
             { k: 'EU', v: 'Bulgaria' }
           ]
         }}

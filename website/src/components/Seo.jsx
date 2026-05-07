@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useContent } from '../content/index.jsx'
-import { localizePath, stripLocalePrefix } from '../content/index.jsx'
 
 const origin = 'https://itoutsource.bg'
 const ogImage = `${origin}/og-image.png`
@@ -25,36 +24,8 @@ const metaByPath = {
       description: 'Enterprise architecture, cloud migration, security governance, ERP integration and technical due diligence for IT change.'
     },
     '/solutions': {
-      title: 'Microsoft Cloud, Security & Business Continuity Solutions — IT Outsource Ltd.',
-      description: 'Microsoft 365, Azure, cybersecurity, endpoint, backup, disaster recovery, managed IT support and migration solutions for reliable business IT operations.'
-    },
-    '/microsoft-365': {
-      title: 'Microsoft 365 Modern Workplace Services — IT Outsource Ltd.',
-      description: 'Microsoft 365 setup, Exchange Online, Teams, SharePoint, OneDrive, Entra ID, Intune, Defender, Conditional Access, MFA, DLP and backup.'
-    },
-    '/azure-cloud': {
-      title: 'Azure Cloud Infrastructure & Migration Services — IT Outsource Ltd.',
-      description: 'Azure landing zones, VM migration, VPN networking, Azure Backup, Site Recovery, monitoring, governance, cost optimization and hybrid infrastructure.'
-    },
-    '/cybersecurity': {
-      title: 'Cybersecurity & Zero Trust Services — IT Outsource Ltd.',
-      description: 'Zero Trust, identity security, endpoint protection, Defender, Intune, Conditional Access, DLP, secure email, monitoring and incident response.'
-    },
-    '/backup-disaster-recovery': {
-      title: 'Backup & Disaster Recovery Services — IT Outsource Ltd.',
-      description: 'Backup strategy, Microsoft 365 backup, server backup, Azure Backup, Site Recovery, immutable backup, restore testing and RTO/RPO planning.'
-    },
-    '/managed-it-support': {
-      title: 'Managed IT Support Services — IT Outsource Ltd.',
-      description: 'Complete IT support, co-managed support, project support, senior escalation, SLA-based support, monitoring, vendor coordination and executive advisory.'
-    },
-    '/google-workspace-to-microsoft-365': {
-      title: 'Google Workspace to Microsoft 365 Migration — IT Outsource Ltd.',
-      description: 'Gmail to Exchange Online, Google Drive to SharePoint and OneDrive, Shared Drives, calendars, contacts, permission mapping and migration batches.'
-    },
-    '/contact': {
-      title: 'Contact IT Outsource Ltd.',
-      description: 'Contact IT Outsource for managed IT, infrastructure, consulting, Microsoft cloud, security, backup and business platform projects.'
+      title: 'IT Solutions — Azure, Microsoft 365, Security, Backup & DR',
+      description: 'Production-ready solutions across Microsoft Azure, Microsoft 365, Zero Trust security, Entra ID, Veeam backup, cloud migration and web platforms.'
     },
     '/solutions/microsoft-azure': {
       title: 'Microsoft Azure Solutions — IT Outsource Ltd.',
@@ -100,10 +71,6 @@ const metaByPath = {
       title: 'GxP & Clinical Research IT — IT Outsource Ltd.',
       description: 'Validated, audit-ready IT environments for CRO, clinical research and regulated life-sciences teams with CSV and GAMP 5 aligned delivery.'
     },
-    '/case-studies': {
-      title: 'Anonymized Case Studies — IT Outsource Ltd.',
-      description: 'Anonymized Microsoft 365 security, Google Workspace migration, Azure disaster recovery and retail infrastructure support case studies.'
-    },
     '/about': {
       title: 'About IT Outsource Ltd.',
       description: 'Learn about IT Outsource Ltd., a Sofia-based IT services company delivering consulting, infrastructure, support and digital solutions.'
@@ -114,23 +81,23 @@ const metaByPath = {
     },
     '/industries': {
       title: 'Industries — IT Outsource Ltd.',
-      description: 'IT solutions for retail, healthcare, pharma, CRO, energy, engineering, solar and growing SMB companies where downtime is not acceptable.'
+      description: 'IT delivery for retail, life sciences, energy and professional services with relevant solutions, governance and operational ownership.'
     },
     '/industries/retail': {
       title: 'Retail & E-commerce IT Services — IT Outsource Ltd.',
       description: 'IT support, infrastructure, identity, backup and web-platform delivery for distributed retail and e-commerce operations.'
     },
-    '/industries/pharma-healthcare': {
-      title: 'Healthcare, Pharma & CRO IT Services — IT Outsource Ltd.',
-      description: 'Secure Microsoft 365, identity, endpoint, backup and support services for healthcare, pharma and CRO teams.'
+    '/industries/life-sciences': {
+      title: 'Life Sciences & Clinical Research IT — IT Outsource Ltd.',
+      description: 'Validated, audit-ready IT environments for clinical research and regulated teams with security, governance and recovery planning.'
     },
-    '/industries/energy-engineering': {
-      title: 'Energy, Solar & Engineering IT Services — IT Outsource Ltd.',
-      description: 'Microsoft cloud, cybersecurity, backup, disaster recovery and IT support for energy, solar and engineering companies.'
+    '/industries/energy': {
+      title: 'Energy & Utilities IT Services — IT Outsource Ltd.',
+      description: 'Microsoft cloud, identity, security and governance delivery for distributed energy and utilities teams.'
     },
-    '/industries/smb': {
-      title: 'SMB & Growing Company IT Services — IT Outsource Ltd.',
-      description: 'Managed IT support, Microsoft 365, cybersecurity, backup and migration services for SMB and growing companies.'
+    '/industries/professional-services': {
+      title: 'Professional Services & Mid-Market IT — IT Outsource Ltd.',
+      description: 'Pragmatic enterprise-grade IT support, SaaS identity, collaboration and modernization for professional services and mid-market companies.'
     },
     '/insights': {
       title: 'Insights & IT Playbooks — IT Outsource Ltd.',
@@ -179,36 +146,8 @@ const metaByPath = {
       description: 'Enterprise архитектура, cloud migration, security governance, ERP интеграции и technical due diligence за ИТ промяна.'
     },
     '/solutions': {
-      title: 'Microsoft Cloud, Security и Business Continuity решения — Ай Ти Аутсорс ООД',
-      description: 'Microsoft 365, Azure, киберсигурност, endpoint, backup, disaster recovery, managed IT support и migration решения за надеждни бизнес ИТ операции.'
-    },
-    '/microsoft-365': {
-      title: 'Microsoft 365 Modern Workplace услуги — Ай Ти Аутсорс ООД',
-      description: 'Microsoft 365 setup, Exchange Online, Teams, SharePoint, OneDrive, Entra ID, Intune, Defender, Conditional Access, MFA, DLP и backup.'
-    },
-    '/azure-cloud': {
-      title: 'Azure Cloud инфраструктура и миграция — Ай Ти Аутсорс ООД',
-      description: 'Azure landing zones, VM migration, VPN networking, Azure Backup, Site Recovery, monitoring, governance, cost optimization и hybrid infrastructure.'
-    },
-    '/cybersecurity': {
-      title: 'Cybersecurity и Zero Trust услуги — Ай Ти Аутсорс ООД',
-      description: 'Zero Trust, identity security, endpoint protection, Defender, Intune, Conditional Access, DLP, secure email, monitoring и incident response.'
-    },
-    '/backup-disaster-recovery': {
-      title: 'Backup и Disaster Recovery услуги — Ай Ти Аутсорс ООД',
-      description: 'Backup strategy, Microsoft 365 backup, server backup, Azure Backup, Site Recovery, immutable backup, restore testing и RTO/RPO planning.'
-    },
-    '/managed-it-support': {
-      title: 'Managed IT Support услуги — Ай Ти Аутсорс ООД',
-      description: 'Complete IT support, co-managed support, project support, senior escalation, SLA-based support, monitoring, vendor coordination и executive advisory.'
-    },
-    '/google-workspace-to-microsoft-365': {
-      title: 'Google Workspace към Microsoft 365 миграция — Ай Ти Аутсорс ООД',
-      description: 'Gmail към Exchange Online, Google Drive към SharePoint и OneDrive, Shared Drives, calendars, contacts, permission mapping и migration batches.'
-    },
-    '/contact': {
-      title: 'Контакти — Ай Ти Аутсорс ООД',
-      description: 'Свържете се с Ай Ти Аутсорс за ИТ поддръжка, инфраструктура, консултации, Microsoft cloud, сигурност и backup проекти.'
+      title: 'ИТ решения — Azure, Microsoft 365, сигурност, backup и DR',
+      description: 'Решения за Microsoft Azure, Microsoft 365, Zero Trust сигурност, Entra ID, Veeam backup, cloud migration и уеб платформи.'
     },
     '/solutions/microsoft-azure': {
       title: 'Microsoft Azure решения — Ай Ти Аутсорс ООД',
@@ -254,10 +193,6 @@ const metaByPath = {
       title: 'GxP и Clinical Research IT — Ай Ти Аутсорс ООД',
       description: 'Validated, audit-ready ИТ среди за CRO, clinical research и регулирани life-sciences екипи с CSV и GAMP 5 aligned доставка.'
     },
-    '/case-studies': {
-      title: 'Анонимизирани казуси — Ай Ти Аутсорс ООД',
-      description: 'Анонимизирани казуси за Microsoft 365 security, Google Workspace migration, Azure DR и retail infrastructure support.'
-    },
     '/about': {
       title: 'За Ай Ти Аутсорс ООД',
       description: 'Информация за Ай Ти Аутсорс ООД — ИТ компания в София за консултации, инфраструктура, поддръжка и дигитални решения.'
@@ -268,23 +203,23 @@ const metaByPath = {
     },
     '/industries': {
       title: 'Индустрии — Ай Ти Аутсорс ООД',
-      description: 'ИТ решения за retail, healthcare, pharma, CRO, energy, engineering, solar и growing SMB companies, където downtime не е приемлив.'
+      description: 'ИТ доставка за retail, life sciences, energy и professional services с релевантни решения, governance и operational ownership.'
     },
     '/industries/retail': {
       title: 'Retail и E-commerce ИТ услуги — Ай Ти Аутсорс ООД',
       description: 'ИТ поддръжка, инфраструктура, identity, backup и web-platform доставка за разпределени retail и e-commerce операции.'
     },
-    '/industries/pharma-healthcare': {
-      title: 'Healthcare, Pharma и CRO ИТ услуги — Ай Ти Аутсорс ООД',
-      description: 'Secure Microsoft 365, identity, endpoint, backup и support услуги за healthcare, pharma и CRO teams.'
+    '/industries/life-sciences': {
+      title: 'Life Sciences и Clinical Research ИТ — Ай Ти Аутсорс ООД',
+      description: 'Validated, audit-ready ИТ среди за clinical research и regulated екипи със сигурност, governance и recovery planning.'
     },
-    '/industries/energy-engineering': {
-      title: 'Energy, Solar и Engineering ИТ услуги — Ай Ти Аутсорс ООД',
-      description: 'Microsoft cloud, cybersecurity, backup, disaster recovery и IT support за energy, solar и engineering companies.'
+    '/industries/energy': {
+      title: 'Energy и Utilities ИТ услуги — Ай Ти Аутсорс ООД',
+      description: 'Microsoft cloud, identity, security и governance доставка за разпределени energy и utilities екипи.'
     },
-    '/industries/smb': {
-      title: 'SMB и Growing Company ИТ услуги — Ай Ти Аутсорс ООД',
-      description: 'Managed IT support, Microsoft 365, cybersecurity, backup и migration services за SMB и growing companies.'
+    '/industries/professional-services': {
+      title: 'Professional Services и Mid-Market ИТ — Ай Ти Аутсорс ООД',
+      description: 'Практична enterprise-grade ИТ поддръжка, SaaS identity, collaboration и modernization за professional services и mid-market компании.'
     },
     '/insights': {
       title: 'Материали и ИТ Playbooks — Ай Ти Аутсорс ООД',
@@ -323,14 +258,6 @@ const routeLabels = {
   '/it-infrastructure-services': 'IT Infrastructure Services',
   '/it-consulting-services': 'IT Consulting Services',
   '/solutions': 'Solutions',
-  '/microsoft-365': 'Microsoft 365',
-  '/azure-cloud': 'Azure Cloud',
-  '/cybersecurity': 'Cybersecurity',
-  '/backup-disaster-recovery': 'Backup & Disaster Recovery',
-  '/managed-it-support': 'Managed IT Support',
-  '/google-workspace-to-microsoft-365': 'Google Workspace to Microsoft 365',
-  '/contact': 'Contact',
-  '/case-studies': 'Case Studies',
   '/about': 'About',
   '/how-we-deliver': 'How We Deliver',
   '/industries': 'Industries',
@@ -345,12 +272,6 @@ const servicePaths = new Set([
   '/it-infrastructure-services',
   '/it-consulting-services',
   '/solutions',
-  '/microsoft-365',
-  '/azure-cloud',
-  '/cybersecurity',
-  '/backup-disaster-recovery',
-  '/managed-it-support',
-  '/google-workspace-to-microsoft-365',
   '/solutions/microsoft-azure',
   '/solutions/microsoft-365',
   '/solutions/vmware-proxmox-virtualization',
@@ -371,9 +292,9 @@ function readableLabel(path, data) {
   return last.split('-').map((p) => p.charAt(0).toUpperCase() + p.slice(1)).join(' ')
 }
 
-function breadcrumbFor(path, data, lang) {
+function breadcrumbFor(path, data) {
   const parts = path.split('/').filter(Boolean)
-  const items = [{ '@type': 'ListItem', position: 1, name: lang === 'bg' ? 'Начало' : 'Home', item: `${origin}${localizePath('/', lang)}` }]
+  const items = [{ '@type': 'ListItem', position: 1, name: 'Home', item: origin }]
   let current = ''
   parts.forEach((part, index) => {
     current += `/${part}`
@@ -381,13 +302,13 @@ function breadcrumbFor(path, data, lang) {
       '@type': 'ListItem',
       position: index + 2,
       name: index === parts.length - 1 ? readableLabel(path, data) : readableLabel(current),
-      item: `${origin}${localizePath(current, lang)}`
+      item: `${origin}${current}`
     })
   })
   return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items }
 }
 
-function serviceFor(path, data, lang) {
+function serviceFor(path, data) {
   if (!servicePaths.has(path)) return null
   return {
     '@context': 'https://schema.org',
@@ -401,7 +322,7 @@ function serviceFor(path, data, lang) {
     },
     areaServed: ['Bulgaria', 'European Union'],
     serviceType: readableLabel(path, data),
-    url: `${origin}${localizePath(path, lang)}`
+    url: `${origin}${path}`
   }
 }
 
@@ -437,30 +358,14 @@ function setLink(rel, href) {
   el.setAttribute('href', href)
 }
 
-function setAlternateLinks(path) {
-  document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove())
-  const alternates = [
-    ['en', `${origin}${localizePath(path, 'en')}`],
-    ['bg', `${origin}${localizePath(path, 'bg')}`],
-    ['x-default', `${origin}${localizePath(path, 'en')}`]
-  ]
-  alternates.forEach(([hreflang, href]) => {
-    const el = document.createElement('link')
-    el.setAttribute('rel', 'alternate')
-    el.setAttribute('hreflang', hreflang)
-    el.setAttribute('href', href)
-    document.head.appendChild(el)
-  })
-}
-
 export default function Seo() {
   const { lang } = useContent()
   const location = useLocation()
 
   useEffect(() => {
-    const path = stripLocalePrefix(location.pathname)
+    const path = location.pathname
     const data = metaByPath[lang]?.[path] || metaByPath.en[path] || metaByPath.en['/']
-    const url = `${origin}${localizePath(path, lang)}`
+    const url = `${origin}${path}`
 
     document.documentElement.lang = lang === 'bg' ? 'bg' : 'en'
     document.title = data.title
@@ -480,7 +385,6 @@ export default function Seo() {
     setMeta('meta[name="twitter:image"]', 'content', ogImage)
     setMeta('meta[name="twitter:image:alt"]', 'content', 'IT Outsource Ltd. — enterprise IT services, cloud, security and operations')
     setLink('canonical', url)
-    setAlternateLinks(path)
 
     setJsonLd('organization', {
       '@context': 'https://schema.org',
@@ -499,8 +403,8 @@ export default function Seo() {
         addressCountry: 'BG'
       }
     })
-    setJsonLd('breadcrumb', breadcrumbFor(path, data, lang))
-    setJsonLd('service', serviceFor(path, data, lang))
+    setJsonLd('breadcrumb', breadcrumbFor(path, data))
+    setJsonLd('service', serviceFor(path, data))
   }, [lang, location.pathname])
 
   return null

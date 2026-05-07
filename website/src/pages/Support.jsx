@@ -4,26 +4,10 @@ import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import InfoList from '../components/InfoList.jsx'
 import ConversionCta from '../components/ConversionCta.jsx'
-import ServiceOutcomeStrip from '../components/ServiceOutcomeStrip.jsx'
 import { useContent } from '../content/index.jsx'
 
-const serviceCopy = {
-  en: [
-    ['Business problem', 'Support without ownership', 'Incidents repeat, endpoint state is unclear, vendors point at each other, and internal teams lose time coordinating IT instead of running the business.'],
-    ['Service provided', 'Managed IT operations', 'We provide SLA-driven service desk, endpoint management, monitoring, escalation and operational governance across Microsoft-centric environments.'],
-    ['Why trust us', 'Production support mindset', 'The model is built around clear tiers, documentation, monthly reporting, escalation paths and continuity for business-critical users.'],
-    ['Next step', 'Request IT Assessment', 'Start with an assessment of support coverage, endpoint posture, recurring incidents, tooling and escalation risks.']
-  ],
-  bg: [
-    ['Бизнес проблем', 'Поддръжка без ownership', 'Инцидентите се повтарят, endpoint състоянието е неясно, vendor-и си прехвърлят отговорността и вътрешните екипи губят време.'],
-    ['Услуга', 'Managed IT операции', 'Предоставяме SLA service desk, endpoint management, monitoring, escalation и governance за Microsoft-centric среди.'],
-    ['Защо да ни се доверите', 'Production support mindset', 'Моделът включва ясни tiers, documentation, reporting, escalation paths и continuity за критични потребители.'],
-    ['Следваща стъпка', 'Заявете ИТ оценка', 'Започнете с оценка на support coverage, endpoint posture, recurring incidents, tooling и escalation risks.']
-  ]
-}
-
 export default function Support() {
-  const { content, lang } = useContent()
+  const { content } = useContent()
   const c = content.support
   const ui = content.shared.ui
 
@@ -48,8 +32,6 @@ export default function Support() {
           ]
         }}
       />
-
-      <ServiceOutcomeStrip items={(serviceCopy[lang] || serviceCopy.en).map(([label, title, body]) => ({ label, title, body }))} />
 
       <GemSection eyebrow="Support" title={c.serviceModelsTitle} lead={c.credibility}>
         <div className="grid gap-4 lg:grid-cols-3">

@@ -2,7 +2,6 @@ import { lazy, Suspense, useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
-import CookieConsent from './CookieConsent.jsx'
 import logo from '../assets/logo-green.jpg'
 
 const HeroWebGL = lazy(() => import('./HeroWebGL.jsx'))
@@ -33,7 +32,7 @@ export default function GemLayout() {
       <main className="relative isolate pt-14 md:pt-16">
         {/* global WebGL network background (desktop only) */}
         {!reduce && desktop ? (
-          <div className="pointer-events-none fixed inset-0 z-0 hidden h-dvh overflow-hidden md:block">
+          <div className="pointer-events-none absolute inset-0 z-0 hidden md:block">
             <Suspense fallback={null}>
               <HeroWebGL logoSrc={logo} showCoin={false} />
             </Suspense>
@@ -45,7 +44,6 @@ export default function GemLayout() {
         </div>
       </main>
       <Footer />
-      <CookieConsent />
     </div>
   )
 }

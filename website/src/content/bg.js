@@ -11,15 +11,15 @@ export const contentBG = {
       solutions: 'Решения',
       about: 'За нас',
       contact: 'Контакти',
-      getQuote: 'Заявете ИТ оценка',
+      getQuote: 'Запитване',
       modernUi: 'Modern UI (v1)',
-      contactUs: 'Заявете ИТ оценка',
+      contactUs: 'Свържете се с нас',
       exploreSolutions: 'Разгледай решенията',
-      talkToUs: 'Запазете консултация',
-      itServicesBadge: 'Microsoft cloud · киберсигурност · managed IT',
+      talkToUs: 'Свържете се',
+      itServicesBadge: 'ИТ услуги и решения',
       servicesEyebrow: 'КАКВО ПРАВИМ',
       servicesTitle: 'Услуги',
-      servicesLead: 'Microsoft cloud, identity, endpoint, backup и инфраструктурни услуги с ясна техническа отговорност.',
+      servicesLead: 'Услуги с фокус върху доставка – издръжливост, сигурност и мащабируемост.',
       whyEyebrow: 'Защо',
       benefitsEyebrow: 'Ползи',
       consultingAreas: 'Ключови направления',
@@ -33,25 +33,25 @@ export const contentBG = {
     }
   },
   home: {
-    heroTitle: 'Проектирайте, защитете, мигрирайте и управлявайте Microsoft cloud среди с увереност',
-    heroSubline: 'IT Outsource помага на компании да модернизират Microsoft 365, Azure, endpoint security, backup и disaster recovery с ясна отговорност от оценка до операция.',
+    heroTitle: 'Нека технологията бъде АКТИВ за Вашия бизнес, НЕ ПРОБЛЕМ',
+    heroSubline: 'От стратегия до операции — ние я проектираме, изграждаме, защитаваме и управляваме.',
     highlights: [
       {
         title: 'Управлявани ИТ операции',
         description:
-          'Структурирана managed IT поддръжка със SLA, endpoint governance, escalation ownership и operational continuity.',
+          'Проактивен мониторинг, бърза реакция при инциденти и непрекъсваемост на услугите.',
         icon: 'support'
       },
       {
         title: 'Облак и дигитално работно място',
         description:
-          'Microsoft 365, Entra ID, Intune и Azure среди, проектирани за сигурно внедряване, миграция и day-two operations.',
+          'Сигурни Microsoft 365, Entra/Intune и модерни трансформации на работното място — работещи в реална продукция.',
         icon: 'cloud'
       },
       {
         title: 'Инфраструктура и платформи',
         description:
-          'Backup, disaster recovery, virtualization и хибридна инфраструктура, проектирани за resilience и тествано възстановяване.',
+          'Дизайн, внедряване и lifecycle управление на хибридна и облачна инфраструктура, изградена за устойчивост.',
         icon: 'infrastructure'
       }
     ],

@@ -3,26 +3,10 @@ import GemSection from '../components/GemSection.jsx'
 import { Card, BulletList } from '../components/Cards.jsx'
 import { Icon, icons } from '../components/Icons.jsx'
 import ConversionCta from '../components/ConversionCta.jsx'
-import ServiceOutcomeStrip from '../components/ServiceOutcomeStrip.jsx'
 import { useContent } from '../content/index.jsx'
 
-const serviceCopy = {
-  en: [
-    ['Business problem', 'Hybrid infrastructure risk', 'Servers, virtualization, storage, backup, cloud and network decisions often evolve separately, creating resilience gaps and unclear recovery ownership.'],
-    ['Service provided', 'Secure infrastructure design and operation', 'We assess, design, migrate and operate Azure, Microsoft 365, VMware, Proxmox, network, backup and disaster recovery platforms as one controlled system.'],
-    ['Why trust us', 'Resilience-first engineering', 'Infrastructure work is tied to hardening, capacity, monitoring, backup validation, runbooks and handover — not just deployment.'],
-    ['Next step', 'Request IT Assessment', 'Start with an infrastructure and recovery assessment covering risk, capacity, backup posture, dependencies and modernization options.']
-  ],
-  bg: [
-    ['Бизнес проблем', 'Риск в хибридна инфраструктура', 'Сървъри, virtualization, storage, backup, cloud и network често се развиват отделно, което създава resilience gaps и неясен recovery ownership.'],
-    ['Услуга', 'Secure infrastructure design and operation', 'Оценяваме, проектираме, мигрираме и управляваме Azure, Microsoft 365, VMware, Proxmox, network, backup и DR като една controlled system.'],
-    ['Защо да ни се доверите', 'Resilience-first engineering', 'Infrastructure работата включва hardening, capacity, monitoring, backup validation, runbooks и handover — не само deployment.'],
-    ['Следваща стъпка', 'Заявете ИТ оценка', 'Започнете с infrastructure и recovery assessment върху risk, capacity, backup posture, dependencies и modernization options.']
-  ]
-}
-
 export default function Infrastructure() {
-  const { content, lang } = useContent()
+  const { content } = useContent()
   const c = content.infrastructure
   const ui = content.shared.ui
 
@@ -47,8 +31,6 @@ export default function Infrastructure() {
           ]
         }}
       />
-
-      <ServiceOutcomeStrip items={(serviceCopy[lang] || serviceCopy.en).map(([label, title, body]) => ({ label, title, body }))} />
 
       <GemSection eyebrow={ui.infrastructure} title={c.title} lead={c.punchline}>
         <div className="grid gap-4 lg:grid-cols-2">

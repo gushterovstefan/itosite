@@ -1,19 +1,19 @@
 import Reveal from './Reveal.jsx'
 
-export default function GemSection({ eyebrow, title, lead, children, className = '' }) {
+export default function GemSection({ eyebrow, title, lead, children }) {
   return (
-    <section className={'relative py-10 md:py-12 ' + className}>
+    <section className="py-8 md:py-10">
       <div className="mx-auto max-w-6xl px-4">
         {eyebrow ? (
           <Reveal>
-            <div className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-800">
+            <div className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-800">
               {eyebrow}
             </div>
           </Reveal>
         ) : null}
         {title ? (
           <Reveal delay={0.05}>
-            <h2 className="mt-2 max-w-4xl text-3xl font-semibold tracking-tight text-ink-950 md:text-5xl">{title}</h2>
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-5xl">{title}</h2>
           </Reveal>
         ) : null}
         {lead ? (

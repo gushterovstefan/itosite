@@ -10,8 +10,6 @@ const Support = lazy(() => import('./pages/Support.jsx'))
 const Infrastructure = lazy(() => import('./pages/Infrastructure.jsx'))
 const Solutions = lazy(() => import('./pages/Solutions.jsx'))
 const SolutionDetail = lazy(() => import('./pages/SolutionDetail.jsx'))
-const CaseStudies = lazy(() => import('./pages/CaseStudies.jsx'))
-const ServiceLanding = lazy(() => import('./pages/ServiceLanding.jsx'))
 const HowWeDeliver = lazy(() => import('./pages/HowWeDeliver.jsx'))
 const IndustriesHub = lazy(() => import('./pages/Industries.jsx').then((m) => ({ default: m.IndustriesHub })))
 const IndustryRoute = lazy(() => import('./pages/IndustryRoute.jsx'))
@@ -20,45 +18,6 @@ const InsightDetail = lazy(() => import('./pages/Insights.jsx').then((m) => ({ d
 const Contact = lazy(() => import('./pages/Contact.jsx'))
 const Legal = lazy(() => import('./pages/Legal.jsx'))
 import Seo from './components/Seo.jsx'
-
-const routeDefs = [
-  ['/', <HomeGem />],
-  ['/about', <About />],
-  ['/it-consulting-services', <Consulting />],
-  ['/it-support-services', <Support />],
-  ['/it-infrastructure-services', <Infrastructure />],
-  ['/solutions', <Solutions />],
-  ['/solutions/:slug', <SolutionDetail />],
-  ['/microsoft-365', <ServiceLanding slug="microsoft-365" />],
-  ['/azure-cloud', <ServiceLanding slug="azure-cloud" />],
-  ['/cybersecurity', <ServiceLanding slug="cybersecurity" />],
-  ['/backup-disaster-recovery', <ServiceLanding slug="backup-disaster-recovery" />],
-  ['/managed-it-support', <ServiceLanding slug="managed-it-support" />],
-  ['/google-workspace-to-microsoft-365', <ServiceLanding slug="google-workspace-to-microsoft-365" />],
-  ['/contact', <Contact />],
-  ['/case-studies', <CaseStudies />],
-  ['/how-we-deliver', <HowWeDeliver />],
-  ['/industries', <IndustriesHub />],
-  ['/industries/:slug', <IndustryRoute />],
-  ['/insights', <InsightsHub />],
-  ['/insights/:slug', <InsightDetail />],
-  ['/contacts', <Contact />],
-  ['/legal/privacy', <Legal type="privacy" />],
-  ['/legal/terms', <Legal type="terms" />]
-]
-
-function renderRoutes(prefix = '') {
-  return routeDefs.map(([path, element]) => {
-    const routePath = path === '/' ? (prefix || '/') : `${prefix}${path}`
-    return (
-      <Route
-        key={routePath}
-        path={routePath}
-        element={<PageTransition>{element}</PageTransition>}
-      />
-    )
-  })
-}
 
 export default function App() {
   const location = useLocation()
@@ -69,8 +28,21 @@ export default function App() {
       <Suspense fallback={<div className="min-h-[60vh]" aria-label="Loading page" />}>
         <Routes location={location} key={location.pathname}>
           <Route element={<GemLayout />}>
-            {renderRoutes()}
-            {renderRoutes('/bg')}
+            <Route path="/" element={<PageTransition><HomeGem /></PageTransition>} />
+            <Route path="/about" element={<PageTransition><About /></PageTransition>} />
+            <Route path="/it-consulting-services" element={<PageTransition><Consulting /></PageTransition>} />
+            <Route path="/it-support-services" element={<PageTransition><Support /></PageTransition>} />
+            <Route path="/it-infrastructure-services" element={<PageTransition><Infrastructure /></PageTransition>} />
+            <Route path="/solutions" element={<PageTransition><Solutions /></PageTransition>} />
+            <Route path="/solutions/:slug" element={<PageTransition><SolutionDetail /></PageTransition>} />
+            <Route path="/how-we-deliver" element={<PageTransition><HowWeDeliver /></PageTransition>} />
+            <Route path="/industries" element={<PageTransition><IndustriesHub /></PageTransition>} />
+            <Route path="/industries/:slug" element={<PageTransition><IndustryRoute /></PageTransition>} />
+            <Route path="/insights" element={<PageTransition><InsightsHub /></PageTransition>} />
+            <Route path="/insights/:slug" element={<PageTransition><InsightDetail /></PageTransition>} />
+            <Route path="/contacts" element={<PageTransition><Contact /></PageTransition>} />
+            <Route path="/legal/privacy" element={<PageTransition><Legal type="privacy" /></PageTransition>} />
+            <Route path="/legal/terms" element={<PageTransition><Legal type="terms" /></PageTransition>} />
           </Route>
         </Routes>
       </Suspense>

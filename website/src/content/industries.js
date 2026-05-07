@@ -2,119 +2,111 @@ export const industries = {
   en: {
     hub: {
       eyebrow: 'Industries',
-      title: 'Solutions for companies where IT downtime is not acceptable',
-      lead: 'IT Outsource maps Microsoft cloud, security, backup, migration and support services to the operating realities of business-critical teams.',
-      subline: 'Choose your business context and see the typical IT challenges, relevant services and outcomes we focus on.'
+      title: 'IT delivery shaped around how your business actually operates.',
+      lead: 'Buyers self-identify by context faster than by service category. These verticals map IT Outsource capabilities to real operational patterns.',
+      subline: 'Retail, life sciences, energy and professional services require different risk models — but the same delivery discipline.'
     },
     pages: {
       retail: {
-        title: 'Retail & Distribution',
+        title: 'Retail & E-commerce',
         eyebrow: 'Industry',
-        lead: 'Reliable IT for stores, warehouses, ERP, POS, reporting, endpoints and distributed teams that cannot afford operational downtime.',
+        lead: 'Support distributed retail operations, stores, warehouses and e-commerce workflows with resilient infrastructure and practical support.',
         icon: 'platform',
-        challenges: ['ERP, POS, warehouses and reporting depend on stable infrastructure', 'Store and HQ users need fast support and clear escalation', 'Backups, monitoring and vendor coordination are often fragmented'],
-        services: ['Managed IT Support', 'Azure Cloud', 'Backup & Disaster Recovery', 'Cybersecurity', 'Microsoft 365'],
-        outcomes: ['More stable retail operations', 'Clear escalation for ERP/POS/infrastructure issues', 'Improved backup and recovery readiness', 'Better visibility over endpoints and access'],
-        caseTitle: 'Retail Infrastructure Support',
-        caseBody: 'A retail operating model benefits from infrastructure review, monitoring, backup checks and a support model that keeps ERP, POS, warehouses and reporting stable.',
-        metrics: ['stable operations', 'clear escalation', 'backup readiness']
+        outcomes: ['Store, warehouse and HQ support with clear escalation', 'ERP, ordering and web-platform integration ownership', 'Endpoint, network and identity governance for distributed teams'],
+        solutions: ['Managed IT Support', 'Web-Based B2B & B2C Solutions', 'Backup & DR with Veeam', 'Entra ID & SSO Consolidation'],
+        caseTitle: 'Anonymized retail pattern',
+        caseBody: 'A retail-style operating model needs reliable service desk intake, vendor coordination, resilient infrastructure and order-flow visibility. The delivery focus is keeping operations moving while reducing hidden IT ownership gaps.',
+        metrics: ['distributed support', 'ERP/web integration', 'operational continuity']
       },
-      'pharma-healthcare': {
-        title: 'Healthcare / Pharma / CRO',
+      'life-sciences': {
+        title: 'Life Sciences & Clinical Research',
         eyebrow: 'Industry',
-        lead: 'Secure collaboration, identity, device and data governance for regulated teams where auditability and continuity matter.',
+        lead: 'Validated, audit-ready IT environments for clinical research and regulated teams where evidence and change control matter.',
         icon: 'governance',
-        challenges: ['Sensitive collaboration requires controlled access and data protection', 'Devices, identities and external sharing need stronger governance', 'Backup, retention and recovery expectations must be documented'],
-        services: ['Microsoft 365', 'Cybersecurity', 'Backup & Disaster Recovery', 'Google Workspace to Microsoft 365', 'Managed IT Support'],
-        outcomes: ['Controlled access and stronger data protection', 'Better Microsoft 365 and endpoint visibility', 'More audit-ready operational evidence', 'Clearer recovery and support ownership'],
-        caseTitle: 'Microsoft 365 Security Modernization',
-        caseBody: 'A regulated business can improve collaboration security with Entra ID, Conditional Access, Intune, Defender and SharePoint governance.',
-        metrics: ['controlled access', 'data protection', 'audit-ready']
+        outcomes: ['Controlled changes with evidence and approval trails', 'Secure identity, endpoint and data governance', 'Backup, retention and recovery planning aligned to audit expectations'],
+        solutions: ['Zero Trust Security with Defender & Sentinel', 'Microsoft 365 Governance', 'Backup & DR with Veeam', 'Cloud Migration Services'],
+        caseTitle: 'Anonymized clinical research pattern',
+        caseBody: 'A regulated research environment needs clear SOPs, controlled access, validated systems and documented recovery. The delivery model prioritizes auditability without slowing operational work.',
+        metrics: ['audit-ready SOPs', 'validated changes', 'controlled access']
       },
-      'energy-engineering': {
-        title: 'Energy / Solar / Engineering',
+      energy: {
+        title: 'Energy & Utilities',
         eyebrow: 'Industry',
-        lead: 'Microsoft cloud, security, backup and support for technical businesses with distributed teams, project files and infrastructure dependencies.',
+        lead: 'Modern Microsoft cloud, identity, security and governance for distributed teams in energy and infrastructure-led businesses.',
         icon: 'cloud',
-        challenges: ['Project teams need secure collaboration across locations', 'Field users, devices and access require governance', 'Business-critical systems need recovery planning and predictable support'],
-        services: ['Azure Cloud', 'Microsoft 365', 'Cybersecurity', 'Backup & Disaster Recovery', 'Managed IT Support'],
-        outcomes: ['More reliable collaboration for distributed teams', 'Stronger identity and endpoint controls', 'Improved resilience for critical systems', 'Better support visibility for management'],
-        caseTitle: 'Azure Disaster Recovery Planning',
-        caseBody: 'Energy and engineering environments benefit from Azure Site Recovery, backup, VPN design, runbooks and restore testing for predictable recovery.',
-        metrics: ['distributed teams', 'DR planning', 'secure access']
+        outcomes: ['M365, identity and device governance for growing teams', 'Security and compliance readiness aligned to ISO/GDPR expectations', 'Migration and support runbooks for distributed operations'],
+        solutions: ['Cloud Migration Services', 'Entra ID & SSO Consolidation', 'Zero Trust Security with Defender & Sentinel', 'IT Consulting Services'],
+        caseTitle: 'Anonymized energy pattern',
+        caseBody: 'A fast-growing energy organization needs consistent collaboration, identity control and compliance documentation across markets and teams. The work is both technical and governance-led.',
+        metrics: ['M365 governance', 'ISO readiness', 'distributed teams']
       },
-      smb: {
-        title: 'SMB / Growing Companies',
+      'professional-services': {
+        title: 'Professional Services & Mid-Market',
         eyebrow: 'Industry',
-        lead: 'Enterprise-grade Microsoft cloud, cybersecurity, backup and IT support discipline without building a large internal IT department.',
+        lead: 'A pragmatic IT operating model for companies that need enterprise-grade controls without enterprise bureaucracy.',
         icon: 'tools',
-        challenges: ['Internal teams lack capacity for cloud, security, backup and support', 'Growth creates unmanaged users, devices, licenses and access', 'Executives need practical IT advice and predictable escalation'],
-        services: ['Managed IT Support', 'Microsoft 365', 'Cybersecurity', 'Backup & Disaster Recovery', 'Google Workspace to Microsoft 365'],
-        outcomes: ['Clear external technical ownership', 'Reduced operational burden', 'Better security and backup posture', 'Practical IT roadmap for growth'],
-        caseTitle: 'Growing Company IT Operating Model',
-        caseBody: 'Growing companies benefit from co-managed or complete IT support, Microsoft 365 governance, backup planning and executive advisory.',
-        metrics: ['senior ownership', 'predictable support', 'growth roadmap']
+        outcomes: ['Right-sized support and infrastructure ownership', 'Secure collaboration and SaaS identity consolidation', 'Architecture reviews and modernization roadmaps'],
+        solutions: ['IT Support Services', 'IT Consulting Services', 'Microsoft 365', 'Entra ID & SSO Consolidation'],
+        caseTitle: 'Anonymized mid-market pattern',
+        caseBody: 'Professional services teams need reliability, secure collaboration and predictable support while keeping overhead lean. The delivery model focuses on practical controls and business continuity.',
+        metrics: ['lean governance', 'secure SaaS', 'predictable support']
       }
     }
   },
   bg: {
     hub: {
       eyebrow: 'Индустрии',
-      title: 'Решения за компании, при които IT downtime не е приемлив',
-      lead: 'IT Outsource свързва Microsoft cloud, security, backup, migration и support services с реалните operational нужди на business-critical екипи.',
-      subline: 'Изберете бизнес контекст и вижте typical IT challenges, relevant services и outcomes.'
+      title: 'ИТ доставка, съобразена с начина, по който бизнесът реално работи.',
+      lead: 'Купувачите се разпознават по контекст по-бързо, отколкото по категория услуга. Тези verticals свързват IT Outsource capabilities с реални operational patterns.',
+      subline: 'Retail, life sciences, energy и professional services имат различни risk models — но една и съща delivery дисциплина.'
     },
     pages: {
       retail: {
-        title: 'Retail & Distribution',
+        title: 'Retail и E-commerce',
         eyebrow: 'Индустрия',
-        lead: 'Надеждно ИТ за stores, warehouses, ERP, POS, reporting, endpoints и distributed teams, които не могат да си позволят downtime.',
+        lead: 'Поддръжка на разпределени retail операции, магазини, складове и e-commerce процеси с устойчива инфраструктура и практична поддръжка.',
         icon: 'platform',
-        challenges: ['ERP, POS, warehouses и reporting зависят от стабилна infrastructure', 'Store и HQ users имат нужда от бърз support и clear escalation', 'Backups, monitoring и vendor coordination често са fragmented'],
-        services: ['Managed IT Support', 'Azure Cloud', 'Backup & Disaster Recovery', 'Cybersecurity', 'Microsoft 365'],
-        outcomes: ['По-стабилни retail operations', 'Clear escalation за ERP/POS/infrastructure issues', 'По-добра backup и recovery readiness', 'Better visibility over endpoints and access'],
-        caseTitle: 'Retail Infrastructure Support',
-        caseBody: 'Retail operating model печели от infrastructure review, monitoring, backup checks и support model за ERP, POS, warehouses и reporting.',
-        metrics: ['stable operations', 'clear escalation', 'backup readiness']
+        outcomes: ['Store, warehouse и HQ support с ясна ескалация', 'ERP, ordering и web-platform integration ownership', 'Endpoint, network и identity governance за разпределени екипи'],
+        solutions: ['Managed IT Support', 'Web-Based B2B & B2C Solutions', 'Backup & DR with Veeam', 'Entra ID & SSO Consolidation'],
+        caseTitle: 'Анонимизиран retail pattern',
+        caseBody: 'Retail-style operating model изисква reliable service desk intake, vendor coordination, resilient infrastructure и order-flow visibility. Фокусът е operations да продължат без скрити ownership gaps.',
+        metrics: ['distributed support', 'ERP/web integration', 'operational continuity']
       },
-      'pharma-healthcare': {
-        title: 'Healthcare / Pharma / CRO',
+      'life-sciences': {
+        title: 'Life Sciences и Clinical Research',
         eyebrow: 'Индустрия',
-        lead: 'Secure collaboration, identity, device и data governance за regulated teams, където auditability и continuity са важни.',
+        lead: 'Validated, audit-ready ИТ среди за clinical research и regulated екипи, където evidence и change control са критични.',
         icon: 'governance',
-        challenges: ['Sensitive collaboration изисква controlled access и data protection', 'Devices, identities и external sharing имат нужда от governance', 'Backup, retention и recovery expectations трябва да са documented'],
-        services: ['Microsoft 365', 'Cybersecurity', 'Backup & Disaster Recovery', 'Google Workspace to Microsoft 365', 'Managed IT Support'],
-        outcomes: ['Controlled access и stronger data protection', 'Better Microsoft 365 и endpoint visibility', 'По-audit-ready operational evidence', 'По-ясен recovery и support ownership'],
-        caseTitle: 'Microsoft 365 Security Modernization',
-        caseBody: 'Regulated business може да подобри collaboration security с Entra ID, Conditional Access, Intune, Defender и SharePoint governance.',
-        metrics: ['controlled access', 'data protection', 'audit-ready']
+        outcomes: ['Controlled changes с evidence и approval trails', 'Secure identity, endpoint и data governance', 'Backup, retention и recovery planning според audit expectations'],
+        solutions: ['Zero Trust Security with Defender & Sentinel', 'Microsoft 365 Governance', 'Backup & DR with Veeam', 'Cloud Migration Services'],
+        caseTitle: 'Анонимизиран clinical research pattern',
+        caseBody: 'Regulated research среда има нужда от ясни SOPs, controlled access, validated systems и documented recovery. Delivery model-ът приоритизира auditability без да забавя operational work.',
+        metrics: ['audit-ready SOPs', 'validated changes', 'controlled access']
       },
-      'energy-engineering': {
-        title: 'Energy / Solar / Engineering',
+      energy: {
+        title: 'Energy и Utilities',
         eyebrow: 'Индустрия',
-        lead: 'Microsoft cloud, security, backup и support за technical businesses с distributed teams, project files и infrastructure dependencies.',
+        lead: 'Modern Microsoft cloud, identity, security и governance за разпределени екипи в energy и infrastructure-led businesses.',
         icon: 'cloud',
-        challenges: ['Project teams имат нужда от secure collaboration across locations', 'Field users, devices и access изискват governance', 'Business-critical systems имат нужда от recovery planning и predictable support'],
-        services: ['Azure Cloud', 'Microsoft 365', 'Cybersecurity', 'Backup & Disaster Recovery', 'Managed IT Support'],
-        outcomes: ['По-надеждна collaboration за distributed teams', 'По-силни identity и endpoint controls', 'Improved resilience за critical systems', 'Better support visibility for management'],
-        caseTitle: 'Azure Disaster Recovery Planning',
-        caseBody: 'Energy и engineering среди печелят от Azure Site Recovery, backup, VPN design, runbooks и restore testing за predictable recovery.',
-        metrics: ['distributed teams', 'DR planning', 'secure access']
+        outcomes: ['M365, identity и device governance за растящи екипи', 'Security и compliance readiness според ISO/GDPR expectations', 'Migration и support runbooks за distributed operations'],
+        solutions: ['Cloud Migration Services', 'Entra ID & SSO Consolidation', 'Zero Trust Security with Defender & Sentinel', 'IT Consulting Services'],
+        caseTitle: 'Анонимизиран energy pattern',
+        caseBody: 'Бързо растяща energy организация има нужда от consistent collaboration, identity control и compliance documentation across markets and teams. Работата е едновременно technical и governance-led.',
+        metrics: ['M365 governance', 'ISO readiness', 'distributed teams']
       },
-      smb: {
-        title: 'SMB / Growing Companies',
+      'professional-services': {
+        title: 'Professional Services и Mid-Market',
         eyebrow: 'Индустрия',
-        lead: 'Enterprise-grade Microsoft cloud, cybersecurity, backup и IT support discipline без голям internal IT department.',
+        lead: 'Практичен ИТ operating model за компании, които искат enterprise-grade controls без enterprise bureaucracy.',
         icon: 'tools',
-        challenges: ['Internal teams нямат capacity за cloud, security, backup и support', 'Growth създава unmanaged users, devices, licenses и access', 'Executives имат нужда от practical IT advice и predictable escalation'],
-        services: ['Managed IT Support', 'Microsoft 365', 'Cybersecurity', 'Backup & Disaster Recovery', 'Google Workspace to Microsoft 365'],
-        outcomes: ['Clear external technical ownership', 'Reduced operational burden', 'Better security и backup posture', 'Practical IT roadmap за growth'],
-        caseTitle: 'Growing Company IT Operating Model',
-        caseBody: 'Growing companies печелят от co-managed или complete IT support, Microsoft 365 governance, backup planning и executive advisory.',
-        metrics: ['senior ownership', 'predictable support', 'growth roadmap']
+        outcomes: ['Right-sized support и infrastructure ownership', 'Secure collaboration и SaaS identity consolidation', 'Architecture reviews и modernization roadmaps'],
+        solutions: ['IT Support Services', 'IT Consulting Services', 'Microsoft 365', 'Entra ID & SSO Consolidation'],
+        caseTitle: 'Анонимизиран mid-market pattern',
+        caseBody: 'Professional services екипите имат нужда от reliability, secure collaboration и predictable support с lean overhead. Delivery model-ът се фокусира върху practical controls и business continuity.',
+        metrics: ['lean governance', 'secure SaaS', 'predictable support']
       }
     }
   }
 }
 
-export const industrySlugs = ['retail', 'pharma-healthcare', 'energy-engineering', 'smb']
+export const industrySlugs = ['retail', 'life-sciences', 'energy', 'professional-services']
