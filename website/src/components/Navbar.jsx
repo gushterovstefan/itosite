@@ -96,9 +96,8 @@ export default function Navbar() {
           <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-xl border border-white/10 bg-[#07111F] p-0.5 md:h-11 md:w-11">
             <img src={logo} alt="IT Outsource Ltd." width="512" height="512" className="h-full w-full object-cover" loading="eager" />
           </span>
-          <span className="hidden leading-tight xl:block">
-            <span className="block text-sm font-semibold tracking-tight text-[#F8FAFC]">IT Outsource</span>
-            <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#94A3B8]">Enterprise IT · Cloud · Operations</span>
+          <span className="hidden text-sm font-semibold uppercase tracking-[0.08em] text-[#F8FAFC] xl:block">
+            IT Outsource Ltd.
           </span>
         </Link>
 
