@@ -7,6 +7,7 @@ import { Icon, icons } from '../components/Icons.jsx'
 import SheenButton from '../components/SheenButton.jsx'
 import ProofLayer from '../components/ProofLayer.jsx'
 import ConversionCta from '../components/ConversionCta.jsx'
+import NetworkBackdrop from '../components/NetworkBackdrop.jsx'
 import { useContent } from '../content/index.jsx'
 import { BOOKING_URL } from '../config/booking.js'
 
@@ -19,7 +20,8 @@ export default function HomeGem() {
     <div id="top" className="relative bg-[#07111F] text-[#F8FAFC]">
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="mx-auto max-w-6xl px-4 pt-10 md:pt-12">
+        <NetworkBackdrop className="z-0" />
+        <div className="relative z-10 mx-auto max-w-6xl px-4 pt-10 md:pt-12">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
               <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-[#101E33] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#CBD5E1]">

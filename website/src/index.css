@@ -292,3 +292,46 @@ body {
   color: #F8FAFC;
   border-bottom-color: rgba(255, 255, 255, 0.08) !important;
 }
+
+.network-backdrop {
+  opacity: 0.9;
+  mix-blend-mode: screen;
+  mask-image: linear-gradient(to bottom, black 0%, black 72%, transparent 100%);
+}
+
+.network-backdrop__svg path {
+  fill: none;
+  stroke: rgba(56, 189, 248, 0.34);
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-dasharray: 8 16;
+  animation: network-drift 18s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.22));
+}
+
+.network-backdrop__svg circle {
+  fill: rgba(56, 189, 248, 0.82);
+  stroke: rgba(248, 250, 252, 0.35);
+  stroke-width: 1;
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.52));
+  animation: network-pulse 3.8s ease-in-out infinite;
+}
+
+.network-backdrop__layer--two circle:nth-child(2n) {
+  animation-delay: 0.8s;
+}
+
+.network-backdrop__layer--two circle:nth-child(3n) {
+  animation-delay: 1.6s;
+}
+
+@keyframes network-drift {
+  0% { stroke-dashoffset: 0; opacity: 0.42; }
+  45% { opacity: 0.76; }
+  100% { stroke-dashoffset: -96; opacity: 0.42; }
+}
+
+@keyframes network-pulse {
+  0%, 100% { opacity: 0.48; transform: scale(0.9); transform-box: fill-box; transform-origin: center; }
+  50% { opacity: 1; transform: scale(1.45); transform-box: fill-box; transform-origin: center; }
+}

@@ -3,6 +3,7 @@ import { Icon, icons } from './Icons.jsx'
 import SheenButton from './SheenButton.jsx'
 import { useContent } from '../content/index.jsx'
 import { BOOKING_URL } from '../config/booking.js'
+import NetworkBackdrop from './NetworkBackdrop.jsx'
 
 export default function PageHero({
   eyebrow,
@@ -24,8 +25,9 @@ export default function PageHero({
         <div className="absolute inset-x-0 top-0 h-px bg-[#101E33]" />
         <div className="absolute inset-0 hero-grid opacity-20" />
       </div>
+      <NetworkBackdrop className="z-0 opacity-75" />
 
-      <div className="relative mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 py-12 md:py-16">
         <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div>
             {eyebrow ? (
