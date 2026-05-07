@@ -14,7 +14,6 @@ const legal = {
     terms: 'Terms',
     trustEyebrow: 'Trust posture',
     trustLine: 'Built around Microsoft cloud operations, ISO 27001:2022-aligned governance, GDPR-aware delivery, and proven backup / virtualization ecosystems.',
-    trustNote: 'Technology names indicate delivery experience and platform alignment, not a claim of certification unless explicitly stated.',
     registered: 'Registered company',
     address: 'Bulgaria, Sofia 1505, Poduyane, 25 Popova Shapka St., floor 2, apt. 6',
     response: 'Typical response: within 1 business day.'
@@ -31,7 +30,6 @@ const legal = {
     terms: 'Условия',
     trustEyebrow: 'Позиция на доверие',
     trustLine: 'Изградено около Microsoft cloud операции, ISO 27001:2022-aligned управление, GDPR-aware доставка и доказани backup / virtualization екосистеми.',
-    trustNote: 'Имената на технологии показват опит и платформена насоченост, не претенция за сертификация, освен ако не е изрично посочено.',
     registered: 'Регистрирана компания',
     address: 'България, София 1505, р-н Подуяне, ул. Попова шапка 25, ет. 2, ап. 6',
     response: 'Типично време за отговор: до 1 работен ден.'
@@ -81,7 +79,6 @@ export default function Footer() {
               </div>
             ))}
           </div>
-          <p className="mt-4 text-xs leading-relaxed text-[#94A3B8]">{l.trustNote}</p>
         </div>
 
         <div className="mt-10 grid gap-8 md:grid-cols-4">
