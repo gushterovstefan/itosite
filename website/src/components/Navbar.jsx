@@ -102,7 +102,7 @@ export default function Navbar() {
   ]
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-50 bg-[#07111F] pb-3 shadow-[0_12px_40px_-34px_rgba(0,0,0,0.95)]">
       <div
         className="absolute left-0 top-0 h-[2px] w-full origin-left bg-[#2563EB]"
         style={{ transform: `scaleX(${scrollProgress})` }}
@@ -112,7 +112,9 @@ export default function Navbar() {
         <div className="rounded-2xl border border-white/10 bg-[#07111F]/95 px-4 shadow-[0_18px_70px_-38px_rgba(0,0,0,0.95)] backdrop-blur-xl">
           <div className="flex h-14 items-center justify-between gap-3">
             <Link to="/" className="flex shrink-0 items-center" onClick={() => setOpen(false)}>
-              <img src={logo} alt="IT Outsource Ltd." width="96" height="92" className="h-9 w-auto md:h-10" loading="eager" />
+              <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-xl border border-white/10 bg-[#0B1728] md:h-11 md:w-11">
+                <img src={logo} alt="IT Outsource Ltd." width="96" height="92" className="h-9 w-auto md:h-10" loading="eager" />
+              </span>
             </Link>
 
             <nav className="hidden items-center gap-1 md:flex" aria-label="Primary navigation">
