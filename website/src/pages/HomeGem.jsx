@@ -142,7 +142,7 @@ export default function HomeGem() {
           items={[
             { value: '15+ yrs', label: 'Experience', note: 'Design · Integrate · Support' },
             { value: '24/7', label: 'Operations', note: 'SLA-driven support' },
-            { value: 'MFA', label: 'Security baseline', note: 'Hardening + policies' },
+            { value: 'Secure', label: 'Security baseline', note: 'Hardening + policies' },
             { value: 'Fast', label: 'Response times', note: 'Clear escalation paths' }
           ]}
         />
