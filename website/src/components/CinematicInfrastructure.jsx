@@ -53,9 +53,9 @@ function makeCardTexture({ title, subtitle, status = 'normal', width = 512, heig
 
   ctx.clearRect(0, 0, width, height)
   roundedRect(ctx, 18, 18, width - 36, height - 36, 26)
-  ctx.fillStyle = COLORS.surface
+  ctx.fillStyle = 'rgba(16, 28, 46, 0.92)'
   ctx.fill()
-  ctx.strokeStyle = status === 'warning' ? 'rgba(239,68,68,0.46)' : status === 'secure' ? 'rgba(34,197,94,0.42)' : 'rgba(56,189,248,0.28)'
+  ctx.strokeStyle = status === 'warning' ? 'rgba(239,68,68,0.58)' : status === 'secure' ? 'rgba(34,197,94,0.54)' : 'rgba(56,189,248,0.42)'
   ctx.lineWidth = 2
   ctx.stroke()
 
@@ -117,6 +117,7 @@ function disposeObject(object) {
 export default function CinematicInfrastructure() {
   const sectionRef = useRef(null)
   const canvasRef = useRef(null)
+  const ctaRef = useRef(null)
   const reduce = useMediaQuery('(prefers-reduced-motion: reduce)')
   const mobile = useMediaQuery('(max-width: 767px)')
 
@@ -128,10 +129,10 @@ export default function CinematicInfrastructure() {
     const section = sectionRef.current
     const canvas = canvasRef.current
     const scene = new THREE.Scene()
-    scene.fog = new THREE.Fog(0x07111f, 9, 18)
+    scene.fog = new THREE.Fog(0x07111f, 16, 30)
 
-    const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 40)
-    camera.position.set(0, 0.15, 8.4)
+    const camera = new THREE.PerspectiveCamera(48, 1, 0.1, 40)
+    camera.position.set(0, 0.12, 8.8)
 
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' })
     renderer.setClearColor(0x07111f, 0)
@@ -146,11 +147,11 @@ export default function CinematicInfrastructure() {
     scene.add(sceneGroup)
     sceneGroup.add(backgroundLayer, fragmentedLayer, structuredLayer, serviceLayer, securityLayer)
 
-    scene.add(new THREE.AmbientLight(0x9cc7f5, 0.95))
+    scene.add(new THREE.AmbientLight(0x9cc7f5, 1.22))
 
     const floor = new THREE.Mesh(
       new THREE.PlaneGeometry(9.5, 5.2),
-      new THREE.MeshBasicMaterial({ color: 0x0b1728, transparent: true, opacity: 0.78 })
+      new THREE.MeshBasicMaterial({ color: 0x0b1728, transparent: true, opacity: 0.86 })
     )
     floor.position.set(0, -1.9, -1.35)
     floor.rotation.x = -Math.PI / 2
@@ -159,21 +160,21 @@ export default function CinematicInfrastructure() {
     const grid = new THREE.GridHelper(8.8, 10, 0x2563eb, 0x20314d)
     grid.position.set(0, -1.88, -1.35)
     grid.material.transparent = true
-    grid.material.opacity = 0.10
+    grid.material.opacity = 0.16
     backgroundLayer.add(grid)
 
     const assetDefs = [
-      { title: 'Users', sub: 'access requests', from: [-3.0, 1.08, -0.1], to: [-2.25, 0.78, 0], status: 'normal' },
-      { title: 'Laptops', sub: 'endpoint estate', from: [2.72, 1.05, -0.15], to: [-2.2, -0.68, 0], status: 'normal' },
-      { title: 'Servers', sub: 'legacy workloads', from: [-2.82, -1.1, -0.35], to: [-0.95, -1.22, 0], status: 'normal' },
-      { title: 'Mail', sub: 'messages · calendar', from: [2.86, -1.05, 0], to: [2.12, 0.7, 0], status: 'normal' },
-      { title: 'Files', sub: 'collaboration data', from: [-0.62, 1.72, -0.25], to: [2.08, -0.72, 0], status: 'normal' },
-      { title: 'Cloud Apps', sub: 'Microsoft services', from: [0.82, -1.55, -0.2], to: [0.95, 1.15, 0], status: 'normal' },
-      { title: 'Alerts', sub: 'risk signals', from: [0.1, 0.35, 0.45], to: [0, -1.55, 0], status: 'warning' }
+      { title: 'Users', sub: 'access requests', from: [-2.2, 1.12, -0.08], to: [-2.05, 0.88, 0], status: 'normal' },
+      { title: 'Endpoints', sub: 'laptops · devices', from: [-2.25, -0.55, -0.06], to: [-2.05, -0.72, 0], status: 'normal' },
+      { title: 'Servers', sub: 'legacy workloads', from: [-1.05, -1.3, -0.08], to: [-0.95, -1.22, 0], status: 'normal' },
+      { title: 'Mail', sub: 'messages · calendar', from: [2.15, 0.9, -0.05], to: [2.05, 0.78, 0], status: 'normal' },
+      { title: 'Files', sub: 'collaboration data', from: [2.15, -0.62, -0.06], to: [2.05, -0.72, 0], status: 'normal' },
+      { title: 'Cloud Apps', sub: 'Microsoft services', from: [0.65, 1.45, -0.08], to: [0.95, 1.22, 0], status: 'normal' },
+      { title: 'Alerts', sub: 'risk signals', from: [0.15, -1.55, 0.04], to: [0, -1.58, 0], status: 'warning' }
     ]
 
     const fragmentedAssets = assetDefs.map((asset, index) => {
-      const mesh = makeCard(asset.title, asset.sub, { status: asset.status, width: 1.42, height: 0.58 })
+      const mesh = makeCard(asset.title, asset.sub, { status: asset.status, width: 1.62, height: 0.66, opacity: 0.98 })
       mesh.position.set(...asset.from)
       mesh.rotation.y = (index - 3) * 0.025
       mesh.userData.target = asset.to
@@ -181,7 +182,7 @@ export default function CinematicInfrastructure() {
       return mesh
     })
 
-    const identity = makeCard('Identity', 'MFA · access · governance', { status: 'secure', width: 2.15, height: 0.76, opacity: 0 })
+    const identity = makeCard('Identity', 'MFA · access · governance', { status: 'secure', width: 2.22, height: 0.82, opacity: 0 })
     identity.position.set(0, 0, 0.15)
     structuredLayer.add(identity)
 
@@ -245,8 +246,12 @@ export default function CinematicInfrastructure() {
       }
     })
 
-    tl.to(camera.position, { z: 7.2, x: 0.8, duration: 1.2 })
-      .to(sceneGroup.rotation, { y: 0.08, duration: 1.2 }, '<')
+    if (ctaRef.current) {
+      gsap.set(ctaRef.current, { opacity: 0, y: 18 })
+    }
+
+    tl.to(camera.position, { z: 7.65, x: 0.24, duration: 1.2 })
+      .to(sceneGroup.rotation, { y: 0.025, duration: 1.2 }, '<')
 
     fragmentedAssets.forEach((mesh) => {
       tl.to(mesh.position, { x: mesh.userData.target[0], y: mesh.userData.target[1], z: mesh.userData.target[2], duration: 1.25 }, 'align')
@@ -254,23 +259,24 @@ export default function CinematicInfrastructure() {
         .to(mesh.scale, { x: 0.92, y: 0.92, z: 0.92, duration: 1.25 }, 'align')
     })
     tl.to(identity.material, { opacity: 1, duration: 0.9 }, 'align+=0.3')
-      .to(connectionLines.map((line) => line.material), { opacity: 0.34, duration: 0.9 }, 'align+=0.45')
-      .to(camera.position, { z: 6.75, x: 0.38, duration: 1.0 }, 'align+=0.25')
+      .to(connectionLines.map((line) => line.material), { opacity: 0.42, duration: 0.9 }, 'align+=0.45')
+      .to(camera.position, { z: 7.2, x: 0.16, duration: 1.0 }, 'align+=0.25')
 
     tl.to(serviceCards.map((mesh) => mesh.material), { opacity: 0.88, duration: 0.8, stagger: 0.045 }, 'services')
       .to(serviceCards.map((mesh) => mesh.scale), { x: 1, y: 1, z: 1, duration: 0.8, stagger: 0.045 }, 'services')
-      .to(camera.position, { z: 6.35, x: 0.12, duration: 1.0 }, 'services')
+      .to(camera.position, { z: 6.9, x: 0.08, duration: 1.0 }, 'services')
 
     tl.to(governanceRing.material, { opacity: 0.48, duration: 0.8 }, 'security')
       .to(secureRing.material, { opacity: 0.32, duration: 0.8 }, 'security+=0.15')
-      .to(camera.position, { z: 6.05, x: 0, duration: 0.9 }, 'security')
+      .to(camera.position, { z: 6.65, x: 0, duration: 0.9 }, 'security')
 
-    tl.to(fragmentedAssets.map((mesh) => mesh.material), { opacity: 0.24, duration: 0.9 }, 'final')
-      .to(serviceCards.map((mesh) => mesh.material), { opacity: 0.22, duration: 0.9 }, 'final')
-      .to(identity.material, { opacity: 0.16, duration: 0.9 }, 'final')
-      .to(connectionLines.map((line) => line.material), { opacity: 0.10, duration: 0.9 }, 'final')
+    tl.to(fragmentedAssets.map((mesh) => mesh.material), { opacity: 0.58, duration: 0.9 }, 'final')
+      .to(serviceCards.map((mesh) => mesh.material), { opacity: 0.55, duration: 0.9 }, 'final')
+      .to(identity.material, { opacity: 0.68, duration: 0.9 }, 'final')
+      .to(connectionLines.map((line) => line.material), { opacity: 0.26, duration: 0.9 }, 'final')
       .to(finalPanel.material, { opacity: 1, duration: 0.9, ease: 'power2.out' }, 'final+=0.15')
       .to(securityLayer.scale, { x: 1.05, y: 1.05, z: 1.05, duration: 0.9 }, 'final+=0.15')
+      .to(ctaRef.current, { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out' }, 'final+=0.35')
 
     let raf = 0
     const render = () => {
@@ -297,13 +303,14 @@ export default function CinematicInfrastructure() {
   return (
     <section ref={sectionRef} className="cinematic-section relative overflow-hidden bg-[#07111F] text-[#F8FAFC]">
       <div className="relative min-h-screen">
-        <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" aria-hidden="true" />
-        <div className="pointer-events-none absolute inset-0 z-[2] bg-[linear-gradient(90deg,rgba(7,17,31,0.98)_0%,rgba(7,17,31,0.86)_44%,rgba(7,17,31,0.34)_78%,rgba(7,17,31,0.74)_100%)]" />
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_52%_46%,rgba(56,189,248,0.22)_0%,rgba(37,99,235,0.12)_34%,transparent_62%),linear-gradient(180deg,#07111F_0%,#0B1728_100%)]" />
+        <canvas ref={canvasRef} className="absolute inset-0 z-[1] h-full w-full" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-0 z-[2] bg-[linear-gradient(90deg,rgba(7,17,31,0.22)_0%,transparent_16%,transparent_78%,rgba(7,17,31,0.34)_100%)]" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-56 bg-gradient-to-t from-[#07111F] to-transparent" />
 
         <div className="relative z-[5] mx-auto flex min-h-screen max-w-6xl flex-col justify-end px-4 py-10 md:py-14">
           <div className="flex justify-start md:justify-end">
-            <div className="pointer-events-auto w-full max-w-xl rounded-3xl border border-white/[0.10] bg-[#07111F]/86 p-5 text-left shadow-[0_24px_90px_-60px_rgba(0,0,0,0.95)] backdrop-blur-md md:text-right">
+            <div ref={ctaRef} className="pointer-events-auto w-full max-w-xl rounded-3xl border border-white/[0.10] bg-[#07111F]/72 p-5 text-left shadow-[0_18px_60px_-46px_rgba(0,0,0,0.86)] backdrop-blur-sm md:text-right">
               <div className="text-sm font-semibold text-[#F8FAFC]">Ready to bring control to your IT environment?</div>
               <div className="mt-4 flex flex-wrap gap-3 md:justify-end">
                 <Link to="/contacts" className="rounded-full bg-[#2563EB] px-5 py-2.5 text-sm font-semibold text-[#F8FAFC] transition hover:bg-[#38BDF8] hover:text-[#07111F] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70">
