@@ -330,18 +330,8 @@ export default function CinematicInfrastructure() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-[0.95fr_1.05fr] md:items-end">
-            <div className="rounded-3xl border border-white/[0.10] bg-[#07111F]/76 p-5 shadow-[0_24px_90px_-60px_rgba(0,0,0,0.95)] backdrop-blur-md">
-              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#38BDF8]">Scroll story</div>
-              <ol className="mt-3 space-y-2 text-sm leading-relaxed text-[#CBD5E1]">
-                <li><span className="font-semibold text-[#F8FAFC]">01</span> Fragmented users, devices, cloud, and data create risk.</li>
-                <li><span className="font-semibold text-[#F8FAFC]">02</span> Assets align around identity and clear architecture.</li>
-                <li><span className="font-semibold text-[#F8FAFC]">03</span> Security and governance wrap the environment.</li>
-                <li><span className="font-semibold text-[#F8FAFC]">04</span> The result is stable, monitored, recoverable IT.</li>
-              </ol>
-            </div>
-
-            <div className="pointer-events-auto rounded-3xl border border-white/[0.10] bg-[#07111F]/78 p-5 text-left shadow-[0_24px_90px_-60px_rgba(0,0,0,0.95)] backdrop-blur-md md:text-right">
+          <div className="flex justify-start md:justify-end">
+            <div className="pointer-events-auto w-full max-w-xl rounded-3xl border border-white/[0.10] bg-[#07111F]/82 p-5 text-left shadow-[0_24px_90px_-60px_rgba(0,0,0,0.95)] backdrop-blur-md md:text-right">
               <div className="text-sm font-semibold text-[#F8FAFC]">Bring control to your Microsoft cloud and IT operations.</div>
               <div className="mt-4 flex flex-wrap gap-3 md:justify-end">
                 <Link to="/contacts" className="rounded-full bg-[#2563EB] px-5 py-2.5 text-sm font-semibold text-[#F8FAFC] transition hover:bg-[#38BDF8] hover:text-[#07111F] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70">
