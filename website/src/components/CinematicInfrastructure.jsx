@@ -119,7 +119,7 @@ export default function CinematicInfrastructure() {
   const canvasRef = useRef(null)
   const ctaRef = useRef(null)
   const reduce = useMediaQuery('(prefers-reduced-motion: reduce)')
-  const mobile = useMediaQuery('(max-width: 767px)')
+  const mobile = useMediaQuery('(max-width: 767px)', true)
 
   useEffect(() => {
     if (reduce || mobile || typeof window === 'undefined' || !sectionRef.current || !canvasRef.current) return undefined

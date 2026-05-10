@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+@supports not (overflow-x: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+main,
+section,
+footer,
+header,
+#root {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+button,
+li,
+div {
+  overflow-wrap: break-word;
+}
+
 :root {
   color-scheme: light dark;
   --color-bg-dark: #07111F;
@@ -329,6 +375,34 @@ body {
   border-radius: 9999px;
   background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0.55), transparent 65%);
   filter: blur(8px);
+}
+
+
+@media (max-width: 480px) {
+  main h1 {
+    font-size: clamp(2.15rem, 10vw, 2.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+  }
+
+  main h2,
+  .cinematic-title {
+    font-size: clamp(1.8rem, 8vw, 2.35rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+  }
+
+  main [class*="tracking-[0.22em]"],
+  main [class*="tracking-[0.24em]"],
+  main [class*="tracking-[0.26em]"] {
+    letter-spacing: 0.14em;
+  }
+
+  .btn-primary,
+  main a,
+  main button {
+    max-width: 100%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

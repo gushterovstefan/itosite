@@ -120,9 +120,10 @@ export default function Navbar() {
             href={BOOKING_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-10 items-center justify-center rounded-full bg-[#2F80ED] px-3 text-xs font-bold text-[#0F172A] shadow-[0_14px_34px_-20px_rgba(47,128,237,0.95)] ring-1 ring-[#38BDF8]/35 transition hover:bg-[#2F80ED] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 sm:px-4 sm:text-sm md:px-5"
+            className="inline-flex h-10 max-w-[42vw] items-center justify-center truncate rounded-full bg-[#2F80ED] px-3 text-xs font-bold text-[#0F172A] shadow-[0_14px_34px_-20px_rgba(47,128,237,0.95)] ring-1 ring-[#38BDF8]/35 transition hover:bg-[#2F80ED] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]/70 sm:max-w-none sm:px-4 sm:text-sm md:px-5"
           >
-            {consultationLabel}
+            <span className="sm:hidden">Assessment</span>
+            <span className="hidden sm:inline">{consultationLabel}</span>
           </a>
 
           <button
