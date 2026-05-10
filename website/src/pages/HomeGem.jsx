@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import GemSection from '../components/GemSection.jsx'
 import KpiStrip from '../components/KpiStrip.jsx'
@@ -10,6 +11,8 @@ import NetworkBackdrop from '../components/NetworkBackdrop.jsx'
 import brandBanner from '../assets/brand-banner-600.jpg'
 import { useContent } from '../content/index.jsx'
 import { BOOKING_URL } from '../config/booking.js'
+
+const CinematicInfrastructure = lazy(() => import('../components/CinematicInfrastructure.jsx'))
 
 export default function HomeGem() {
   const { content, lang } = useContent()
@@ -133,6 +136,10 @@ export default function HomeGem() {
           </div>
         </div>
       </section>
+
+      <Suspense fallback={<div className="min-h-[60vh] bg-[#07111F]" aria-label="Loading cinematic infrastructure animation" />}>
+        <CinematicInfrastructure />
+      </Suspense>
 
       <ProofLayer />
 
