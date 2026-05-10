@@ -66,6 +66,44 @@ body {
   @apply text-2xl font-semibold tracking-tight md:text-4xl;
 }
 
+.cinematic-text-panel {
+  position: relative;
+  z-index: 5;
+  max-width: 720px;
+  padding: 32px;
+  border-radius: 24px;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 17, 31, 0.92) 0%,
+    rgba(7, 17, 31, 0.72) 55%,
+    rgba(7, 17, 31, 0.20) 100%
+  );
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cinematic-title {
+  color: #F8FAFC;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.cinematic-subtitle {
+  color: #CBD5E1;
+  font-size: clamp(17px, 1.5vw, 22px);
+  line-height: 1.6;
+  max-width: 660px;
+}
+
+@media (max-width: 767px) {
+  .cinematic-text-panel {
+    padding: 24px;
+    background: rgba(7, 17, 31, 0.92);
+  }
+}
+
 /* Elementra-ish motion background */
 @keyframes floatGradient {
   0% { transform: translate3d(0, 0, 0) scale(1); }
