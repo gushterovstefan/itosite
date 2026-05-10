@@ -301,18 +301,7 @@ export default function CinematicInfrastructure() {
         <div className="pointer-events-none absolute inset-0 z-[2] bg-[linear-gradient(90deg,rgba(7,17,31,0.98)_0%,rgba(7,17,31,0.86)_44%,rgba(7,17,31,0.34)_78%,rgba(7,17,31,0.74)_100%)]" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-56 bg-gradient-to-t from-[#07111F] to-transparent" />
 
-        <div className="relative z-[5] mx-auto flex min-h-screen max-w-6xl flex-col justify-between px-4 py-10 md:py-14">
-          <div className="cinematic-text-panel">
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/[0.12] bg-[#101C2E] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#CBD5E1]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#38BDF8]" aria-hidden="true" />
-              Microsoft cloud · security · managed IT
-            </div>
-            <h2 className="cinematic-title mt-5">From IT complexity to controlled digital infrastructure.</h2>
-            <p className="cinematic-subtitle mt-5">
-              We design, secure, migrate, and operate Microsoft cloud environments, endpoints, identity, data protection, backup, and managed IT support — with one accountable partner.
-            </p>
-          </div>
-
+        <div className="relative z-[5] mx-auto flex min-h-screen max-w-6xl flex-col justify-end px-4 py-10 md:py-14">
           <div className="flex justify-start md:justify-end">
             <div className="pointer-events-auto w-full max-w-xl rounded-3xl border border-white/[0.10] bg-[#07111F]/86 p-5 text-left shadow-[0_24px_90px_-60px_rgba(0,0,0,0.95)] backdrop-blur-md md:text-right">
               <div className="text-sm font-semibold text-[#F8FAFC]">Ready to bring control to your IT environment?</div>
